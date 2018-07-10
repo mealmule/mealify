@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.m \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FValidation.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Constants/FConstants.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/FIndex.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/FPriorityIndex.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FNodeFilter.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FIndexedFilter.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FLimitedFilter.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/FRangedFilter.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FNode.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FSnapshotUtilities.h

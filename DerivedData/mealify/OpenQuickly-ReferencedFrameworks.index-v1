@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>meals</string>
+	<string>FirebaseCore</string>
+	<string>FirebaseStorage</string>
+	<string>Dispatch</string>
+	<string>FirebaseDatabase</string>
+	<string>Pods</string>
+	<string>Firebase</string>
+	<string>CoreServices</string>
+	<string>FirebaseFunctions</string>
+	<string>FirebaseMLVisionTextModel</string>
+	<string>SafariServices</string>
+	<string>Charts</string>
+	<string>FirebaseMLModelInterpreter</string>
+	<string>FirebaseMessaging</string>
+	<string>GoogleMobileAds</string>
+	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
+	<string>FirebaseInstanceID</string>
+	<string>FirebaseMLVisionFaceModel</string>
+	<string>FirebaseAuth</string>
+	<string>FirebaseInvites</string>
+	<string>FirebaseMLVisionLabelModel</string>
+	<string>AppKit</string>
+	<string>Cocoa</string>
+	<string>FirebasePerformance</string>
+	<string>Crashlytics</string>
+	<string>mealify</string>
+	<string>XCTest</string>
+	<string>netinet</string>
+	<string>CoreData</string>
+	<string>CommonCrypto</string>
+	<string>FirebaseRemoteConfig</string>
+	<string>Alamofire</string>
+	<string>unicode</string>
+	<string>FirebaseMLVision</string>
+	<string>FirebaseCrash</string>
+	<string>GTMSessionFetcher</string>
+	<string>GoogleToolboxForMac</string>
+	<string>SystemConfiguration</string>
+	<string>FirebaseAnalytics</string>
+	<string>Security</string>
+	<string>CoreGraphics</string>
+	<string>objc</string>
+	<string>SwiftyJSON</string>
+	<string>FirebaseDynamicLinks</string>
+	<string>UIKit</string>
+	<string>Fabric</string>
+	<string>Foundation</string>
+	<string>FirebaseMLVisionBarcodeModel</string>
+	<string>sys</string>
+	<string>Quartz</string>
+	<string>FirebaseFirestore</string>
+</array>
+</plist>

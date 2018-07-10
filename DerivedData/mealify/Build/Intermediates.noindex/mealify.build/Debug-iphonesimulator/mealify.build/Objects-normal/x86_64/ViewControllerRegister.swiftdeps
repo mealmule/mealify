@@ -1,0 +1,793 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewControllerRegister"
+provides-nominal:
+- "7mealify22ViewControllerRegisterC"
+provides-member:
+- ["7mealify22ViewControllerRegisterC", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "emailtext"
+- "passwordtext"
+- "registerbutton"
+- "viewDidLoad"
+depends-top-level:
+- !private "-"
+- !private "..."
+- "AssignmentPrecedence"
+- !private "Auth"
+- "Calendar"
+- !private "Database"
+- "DatabaseReference"
+- "Date"
+- "DateFormatter"
+- "Dictionary"
+- "StringLiteralType"
+- "UITextField"
+- "UIViewController"
+- "ViewControllerRegister"
+- !private "print"
+depends-member:
+- !private ["So4AuthC", "auth"]
+- !private ["So4AuthC", "createUser"]
+- !private ["So4AuthC", "currentUser"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "Auth"]
+- ["s7CVarArgP", "Calendar"]
+- !private ["s7CVarArgP", "Database"]
+- ["s7CVarArgP", "Date"]
+- ["s7CVarArgP", "DateFormatter"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "auth"]
+- !private ["s7CVarArgP", "cal"]
+- !private ["s7CVarArgP", "child"]
+- !private ["s7CVarArgP", "createUser"]
+- !private ["s7CVarArgP", "currentUser"]
+- !private ["s7CVarArgP", "database"]
+- !private ["s7CVarArgP", "databaseRef"]
+- !private ["s7CVarArgP", "dateFormatter"]
+- !private ["s7CVarArgP", "dateStyle"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "emailtext"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "passwordtext"]
+- !private ["s7CVarArgP", "performSegue"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reference"]
+- !private ["s7CVarArgP", "setValue"]
+- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "timeStyle"]
+- !private ["s7CVarArgP", "today"]
+- !private ["s7CVarArgP", "todayFormatted"]
+- !private ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["10Foundation8CalendarV", "current"]
+- !private ["10Foundation8CalendarV", "date"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- !private ["10Foundation8CalendarV9ComponentO", "day"]
+- !private ["s28CustomDebugStringConvertibleP", "Auth"]
+- ["s28CustomDebugStringConvertibleP", "Calendar"]
+- !private ["s28CustomDebugStringConvertibleP", "Database"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
+- ["s28CustomDebugStringConvertibleP", "DateFormatter"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- !private ["s28CustomDebugStringConvertibleP", "cal"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
+- !private ["s28CustomDebugStringConvertibleP", "createUser"]
+- ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- !private ["s28CustomDebugStringConvertibleP", "database"]
+- !private ["s28CustomDebugStringConvertibleP", "databaseRef"]
+- !private ["s28CustomDebugStringConvertibleP", "date"]
+- !private ["s28CustomDebugStringConvertibleP", "dateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "dateStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "emailtext"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "passwordtext"]
+- !private ["s28CustomDebugStringConvertibleP", "performSegue"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reference"]
+- !private ["s28CustomDebugStringConvertibleP", "setValue"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "timeStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "today"]
+- !private ["s28CustomDebugStringConvertibleP", "todayFormatted"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "current"]
+- !private ["s17CustomReflectableP", "date"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Auth"]
+- ["s23CustomStringConvertibleP", "Calendar"]
+- !private ["s23CustomStringConvertibleP", "Database"]
+- ["s23CustomStringConvertibleP", "Date"]
+- ["s23CustomStringConvertibleP", "DateFormatter"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "auth"]
+- !private ["s23CustomStringConvertibleP", "cal"]
+- !private ["s23CustomStringConvertibleP", "child"]
+- !private ["s23CustomStringConvertibleP", "createUser"]
+- ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
+- !private ["s23CustomStringConvertibleP", "database"]
+- !private ["s23CustomStringConvertibleP", "databaseRef"]
+- !private ["s23CustomStringConvertibleP", "date"]
+- !private ["s23CustomStringConvertibleP", "dateFormatter"]
+- !private ["s23CustomStringConvertibleP", "dateStyle"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "emailtext"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "passwordtext"]
+- !private ["s23CustomStringConvertibleP", "performSegue"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reference"]
+- !private ["s23CustomStringConvertibleP", "setValue"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "timeStyle"]
+- !private ["s23CustomStringConvertibleP", "today"]
+- !private ["s23CustomStringConvertibleP", "todayFormatted"]
+- !private ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["So8DatabaseC", "database"]
+- !private ["So8DatabaseC", "reference"]
+- !private ["So13DatabaseQueryC", "child"]
+- !private ["So13DatabaseQueryC", "setValue"]
+- !private ["So17DatabaseReferenceC", "child"]
+- !private ["So17DatabaseReferenceC", "setValue"]
+- ["10Foundation4DateV", "init"]
+- !private ["So13DateFormatterC", "dateStyle"]
+- ["So13DateFormatterC", "init"]
+- !private ["So13DateFormatterC", "string"]
+- !private ["So13DateFormatterC", "timeStyle"]
+- ["s9DecodableP", "current"]
+- !private ["s9DecodableP", "date"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "current"]
+- !private ["s9EncodableP", "date"]
+- ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "Auth"]
+- ["s9EquatableP", "Calendar"]
+- !private ["s9EquatableP", "Database"]
+- ["s9EquatableP", "Date"]
+- ["s9EquatableP", "DateFormatter"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "auth"]
+- !private ["s9EquatableP", "cal"]
+- !private ["s9EquatableP", "child"]
+- !private ["s9EquatableP", "createUser"]
+- ["s9EquatableP", "current"]
+- !private ["s9EquatableP", "currentUser"]
+- !private ["s9EquatableP", "database"]
+- !private ["s9EquatableP", "databaseRef"]
+- !private ["s9EquatableP", "date"]
+- !private ["s9EquatableP", "dateFormatter"]
+- !private ["s9EquatableP", "dateStyle"]
+- !private ["s9EquatableP", "day"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "emailtext"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "medium"]
+- !private ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "passwordtext"]
+- !private ["s9EquatableP", "performSegue"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "reference"]
+- !private ["s9EquatableP", "setValue"]
+- !private ["s9EquatableP", "string"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "timeStyle"]
+- !private ["s9EquatableP", "today"]
+- !private ["s9EquatableP", "todayFormatted"]
+- !private ["s9EquatableP", "uid"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s25ExpressibleByArrayLiteralP", "day"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So9FormatterC", "dateStyle"]
+- ["So9FormatterC", "init"]
+- !private ["So9FormatterC", "string"]
+- !private ["So9FormatterC", "timeStyle"]
+- !private ["s8HashableP", "Auth"]
+- ["s8HashableP", "Calendar"]
+- !private ["s8HashableP", "Database"]
+- ["s8HashableP", "Date"]
+- ["s8HashableP", "DateFormatter"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "auth"]
+- !private ["s8HashableP", "cal"]
+- !private ["s8HashableP", "child"]
+- !private ["s8HashableP", "createUser"]
+- ["s8HashableP", "current"]
+- !private ["s8HashableP", "currentUser"]
+- !private ["s8HashableP", "database"]
+- !private ["s8HashableP", "databaseRef"]
+- !private ["s8HashableP", "date"]
+- !private ["s8HashableP", "dateFormatter"]
+- !private ["s8HashableP", "dateStyle"]
+- !private ["s8HashableP", "day"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "emailtext"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "medium"]
+- !private ["s8HashableP", "none"]
+- !private ["s8HashableP", "passwordtext"]
+- !private ["s8HashableP", "performSegue"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "reference"]
+- !private ["s8HashableP", "setValue"]
+- !private ["s8HashableP", "string"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "timeStyle"]
+- !private ["s8HashableP", "today"]
+- !private ["s8HashableP", "todayFormatted"]
+- !private ["s8HashableP", "uid"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "Auth"]
+- ["So8NSCodingP", "Calendar"]
+- !private ["So8NSCodingP", "Database"]
+- ["So8NSCodingP", "Date"]
+- ["So8NSCodingP", "DateFormatter"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "cal"]
+- !private ["So8NSCodingP", "databaseRef"]
+- !private ["So8NSCodingP", "dateFormatter"]
+- !private ["So8NSCodingP", "dateStyle"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "emailtext"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "passwordtext"]
+- !private ["So8NSCodingP", "performSegue"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "timeStyle"]
+- !private ["So8NSCodingP", "today"]
+- !private ["So8NSCodingP", "todayFormatted"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So9NSCopyingP", "dateStyle"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "string"]
+- !private ["So9NSCopyingP", "timeStyle"]
+- !private ["So26NSExtensionRequestHandlingP", "Auth"]
+- ["So26NSExtensionRequestHandlingP", "Calendar"]
+- !private ["So26NSExtensionRequestHandlingP", "Database"]
+- ["So26NSExtensionRequestHandlingP", "Date"]
+- ["So26NSExtensionRequestHandlingP", "DateFormatter"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "cal"]
+- !private ["So26NSExtensionRequestHandlingP", "databaseRef"]
+- !private ["So26NSExtensionRequestHandlingP", "dateFormatter"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "emailtext"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "passwordtext"]
+- !private ["So26NSExtensionRequestHandlingP", "performSegue"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "today"]
+- !private ["So26NSExtensionRequestHandlingP", "todayFormatted"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So8NSObjectC", "Auth"]
+- ["So8NSObjectC", "Calendar"]
+- !private ["So8NSObjectC", "Database"]
+- ["So8NSObjectC", "DatabaseReference"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DateFormatter"]
+- ["So8NSObjectC", "UITextField"]
+- !private ["So8NSObjectC", "auth"]
+- ["So8NSObjectC", "cal"]
+- !private ["So8NSObjectC", "child"]
+- !private ["So8NSObjectC", "createUser"]
+- !private ["So8NSObjectC", "currentUser"]
+- !private ["So8NSObjectC", "database"]
+- ["So8NSObjectC", "databaseRef"]
+- ["So8NSObjectC", "dateFormatter"]
+- !private ["So8NSObjectC", "dateStyle"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "emailtext"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "passwordtext"]
+- !private ["So8NSObjectC", "performSegue"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "reference"]
+- ["So8NSObjectC", "registerbutton"]
+- !private ["So8NSObjectC", "setValue"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "timeStyle"]
+- ["So8NSObjectC", "today"]
+- ["So8NSObjectC", "todayFormatted"]
+- !private ["So8NSObjectC", "uid"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "Auth"]
+- ["So16NSObjectProtocolP", "Calendar"]
+- !private ["So16NSObjectProtocolP", "Database"]
+- ["So16NSObjectProtocolP", "Date"]
+- ["So16NSObjectProtocolP", "DateFormatter"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "auth"]
+- !private ["So16NSObjectProtocolP", "cal"]
+- !private ["So16NSObjectProtocolP", "child"]
+- !private ["So16NSObjectProtocolP", "createUser"]
+- !private ["So16NSObjectProtocolP", "currentUser"]
+- !private ["So16NSObjectProtocolP", "database"]
+- !private ["So16NSObjectProtocolP", "databaseRef"]
+- !private ["So16NSObjectProtocolP", "dateFormatter"]
+- !private ["So16NSObjectProtocolP", "dateStyle"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "emailtext"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "passwordtext"]
+- !private ["So16NSObjectProtocolP", "performSegue"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "reference"]
+- !private ["So16NSObjectProtocolP", "setValue"]
+- !private ["So16NSObjectProtocolP", "string"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "timeStyle"]
+- !private ["So16NSObjectProtocolP", "today"]
+- !private ["So16NSObjectProtocolP", "todayFormatted"]
+- !private ["So16NSObjectProtocolP", "uid"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["s9OptionSetP", "day"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "day"]
+- !private ["s16RawRepresentableP", "medium"]
+- !private ["s16RawRepresentableP", "none"]
+- ["10Foundation20ReferenceConvertibleP", "current"]
+- !private ["10Foundation20ReferenceConvertibleP", "date"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["s10SetAlgebraP", "day"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- !private ["So13DateFormatterC5StyleO", "medium"]
+- !private ["So13DateFormatterC5StyleO", "none"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "Auth"]
+- ["So21UIAppearanceContainerP", "Calendar"]
+- !private ["So21UIAppearanceContainerP", "Database"]
+- ["So21UIAppearanceContainerP", "Date"]
+- ["So21UIAppearanceContainerP", "DateFormatter"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "cal"]
+- !private ["So21UIAppearanceContainerP", "databaseRef"]
+- !private ["So21UIAppearanceContainerP", "dateFormatter"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "emailtext"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "passwordtext"]
+- !private ["So21UIAppearanceContainerP", "performSegue"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "today"]
+- !private ["So21UIAppearanceContainerP", "todayFormatted"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "Auth"]
+- ["So18UIContentContainerP", "Calendar"]
+- !private ["So18UIContentContainerP", "Database"]
+- ["So18UIContentContainerP", "Date"]
+- ["So18UIContentContainerP", "DateFormatter"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "cal"]
+- !private ["So18UIContentContainerP", "databaseRef"]
+- !private ["So18UIContentContainerP", "dateFormatter"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "emailtext"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "passwordtext"]
+- !private ["So18UIContentContainerP", "performSegue"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "today"]
+- !private ["So18UIContentContainerP", "todayFormatted"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "Auth"]
+- ["So18UIFocusEnvironmentP", "Calendar"]
+- !private ["So18UIFocusEnvironmentP", "Database"]
+- ["So18UIFocusEnvironmentP", "Date"]
+- ["So18UIFocusEnvironmentP", "DateFormatter"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "cal"]
+- !private ["So18UIFocusEnvironmentP", "databaseRef"]
+- !private ["So18UIFocusEnvironmentP", "dateFormatter"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "emailtext"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "passwordtext"]
+- !private ["So18UIFocusEnvironmentP", "performSegue"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "today"]
+- !private ["So18UIFocusEnvironmentP", "todayFormatted"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "Auth"]
+- ["So30UIPasteConfigurationSupportingP", "Calendar"]
+- !private ["So30UIPasteConfigurationSupportingP", "Database"]
+- ["So30UIPasteConfigurationSupportingP", "Date"]
+- ["So30UIPasteConfigurationSupportingP", "DateFormatter"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "cal"]
+- !private ["So30UIPasteConfigurationSupportingP", "databaseRef"]
+- !private ["So30UIPasteConfigurationSupportingP", "dateFormatter"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "emailtext"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "passwordtext"]
+- !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "today"]
+- !private ["So30UIPasteConfigurationSupportingP", "todayFormatted"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "Auth"]
+- ["So11UIResponderC", "Calendar"]
+- !private ["So11UIResponderC", "Database"]
+- ["So11UIResponderC", "DatabaseReference"]
+- ["So11UIResponderC", "Date"]
+- ["So11UIResponderC", "DateFormatter"]
+- ["So11UIResponderC", "UITextField"]
+- ["So11UIResponderC", "cal"]
+- ["So11UIResponderC", "databaseRef"]
+- ["So11UIResponderC", "dateFormatter"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "emailtext"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "passwordtext"]
+- !private ["So11UIResponderC", "performSegue"]
+- !private ["So11UIResponderC", "print"]
+- ["So11UIResponderC", "registerbutton"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "today"]
+- ["So11UIResponderC", "todayFormatted"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "Auth"]
+- ["So30UIResponderStandardEditActionsP", "Calendar"]
+- !private ["So30UIResponderStandardEditActionsP", "Database"]
+- ["So30UIResponderStandardEditActionsP", "Date"]
+- ["So30UIResponderStandardEditActionsP", "DateFormatter"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "cal"]
+- !private ["So30UIResponderStandardEditActionsP", "databaseRef"]
+- !private ["So30UIResponderStandardEditActionsP", "dateFormatter"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "emailtext"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "passwordtext"]
+- !private ["So30UIResponderStandardEditActionsP", "performSegue"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "today"]
+- !private ["So30UIResponderStandardEditActionsP", "todayFormatted"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "Auth"]
+- ["So16UIStateRestoringP", "Calendar"]
+- !private ["So16UIStateRestoringP", "Database"]
+- ["So16UIStateRestoringP", "Date"]
+- ["So16UIStateRestoringP", "DateFormatter"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "cal"]
+- !private ["So16UIStateRestoringP", "databaseRef"]
+- !private ["So16UIStateRestoringP", "dateFormatter"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "emailtext"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "passwordtext"]
+- !private ["So16UIStateRestoringP", "performSegue"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "today"]
+- !private ["So16UIStateRestoringP", "todayFormatted"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "Auth"]
+- ["So18UITraitEnvironmentP", "Calendar"]
+- !private ["So18UITraitEnvironmentP", "Database"]
+- ["So18UITraitEnvironmentP", "Date"]
+- ["So18UITraitEnvironmentP", "DateFormatter"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "cal"]
+- !private ["So18UITraitEnvironmentP", "databaseRef"]
+- !private ["So18UITraitEnvironmentP", "dateFormatter"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "emailtext"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "passwordtext"]
+- !private ["So18UITraitEnvironmentP", "performSegue"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "today"]
+- !private ["So18UITraitEnvironmentP", "todayFormatted"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So6UIViewC", "text"]
+- !private ["So16UIViewControllerC", "Auth"]
+- ["So16UIViewControllerC", "Calendar"]
+- !private ["So16UIViewControllerC", "Database"]
+- ["So16UIViewControllerC", "DatabaseReference"]
+- ["So16UIViewControllerC", "Date"]
+- ["So16UIViewControllerC", "DateFormatter"]
+- ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "cal"]
+- ["So16UIViewControllerC", "databaseRef"]
+- ["So16UIViewControllerC", "dateFormatter"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "emailtext"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "passwordtext"]
+- !private ["So16UIViewControllerC", "performSegue"]
+- !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "registerbutton"]
+- ["So16UIViewControllerC", "today"]
+- ["So16UIViewControllerC", "todayFormatted"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["9Alamofire14URLConvertibleP", "init"]
+- !private ["So10NSCalendarC4UnitV", "day"]
+- !private ["So4UserC", "uid"]
+- !private ["So8UserInfoP", "uid"]
+- !private ["7mealify22ViewControllerRegisterC", "Auth"]
+- ["7mealify22ViewControllerRegisterC", "Calendar"]
+- !private ["7mealify22ViewControllerRegisterC", "Database"]
+- ["7mealify22ViewControllerRegisterC", "DatabaseReference"]
+- ["7mealify22ViewControllerRegisterC", "Date"]
+- ["7mealify22ViewControllerRegisterC", "DateFormatter"]
+- ["7mealify22ViewControllerRegisterC", "UITextField"]
+- ["7mealify22ViewControllerRegisterC", "cal"]
+- ["7mealify22ViewControllerRegisterC", "databaseRef"]
+- ["7mealify22ViewControllerRegisterC", "dateFormatter"]
+- ["7mealify22ViewControllerRegisterC", "deinit"]
+- ["7mealify22ViewControllerRegisterC", "didReceiveMemoryWarning"]
+- ["7mealify22ViewControllerRegisterC", "emailtext"]
+- ["7mealify22ViewControllerRegisterC", "init"]
+- ["7mealify22ViewControllerRegisterC", "passwordtext"]
+- !private ["7mealify22ViewControllerRegisterC", "performSegue"]
+- !private ["7mealify22ViewControllerRegisterC", "print"]
+- ["7mealify22ViewControllerRegisterC", "registerbutton"]
+- ["7mealify22ViewControllerRegisterC", "today"]
+- ["7mealify22ViewControllerRegisterC", "todayFormatted"]
+- ["7mealify22ViewControllerRegisterC", "viewDidLoad"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Calendar"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "database"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "databaseRef"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emailtext"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "passwordtext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timeStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "today"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "todayFormatted"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation14_MutableBoxingP", "current"]
+- !private ["10Foundation14_MutableBoxingP", "date"]
+- ["s21_ObjectiveCBridgeableP", "current"]
+- !private ["s21_ObjectiveCBridgeableP", "date"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "So4AuthC"
+- "s23BidirectionalCollectionP"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "10Foundation8CalendarV"
+- "s10CollectionP"
+- "s10ComparableP"
+- !private "10Foundation8CalendarV9ComponentO"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "So8DatabaseC"
+- !private "So13DatabaseQueryC"
+- !private "So17DatabaseReferenceC"
+- "10Foundation4DateV"
+- "So13DateFormatterC"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "So9FormatterC"
+- "s8HashableP"
+- "10SwiftyJSON17JSONSubscriptTypeP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s9OptionSetP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- !private "s10SetAlgebraP"
+- "SS"
+- "s14StringProtocolP"
+- !private "So13DateFormatterC5StyleO"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So10UIKeyInputP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- "9Alamofire14URLConvertibleP"
+- !private "So10NSCalendarC4UnitV"
+- !private "So4UserC"
+- !private "So8UserInfoP"
+- "7mealify22ViewControllerRegisterC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation14_MutableBoxingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Headers/Charts-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Headers/Charts-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "2d63ab331d54fa40b493fd6b9939d140"

@@ -1,0 +1,1149 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "addFoodViewController"
+provides-nominal:
+- "7mealify21addFoodViewControllerC"
+provides-member:
+- ["7mealify21addFoodViewControllerC", ""]
+provides-dynamic-lookup:
+- "addAmount"
+- "addFoodName"
+- "dateHeader"
+- "didReceiveMemoryWarning"
+- "foodTableView"
+- "getNutrients"
+- "logoutPressed"
+- "viewDidLoad"
+depends-top-level:
+- !private "*"
+- !private "+"
+- !private "??"
+- !private "Alamofire"
+- !private "AnyObject"
+- "AssignmentPrecedence"
+- !private "Auth"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "Database"
+- "DatabaseReference"
+- "Date"
+- "DateFormatter"
+- !private "Dictionary"
+- "Double"
+- !private "JSON"
+- "String"
+- "StringLiteralType"
+- "UINavigationItem"
+- "UITableView"
+- "UITextField"
+- "UIViewController"
+- !private "UnicodeScalarType"
+- "addFoodViewController"
+- !private "print"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "subscript"]
+- !private ["So4AuthC", "auth"]
+- !private ["So4AuthC", "currentUser"]
+- !private ["So4AuthC", "signOut"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "replacingOccurrences"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "Alamofire"]
+- !private ["s7CVarArgP", "Auth"]
+- !private ["s7CVarArgP", "Database"]
+- ["s7CVarArgP", "Date"]
+- ["s7CVarArgP", "DateFormatter"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "JSON"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "addAmount"]
+- !private ["s7CVarArgP", "addFoodName"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "auth"]
+- !private ["s7CVarArgP", "child"]
+- !private ["s7CVarArgP", "currentUser"]
+- !private ["s7CVarArgP", "database"]
+- !private ["s7CVarArgP", "dateFormatter"]
+- !private ["s7CVarArgP", "dateHeader"]
+- !private ["s7CVarArgP", "dateStyle"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "getFoodReport"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "observeSingleEvent"]
+- !private ["s7CVarArgP", "popToRootViewController"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "ref"]
+- !private ["s7CVarArgP", "reference"]
+- !private ["s7CVarArgP", "replacingOccurrences"]
+- !private ["s7CVarArgP", "searchFoods"]
+- !private ["s7CVarArgP", "setValue"]
+- !private ["s7CVarArgP", "signOut"]
+- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "timeStyle"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "today"]
+- !private ["s7CVarArgP", "todayFormatted"]
+- !private ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "updateChildValues"]
+- !private ["s7CVarArgP", "value"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "rawString"]
+- !private ["s10CollectionP", "replacingOccurrences"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "rawString"]
+- !private ["s10ComparableP", "replacingOccurrences"]
+- !private ["s10ComparableP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "Alamofire"]
+- !private ["s28CustomDebugStringConvertibleP", "Auth"]
+- !private ["s28CustomDebugStringConvertibleP", "Database"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
+- ["s28CustomDebugStringConvertibleP", "DateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "JSON"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addAmount"]
+- !private ["s28CustomDebugStringConvertibleP", "addFoodName"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- !private ["s28CustomDebugStringConvertibleP", "child"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- !private ["s28CustomDebugStringConvertibleP", "database"]
+- !private ["s28CustomDebugStringConvertibleP", "dateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "dateHeader"]
+- !private ["s28CustomDebugStringConvertibleP", "dateStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- !private ["s28CustomDebugStringConvertibleP", "getFoodReport"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isSuccess"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "observeSingleEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "popToRootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "rawString"]
+- !private ["s28CustomDebugStringConvertibleP", "ref"]
+- !private ["s28CustomDebugStringConvertibleP", "reference"]
+- !private ["s28CustomDebugStringConvertibleP", "replacingOccurrences"]
+- !private ["s28CustomDebugStringConvertibleP", "responseJSON"]
+- !private ["s28CustomDebugStringConvertibleP", "result"]
+- !private ["s28CustomDebugStringConvertibleP", "searchFoods"]
+- !private ["s28CustomDebugStringConvertibleP", "setValue"]
+- !private ["s28CustomDebugStringConvertibleP", "signOut"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "timeStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "today"]
+- !private ["s28CustomDebugStringConvertibleP", "todayFormatted"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "updateChildValues"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "replacingOccurrences"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "replacingOccurrences"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Alamofire"]
+- !private ["s23CustomStringConvertibleP", "Auth"]
+- !private ["s23CustomStringConvertibleP", "Database"]
+- ["s23CustomStringConvertibleP", "Date"]
+- ["s23CustomStringConvertibleP", "DateFormatter"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "JSON"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addAmount"]
+- !private ["s23CustomStringConvertibleP", "addFoodName"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "auth"]
+- !private ["s23CustomStringConvertibleP", "child"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
+- !private ["s23CustomStringConvertibleP", "database"]
+- !private ["s23CustomStringConvertibleP", "dateFormatter"]
+- !private ["s23CustomStringConvertibleP", "dateHeader"]
+- !private ["s23CustomStringConvertibleP", "dateStyle"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "getFoodReport"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isSuccess"]
+- !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "observeSingleEvent"]
+- !private ["s23CustomStringConvertibleP", "popToRootViewController"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "rawString"]
+- !private ["s23CustomStringConvertibleP", "ref"]
+- !private ["s23CustomStringConvertibleP", "reference"]
+- !private ["s23CustomStringConvertibleP", "replacingOccurrences"]
+- !private ["s23CustomStringConvertibleP", "responseJSON"]
+- !private ["s23CustomStringConvertibleP", "result"]
+- !private ["s23CustomStringConvertibleP", "searchFoods"]
+- !private ["s23CustomStringConvertibleP", "setValue"]
+- !private ["s23CustomStringConvertibleP", "signOut"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "timeStyle"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "today"]
+- !private ["s23CustomStringConvertibleP", "todayFormatted"]
+- !private ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "updateChildValues"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["SC13DataEventTypeO", "value"]
+- !private ["9Alamofire11DataRequestC", "responseJSON"]
+- !private ["9Alamofire12DataResponseV", "result"]
+- !private ["So12DataSnapshotC", "value"]
+- !private ["So8DatabaseC", "database"]
+- !private ["So8DatabaseC", "reference"]
+- !private ["So13DatabaseQueryC", "child"]
+- !private ["So13DatabaseQueryC", "observeSingleEvent"]
+- !private ["So13DatabaseQueryC", "setValue"]
+- !private ["So13DatabaseQueryC", "updateChildValues"]
+- !private ["So17DatabaseReferenceC", "child"]
+- !private ["So17DatabaseReferenceC", "observeSingleEvent"]
+- !private ["So17DatabaseReferenceC", "setValue"]
+- !private ["So17DatabaseReferenceC", "updateChildValues"]
+- ["10Foundation4DateV", "init"]
+- !private ["So13DateFormatterC", "dateStyle"]
+- ["So13DateFormatterC", "init"]
+- !private ["So13DateFormatterC", "string"]
+- !private ["So13DateFormatterC", "timeStyle"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "rawString"]
+- !private ["s9DecodableP", "replacingOccurrences"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "rawString"]
+- !private ["s9EncodableP", "replacingOccurrences"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Alamofire"]
+- !private ["s9EquatableP", "Auth"]
+- !private ["s9EquatableP", "Database"]
+- ["s9EquatableP", "Date"]
+- ["s9EquatableP", "DateFormatter"]
+- !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "JSON"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addAmount"]
+- !private ["s9EquatableP", "addFoodName"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "auth"]
+- !private ["s9EquatableP", "child"]
+- !private ["s9EquatableP", "currentUser"]
+- !private ["s9EquatableP", "database"]
+- !private ["s9EquatableP", "dateFormatter"]
+- !private ["s9EquatableP", "dateHeader"]
+- !private ["s9EquatableP", "dateStyle"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "get"]
+- !private ["s9EquatableP", "getFoodReport"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "medium"]
+- !private ["s9EquatableP", "navigationController"]
+- !private ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "observeSingleEvent"]
+- !private ["s9EquatableP", "popToRootViewController"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "rawString"]
+- !private ["s9EquatableP", "ref"]
+- !private ["s9EquatableP", "reference"]
+- !private ["s9EquatableP", "replacingOccurrences"]
+- !private ["s9EquatableP", "searchFoods"]
+- !private ["s9EquatableP", "setValue"]
+- !private ["s9EquatableP", "signOut"]
+- !private ["s9EquatableP", "string"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "timeStyle"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "today"]
+- !private ["s9EquatableP", "todayFormatted"]
+- !private ["s9EquatableP", "uid"]
+- !private ["s9EquatableP", "updateChildValues"]
+- !private ["s9EquatableP", "value"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "rawString"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "rawString"]
+- !private ["s27ExpressibleByBooleanLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "rawString"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "rawString"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "subscript"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "rawString"]
+- !private ["s25ExpressibleByFloatLiteralP", "subscript"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "rawString"]
+- !private ["s27ExpressibleByIntegerLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "rawString"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "rawString"]
+- !private ["s26ExpressibleByStringLiteralP", "replacingOccurrences"]
+- !private ["s26ExpressibleByStringLiteralP", "subscript"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "rawString"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "subscript"]
+- !private ["s13FloatingPointP", "init"]
+- !private ["So9FormatterC", "dateStyle"]
+- ["So9FormatterC", "init"]
+- !private ["So9FormatterC", "string"]
+- !private ["So9FormatterC", "timeStyle"]
+- !private ["9Alamofire10HTTPMethodO", "get"]
+- !private ["s8HashableP", "Alamofire"]
+- !private ["s8HashableP", "Auth"]
+- !private ["s8HashableP", "Database"]
+- ["s8HashableP", "Date"]
+- ["s8HashableP", "DateFormatter"]
+- !private ["s8HashableP", "Double"]
+- !private ["s8HashableP", "JSON"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addAmount"]
+- !private ["s8HashableP", "addFoodName"]
+- !private ["s8HashableP", "auth"]
+- !private ["s8HashableP", "child"]
+- !private ["s8HashableP", "currentUser"]
+- !private ["s8HashableP", "database"]
+- !private ["s8HashableP", "dateFormatter"]
+- !private ["s8HashableP", "dateHeader"]
+- !private ["s8HashableP", "dateStyle"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "get"]
+- !private ["s8HashableP", "getFoodReport"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "medium"]
+- !private ["s8HashableP", "navigationController"]
+- !private ["s8HashableP", "none"]
+- !private ["s8HashableP", "observeSingleEvent"]
+- !private ["s8HashableP", "popToRootViewController"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "ref"]
+- !private ["s8HashableP", "reference"]
+- !private ["s8HashableP", "replacingOccurrences"]
+- !private ["s8HashableP", "searchFoods"]
+- !private ["s8HashableP", "setValue"]
+- !private ["s8HashableP", "signOut"]
+- !private ["s8HashableP", "string"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "timeStyle"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "today"]
+- !private ["s8HashableP", "todayFormatted"]
+- !private ["s8HashableP", "uid"]
+- !private ["s8HashableP", "updateChildValues"]
+- !private ["s8HashableP", "value"]
+- !private ["s8HashableP", "viewDidLoad"]
+- !private ["10SwiftyJSON0B0V", "init"]
+- !private ["10SwiftyJSON0B0V", "rawString"]
+- !private ["10SwiftyJSON0B0V", "subscript"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "replacingOccurrences"]
+- !private ["s22LazyCollectionProtocolP", "subscript"]
+- !private ["s20LazySequenceProtocolP", "subscript"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "replacingOccurrences"]
+- ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "replacingOccurrences"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "Alamofire"]
+- !private ["So8NSCodingP", "Auth"]
+- !private ["So8NSCodingP", "Database"]
+- ["So8NSCodingP", "Date"]
+- ["So8NSCodingP", "DateFormatter"]
+- !private ["So8NSCodingP", "Double"]
+- !private ["So8NSCodingP", "JSON"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "addAmount"]
+- !private ["So8NSCodingP", "addFoodName"]
+- !private ["So8NSCodingP", "dateFormatter"]
+- !private ["So8NSCodingP", "dateHeader"]
+- !private ["So8NSCodingP", "dateStyle"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "getFoodReport"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "popToRootViewController"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "ref"]
+- !private ["So8NSCodingP", "replacingOccurrences"]
+- !private ["So8NSCodingP", "searchFoods"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "timeStyle"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So8NSCodingP", "today"]
+- !private ["So8NSCodingP", "todayFormatted"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So9NSCopyingP", "dateStyle"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "replacingOccurrences"]
+- !private ["So9NSCopyingP", "string"]
+- !private ["So9NSCopyingP", "timeStyle"]
+- !private ["So26NSExtensionRequestHandlingP", "Alamofire"]
+- !private ["So26NSExtensionRequestHandlingP", "Auth"]
+- !private ["So26NSExtensionRequestHandlingP", "Database"]
+- ["So26NSExtensionRequestHandlingP", "Date"]
+- ["So26NSExtensionRequestHandlingP", "DateFormatter"]
+- !private ["So26NSExtensionRequestHandlingP", "Double"]
+- !private ["So26NSExtensionRequestHandlingP", "JSON"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "addAmount"]
+- !private ["So26NSExtensionRequestHandlingP", "addFoodName"]
+- !private ["So26NSExtensionRequestHandlingP", "dateFormatter"]
+- !private ["So26NSExtensionRequestHandlingP", "dateHeader"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "getFoodReport"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "popToRootViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "ref"]
+- !private ["So26NSExtensionRequestHandlingP", "searchFoods"]
+- !private ["So26NSExtensionRequestHandlingP", "today"]
+- !private ["So26NSExtensionRequestHandlingP", "todayFormatted"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So21NSItemProviderReadingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderWritingP", "replacingOccurrences"]
+- !private ["So16NSMutableCopyingP", "replacingOccurrences"]
+- !private ["So8NSObjectC", "Alamofire"]
+- !private ["So8NSObjectC", "AnyObject"]
+- !private ["So8NSObjectC", "Auth"]
+- !private ["So8NSObjectC", "Database"]
+- ["So8NSObjectC", "DatabaseReference"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DateFormatter"]
+- ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "JSON"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UINavigationItem"]
+- ["So8NSObjectC", "UITableView"]
+- ["So8NSObjectC", "UITextField"]
+- ["So8NSObjectC", "addAmount"]
+- ["So8NSObjectC", "addFoodName"]
+- !private ["So8NSObjectC", "auth"]
+- !private ["So8NSObjectC", "child"]
+- !private ["So8NSObjectC", "currentUser"]
+- !private ["So8NSObjectC", "database"]
+- ["So8NSObjectC", "dateFormatter"]
+- ["So8NSObjectC", "dateHeader"]
+- !private ["So8NSObjectC", "dateStyle"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "foodTableView"]
+- ["So8NSObjectC", "getFoodReport"]
+- ["So8NSObjectC", "getNutrients"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "logoutPressed"]
+- !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "observeSingleEvent"]
+- !private ["So8NSObjectC", "popToRootViewController"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "ref"]
+- !private ["So8NSObjectC", "reference"]
+- !private ["So8NSObjectC", "replacingOccurrences"]
+- ["So8NSObjectC", "searchFoods"]
+- !private ["So8NSObjectC", "setValue"]
+- !private ["So8NSObjectC", "signOut"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "timeStyle"]
+- !private ["So8NSObjectC", "title"]
+- ["So8NSObjectC", "today"]
+- ["So8NSObjectC", "todayFormatted"]
+- !private ["So8NSObjectC", "uid"]
+- !private ["So8NSObjectC", "updateChildValues"]
+- ["So8NSObjectC", "url"]
+- ["So8NSObjectC", "urlSearchFood"]
+- !private ["So8NSObjectC", "value"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "Alamofire"]
+- !private ["So16NSObjectProtocolP", "Auth"]
+- !private ["So16NSObjectProtocolP", "Database"]
+- ["So16NSObjectProtocolP", "Date"]
+- ["So16NSObjectProtocolP", "DateFormatter"]
+- !private ["So16NSObjectProtocolP", "Double"]
+- !private ["So16NSObjectProtocolP", "JSON"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "addAmount"]
+- !private ["So16NSObjectProtocolP", "addFoodName"]
+- !private ["So16NSObjectProtocolP", "auth"]
+- !private ["So16NSObjectProtocolP", "child"]
+- !private ["So16NSObjectProtocolP", "currentUser"]
+- !private ["So16NSObjectProtocolP", "database"]
+- !private ["So16NSObjectProtocolP", "dateFormatter"]
+- !private ["So16NSObjectProtocolP", "dateHeader"]
+- !private ["So16NSObjectProtocolP", "dateStyle"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "getFoodReport"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "navigationController"]
+- !private ["So16NSObjectProtocolP", "observeSingleEvent"]
+- !private ["So16NSObjectProtocolP", "popToRootViewController"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "ref"]
+- !private ["So16NSObjectProtocolP", "reference"]
+- !private ["So16NSObjectProtocolP", "replacingOccurrences"]
+- !private ["So16NSObjectProtocolP", "searchFoods"]
+- !private ["So16NSObjectProtocolP", "setValue"]
+- !private ["So16NSObjectProtocolP", "signOut"]
+- !private ["So16NSObjectProtocolP", "string"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "timeStyle"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "today"]
+- !private ["So16NSObjectProtocolP", "todayFormatted"]
+- !private ["So16NSObjectProtocolP", "uid"]
+- !private ["So16NSObjectProtocolP", "updateChildValues"]
+- !private ["So16NSObjectProtocolP", "value"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "replacingOccurrences"]
+- !private ["So8NSStringC", "replacingOccurrences"]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "replacingOccurrences"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "get"]
+- !private ["s16RawRepresentableP", "init"]
+- !private ["s16RawRepresentableP", "medium"]
+- !private ["s16RawRepresentableP", "none"]
+- !private ["s16RawRepresentableP", "rawString"]
+- !private ["s16RawRepresentableP", "subscript"]
+- !private ["s16RawRepresentableP", "value"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["9Alamofire7RequestC", "responseJSON"]
+- !private ["9Alamofire8ResponseP", "result"]
+- !private ["9Alamofire6ResultO", "error"]
+- !private ["9Alamofire6ResultO", "isSuccess"]
+- !private ["9Alamofire6ResultO", "value"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "rawString"]
+- !private ["s8SequenceP", "replacingOccurrences"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s5SliceV", "subscript"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- !private ["SS", "replacingOccurrences"]
+- ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "replacingOccurrences"]
+- !private ["So13DateFormatterC5StyleO", "medium"]
+- !private ["So13DateFormatterC5StyleO", "none"]
+- ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "replacingOccurrences"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "replacingOccurrences"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "Alamofire"]
+- !private ["So21UIAppearanceContainerP", "Auth"]
+- !private ["So21UIAppearanceContainerP", "Database"]
+- ["So21UIAppearanceContainerP", "Date"]
+- ["So21UIAppearanceContainerP", "DateFormatter"]
+- !private ["So21UIAppearanceContainerP", "Double"]
+- !private ["So21UIAppearanceContainerP", "JSON"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "addAmount"]
+- !private ["So21UIAppearanceContainerP", "addFoodName"]
+- !private ["So21UIAppearanceContainerP", "dateFormatter"]
+- !private ["So21UIAppearanceContainerP", "dateHeader"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "getFoodReport"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "popToRootViewController"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "ref"]
+- !private ["So21UIAppearanceContainerP", "searchFoods"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "today"]
+- !private ["So21UIAppearanceContainerP", "todayFormatted"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "Alamofire"]
+- !private ["So18UIContentContainerP", "Auth"]
+- !private ["So18UIContentContainerP", "Database"]
+- ["So18UIContentContainerP", "Date"]
+- ["So18UIContentContainerP", "DateFormatter"]
+- !private ["So18UIContentContainerP", "Double"]
+- !private ["So18UIContentContainerP", "JSON"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "addAmount"]
+- !private ["So18UIContentContainerP", "addFoodName"]
+- !private ["So18UIContentContainerP", "dateFormatter"]
+- !private ["So18UIContentContainerP", "dateHeader"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "getFoodReport"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "popToRootViewController"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "ref"]
+- !private ["So18UIContentContainerP", "searchFoods"]
+- !private ["So18UIContentContainerP", "today"]
+- !private ["So18UIContentContainerP", "todayFormatted"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "Alamofire"]
+- !private ["So18UIFocusEnvironmentP", "Auth"]
+- !private ["So18UIFocusEnvironmentP", "Database"]
+- ["So18UIFocusEnvironmentP", "Date"]
+- ["So18UIFocusEnvironmentP", "DateFormatter"]
+- !private ["So18UIFocusEnvironmentP", "Double"]
+- !private ["So18UIFocusEnvironmentP", "JSON"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "addAmount"]
+- !private ["So18UIFocusEnvironmentP", "addFoodName"]
+- !private ["So18UIFocusEnvironmentP", "dateFormatter"]
+- !private ["So18UIFocusEnvironmentP", "dateHeader"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "getFoodReport"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "popToRootViewController"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "ref"]
+- !private ["So18UIFocusEnvironmentP", "searchFoods"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "today"]
+- !private ["So18UIFocusEnvironmentP", "todayFormatted"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So22UINavigationControllerC", "popToRootViewController"]
+- !private ["So16UINavigationItemC", "title"]
+- !private ["So30UIPasteConfigurationSupportingP", "Alamofire"]
+- !private ["So30UIPasteConfigurationSupportingP", "Auth"]
+- !private ["So30UIPasteConfigurationSupportingP", "Database"]
+- ["So30UIPasteConfigurationSupportingP", "Date"]
+- ["So30UIPasteConfigurationSupportingP", "DateFormatter"]
+- !private ["So30UIPasteConfigurationSupportingP", "Double"]
+- !private ["So30UIPasteConfigurationSupportingP", "JSON"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "addAmount"]
+- !private ["So30UIPasteConfigurationSupportingP", "addFoodName"]
+- !private ["So30UIPasteConfigurationSupportingP", "dateFormatter"]
+- !private ["So30UIPasteConfigurationSupportingP", "dateHeader"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "getFoodReport"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "popToRootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "ref"]
+- !private ["So30UIPasteConfigurationSupportingP", "searchFoods"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "today"]
+- !private ["So30UIPasteConfigurationSupportingP", "todayFormatted"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "Alamofire"]
+- !private ["So11UIResponderC", "AnyObject"]
+- !private ["So11UIResponderC", "Auth"]
+- !private ["So11UIResponderC", "Database"]
+- ["So11UIResponderC", "DatabaseReference"]
+- ["So11UIResponderC", "Date"]
+- ["So11UIResponderC", "DateFormatter"]
+- ["So11UIResponderC", "Double"]
+- !private ["So11UIResponderC", "JSON"]
+- ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UINavigationItem"]
+- ["So11UIResponderC", "UITableView"]
+- ["So11UIResponderC", "UITextField"]
+- ["So11UIResponderC", "addAmount"]
+- ["So11UIResponderC", "addFoodName"]
+- ["So11UIResponderC", "dateFormatter"]
+- ["So11UIResponderC", "dateHeader"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "foodTableView"]
+- ["So11UIResponderC", "getFoodReport"]
+- ["So11UIResponderC", "getNutrients"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "logoutPressed"]
+- !private ["So11UIResponderC", "navigationController"]
+- !private ["So11UIResponderC", "popToRootViewController"]
+- !private ["So11UIResponderC", "print"]
+- ["So11UIResponderC", "ref"]
+- ["So11UIResponderC", "searchFoods"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "today"]
+- ["So11UIResponderC", "todayFormatted"]
+- ["So11UIResponderC", "url"]
+- ["So11UIResponderC", "urlSearchFood"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "Alamofire"]
+- !private ["So30UIResponderStandardEditActionsP", "Auth"]
+- !private ["So30UIResponderStandardEditActionsP", "Database"]
+- ["So30UIResponderStandardEditActionsP", "Date"]
+- ["So30UIResponderStandardEditActionsP", "DateFormatter"]
+- !private ["So30UIResponderStandardEditActionsP", "Double"]
+- !private ["So30UIResponderStandardEditActionsP", "JSON"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "addAmount"]
+- !private ["So30UIResponderStandardEditActionsP", "addFoodName"]
+- !private ["So30UIResponderStandardEditActionsP", "dateFormatter"]
+- !private ["So30UIResponderStandardEditActionsP", "dateHeader"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "getFoodReport"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "popToRootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "ref"]
+- !private ["So30UIResponderStandardEditActionsP", "searchFoods"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "today"]
+- !private ["So30UIResponderStandardEditActionsP", "todayFormatted"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "Alamofire"]
+- !private ["So16UIStateRestoringP", "Auth"]
+- !private ["So16UIStateRestoringP", "Database"]
+- ["So16UIStateRestoringP", "Date"]
+- ["So16UIStateRestoringP", "DateFormatter"]
+- !private ["So16UIStateRestoringP", "Double"]
+- !private ["So16UIStateRestoringP", "JSON"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "addAmount"]
+- !private ["So16UIStateRestoringP", "addFoodName"]
+- !private ["So16UIStateRestoringP", "dateFormatter"]
+- !private ["So16UIStateRestoringP", "dateHeader"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "getFoodReport"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "popToRootViewController"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "ref"]
+- !private ["So16UIStateRestoringP", "searchFoods"]
+- !private ["So16UIStateRestoringP", "today"]
+- !private ["So16UIStateRestoringP", "todayFormatted"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "Alamofire"]
+- !private ["So18UITraitEnvironmentP", "Auth"]
+- !private ["So18UITraitEnvironmentP", "Database"]
+- ["So18UITraitEnvironmentP", "Date"]
+- ["So18UITraitEnvironmentP", "DateFormatter"]
+- !private ["So18UITraitEnvironmentP", "Double"]
+- !private ["So18UITraitEnvironmentP", "JSON"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "addAmount"]
+- !private ["So18UITraitEnvironmentP", "addFoodName"]
+- !private ["So18UITraitEnvironmentP", "dateFormatter"]
+- !private ["So18UITraitEnvironmentP", "dateHeader"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "getFoodReport"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "popToRootViewController"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "ref"]
+- !private ["So18UITraitEnvironmentP", "searchFoods"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "today"]
+- !private ["So18UITraitEnvironmentP", "todayFormatted"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So6UIViewC", "text"]
+- !private ["So16UIViewControllerC", "Alamofire"]
+- !private ["So16UIViewControllerC", "AnyObject"]
+- !private ["So16UIViewControllerC", "Auth"]
+- !private ["So16UIViewControllerC", "Database"]
+- ["So16UIViewControllerC", "DatabaseReference"]
+- ["So16UIViewControllerC", "Date"]
+- ["So16UIViewControllerC", "DateFormatter"]
+- ["So16UIViewControllerC", "Double"]
+- !private ["So16UIViewControllerC", "JSON"]
+- ["So16UIViewControllerC", "String"]
+- ["So16UIViewControllerC", "UINavigationItem"]
+- ["So16UIViewControllerC", "UITableView"]
+- ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "addAmount"]
+- ["So16UIViewControllerC", "addFoodName"]
+- ["So16UIViewControllerC", "dateFormatter"]
+- ["So16UIViewControllerC", "dateHeader"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "foodTableView"]
+- ["So16UIViewControllerC", "getFoodReport"]
+- ["So16UIViewControllerC", "getNutrients"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "logoutPressed"]
+- !private ["So16UIViewControllerC", "navigationController"]
+- !private ["So16UIViewControllerC", "popToRootViewController"]
+- !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "ref"]
+- ["So16UIViewControllerC", "searchFoods"]
+- ["So16UIViewControllerC", "today"]
+- ["So16UIViewControllerC", "todayFormatted"]
+- ["So16UIViewControllerC", "url"]
+- ["So16UIViewControllerC", "urlSearchFood"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["9Alamofire14URLConvertibleP", "init"]
+- !private ["9Alamofire14URLConvertibleP", "replacingOccurrences"]
+- !private ["So4UserC", "uid"]
+- !private ["So8UserInfoP", "uid"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "replacingOccurrences"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "replacingOccurrences"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replacingOccurrences"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "replacingOccurrences"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "replacingOccurrences"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Alamofire"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Database"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSON"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addAmount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addFoodName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "child"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "database"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateHeader"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getFoodReport"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "observeSingleEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "popToRootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ref"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "replacingOccurrences"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "searchFoods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "signOut"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timeStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "today"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "todayFormatted"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateChildValues"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "replacingOccurrences"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "replacingOccurrences"]
+- !private ["7mealify21addFoodViewControllerC", "Alamofire"]
+- !private ["7mealify21addFoodViewControllerC", "AnyObject"]
+- !private ["7mealify21addFoodViewControllerC", "Auth"]
+- !private ["7mealify21addFoodViewControllerC", "Database"]
+- ["7mealify21addFoodViewControllerC", "DatabaseReference"]
+- ["7mealify21addFoodViewControllerC", "Date"]
+- ["7mealify21addFoodViewControllerC", "DateFormatter"]
+- ["7mealify21addFoodViewControllerC", "Double"]
+- !private ["7mealify21addFoodViewControllerC", "JSON"]
+- ["7mealify21addFoodViewControllerC", "String"]
+- ["7mealify21addFoodViewControllerC", "UINavigationItem"]
+- ["7mealify21addFoodViewControllerC", "UITableView"]
+- ["7mealify21addFoodViewControllerC", "UITextField"]
+- ["7mealify21addFoodViewControllerC", "addAmount"]
+- ["7mealify21addFoodViewControllerC", "addFoodName"]
+- ["7mealify21addFoodViewControllerC", "dateFormatter"]
+- ["7mealify21addFoodViewControllerC", "dateHeader"]
+- ["7mealify21addFoodViewControllerC", "deinit"]
+- ["7mealify21addFoodViewControllerC", "didReceiveMemoryWarning"]
+- ["7mealify21addFoodViewControllerC", "foodTableView"]
+- ["7mealify21addFoodViewControllerC", "getFoodReport"]
+- ["7mealify21addFoodViewControllerC", "getNutrients"]
+- ["7mealify21addFoodViewControllerC", "init"]
+- ["7mealify21addFoodViewControllerC", "logoutPressed"]
+- !private ["7mealify21addFoodViewControllerC", "navigationController"]
+- !private ["7mealify21addFoodViewControllerC", "print"]
+- ["7mealify21addFoodViewControllerC", "ref"]
+- ["7mealify21addFoodViewControllerC", "searchFoods"]
+- ["7mealify21addFoodViewControllerC", "today"]
+- ["7mealify21addFoodViewControllerC", "todayFormatted"]
+- ["7mealify21addFoodViewControllerC", "url"]
+- ["7mealify21addFoodViewControllerC", "urlSearchFood"]
+- ["7mealify21addFoodViewControllerC", "viewDidLoad"]
+depends-nominal:
+- !private "Sa"
+- !private "So4AuthC"
+- "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "SC13DataEventTypeO"
+- !private "9Alamofire11DataRequestC"
+- !private "9Alamofire12DataResponseV"
+- !private "So12DataSnapshotC"
+- !private "So8DatabaseC"
+- !private "So13DatabaseQueryC"
+- !private "So17DatabaseReferenceC"
+- "10Foundation4DateV"
+- "So13DateFormatterC"
+- "s9DecodableP"
+- !private "s10DictionaryV"
+- !private "Sd"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s13FloatingPointP"
+- "So9FormatterC"
+- !private "9Alamofire10HTTPMethodO"
+- "s8HashableP"
+- !private "10SwiftyJSON0B0V"
+- "10SwiftyJSON17JSONSubscriptTypeP"
+- !private "s22LazyCollectionProtocolP"
+- !private "s20LazySequenceProtocolP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "10Foundation20ReferenceConvertibleP"
+- !private "9Alamofire7RequestC"
+- !private "9Alamofire8ResponseP"
+- !private "9Alamofire6ResultO"
+- "s8SequenceP"
+- !private "s13SignedNumericP"
+- !private "s5SliceV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- !private "So13DateFormatterC5StyleO"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So10UIKeyInputP"
+- !private "So22UINavigationControllerC"
+- !private "So16UINavigationItemC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- "9Alamofire14URLConvertibleP"
+- !private "So4UserC"
+- !private "So8UserInfoP"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+- "7mealify21addFoodViewControllerC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Headers/Charts-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Headers/Charts-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "7504f95a619b7747eab66c189f802743"

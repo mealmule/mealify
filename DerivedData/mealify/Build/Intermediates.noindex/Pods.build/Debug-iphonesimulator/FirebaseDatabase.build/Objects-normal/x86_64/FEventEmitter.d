@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FEventEmitter.m \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FEventEmitter.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseConfig.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoManager.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FRepo.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FPersistentConnection.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Realtime/FConnection.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/FSRWebSocket.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleUserCallback.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabaseQuery_Private.h

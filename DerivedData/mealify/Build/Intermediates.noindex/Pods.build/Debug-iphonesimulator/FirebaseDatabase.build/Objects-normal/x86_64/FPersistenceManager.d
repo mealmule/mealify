@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FPersistenceManager.m \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FPersistenceManager.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FNode.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FCompoundWrite.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FQuerySpec.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/FIndex.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FStorageEngine.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FCachePolicy.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Core/View/FCacheNode.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FLevelDBStorageEngine.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FIndexedNode.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/FNamedNode.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FTrackedQueryManager.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FTrackedQuery.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/Persistence/FPruneForest.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseDatabase/Firebase/Database/FClock.h

@@ -1,0 +1,647 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MealViewController"
+provides-nominal:
+- "7mealify18MealViewControllerC"
+provides-member:
+- ["7mealify18MealViewControllerC", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "foodCalories"
+- "foodCarbohydrates"
+- "foodFats"
+- "foodName"
+- "foodProteins"
+- "prepare"
+- "viewDidLoad"
+depends-top-level:
+- !private "+"
+- !private "+="
+- !private "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "Meal"
+- "MealViewController"
+- "String"
+- "StringLiteralType"
+- "UILabel"
+- "UIStoryboardSegue"
+- "UIViewController"
+- !private "day"
+- !private "print"
+- !private "today"
+- !private "tomorrow"
+- !private "yesterday"
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "text"]
+- ["s7CVarArgP", "Meal"]
+- !private ["s7CVarArgP", "String"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "day"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "foodCalories"]
+- !private ["s7CVarArgP", "foodCarbohydrates"]
+- !private ["s7CVarArgP", "foodFats"]
+- !private ["s7CVarArgP", "foodName"]
+- !private ["s7CVarArgP", "foodProteins"]
+- !private ["s7CVarArgP", "identifier"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "meal"]
+- !private ["s7CVarArgP", "mealType"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "today"]
+- !private ["s7CVarArgP", "tomorrow"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "yesterday"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "Meal"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "day"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "foodCalories"]
+- !private ["s28CustomDebugStringConvertibleP", "foodCarbohydrates"]
+- !private ["s28CustomDebugStringConvertibleP", "foodFats"]
+- !private ["s28CustomDebugStringConvertibleP", "foodName"]
+- !private ["s28CustomDebugStringConvertibleP", "foodProteins"]
+- !private ["s28CustomDebugStringConvertibleP", "identifier"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "meal"]
+- !private ["s28CustomDebugStringConvertibleP", "mealType"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "today"]
+- !private ["s28CustomDebugStringConvertibleP", "tomorrow"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "yesterday"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "Meal"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "day"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "foodCalories"]
+- !private ["s23CustomStringConvertibleP", "foodCarbohydrates"]
+- !private ["s23CustomStringConvertibleP", "foodFats"]
+- !private ["s23CustomStringConvertibleP", "foodName"]
+- !private ["s23CustomStringConvertibleP", "foodProteins"]
+- !private ["s23CustomStringConvertibleP", "identifier"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "meal"]
+- !private ["s23CustomStringConvertibleP", "mealType"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "today"]
+- !private ["s23CustomStringConvertibleP", "tomorrow"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "yesterday"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "Meal"]
+- !private ["s9EquatableP", "String"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "day"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "foodCalories"]
+- !private ["s9EquatableP", "foodCarbohydrates"]
+- !private ["s9EquatableP", "foodFats"]
+- !private ["s9EquatableP", "foodName"]
+- !private ["s9EquatableP", "foodProteins"]
+- !private ["s9EquatableP", "identifier"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "meal"]
+- !private ["s9EquatableP", "mealType"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "today"]
+- !private ["s9EquatableP", "tomorrow"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s9EquatableP", "yesterday"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "Meal"]
+- !private ["s8HashableP", "String"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "day"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "foodCalories"]
+- !private ["s8HashableP", "foodCarbohydrates"]
+- !private ["s8HashableP", "foodFats"]
+- !private ["s8HashableP", "foodName"]
+- !private ["s8HashableP", "foodProteins"]
+- !private ["s8HashableP", "identifier"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "meal"]
+- !private ["s8HashableP", "mealType"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "today"]
+- !private ["s8HashableP", "tomorrow"]
+- !private ["s8HashableP", "viewDidLoad"]
+- !private ["s8HashableP", "yesterday"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["7mealify4MealC", "calories"]
+- !private ["7mealify4MealC", "carbs"]
+- !private ["7mealify4MealC", "fats"]
+- ["7mealify4MealC", "init"]
+- !private ["7mealify4MealC", "name"]
+- !private ["7mealify4MealC", "proteins"]
+- ["7mealify18MealViewControllerC", "Meal"]
+- ["7mealify18MealViewControllerC", "String"]
+- ["7mealify18MealViewControllerC", "UILabel"]
+- ["7mealify18MealViewControllerC", "UIStoryboardSegue"]
+- !private ["7mealify18MealViewControllerC", "day"]
+- ["7mealify18MealViewControllerC", "deinit"]
+- ["7mealify18MealViewControllerC", "didReceiveMemoryWarning"]
+- ["7mealify18MealViewControllerC", "foodCalories"]
+- ["7mealify18MealViewControllerC", "foodCarbohydrates"]
+- ["7mealify18MealViewControllerC", "foodFats"]
+- ["7mealify18MealViewControllerC", "foodName"]
+- ["7mealify18MealViewControllerC", "foodProteins"]
+- ["7mealify18MealViewControllerC", "init"]
+- ["7mealify18MealViewControllerC", "meal"]
+- ["7mealify18MealViewControllerC", "mealType"]
+- ["7mealify18MealViewControllerC", "prepare"]
+- !private ["7mealify18MealViewControllerC", "print"]
+- !private ["7mealify18MealViewControllerC", "today"]
+- !private ["7mealify18MealViewControllerC", "tomorrow"]
+- ["7mealify18MealViewControllerC", "viewDidLoad"]
+- !private ["7mealify18MealViewControllerC", "yesterday"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "Meal"]
+- !private ["So8NSCodingP", "String"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "day"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "foodCalories"]
+- !private ["So8NSCodingP", "foodCarbohydrates"]
+- !private ["So8NSCodingP", "foodFats"]
+- !private ["So8NSCodingP", "foodName"]
+- !private ["So8NSCodingP", "foodProteins"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "meal"]
+- !private ["So8NSCodingP", "mealType"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "today"]
+- !private ["So8NSCodingP", "tomorrow"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So8NSCodingP", "yesterday"]
+- ["So26NSExtensionRequestHandlingP", "Meal"]
+- !private ["So26NSExtensionRequestHandlingP", "String"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "day"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "foodCalories"]
+- !private ["So26NSExtensionRequestHandlingP", "foodCarbohydrates"]
+- !private ["So26NSExtensionRequestHandlingP", "foodFats"]
+- !private ["So26NSExtensionRequestHandlingP", "foodName"]
+- !private ["So26NSExtensionRequestHandlingP", "foodProteins"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "meal"]
+- !private ["So26NSExtensionRequestHandlingP", "mealType"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "today"]
+- !private ["So26NSExtensionRequestHandlingP", "tomorrow"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So26NSExtensionRequestHandlingP", "yesterday"]
+- ["So8NSObjectC", "Meal"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UIStoryboardSegue"]
+- !private ["So8NSObjectC", "day"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "foodCalories"]
+- ["So8NSObjectC", "foodCarbohydrates"]
+- ["So8NSObjectC", "foodFats"]
+- ["So8NSObjectC", "foodName"]
+- ["So8NSObjectC", "foodProteins"]
+- !private ["So8NSObjectC", "identifier"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "meal"]
+- ["So8NSObjectC", "mealType"]
+- ["So8NSObjectC", "prepare"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "today"]
+- !private ["So8NSObjectC", "tomorrow"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectC", "yesterday"]
+- ["So16NSObjectProtocolP", "Meal"]
+- !private ["So16NSObjectProtocolP", "String"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "day"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "foodCalories"]
+- !private ["So16NSObjectProtocolP", "foodCarbohydrates"]
+- !private ["So16NSObjectProtocolP", "foodFats"]
+- !private ["So16NSObjectProtocolP", "foodName"]
+- !private ["So16NSObjectProtocolP", "foodProteins"]
+- !private ["So16NSObjectProtocolP", "identifier"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "meal"]
+- !private ["So16NSObjectProtocolP", "mealType"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "today"]
+- !private ["So16NSObjectProtocolP", "tomorrow"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "yesterday"]
+- !private ["7mealify6NumberC", "breakfastMeals"]
+- !private ["7mealify6NumberC", "dinnerMeals"]
+- !private ["7mealify6NumberC", "lunchMeals"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s8SequenceP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
+- ["So21UIAppearanceContainerP", "Meal"]
+- !private ["So21UIAppearanceContainerP", "String"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "day"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "foodCalories"]
+- !private ["So21UIAppearanceContainerP", "foodCarbohydrates"]
+- !private ["So21UIAppearanceContainerP", "foodFats"]
+- !private ["So21UIAppearanceContainerP", "foodName"]
+- !private ["So21UIAppearanceContainerP", "foodProteins"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "meal"]
+- !private ["So21UIAppearanceContainerP", "mealType"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "today"]
+- !private ["So21UIAppearanceContainerP", "tomorrow"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So21UIAppearanceContainerP", "yesterday"]
+- ["So18UIContentContainerP", "Meal"]
+- !private ["So18UIContentContainerP", "String"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "day"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "foodCalories"]
+- !private ["So18UIContentContainerP", "foodCarbohydrates"]
+- !private ["So18UIContentContainerP", "foodFats"]
+- !private ["So18UIContentContainerP", "foodName"]
+- !private ["So18UIContentContainerP", "foodProteins"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "meal"]
+- !private ["So18UIContentContainerP", "mealType"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "today"]
+- !private ["So18UIContentContainerP", "tomorrow"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "yesterday"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- ["So18UIFocusEnvironmentP", "Meal"]
+- !private ["So18UIFocusEnvironmentP", "String"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "day"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "foodCalories"]
+- !private ["So18UIFocusEnvironmentP", "foodCarbohydrates"]
+- !private ["So18UIFocusEnvironmentP", "foodFats"]
+- !private ["So18UIFocusEnvironmentP", "foodName"]
+- !private ["So18UIFocusEnvironmentP", "foodProteins"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "meal"]
+- !private ["So18UIFocusEnvironmentP", "mealType"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "today"]
+- !private ["So18UIFocusEnvironmentP", "tomorrow"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So18UIFocusEnvironmentP", "yesterday"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So7UILabelC", "text"]
+- ["So30UIPasteConfigurationSupportingP", "Meal"]
+- !private ["So30UIPasteConfigurationSupportingP", "String"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "day"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "foodCalories"]
+- !private ["So30UIPasteConfigurationSupportingP", "foodCarbohydrates"]
+- !private ["So30UIPasteConfigurationSupportingP", "foodFats"]
+- !private ["So30UIPasteConfigurationSupportingP", "foodName"]
+- !private ["So30UIPasteConfigurationSupportingP", "foodProteins"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "meal"]
+- !private ["So30UIPasteConfigurationSupportingP", "mealType"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "today"]
+- !private ["So30UIPasteConfigurationSupportingP", "tomorrow"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So30UIPasteConfigurationSupportingP", "yesterday"]
+- ["So11UIResponderC", "Meal"]
+- ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UIStoryboardSegue"]
+- !private ["So11UIResponderC", "day"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "foodCalories"]
+- ["So11UIResponderC", "foodCarbohydrates"]
+- ["So11UIResponderC", "foodFats"]
+- ["So11UIResponderC", "foodName"]
+- ["So11UIResponderC", "foodProteins"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "meal"]
+- ["So11UIResponderC", "mealType"]
+- ["So11UIResponderC", "prepare"]
+- !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So11UIResponderC", "today"]
+- !private ["So11UIResponderC", "tomorrow"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So11UIResponderC", "yesterday"]
+- ["So30UIResponderStandardEditActionsP", "Meal"]
+- !private ["So30UIResponderStandardEditActionsP", "String"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "day"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "foodCalories"]
+- !private ["So30UIResponderStandardEditActionsP", "foodCarbohydrates"]
+- !private ["So30UIResponderStandardEditActionsP", "foodFats"]
+- !private ["So30UIResponderStandardEditActionsP", "foodName"]
+- !private ["So30UIResponderStandardEditActionsP", "foodProteins"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "meal"]
+- !private ["So30UIResponderStandardEditActionsP", "mealType"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "today"]
+- !private ["So30UIResponderStandardEditActionsP", "tomorrow"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "yesterday"]
+- ["So16UIStateRestoringP", "Meal"]
+- !private ["So16UIStateRestoringP", "String"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "day"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "foodCalories"]
+- !private ["So16UIStateRestoringP", "foodCarbohydrates"]
+- !private ["So16UIStateRestoringP", "foodFats"]
+- !private ["So16UIStateRestoringP", "foodName"]
+- !private ["So16UIStateRestoringP", "foodProteins"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "meal"]
+- !private ["So16UIStateRestoringP", "mealType"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "today"]
+- !private ["So16UIStateRestoringP", "tomorrow"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "yesterday"]
+- !private ["So17UIStoryboardSegueC", "identifier"]
+- ["So18UITraitEnvironmentP", "Meal"]
+- !private ["So18UITraitEnvironmentP", "String"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "day"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "foodCalories"]
+- !private ["So18UITraitEnvironmentP", "foodCarbohydrates"]
+- !private ["So18UITraitEnvironmentP", "foodFats"]
+- !private ["So18UITraitEnvironmentP", "foodName"]
+- !private ["So18UITraitEnvironmentP", "foodProteins"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "meal"]
+- !private ["So18UITraitEnvironmentP", "mealType"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "today"]
+- !private ["So18UITraitEnvironmentP", "tomorrow"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "yesterday"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Meal"]
+- ["So16UIViewControllerC", "String"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UIStoryboardSegue"]
+- ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "day"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "foodCalories"]
+- ["So16UIViewControllerC", "foodCarbohydrates"]
+- ["So16UIViewControllerC", "foodFats"]
+- ["So16UIViewControllerC", "foodName"]
+- ["So16UIViewControllerC", "foodProteins"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "meal"]
+- ["So16UIViewControllerC", "mealType"]
+- ["So16UIViewControllerC", "prepare"]
+- !private ["So16UIViewControllerC", "print"]
+- !private ["So16UIViewControllerC", "today"]
+- !private ["So16UIViewControllerC", "tomorrow"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["So16UIViewControllerC", "yesterday"]
+- ["9Alamofire14URLConvertibleP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Meal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "day"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "foodCalories"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "foodCarbohydrates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "foodFats"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "foodName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "foodProteins"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "meal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mealType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "today"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tomorrow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "yesterday"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "10SwiftyJSON17JSONSubscriptTypeP"
+- "s25LosslessStringConvertibleP"
+- "7mealify4MealC"
+- "7mealify18MealViewControllerC"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "7mealify6NumberC"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So17UIStoryboardSegueC"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- "9Alamofire14URLConvertibleP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Headers/Charts-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Headers/Charts-Swift.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "defb6363f1ab017a27522a68ea52d02a"

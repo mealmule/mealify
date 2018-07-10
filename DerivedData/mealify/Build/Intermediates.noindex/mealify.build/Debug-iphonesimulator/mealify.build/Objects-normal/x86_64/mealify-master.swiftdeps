@@ -1,0 +1,22 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "7f7f6a0a3ba93771952e8ca9d730b571"
+build_time: [1530723695, 465663000]
+inputs:
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/Meal.swift": [1530679917, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/Numbers.swift": [1530679937, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/mealify/New Group/addFoodViewController.swift": [1530723694, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController6.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/MealTableViewCell.swift": [1530679930, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController.swift": [1530679940, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController3.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/MealTableViewController.swift": [1530679934, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewControllerRegister.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/mealify/New Group/ChartsViewController.swift": [1530723694, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController2.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/mealify/New Group/ViewControllerJ.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/mealify/Other Files/AppDelegate.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController5.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/Day.swift": [1530679803, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController1.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify.io/ViewController4.swift": [1530679809, 0]
+  "/Users/justinlew/Downloads/MealViewController.swift": [1530680180, 0]

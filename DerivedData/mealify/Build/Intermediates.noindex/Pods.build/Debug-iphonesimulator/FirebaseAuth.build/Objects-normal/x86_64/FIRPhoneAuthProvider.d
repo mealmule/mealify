@@ -1,0 +1,42 @@
+dependencies: \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthProvider.m \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseAuth.build/module.modulemap \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthProvider.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthCredential_Internal.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthCredential.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthCredential.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSToken.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSTokenManager.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredential.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthGlobalWorkQueue.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth_Internal.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuth.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthErrors.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthURLPresenter.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthNotificationManager.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthErrorUtils.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthBackend.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthSettings.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebUtils.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuthVersion.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigRequest.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRIdentityToolkitRequest.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRequestConfiguration.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCRequest.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigResponse.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCResponse.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeRequest.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeResponse.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientRequest.h \
+  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientResponse.h

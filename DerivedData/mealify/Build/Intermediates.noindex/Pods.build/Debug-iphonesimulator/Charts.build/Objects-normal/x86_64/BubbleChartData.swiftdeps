@@ -1,0 +1,143 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BubbleChartData"
+provides-nominal:
+- "6Charts15BubbleChartDataC"
+provides-member:
+- ["6Charts15BubbleChartDataC", ""]
+provides-dynamic-lookup:
+- "setHighlightCircleWidth"
+depends-top-level:
+- !private "AssignmentPrecedence"
+- "BarLineScatterCandleBubbleChartData"
+- "BubbleChartData"
+- "CGFloat"
+- "CastingPrecedence"
+- !private "IBubbleChartDataSet"
+- "IChartDataSet"
+depends-member:
+- !private ["Sa", "forEach"]
+- ["6Charts35BarLineScatterCandleBubbleChartDataC", "CGFloat"]
+- !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "IBubbleChartDataSet"]
+- ["6Charts35BarLineScatterCandleBubbleChartDataC", "IChartDataSet"]
+- ["6Charts35BarLineScatterCandleBubbleChartDataC", ""]
+- !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "_dataSets"]
+- ["6Charts35BarLineScatterCandleBubbleChartDataC", "init"]
+- ["6Charts35BarLineScatterCandleBubbleChartDataC", "setHighlightCircleWidth"]
+- !private ["s23BidirectionalCollectionP", "forEach"]
+- ["6Charts15BubbleChartDataC", "CGFloat"]
+- !private ["6Charts15BubbleChartDataC", "IBubbleChartDataSet"]
+- ["6Charts15BubbleChartDataC", "IChartDataSet"]
+- !private ["6Charts15BubbleChartDataC", "_dataSets"]
+- ["6Charts15BubbleChartDataC", "deinit"]
+- ["6Charts15BubbleChartDataC", "init"]
+- ["6Charts15BubbleChartDataC", "setHighlightCircleWidth"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_dataSets"]
+- !private ["s7CVarArgP", "forEach"]
+- !private ["s7CVarArgP", "init"]
+- ["6Charts9ChartDataC", "CGFloat"]
+- !private ["6Charts9ChartDataC", "IBubbleChartDataSet"]
+- ["6Charts9ChartDataC", "IChartDataSet"]
+- !private ["6Charts9ChartDataC", "_dataSets"]
+- ["6Charts9ChartDataC", "init"]
+- ["6Charts9ChartDataC", "setHighlightCircleWidth"]
+- !private ["s10CollectionP", "forEach"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_dataSets"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "forEach"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_dataSets"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9DecodableP", "forEach"]
+- !private ["s9EncodableP", "forEach"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_dataSets"]
+- !private ["s9EquatableP", "forEach"]
+- !private ["s9EquatableP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_dataSets"]
+- !private ["s8HashableP", "init"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleWidth"]
+- !private ["6Charts19IBubbleChartDataSetP", "highlightCircleWidth"]
+- !private ["6Charts13IChartDataSetP", "highlightCircleWidth"]
+- !private ["s17MutableCollectionP", "forEach"]
+- ["So8NSObjectC", "CGFloat"]
+- !private ["So8NSObjectC", "IBubbleChartDataSet"]
+- ["So8NSObjectC", "IChartDataSet"]
+- !private ["So8NSObjectC", "_dataSets"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "setHighlightCircleWidth"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "_dataSets"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["s22RandomAccessCollectionP", "forEach"]
+- !private ["s26RangeReplaceableCollectionP", "forEach"]
+- !private ["s8SequenceP", "forEach"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- !private ["s24_DestructorSafeContainerP", "forEach"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_dataSets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
+depends-nominal:
+- !private "Sa"
+- "6Charts35BarLineScatterCandleBubbleChartDataC"
+- !private "s23BidirectionalCollectionP"
+- "6Charts15BubbleChartDataC"
+- "s7CVarArgP"
+- "6Charts9ChartDataC"
+- !private "s10CollectionP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s8HashableP"
+- !private "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- !private "6Charts19IBubbleChartDataSetP"
+- !private "6Charts13IChartDataSetP"
+- !private "s17MutableCollectionP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify.io/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "d4ee50b27a88aac1709e5f4a09b447ba"
