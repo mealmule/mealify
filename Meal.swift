@@ -2,7 +2,11 @@
 //  Meal.swift
 //  Home
 //
-//  Created by vdy on 2018-06-29.
+//  Created by Vincent Yu on 2018-06-29.
+//  Team name: Meal Mules
+//  Changes made: Added name to get meal name
+//                  Added calories, fats, proteins, and carbs
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -12,16 +16,18 @@ import Foundation
 
 //Class for the meal object
 //Name of the meal
-//TODO: Properties of the meal: Description, nutrients, calories, etc
+//Meal properties includes name, calories, fats, proteins, and cars
+//TODO:
 class Meal {
     
+    //Properties of the meals.
     let name: String
     let calories: Int
     let fats: Int
     let proteins: Int
     let carbs: Int
     
-    
+    //Init with all variales
     init(name: String, calories: Int, fats: Int, proteins: Int, carbs: Int){
         
         self.name = name
@@ -32,6 +38,7 @@ class Meal {
         
     }
     
+    //Init with just name, everything else is set to 0
     init(name: String){
         
         self.name = name
@@ -42,6 +49,7 @@ class Meal {
         
     }
     
+    //Init with name set to "Food" and everything else set to 0.
     init(){
         
         self.name = "Food"

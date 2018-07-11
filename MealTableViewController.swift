@@ -2,7 +2,12 @@
 //  MealTableViewController.swift
 //  Home
 //
-//  Created by vdy on 2018-06-29.
+//  Created by Vincent Yu on 2018-06-29.
+//  Team name: Meal Mules
+//  Changes made: Added table that contains all foods (placeholder foods for now)
+//                Added Search bar to search for any foods
+//                Added segue to page where it displays the meal
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -10,7 +15,7 @@ import UIKit
 
 class MealTableViewController: UITableViewController {
     
-    
+    //Properties and variables
     var meals = [Meal]()
     var filteredMeals = [Meal]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -54,13 +59,13 @@ class MealTableViewController: UITableViewController {
     }
     
     //Back button functionality.
+    //Replace previous back button so that this one can have some functionality to it
+    //For example, I wanted to hide the navigation bar when the back button is pressed
     @objc func back(sender: UIBarButtonItem) {
         
         //Functionality
         //Hide the navigation bar again
         self.navigationController?.isNavigationBarHidden = true
-
-        
         
         //This leads you back to the previous view controller.
         _ = navigationController?.popViewController(animated: true)
@@ -179,8 +184,6 @@ class MealTableViewController: UITableViewController {
     }
     */
 
-    
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

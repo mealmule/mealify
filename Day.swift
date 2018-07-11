@@ -2,14 +2,20 @@
 //  Day.swift
 //  Home
 //
-//  Created by vdy on 2018-06-29.
+//  Created by Vincent Yu on 2018-06-29.
+//  Team name: Meal Mules
+//  Changes made: Added dates, today, yesterday, and tomorrow
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
 import Foundation
 
+
+//Object for what day it is, and return it in year, month, and day
 class DateN {
     
+    //Properties
     private let date: Date
     private let calendar: Calendar
     
@@ -17,7 +23,7 @@ class DateN {
     let month: Int
     let day: Int
     
-    
+    //Init with all custom days
     init(yy: Int, mm: Int, dd: Int){
         
         self.date = Date()
@@ -29,7 +35,7 @@ class DateN {
         
         
     }
-    
+    //Init with being a day before today
     init (yesterday: Bool){
         
         if yesterday {
@@ -52,6 +58,7 @@ class DateN {
         }
     }
     
+    //Init with being a day after today
     init (tomorrow: Bool){
         
         if tomorrow {
@@ -74,6 +81,7 @@ class DateN {
         }
     }
     
+    //Init it to be today.
     init(){
         
         self.date = Date()

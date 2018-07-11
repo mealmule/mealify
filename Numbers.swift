@@ -2,8 +2,11 @@
 //  Numbers.swift
 //  Home
 //
-//  Numbers displayed on the home page depending on which day it is
-//  Created by vdy on 2018-06-29.
+//  Created by Vincent Yu on 2018-06-29.
+//  Team name: Meal Mules
+//  Changes made: Added numbers for the home page depending on what day it is
+//                Added breakfast, lunch, and dinner arrays
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -17,6 +20,7 @@ import Foundation
 //dCals is the recommended dinner calories for that day,
 class Number {
     
+    //Properties
     var kCals: Int
     var bCals: Int
     var lCals: Int
@@ -24,6 +28,7 @@ class Number {
     
     let date: DateN
     
+    //Arrays for breakfast, lunch and dinner
     var breakfastMeals = [Meal]()
     var lunchMeals = [Meal]()
     var dinnerMeals = [Meal]()

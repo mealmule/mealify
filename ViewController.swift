@@ -2,7 +2,12 @@
 //  ViewController.swift
 //  Home
 //
-//  Created by vdy on 2018-06-29.
+//  Created by Vincent Yu on 2018-06-29.
+//  Team name: Meal Mules
+//  Changes made: Added buttons for all tappable objects
+//                Added functionality to yesterday, today, and tomorrow buttons
+//                Added functionality to add breakfast, add lunch, add dinner buttons
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -11,6 +16,8 @@ import UIKit
 //-1 is yesterday
 //0 is today
 //1 is tomorrow
+
+//Global variables
 var day: Int = 0
 
 var today = Number()
