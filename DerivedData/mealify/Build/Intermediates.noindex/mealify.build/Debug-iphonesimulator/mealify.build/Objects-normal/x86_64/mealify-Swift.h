@@ -164,8 +164,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
-@import Charts;
+@import FSCalendar;
 @import Foundation;
+@import Charts;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -198,9 +199,22 @@ SWIFT_CLASS("_TtC7mealify12AppDelegate2")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class LineChartView;
+@class FSCalendar;
+@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC7mealify22CalendarViewController")
+@interface CalendarViewController : UIViewController <FSCalendarDataSource, FSCalendarDelegate>
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)calendar:(FSCalendar * _Nonnull)calendar didSelectDate:(NSDate * _Nonnull)date atMonthPosition:(FSCalendarMonthPosition)monthPosition;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class LineChartView;
 
 SWIFT_CLASS("_TtC7mealify20ChartsViewController")
 @interface ChartsViewController : UIViewController <ChartViewDelegate>
@@ -213,6 +227,16 @@ SWIFT_CLASS("_TtC7mealify20ChartsViewController")
 
 @class UILabel;
 
+SWIFT_CLASS("_TtC7mealify30DailyInformationViewController")
+@interface DailyInformationViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DateLabel;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC7mealify17MealTableViewCell")
 @interface MealTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodName;
@@ -224,7 +248,6 @@ SWIFT_CLASS("_TtC7mealify17MealTableViewCell")
 
 @class UIBarButtonItem;
 @class UITableView;
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC7mealify23MealTableViewController")
 @interface MealTableViewController : UITableViewController

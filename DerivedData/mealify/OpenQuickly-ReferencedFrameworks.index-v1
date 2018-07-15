@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<string>meals</string>
+	<string>FSCalendar</string>
 	<string>FirebaseCore</string>
 	<string>FirebaseStorage</string>
 	<string>Dispatch</string>

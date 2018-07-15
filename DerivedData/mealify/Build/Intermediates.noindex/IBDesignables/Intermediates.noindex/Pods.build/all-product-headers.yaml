@@ -1,0 +1,113 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/FSCalendar/FSCalendar.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FSCalendar-Swift.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/FSCalendar/FSCalendar.framework/Headers/FSCalendar-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendar-umbrella.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/Target Support Files/FSCalendar/FSCalendar-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendar.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendar.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarAppearance.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarAppearance.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarCalculator.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarCalculator.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarCell.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarCell.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarCollectionView.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarCollectionView.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarCollectionViewLayout.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarCollectionViewLayout.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarConstants.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarDelegationFactory.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarDelegationFactory.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarDelegationProxy.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarDelegationProxy.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarDynamicHeader.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarDynamicHeader.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarExtensions.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarExtensions.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarHeaderView.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarHeaderView.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarScopeHandle.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarScopeHandle.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarStickyHeader.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarStickyHeader.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarTransitionCoordinator.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarTransitionCoordinator.h"
+        },
+        {
+          'type': 'file',
+          'name': "FSCalendarWeekdayView.h",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/Pods/FSCalendar/FSCalendar/FSCalendarWeekdayView.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/FSCalendar/FSCalendar.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FSCalendar.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

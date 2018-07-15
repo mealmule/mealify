@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24083C8520F9C61E00B5CEAB /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C7E20F9C61D00B5CEAB /* Day.swift */; };
+		24083C8620F9C61E00B5CEAB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C7F20F9C61D00B5CEAB /* Meal.swift */; };
+		24083C8720F9C61E00B5CEAB /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C8020F9C61D00B5CEAB /* MealViewController.swift */; };
+		24083C8820F9C61E00B5CEAB /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C8120F9C61D00B5CEAB /* MealTableViewCell.swift */; };
+		24083C8920F9C61E00B5CEAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C8220F9C61D00B5CEAB /* ViewController.swift */; };
+		24083C8A20F9C61E00B5CEAB /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C8320F9C61E00B5CEAB /* Numbers.swift */; };
+		24083C8B20F9C61E00B5CEAB /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083C8420F9C61E00B5CEAB /* MealTableViewController.swift */; };
 		241016A220E4820C00E2E215 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241016A120E4820B00E2E215 /* GoogleService-Info.plist */; };
 		24C9C8B420EB67E100082B56 /* addFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9C8B320EB67E100082B56 /* addFoodViewController.swift */; };
+		24D37FFE20FAB82C00D0D048 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D37FFD20FAB82C00D0D048 /* CalendarViewController.swift */; };
+		24D3800020FAE26E00D0D048 /* DailyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D37FFF20FAE26E00D0D048 /* DailyInformationViewController.swift */; };
 		24DE748420E7352300125859 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE748320E7352300125859 /* ChartsViewController.swift */; };
 		24DECF3720B9E4DF007F678D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DECF3620B9E4DF007F678D /* AppDelegate.swift */; };
 		24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DECF3820B9E4DF007F678D /* ViewControllerJ.swift */; };
@@ -25,13 +34,6 @@
 		7DBF2EE020EB034700E06F4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBF2EDF20EB034700E06F4C /* Info.plist */; };
 		7DEC6AF820EC57EA00471017 /* ViewController3LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6AF720EC57EA00471017 /* ViewController3LoginTest.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
-		BFE1577220F6B0BC00131E4B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1576B20F6B0BB00131E4B /* Day.swift */; };
-		BFE1577320F6B0BC00131E4B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1576C20F6B0BB00131E4B /* Meal.swift */; };
-		BFE1577420F6B0BC00131E4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1576D20F6B0BB00131E4B /* ViewController.swift */; };
-		BFE1577520F6B0BC00131E4B /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1576E20F6B0BC00131E4B /* Numbers.swift */; };
-		BFE1577620F6B0BC00131E4B /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1576F20F6B0BC00131E4B /* MealViewController.swift */; };
-		BFE1577720F6B0BC00131E4B /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1577020F6B0BC00131E4B /* MealTableViewController.swift */; };
-		BFE1577820F6B0BC00131E4B /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE1577120F6B0BC00131E4B /* MealTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24083C7E20F9C61D00B5CEAB /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		24083C7F20F9C61D00B5CEAB /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		24083C8020F9C61D00B5CEAB /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		24083C8120F9C61D00B5CEAB /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		24083C8220F9C61D00B5CEAB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24083C8320F9C61E00B5CEAB /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		24083C8420F9C61E00B5CEAB /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		241016A120E4820B00E2E215 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24C9C8B320EB67E100082B56 /* addFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFoodViewController.swift; sourceTree = "<group>"; };
+		24D37FFD20FAB82C00D0D048 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		24D37FFF20FAE26E00D0D048 /* DailyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInformationViewController.swift; sourceTree = "<group>"; };
 		24DE748320E7352300125859 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		24DECF3320B9E4DF007F678D /* mealify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DECF3620B9E4DF007F678D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,13 +79,6 @@
 		7DEC6AF120EC573C00471017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEC6AF720EC57EA00471017 /* ViewController3LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3LoginTest.swift; sourceTree = "<group>"; };
 		A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFE1576B20F6B0BB00131E4B /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Day.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/Day.swift"; sourceTree = "<group>"; };
-		BFE1576C20F6B0BB00131E4B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/Meal.swift"; sourceTree = "<group>"; };
-		BFE1576D20F6B0BB00131E4B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/ViewController.swift"; sourceTree = "<group>"; };
-		BFE1576E20F6B0BC00131E4B /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Numbers.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/Numbers.swift"; sourceTree = "<group>"; };
-		BFE1576F20F6B0BC00131E4B /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealViewController.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/MealViewController.swift"; sourceTree = "<group>"; };
-		BFE1577020F6B0BC00131E4B /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTableViewController.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/MealTableViewController.swift"; sourceTree = "<group>"; };
-		BFE1577120F6B0BC00131E4B /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTableViewCell.swift; path = "../../Downloads/drive-download-20180711T213336Z-001/MealTableViewCell.swift"; sourceTree = "<group>"; };
 		CC754CCEB0777F0F89C9D0F8 /* Pods-mealify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealify.release.xcconfig"; path = "Pods/Target Support Files/Pods-mealify/Pods-mealify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,16 +115,11 @@
 				24C9C8B320EB67E100082B56 /* addFoodViewController.swift */,
 				24DECF3820B9E4DF007F678D /* ViewControllerJ.swift */,
 				24DE748320E7352300125859 /* ChartsViewController.swift */,
+				24D37FFD20FAB82C00D0D048 /* CalendarViewController.swift */,
+				24D37FFF20FAE26E00D0D048 /* DailyInformationViewController.swift */,
 			);
 			name = Controller;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		24DE748120E7347B00125859 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		24DE748220E7348200125859 /* Other Files */ = {
@@ -139,13 +138,13 @@
 				7D09919920EAD7C400C3EE56 /* ViewController3.swift */,
 				7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */,
 				7D09919420EAD79400C3EE56 /* ViewController4.swift */,
-				BFE1576B20F6B0BB00131E4B /* Day.swift */,
-				BFE1576C20F6B0BB00131E4B /* Meal.swift */,
-				BFE1577120F6B0BC00131E4B /* MealTableViewCell.swift */,
-				BFE1577020F6B0BC00131E4B /* MealTableViewController.swift */,
-				BFE1576F20F6B0BC00131E4B /* MealViewController.swift */,
-				BFE1576E20F6B0BC00131E4B /* Numbers.swift */,
-				BFE1576D20F6B0BB00131E4B /* ViewController.swift */,
+				24083C8120F9C61D00B5CEAB /* MealTableViewCell.swift */,
+				24083C8420F9C61E00B5CEAB /* MealTableViewController.swift */,
+				24083C8320F9C61E00B5CEAB /* Numbers.swift */,
+				24083C7E20F9C61D00B5CEAB /* Day.swift */,
+				24083C7F20F9C61D00B5CEAB /* Meal.swift */,
+				24083C8020F9C61D00B5CEAB /* MealViewController.swift */,
+				24083C8220F9C61D00B5CEAB /* ViewController.swift */,
 				7DBF2EDF20EB034700E06F4C /* Info.plist */,
 				7D09919720EAD7B000C3EE56 /* ViewController5.swift */,
 				7D09919A20EAD7D400C3EE56 /* ViewController6.swift */,
@@ -170,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				24DE748220E7348200125859 /* Other Files */,
-				24DE748120E7347B00125859 /* Model */,
 				24DE748020E7347400125859 /* Controller */,
 				24DE747F20E7346D00125859 /* View */,
 				24DECF3D20B9E4E1007F678D /* Assets.xcassets */,
@@ -336,6 +334,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-mealify/Pods-mealify-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -346,6 +345,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -364,21 +364,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24083C8620F9C61E00B5CEAB /* Meal.swift in Sources */,
 				24C9C8B420EB67E100082B56 /* addFoodViewController.swift in Sources */,
-				BFE1577620F6B0BC00131E4B /* MealViewController.swift in Sources */,
-				BFE1577720F6B0BC00131E4B /* MealTableViewController.swift in Sources */,
 				7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */,
-				BFE1577520F6B0BC00131E4B /* Numbers.swift in Sources */,
-				BFE1577320F6B0BC00131E4B /* Meal.swift in Sources */,
-				BFE1577220F6B0BC00131E4B /* Day.swift in Sources */,
-				BFE1577420F6B0BC00131E4B /* ViewController.swift in Sources */,
+				24083C8920F9C61E00B5CEAB /* ViewController.swift in Sources */,
+				24083C8B20F9C61E00B5CEAB /* MealTableViewController.swift in Sources */,
 				7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */,
 				7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */,
+				24D3800020FAE26E00D0D048 /* DailyInformationViewController.swift in Sources */,
 				24DE748420E7352300125859 /* ChartsViewController.swift in Sources */,
+				24083C8820F9C61E00B5CEAB /* MealTableViewCell.swift in Sources */,
 				7D0991A420EAD7F700C3EE56 /* ViewController2.swift in Sources */,
+				24D37FFE20FAB82C00D0D048 /* CalendarViewController.swift in Sources */,
 				24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */,
 				24DECF3720B9E4DF007F678D /* AppDelegate.swift in Sources */,
-				BFE1577820F6B0BC00131E4B /* MealTableViewCell.swift in Sources */,
+				24083C8520F9C61E00B5CEAB /* Day.swift in Sources */,
+				24083C8720F9C61E00B5CEAB /* MealViewController.swift in Sources */,
+				24083C8A20F9C61E00B5CEAB /* Numbers.swift in Sources */,
 				7D0991A320EAD7F700C3EE56 /* ViewController5.swift in Sources */,
 				7D0991A220EAD7F700C3EE56 /* ViewController1.swift in Sources */,
 				7D0991A020EAD7F700C3EE56 /* ViewController4.swift in Sources */,
