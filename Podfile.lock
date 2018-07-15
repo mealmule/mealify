@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - ASHorizontalScrollView (1.5.1)
   - Charts (3.1.1):
     - Charts/Core (= 3.1.1)
   - Charts/Core (3.1.1)
@@ -43,6 +44,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - ASHorizontalScrollView
   - Charts
   - Firebase/Auth
   - Firebase/Core
@@ -52,6 +54,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - ASHorizontalScrollView
     - Charts
     - Firebase
     - FirebaseAnalytics
@@ -67,6 +70,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  ASHorizontalScrollView: 9c98b9226509540075b6398c92f68fb474bea7e9
   Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
@@ -80,6 +84,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 13b4146c5bb881841385e08f1c5166786072bac1
+PODFILE CHECKSUM: a4cc89c9fb19ea9acef8de4fc0dbda43d9adadb9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.2
