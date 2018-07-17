@@ -32,7 +32,6 @@ depends-top-level:
 - "StringLiteralType"
 - "UILabel"
 - "UIViewController"
-- !private "i"
 - !private "print"
 depends-member:
 - !private ["6Charts16AnimatorDelegateP", "animate"]
@@ -45,6 +44,8 @@ depends-member:
 - !private ["6Charts17BarChartDataEntryC", "init"]
 - !private ["6Charts20BarChartDataProviderP", "animate"]
 - !private ["6Charts20BarChartDataProviderP", "data"]
+- !private ["6Charts15BarChartDataSetC", "colors"]
+- !private ["6Charts15BarChartDataSetC", "init"]
 - !private ["6Charts12BarChartViewC", "animate"]
 - !private ["6Charts12BarChartViewC", "data"]
 - !private ["6Charts20BarLineChartViewBaseC", "animate"]
@@ -53,6 +54,7 @@ depends-member:
 - !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "init"]
 - !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "animate"]
 - !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "data"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "colors"]
 - !private ["s23BidirectionalCollectionP", "append"]
 - !private ["s23BidirectionalCollectionP", "count"]
 - ["s23BidirectionalCollectionP", "init"]
@@ -85,10 +87,10 @@ depends-member:
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - ["s7CVarArgP", "getDateInformation"]
 - !private ["s7CVarArgP", "horizontalBarChart"]
-- !private ["s7CVarArgP", "i"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "macronutrient_amount"]
 - !private ["s7CVarArgP", "macronutrients"]
+- !private ["s7CVarArgP", "material"]
 - !private ["s7CVarArgP", "micronutrient_amount"]
 - !private ["s7CVarArgP", "micronutrients"]
 - !private ["s7CVarArgP", "pieChart"]
@@ -98,9 +100,8 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "viewDidLoad"]
-- !private ["s7CVarArgP", "vordiplom"]
 - !private ["6Charts16ChartBaseDataSetC", "colors"]
-- !private ["6Charts19ChartColorTemplatesC", "vordiplom"]
+- !private ["6Charts19ChartColorTemplatesC", "material"]
 - !private ["6Charts9ChartDataC", "addDataSet"]
 - !private ["6Charts9ChartDataC", "init"]
 - !private ["6Charts14ChartDataEntryC", "init"]
@@ -126,7 +127,6 @@ depends-member:
 - !private ["6Charts17ChartViewDelegateP", "dateChosen"]
 - ["6Charts17ChartViewDelegateP", "getDateInformation"]
 - !private ["6Charts17ChartViewDelegateP", "horizontalBarChart"]
-- !private ["6Charts17ChartViewDelegateP", "i"]
 - !private ["6Charts17ChartViewDelegateP", "macronutrient_amount"]
 - !private ["6Charts17ChartViewDelegateP", "macronutrients"]
 - !private ["6Charts17ChartViewDelegateP", "micronutrient_amount"]
@@ -164,10 +164,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - ["s28CustomDebugStringConvertibleP", "getDateInformation"]
 - !private ["s28CustomDebugStringConvertibleP", "horizontalBarChart"]
-- !private ["s28CustomDebugStringConvertibleP", "i"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "macronutrient_amount"]
 - !private ["s28CustomDebugStringConvertibleP", "macronutrients"]
+- !private ["s28CustomDebugStringConvertibleP", "material"]
 - !private ["s28CustomDebugStringConvertibleP", "micronutrient_amount"]
 - !private ["s28CustomDebugStringConvertibleP", "micronutrients"]
 - !private ["s28CustomDebugStringConvertibleP", "pieChart"]
@@ -177,7 +177,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
-- !private ["s28CustomDebugStringConvertibleP", "vordiplom"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "count"]
@@ -207,10 +206,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - ["s23CustomStringConvertibleP", "getDateInformation"]
 - !private ["s23CustomStringConvertibleP", "horizontalBarChart"]
-- !private ["s23CustomStringConvertibleP", "i"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "macronutrient_amount"]
 - !private ["s23CustomStringConvertibleP", "macronutrients"]
+- !private ["s23CustomStringConvertibleP", "material"]
 - !private ["s23CustomStringConvertibleP", "micronutrient_amount"]
 - !private ["s23CustomStringConvertibleP", "micronutrients"]
 - !private ["s23CustomStringConvertibleP", "pieChart"]
@@ -220,7 +219,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
-- !private ["s23CustomStringConvertibleP", "vordiplom"]
 - !private ["7mealify30DailyInformationViewControllerC", "BarChartData"]
 - !private ["7mealify30DailyInformationViewControllerC", "BarChartDataEntry"]
 - !private ["7mealify30DailyInformationViewControllerC", "BarChartDataSet"]
@@ -244,7 +242,6 @@ depends-member:
 - ["7mealify30DailyInformationViewControllerC", "didReceiveMemoryWarning"]
 - ["7mealify30DailyInformationViewControllerC", "getDateInformation"]
 - ["7mealify30DailyInformationViewControllerC", "horizontalBarChart"]
-- !private ["7mealify30DailyInformationViewControllerC", "i"]
 - ["7mealify30DailyInformationViewControllerC", "init"]
 - ["7mealify30DailyInformationViewControllerC", "macronutrient_amount"]
 - ["7mealify30DailyInformationViewControllerC", "macronutrients"]
@@ -288,10 +285,10 @@ depends-member:
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - ["s9EquatableP", "getDateInformation"]
 - !private ["s9EquatableP", "horizontalBarChart"]
-- !private ["s9EquatableP", "i"]
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "macronutrient_amount"]
 - !private ["s9EquatableP", "macronutrients"]
+- !private ["s9EquatableP", "material"]
 - !private ["s9EquatableP", "micronutrient_amount"]
 - !private ["s9EquatableP", "micronutrients"]
 - !private ["s9EquatableP", "pieChart"]
@@ -301,7 +298,6 @@ depends-member:
 - !private ["s9EquatableP", "subscript"]
 - !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "viewDidLoad"]
-- !private ["s9EquatableP", "vordiplom"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
@@ -333,10 +329,10 @@ depends-member:
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - ["s8HashableP", "getDateInformation"]
 - !private ["s8HashableP", "horizontalBarChart"]
-- !private ["s8HashableP", "i"]
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "macronutrient_amount"]
 - !private ["s8HashableP", "macronutrients"]
+- !private ["s8HashableP", "material"]
 - !private ["s8HashableP", "micronutrient_amount"]
 - !private ["s8HashableP", "micronutrients"]
 - !private ["s8HashableP", "pieChart"]
@@ -345,9 +341,12 @@ depends-member:
 - !private ["s8HashableP", "setPieChart"]
 - !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "viewDidLoad"]
-- !private ["s8HashableP", "vordiplom"]
 - !private ["6Charts22HorizontalBarChartViewC", "animate"]
 - !private ["6Charts22HorizontalBarChartViewC", "data"]
+- !private ["6Charts16IBarChartDataSetP", "colors"]
+- !private ["6Charts16IBarChartDataSetP", "init"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "colors"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "init"]
 - !private ["6Charts13IChartDataSetP", "colors"]
 - !private ["6Charts13IChartDataSetP", "init"]
 - !private ["6Charts16IPieChartDataSetP", "colors"]
@@ -378,7 +377,6 @@ depends-member:
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - ["So8NSCodingP", "getDateInformation"]
 - !private ["So8NSCodingP", "horizontalBarChart"]
-- !private ["So8NSCodingP", "i"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "macronutrient_amount"]
 - !private ["So8NSCodingP", "macronutrients"]
@@ -408,7 +406,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - ["So26NSExtensionRequestHandlingP", "getDateInformation"]
 - !private ["So26NSExtensionRequestHandlingP", "horizontalBarChart"]
-- !private ["So26NSExtensionRequestHandlingP", "i"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "macronutrient_amount"]
 - !private ["So26NSExtensionRequestHandlingP", "macronutrients"]
@@ -445,10 +442,10 @@ depends-member:
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "getDateInformation"]
 - ["So8NSObjectC", "horizontalBarChart"]
-- !private ["So8NSObjectC", "i"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "macronutrient_amount"]
 - ["So8NSObjectC", "macronutrients"]
+- !private ["So8NSObjectC", "material"]
 - ["So8NSObjectC", "micronutrient_amount"]
 - ["So8NSObjectC", "micronutrients"]
 - ["So8NSObjectC", "pieChart"]
@@ -457,7 +454,6 @@ depends-member:
 - ["So8NSObjectC", "setPieChart"]
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "viewDidLoad"]
-- !private ["So8NSObjectC", "vordiplom"]
 - !private ["So16NSObjectProtocolP", "BarChartData"]
 - !private ["So16NSObjectProtocolP", "BarChartDataEntry"]
 - !private ["So16NSObjectProtocolP", "BarChartDataSet"]
@@ -480,10 +476,10 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - ["So16NSObjectProtocolP", "getDateInformation"]
 - !private ["So16NSObjectProtocolP", "horizontalBarChart"]
-- !private ["So16NSObjectProtocolP", "i"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "macronutrient_amount"]
 - !private ["So16NSObjectProtocolP", "macronutrients"]
+- !private ["So16NSObjectProtocolP", "material"]
 - !private ["So16NSObjectProtocolP", "micronutrient_amount"]
 - !private ["So16NSObjectProtocolP", "micronutrients"]
 - !private ["So16NSObjectProtocolP", "pieChart"]
@@ -492,7 +488,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "setPieChart"]
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
-- !private ["So16NSObjectProtocolP", "vordiplom"]
 - !private ["6Charts8NSUIViewC", "animate"]
 - !private ["6Charts8NSUIViewC", "data"]
 - !private ["s7NumericP", "init"]
@@ -500,7 +495,9 @@ depends-member:
 - !private ["6Charts17PieChartDataEntryC", "init"]
 - !private ["6Charts15PieChartDataSetC", "colors"]
 - !private ["6Charts15PieChartDataSetC", "init"]
+- !private ["6Charts12PieChartViewC", "animate"]
 - !private ["6Charts12PieChartViewC", "data"]
+- !private ["6Charts21PieRadarChartViewBaseC", "animate"]
 - !private ["6Charts21PieRadarChartViewBaseC", "data"]
 - !private ["s22RandomAccessCollectionP", "append"]
 - !private ["s22RandomAccessCollectionP", "count"]
@@ -526,7 +523,6 @@ depends-member:
 - !private ["7mealify20RetrieveDateDelegateP", "dateChosen"]
 - ["7mealify20RetrieveDateDelegateP", "getDateInformation"]
 - !private ["7mealify20RetrieveDateDelegateP", "horizontalBarChart"]
-- !private ["7mealify20RetrieveDateDelegateP", "i"]
 - !private ["7mealify20RetrieveDateDelegateP", "macronutrient_amount"]
 - !private ["7mealify20RetrieveDateDelegateP", "macronutrients"]
 - !private ["7mealify20RetrieveDateDelegateP", "micronutrient_amount"]
@@ -571,7 +567,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - ["So21UIAppearanceContainerP", "getDateInformation"]
 - !private ["So21UIAppearanceContainerP", "horizontalBarChart"]
-- !private ["So21UIAppearanceContainerP", "i"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "macronutrient_amount"]
 - !private ["So21UIAppearanceContainerP", "macronutrients"]
@@ -601,7 +596,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - ["So18UIContentContainerP", "getDateInformation"]
 - !private ["So18UIContentContainerP", "horizontalBarChart"]
-- !private ["So18UIContentContainerP", "i"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "macronutrient_amount"]
 - !private ["So18UIContentContainerP", "macronutrients"]
@@ -639,7 +633,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - ["So18UIFocusEnvironmentP", "getDateInformation"]
 - !private ["So18UIFocusEnvironmentP", "horizontalBarChart"]
-- !private ["So18UIFocusEnvironmentP", "i"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "macronutrient_amount"]
 - !private ["So18UIFocusEnvironmentP", "macronutrients"]
@@ -677,7 +670,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - ["So30UIPasteConfigurationSupportingP", "getDateInformation"]
 - !private ["So30UIPasteConfigurationSupportingP", "horizontalBarChart"]
-- !private ["So30UIPasteConfigurationSupportingP", "i"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "macronutrient_amount"]
 - !private ["So30UIPasteConfigurationSupportingP", "macronutrients"]
@@ -713,7 +705,6 @@ depends-member:
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "getDateInformation"]
 - ["So11UIResponderC", "horizontalBarChart"]
-- !private ["So11UIResponderC", "i"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "macronutrient_amount"]
 - ["So11UIResponderC", "macronutrients"]
@@ -745,7 +736,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - ["So30UIResponderStandardEditActionsP", "getDateInformation"]
 - !private ["So30UIResponderStandardEditActionsP", "horizontalBarChart"]
-- !private ["So30UIResponderStandardEditActionsP", "i"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "macronutrient_amount"]
 - !private ["So30UIResponderStandardEditActionsP", "macronutrients"]
@@ -775,7 +765,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - ["So16UIStateRestoringP", "getDateInformation"]
 - !private ["So16UIStateRestoringP", "horizontalBarChart"]
-- !private ["So16UIStateRestoringP", "i"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "macronutrient_amount"]
 - !private ["So16UIStateRestoringP", "macronutrients"]
@@ -806,7 +795,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - ["So18UITraitEnvironmentP", "getDateInformation"]
 - !private ["So18UITraitEnvironmentP", "horizontalBarChart"]
-- !private ["So18UITraitEnvironmentP", "i"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "macronutrient_amount"]
 - !private ["So18UITraitEnvironmentP", "macronutrients"]
@@ -844,7 +832,6 @@ depends-member:
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "getDateInformation"]
 - ["So16UIViewControllerC", "horizontalBarChart"]
-- !private ["So16UIViewControllerC", "i"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "macronutrient_amount"]
 - ["So16UIViewControllerC", "macronutrients"]
@@ -896,10 +883,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "getDateInformation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "horizontalBarChart"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "i"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "macronutrient_amount"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "macronutrients"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "material"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "micronutrient_amount"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "micronutrients"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pieChart"]
@@ -908,7 +895,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setPieChart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "vordiplom"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - ["s21_ObjectiveCBridgeableP", "init"]
@@ -920,10 +906,12 @@ depends-nominal:
 - !private "6Charts12BarChartDataC"
 - !private "6Charts17BarChartDataEntryC"
 - !private "6Charts20BarChartDataProviderP"
+- !private "6Charts15BarChartDataSetC"
 - !private "6Charts12BarChartViewC"
 - !private "6Charts20BarLineChartViewBaseC"
 - !private "6Charts35BarLineScatterCandleBubbleChartDataC"
 - !private "6Charts43BarLineScatterCandleBubbleChartDataProviderP"
+- !private "6Charts38BarLineScatterCandleBubbleChartDataSetC"
 - "s23BidirectionalCollectionP"
 - !private "s19BinaryFloatingPointP"
 - !private "So15CALayerDelegateP"
@@ -956,6 +944,8 @@ depends-nominal:
 - !private "s13FloatingPointP"
 - "s8HashableP"
 - !private "6Charts22HorizontalBarChartViewC"
+- !private "6Charts16IBarChartDataSetP"
+- !private "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
 - !private "6Charts13IChartDataSetP"
 - !private "6Charts16IPieChartDataSetP"
 - "10SwiftyJSON17JSONSubscriptTypeP"
@@ -1024,7 +1014,6 @@ depends-external:
 - "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
 - "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Products/Debug-iphonesimulator/Charts/Charts.framework/Modules/Charts.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"

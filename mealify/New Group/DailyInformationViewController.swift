@@ -62,9 +62,11 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         }
         
         let chartDataset = BarChartDataSet(values: dataEntries, label: "Per unit")
-        print("this is the chartdataset")
-        let chartData = BarChartData()
+        chartDataset.colors = ChartColorTemplates.material()
+        
+        var chartData = BarChartData()
         chartData.addDataSet(chartDataset)
+        
         horizontalBarChart.data = chartData
         horizontalBarChart.animate(yAxisDuration: 2.5)
         
@@ -80,7 +82,7 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         
         let chartDataset = PieChartDataSet(values: dataEntries, label: "Macronutrients")
         
-        chartDataset.colors = ChartColorTemplates.vordiplom()
+        chartDataset.colors = ChartColorTemplates.material()
         
         let chartData = PieChartData(dataSet: chartDataset)
         pieChart.data = chartData
