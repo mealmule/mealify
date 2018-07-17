@@ -949,19 +949,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6D-P5-v12">
-                                <rect key="frame" x="16" y="124" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6D-P5-v12">
+                                <rect key="frame" x="16" y="142" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBQ-58-0iO" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="250" width="343" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="1EV-bN-FCM"/>
+                                    <constraint firstAttribute="width" constant="343" id="xJt-Ga-kgi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-i3-Rmj" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="425" width="343" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="65p-os-Iil"/>
+                                    <constraint firstAttribute="height" constant="210" id="vZZ-pC-QrE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sz0-i3-Rmj" firstAttribute="top" secondItem="FBQ-58-0iO" secondAttribute="bottom" constant="8" id="Ckn-0h-Zsd"/>
+                            <constraint firstItem="Daq-wu-Rh0" firstAttribute="trailing" secondItem="FBQ-58-0iO" secondAttribute="trailing" constant="16" id="DEx-Sj-ZLz"/>
+                            <constraint firstItem="Daq-wu-Rh0" firstAttribute="trailing" secondItem="Sz0-i3-Rmj" secondAttribute="trailing" constant="16" id="UCX-Ih-Z9X"/>
+                            <constraint firstItem="Daq-wu-Rh0" firstAttribute="bottom" secondItem="Sz0-i3-Rmj" secondAttribute="bottom" constant="32" id="VIg-c1-0AX"/>
+                            <constraint firstItem="Sz0-i3-Rmj" firstAttribute="leading" secondItem="Daq-wu-Rh0" secondAttribute="leading" constant="16" id="W56-dt-bvT"/>
+                            <constraint firstItem="FBQ-58-0iO" firstAttribute="leading" secondItem="Daq-wu-Rh0" secondAttribute="leading" constant="16" id="gOa-Xf-Ogg"/>
+                            <constraint firstItem="FBQ-58-0iO" firstAttribute="top" secondItem="U6D-P5-v12" secondAttribute="bottom" constant="87" id="h20-RV-HKn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Daq-wu-Rh0"/>
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="U6D-P5-v12" id="B4I-yw-MpF"/>
+                        <outlet property="horizontalBarChart" destination="FBQ-58-0iO" id="xvg-ox-eP5"/>
+                        <outlet property="pieChart" destination="Sz0-i3-Rmj" id="U8M-wH-dnj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUb-0a-wnI" userLabel="First Responder" sceneMemberID="firstResponder"/>

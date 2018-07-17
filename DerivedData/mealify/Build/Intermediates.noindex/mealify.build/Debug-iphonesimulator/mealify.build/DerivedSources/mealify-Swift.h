@@ -165,8 +165,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import FSCalendar;
-@import Foundation;
 @import Charts;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -205,7 +205,7 @@ SWIFT_CLASS("_TtC7mealify12AppDelegate2")
 @class NSCoder;
 
 SWIFT_CLASS("_TtC7mealify22CalendarViewController")
-@interface CalendarViewController : UIViewController <FSCalendarDataSource, FSCalendarDelegate>
+@interface CalendarViewController : UIViewController <ChartViewDelegate, FSCalendarDataSource, FSCalendarDelegate>
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)calendar:(FSCalendar * _Nonnull)calendar didSelectDate:(NSDate * _Nonnull)date atMonthPosition:(FSCalendarMonthPosition)monthPosition;
@@ -226,10 +226,14 @@ SWIFT_CLASS("_TtC7mealify20ChartsViewController")
 @end
 
 @class UILabel;
+@class HorizontalBarChartView;
+@class PieChartView;
 
 SWIFT_CLASS("_TtC7mealify30DailyInformationViewController")
-@interface DailyInformationViewController : UIViewController
+@interface DailyInformationViewController : UIViewController <ChartViewDelegate>
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DateLabel;
+@property (nonatomic, weak) IBOutlet HorizontalBarChartView * _Null_unspecified horizontalBarChart;
+@property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified pieChart;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

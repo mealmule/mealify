@@ -8,13 +8,14 @@
 
 import UIKit
 import FSCalendar
+import Charts
 
 protocol RetrieveDateDelegate: class {
     func getDateInformation(_ date: String)
 }
 
 
-class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, ChartViewDelegate{
     
     weak var delegate: RetrieveDateDelegate?
     
@@ -48,11 +49,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     }
     
     // when a date is selected, it should redirect to the information for that day
-    
-    func calendar(calendar: FSCalendar!, didSelectDate date: NSDate!) {
-        print("hi")
-    }
-    
+
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         delegate?.getDateInformation("hi")
