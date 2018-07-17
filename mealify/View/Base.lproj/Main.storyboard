@@ -917,22 +917,15 @@
             <objects>
                 <viewController id="eEg-nl-cHd" customClass="Diary" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ucF-cB-mjn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="826"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="835"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZp-WH-sbo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="826"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="835"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-J1-xYZ" userLabel="ContentView">
-                                        <rect key="frame" x="-0.17647058817328798" y="-63.8235294117801" width="375" height="826.00000000000023"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="835"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mK-gM-rtO" userLabel="center">
-                                                <rect key="frame" x="167" y="403" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-Yu-ezb">
                                                 <rect key="frame" x="35" y="248" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -967,10 +960,6 @@
                                                 <rect key="frame" x="281" y="277" width="75" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="kQ6-Xk-B5P">
-                                                <rect key="frame" x="176" y="61" width="22" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="VZz-xV-Ao3">
                                                 <rect key="frame" x="127" y="103" width="120" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1225,28 +1214,28 @@
                                                     <segue destination="HFY-Ff-tQR" kind="show" id="UfB-IF-S95"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEJ-ue-bGP" userLabel="bottom">
-                                                <rect key="frame" x="166" y="797" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="statsBar" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-iJ-Pf9" userLabel="folateStatsBar">
-                                                <rect key="frame" x="35" y="503" width="317" height="14"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="statsBar" translatesAutoresizingMaskIntoConstraints="NO" id="H0O-R0-hvb" userLabel="folateStatsBar">
+                                                <rect key="frame" x="37" y="503" width="317" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="836" id="oGz-xY-9ed"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.72483420369999996" green="0.88585841659999998" blue="0.92944073679999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="top" secondItem="KZp-WH-sbo" secondAttribute="top" constant="349" id="0KA-Xi-C6S"/>
-                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="width" secondItem="KZp-WH-sbo" secondAttribute="width" id="0wR-lR-9Gh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lgt-J1-xYZ" secondAttribute="trailing" constant="68" id="0yE-lQ-rOe"/>
-                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="leading" secondItem="KZp-WH-sbo" secondAttribute="leading" constant="67" id="aQF-IT-bcG"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lgt-J1-xYZ" secondAttribute="bottom" constant="349" id="h3r-hz-RbZ"/>
-                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="height" secondItem="KZp-WH-sbo" secondAttribute="height" id="iLI-VE-Cxe"/>
+                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="top" secondItem="KZp-WH-sbo" secondAttribute="top" id="Afn-XL-9ba"/>
+                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="leading" secondItem="KZp-WH-sbo" secondAttribute="leading" constant="-0.17647058817328798" id="B3v-ED-S8Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lgt-J1-xYZ" secondAttribute="trailing" constant="0.17647058817328798" id="CQ6-EI-7st"/>
+                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="top" secondItem="KZp-WH-sbo" secondAttribute="top" id="Dzg-8z-OtB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lgt-J1-xYZ" secondAttribute="bottom" id="FrI-cS-f2m"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lgt-J1-xYZ" secondAttribute="bottom" id="LJL-2z-MEE"/>
+                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="height" secondItem="KZp-WH-sbo" secondAttribute="height" priority="250" id="Mp3-D7-HvT"/>
+                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="width" secondItem="KZp-WH-sbo" secondAttribute="width" id="eJ8-mG-bRc"/>
+                                    <constraint firstItem="Lgt-J1-xYZ" firstAttribute="top" secondItem="KZp-WH-sbo" secondAttribute="top" id="pcf-qi-wxv"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-RO-G6Y">
@@ -1285,6 +1274,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lgt-J1-xYZ" firstAttribute="width" secondItem="ucF-cB-mjn" secondAttribute="width" id="6BW-Wv-aDi"/>
                             <constraint firstItem="YMm-yi-mPC" firstAttribute="bottom" secondItem="KZp-WH-sbo" secondAttribute="bottom" id="Gkt-9D-htw"/>
                             <constraint firstItem="YMm-yi-mPC" firstAttribute="trailing" secondItem="KZp-WH-sbo" secondAttribute="trailing" id="TNx-Ts-Osa"/>
                             <constraint firstItem="YMm-yi-mPC" firstAttribute="top" secondItem="KZp-WH-sbo" secondAttribute="top" constant="64" id="r7p-Gd-LMg"/>
@@ -1292,8 +1282,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YMm-yi-mPC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mDQ-yr-EJR"/>
-                    <size key="freeformSize" width="375" height="826"/>
+                    <navigationItem key="navigationItem" id="yWI-MP-YKi"/>
+                    <size key="freeformSize" width="375" height="835"/>
                     <connections>
                         <outlet property="after" destination="sfX-z2-37J" id="imt-yJ-yLH"/>
                         <outlet property="before" destination="Nmv-RO-G6Y" id="zEY-pc-Dlm"/>
@@ -1308,7 +1298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIz-j4-wSX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4559.1999999999998" y="286.95652173913044"/>
+            <point key="canvasLocation" x="-4559.1999999999998" y="286.50674662668666"/>
         </scene>
         <!--Meal Table View Controller-->
         <scene sceneID="J2e-jH-reA">
@@ -1456,7 +1446,6 @@
         <image name="button_login (1)" width="96" height="40"/>
         <image name="button_next (1)" width="91" height="40"/>
         <image name="button_register" width="138" height="40"/>
-        <image name="calendar" width="85" height="85"/>
         <image name="face1" width="109" height="109"/>
         <image name="glass_1_grey" width="99" height="120"/>
         <image name="navBar" width="188" height="1"/>
@@ -1474,7 +1463,8 @@
         <image name="statsBar" width="158" height="3"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CkZ-ff-UQy"/>
+        <segue reference="UfB-IF-S95"/>
+        <segue reference="IZd-7c-vOl"/>
         <segue reference="sjZ-8o-7p6"/>
         <segue reference="LjZ-LN-p1e"/>
         <segue reference="fv4-Im-OpV"/>
