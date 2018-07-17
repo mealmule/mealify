@@ -16,7 +16,6 @@ class MealViewController: UIViewController {
     
     //Properties
     var meal = Meal()
-    var mealType: String = ""
     var mealNutrients: String = ""
     
     @IBOutlet weak var foodName: UILabel!
@@ -72,45 +71,18 @@ class MealViewController: UIViewController {
         //Dest is the Home view. Change properties below
         //If the identifier goes back to view controller, then update the foods within that view controller
         if segue.identifier == "updateFoods"{
-            print(mealType)
-            //If the breakfast section was pressed before, then update the breakfast foods
-            if mealType == "Breakfasts"{
                 
-                //Check the days of the app, add meal to array depending on day and types of meal
-                if day == 0{
-                    today.breakfastMeals += [meal]
-                } else if day == -1{
-                    yesterday.breakfastMeals += [meal]
-                } else if day == 1{
-                    tomorrow.breakfastMeals += [meal]
-                }
+            //Check the days of the app, add meal to array depending on day and types of meal
+            if day == 0{
+                today.userMeals += [meal]
+            } else if day == -1{
+                yesterday.userMeals += [meal]
+            } else if day == 1{
+                tomorrow.userMeals += [meal]
             }
-                //If the breakfast section was pressed before, then update the breakfast foods
-            else if mealType == "Lunches"{
-                
-                //Check the days of the app, add meal to array depending on day and types of meal
-                if day == 0{
-                    today.lunchMeals += [meal]
-                } else if day == -1{
-                    yesterday.lunchMeals += [meal]
-                } else if day == 1{
-                    tomorrow.lunchMeals += [meal]
-                }
-            }
-                //If the breakfast section was pressed before, then update the breakfast foods
-            else if mealType == "Dinners"{
-                
-                //Check the days of the app, add meal to array depending on day and types of meal
-                if day == 0{
-                    today.dinnerMeals += [meal]
-                } else if day == -1{
-                    yesterday.dinnerMeals += [meal]
-                } else if day == 1{
-                    tomorrow.dinnerMeals += [meal]
-                }
-            }
-            
         }
+            
+         
     }
     
     

@@ -29,9 +29,7 @@ class Number {
     let date: DateN
     
     //Arrays for breakfast, lunch and dinner
-    var breakfastMeals = [Meal]()
-    var lunchMeals = [Meal]()
-    var dinnerMeals = [Meal]()
+    var userMeals = [Meal]()
     
     init(kCals: Int, bCals: Int, lCals: Int, dCals: Int){
         

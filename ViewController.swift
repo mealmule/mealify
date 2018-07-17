@@ -24,27 +24,21 @@ var today = Number()
 var yesterday = Number(day_before: true)
 var tomorrow = Number(day_after: true)
 
-var breakfastMeals = [Meal]()
-var lunchMeals = [Meal]()
-var dinnerMeals = [Meal]()
-
 
 class ViewController: UIViewController {
     
     
     //Properties
     @IBOutlet weak var kcalsLeft: UILabel!
-    @IBOutlet weak var breakfastRecommend: UILabel!
-    @IBOutlet weak var lunchRecommend: UILabel!
-    @IBOutlet weak var dinnerRecommend: UILabel!
+    @IBOutlet weak var mealRecommend: UILabel!
+
     
     @IBOutlet weak var todayButton: UIButton!
     @IBOutlet weak var tomorrowButton: UIButton!
     @IBOutlet weak var yesterdayButton: UIButton!
     
-    @IBOutlet weak var breakfastFoods: UILabel!
-    @IBOutlet weak var lunchFoods: UILabel!
-    @IBOutlet weak var dinnerFoods: UILabel!
+    @IBOutlet weak var mealFoods: UILabel!
+
     
     var Recipes = [Recipe]()
     
@@ -74,17 +68,8 @@ class ViewController: UIViewController {
         //Number of calories recommended for today's breakfast in the day.
         //set it to a number
         //Default number is 0, units is Kcals
-        breakfastRecommend.text = recommendedCalories(calories: bCalories);
+        mealRecommend.text = recommendedCalories(calories: bCalories);
         
-        //Number of calories recommended for today's lunch in the day.
-        //set it to a number
-        //Default number is 0, units is Kcals
-        lunchRecommend.text = recommendedCalories(calories: lCalories);
-        
-        //Number of calories recommended for today's dinner in the day.
-        //set it to a number
-        //Default number is 0, units is Kcals
-        dinnerRecommend.text = recommendedCalories(calories: dCalories);
         
     }
     
@@ -211,123 +196,54 @@ class ViewController: UIViewController {
         if day == 0{
             
             //This section is for today's breakfast foods
-            if today.breakfastMeals.count == 0{
-                breakfastFoods.text = "Foods: None"
+            if today.userMeals.count == 0{
+                mealFoods.text = "Foods: None"
             } else{
                 
                 var n: String = "Foods: "
-                for i in today.breakfastMeals {
+                for i in today.userMeals {
                     n += i.name + ", "
                 }
-                breakfastFoods.text = n
+                mealFoods.text = n
                 
             }
-            //This section is for today's lunch foods
-            if today.lunchMeals.count == 0{
-                lunchFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in today.lunchMeals {
-                    n += i.name + ", "
-                }
-                lunchFoods.text = n
-                
-            }
-            //This section is for today's dinner foods
-            if today.dinnerMeals.count == 0{
-                dinnerFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in today.dinnerMeals {
-                    n += i.name + ", "
-                }
-                dinnerFoods.text = n
-                
-            }
+            
         }
             
             //Check to see if current day displayed is equal to yesterday
         else if day == -1{
             
             //This section is for yesterday's breakfast foods
-            if yesterday.breakfastMeals.count == 0{
-                breakfastFoods.text = "Foods: None"
+            if yesterday.userMeals.count == 0{
+                mealFoods.text = "Foods: None"
             } else{
                 
                 var n: String = "Foods: "
-                for i in yesterday.breakfastMeals {
+                for i in yesterday.userMeals {
                     n += i.name + ", "
                 }
-                breakfastFoods.text = n
+                mealFoods.text = n
                 
             }
-            //This section is for yesterday's lunch foods
-            if yesterday.lunchMeals.count == 0{
-                lunchFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in yesterday.lunchMeals {
-                    n += i.name + ", "
-                }
-                lunchFoods.text = n
-                
-            }
-            //This section is for yesterday's dinner foods
-            if yesterday.dinnerMeals.count == 0{
-                dinnerFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in yesterday.dinnerMeals {
-                    n += i.name + ", "
-                }
-                dinnerFoods.text = n
-                
-            }
+           
         }
             
             //Check to see if current day displayed is equal to tomorrow
         else if day == 1{
             
             ////This section is for tomorrow's breakfast foods
-            if tomorrow.breakfastMeals.count == 0{
-                breakfastFoods.text = "Foods: None"
+            if tomorrow.userMeals.count == 0{
+                mealFoods.text = "Foods: None"
             } else{
                 
                 var n: String = "Foods: "
-                for i in tomorrow.breakfastMeals {
+                for i in tomorrow.userMeals {
                     n += i.name + ", "
                 }
-                breakfastFoods.text = n
+                mealFoods.text = n
                 
             }
-            //This section is for tomorrow's lunch foods
-            if tomorrow.lunchMeals.count == 0{
-                lunchFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in tomorrow.lunchMeals {
-                    n += i.name + ", "
-                }
-                lunchFoods.text = n
-                
-            }
-            //This section is for tomorrow's dinner foods
-            if tomorrow.dinnerMeals.count == 0{
-                dinnerFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in tomorrow.dinnerMeals {
-                    n += i.name + ", "
-                }
-                dinnerFoods.text = n
-                
-            }
+            
         }
         
         
@@ -374,36 +290,17 @@ class ViewController: UIViewController {
         
         
         //Breakfast button is pressed
-        if segue.identifier == "addBreakfast"{
+        if segue.identifier == "addMeals"{
             
             //connect to table view
             let dest = segue.destination as! MealTableViewController
             
             //Dest is the Meal table view. Change properties below
-            dest.title = "Breakfasts"
+            dest.title = "Meals"
             
         }
-            //Lunch button is pressed
-        else if segue.identifier == "addLunch"{
-            
-            //connect to table view
-            let dest = segue.destination as! MealTableViewController
-            
-            //Dest is the Meal table view. Change properties below
-            dest.title = "Lunches"
-            
-        }
-            //Dinner button is pressed
-        else if segue.identifier == "addDinner"{
-            
-            //connect to table view
-            let dest = segue.destination as! MealTableViewController
-            
-            //Dest is the Meal table view. Change properties below
-            dest.title = "Dinners"
-            
-        }
-            //Dinner button is pressed
+
+        
         else if segue.identifier == "recipes"{
             
             //connect to table view

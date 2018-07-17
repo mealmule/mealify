@@ -13,31 +13,74 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
-var nutrients = [Nutrients]()
 
 class MealTableViewController: UITableViewController {
     
-    var ref: DatabaseReference!
-    var ref2: DatabaseReference!
-    var ref3: DatabaseReference!
-    var databaseHandle: DatabaseHandle?
-    
     //Properties and variables
     var meals = [Meal]()
+    var allFilteredMeals = [Meal]()
     var filteredMeals = [Meal]()
-    var nutrientMealInfo = [NutrientMealInfo]()
+    var toLoad = 35
+    var loaded = 0
+    var filteredLoaded = 0
     let searchController = UISearchController(searchResultsController: nil)
     
-    var offset = 0
-    var reachedEndOfItems = false
-    var mealsToLoad = 0
-    var loadingMeals = 0
+
     //This adds new meals into the array.
     //TODO:
     //For now, they are sample meals, but can import meals from database later
-    private func loadSampleMeals() {
+    private func loadMoreMeals() {
+        
+//        if isFiltering(){
+//
+//            for i in filteredLoaded...(filteredLoaded + toLoad - 1){
+//                if i < allFilteredMeals.count{
+//                    filteredMeals += [allFilteredMeals[i]]
+//                }
+//            }
+//
+//            filteredLoaded += toLoad
+//
+//        }
+//        else{
+        if !isFiltering(){
+            for i in loaded...(loaded + toLoad - 1){
+                if i < allMeals.count{
+                    meals += [allMeals[i]]
+                }
+            }
+            
+            loaded += toLoad
+        }
+      
+        
+        tableView.reloadData()
+        print(loaded)
+        
+    }
+    
+    //This adds new meals into the array.
+    //TODO:
+    //For now, they are sample meals, but can import meals from database later
+    private func loadMoreFilteredMeals() {
+        
+        if isFiltering(){
+
+            for i in filteredLoaded...(filteredLoaded + toLoad - 1){
+                if i < allFilteredMeals.count{
+                    filteredMeals += [allFilteredMeals[i]]
+                }
+            }
+
+            filteredLoaded += toLoad
+
+        }
+        
+        
+        
+        tableView.reloadData()
+        print(loaded)
         
     }
     
@@ -51,11 +94,15 @@ class MealTableViewController: UITableViewController {
     //This will then give the filtered version of the table
     //Reload data afterwards so that new filtered items appear whenever you type into the search bar
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredMeals = meals.filter({( meal : Meal) -> Bool in
+        filteredLoaded = 0
+        filteredMeals = []
+        allFilteredMeals = allMeals.filter({( meal : Meal) -> Bool in
             return meal.name.lowercased().contains(searchText.lowercased())
         })
         
-        tableView.reloadData()
+        loadMoreFilteredMeals()
+        
+        //tableView.reloadData()
     }
     
     //Determines if you are filtering by checking the search bar and seeing if its empty
@@ -80,11 +127,10 @@ class MealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = Database.database(url: "https://mealify-7babd-2e44f.firebaseio.com/").reference()
-        ref2 = Database.database(url: "https://mealify-7babd-78a83.firebaseio.com/").reference()
-        ref3 = Database.database(url: "https://mealify-7babd-a6cd5.firebaseio.com/").reference()
+    
         
-        
+        tableView.delegate = self
+        tableView.dataSource = self
         //Hides the back button on navigation bar and implement your own.
         //This gives the back button more options, for example, you can do other things
         //when the back button is pressed.
@@ -96,7 +142,7 @@ class MealTableViewController: UITableViewController {
         self.navigationController?.isNavigationBarHidden = false
         
         //This loads all the sample meals and store them in the array
-        //loadSampleMeals()
+        loadMoreMeals()
         
         //Setup the Search Controller
         //Adds search bar functionality.
@@ -107,57 +153,8 @@ class MealTableViewController: UITableViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
         
-        mealsToLoad = 10
         
-        databaseHandle = ref?.observe(.childAdded, with: { (snapshot) in
-            
-            if let allNames = snapshot.value as? [String:AnyObject] {
-                
-                let userInterest = allNames["FoodDescription"] as! String
-                let foodID = allNames["FoodID"] as! Int
-                print(userInterest);
-                self.meals += [Meal(name: userInterest, foodID: foodID)]
-                self.tableView.reloadData()
-
-            }
-            
-        })
         
-        databaseHandle = ref2?.observe(.childAdded, with: { (snapshot) in
-            
-            if let allNames = snapshot.value as? [String:AnyObject] {
-                
-                let nutrientID = allNames["NutrientID"] as! Int
-                let foodID = allNames["FoodID"] as! Int
-                let nutrientSourceID = allNames["NutrientSourceID"] as! Int
-                let nutrientValue = allNames["NutrientValue"] as! NSNumber
-                
-                
-                self.nutrientMealInfo += [NutrientMealInfo(foodID: foodID, nutrientID: nutrientID, nutrientSourceID: nutrientSourceID, nutrientValue: nutrientValue)]
-                self.tableView.reloadData()
-            }
-            
-        })
-        
-        if nutrients.count < 8{
-            databaseHandle = ref3?.observe(.childAdded, with: { (snapshot) in
-                
-                if let allNames = snapshot.value as? [String:AnyObject] {
-                    
-                    let nutrientCode = allNames["NutrientCode"] as! Int
-                    let nutrientDecimals = allNames["NutrientDecimals"] as! Int
-                    let nutrientName = allNames["NutrientName"] as! String
-                    let nutrientNameF = allNames["NutrientNameF"] as! String
-                    let nutrientSymbol = allNames["NutrientSymbol"] as! String
-                    let nutrientUnit = allNames["NutrientUnit"] as! String
-                    let tagName = allNames["Tagname"] as! String
-                    
-                    nutrients += [Nutrients(nutrientCode: nutrientCode, nutrientDecimals: nutrientDecimals, nutrientName: nutrientName, nutrientNameF: nutrientNameF, nutrientSymbol: nutrientSymbol, nutrientUnit: nutrientUnit, tagName: tagName)]
-                    self.tableView.reloadData()
-                }
-                
-            })
-        }
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -166,6 +163,34 @@ class MealTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
+  
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        // Change 10.0 to adjust the distance from bottom
+        if maximumOffset - currentOffset <= 10.0 {
+            if !isFiltering() && allMeals.count > loaded{
+                self.loadMoreMeals()
+            }
+            else if isFiltering() && allFilteredMeals.count > filteredLoaded{
+                self.loadMoreFilteredMeals()
+            }
+
+        }
+    }
+
+    
+//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: NSIndexPath) {
+//        print(indexPath.row)
+//        let lastElement = meals.count - 1
+//        if indexPath.row == lastElement {
+//
+//            loadMoreMeals()
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -185,9 +210,6 @@ class MealTableViewController: UITableViewController {
            return filteredMeals.count
         }
         
-        if(mealsToLoad != meals.count){
-            mealsToLoad += 10
-        }
         return meals.count
     }
     
@@ -283,7 +305,7 @@ class MealTableViewController: UITableViewController {
             selectedMeal = meals[indexPath.row]
         }
         
-        for i in nutrientMealInfo{
+        for i in mealNutrients{
             
             if i.foodID == selectedMeal.foodID{
                 selectedMeal.nutrients += [i]
@@ -298,20 +320,6 @@ class MealTableViewController: UITableViewController {
         if segue.identifier == "newFoods"{
             
             let dest = segue.destination as! MealViewController
-            
-            //If the breakfast section was pressed before, then update the breakfast foods
-            if self.title == "Breakfasts"{
-                dest.mealType = "Breakfasts"
-            }
-                //If the breakfast section was pressed before, then update the breakfast foods
-            else if self.title == "Lunches"{
-                dest.mealType = "Lunches"
-            }
-                //If the breakfast section was pressed before, then update the breakfast foods
-            else if self.title == "Dinners"{
-                
-                dest.mealType = "Dinners"
-            }
             
             dest.meal = selectedMeal
             
