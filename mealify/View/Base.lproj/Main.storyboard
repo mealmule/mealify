@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mmh-Dc-Gk2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cae-wl-QqE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1008,6 +1009,9 @@
                                 <rect key="frame" x="329" y="103" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="settings"/>
+                                <connections>
+                                    <segue destination="Mmh-Dc-Gk2" kind="show" id="Kz4-8R-LMh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-cB-OdC">
                                 <rect key="frame" x="159" y="22" width="57" height="30"/>
@@ -1024,12 +1028,8 @@
                                 <rect key="frame" x="20" y="303" width="334" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="GPT-6X-aiY">
-                                <rect key="frame" x="20" y="394" width="334" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-e0-V4o">
-                                <rect key="frame" x="103" y="311" width="122" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-e0-V4o">
+                                <rect key="frame" x="103" y="311" width="122" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -1053,80 +1053,8 @@
                                 <rect key="frame" x="284" y="303" width="70" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addBreakfast" id="Z2j-Pu-SDJ"/>
+                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addMeal" id="Z2j-Pu-SDJ"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2B-IQ-dLx">
-                                <rect key="frame" x="103" y="400" width="122" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommend: Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJT-GL-H5p">
-                                <rect key="frame" x="103" y="420" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="11"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foods: None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjT-gk-gSc">
-                                <rect key="frame" x="103" y="449" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUe-ob-kJe">
-                                <rect key="frame" x="284" y="394" width="70" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addLunch" id="UD1-3e-QhE"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="aFs-Ao-fBW">
-                                <rect key="frame" x="20" y="485" width="334" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE4-Lf-Ca5">
-                                <rect key="frame" x="103" y="491" width="122" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommend: Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNa-p9-0EN">
-                                <rect key="frame" x="103" y="512" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="11"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foods: None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGq-CC-iqu">
-                                <rect key="frame" x="103" y="541" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sO-kX-lIc">
-                                <rect key="frame" x="284" y="485" width="70" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addDinner" id="k37-TI-iAx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSH-wq-2yu">
-                                <rect key="frame" x="20" y="303" width="265" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4m-re-YYm">
-                                <rect key="frame" x="20" y="394" width="265" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-qt-0aO">
-                                <rect key="frame" x="20" y="485" width="265" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-P5-dZ3">
                                 <rect key="frame" x="57" y="334" width="11" height="21"/>
@@ -1135,38 +1063,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDS-aK-b4M">
-                                <rect key="frame" x="57" y="425" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtA-rD-Z9p">
-                                <rect key="frame" x="57" y="516" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyX-ft-9fF">
-                                <rect key="frame" x="209" y="440" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
-                                <state key="normal" title="More Food"/>
-                                <connections>
-                                    <segue destination="IPT-M8-MHO" kind="show" id="5fI-cG-UTp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-xi-eLT">
-                                <rect key="frame" x="209" y="532" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
-                                <state key="normal" title="More Food"/>
-                                <connections>
-                                    <segue destination="IPT-M8-MHO" kind="show" id="yRR-tE-oFJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4E-AF-TvJ">
                                 <rect key="frame" x="218" y="347" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1205,13 +1101,9 @@
                     <connections>
                         <outlet property="after" destination="sfX-z2-37J" id="imt-yJ-yLH"/>
                         <outlet property="before" destination="Nmv-RO-G6Y" id="zEY-pc-Dlm"/>
-                        <outlet property="breakfastFoods" destination="cI0-ss-X5f" id="2Cs-nI-161"/>
-                        <outlet property="breakfastRecommend" destination="oOS-CG-mKC" id="HZG-4d-z49"/>
-                        <outlet property="dinnerFoods" destination="cGq-CC-iqu" id="gHV-5v-Mak"/>
-                        <outlet property="dinnerRecommend" destination="xNa-p9-0EN" id="r0K-E8-Iox"/>
                         <outlet property="kcalsLeft" destination="pGc-u4-75f" id="4Wd-TT-7Hp"/>
-                        <outlet property="lunchFoods" destination="GjT-gk-gSc" id="Nfd-bN-Q9U"/>
-                        <outlet property="lunchRecommend" destination="TJT-GL-H5p" id="gm1-Co-nn4"/>
+                        <outlet property="mealFoods" destination="cI0-ss-X5f" id="rSW-a3-tu9"/>
+                        <outlet property="mealRecommend" destination="oOS-CG-mKC" id="LS7-I7-J0N"/>
                         <outlet property="now" destination="EJx-cB-OdC" id="e3s-pC-HSo"/>
                         <outlet property="todayButton" destination="EJx-cB-OdC" id="h53-Vy-v3s"/>
                         <outlet property="tomorrowButton" destination="sfX-z2-37J" id="5XE-yY-4pP"/>
@@ -1238,14 +1130,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foods" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fm-xD-0Eu">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fm-xD-0Eu">
                                             <rect key="frame" x="16" y="11" width="343" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8Fm-xD-0Eu" firstAttribute="bottom" secondItem="wup-W4-1pm" secondAttribute="bottomMargin" id="Cvy-9m-NuZ"/>
+                                        <constraint firstItem="8Fm-xD-0Eu" firstAttribute="trailing" secondItem="wup-W4-1pm" secondAttribute="trailingMargin" id="Lna-Gh-IbK"/>
+                                        <constraint firstItem="8Fm-xD-0Eu" firstAttribute="leading" secondItem="wup-W4-1pm" secondAttribute="leadingMargin" id="MVJ-e7-Spn"/>
+                                        <constraint firstItem="8Fm-xD-0Eu" firstAttribute="top" secondItem="wup-W4-1pm" secondAttribute="topMargin" id="y6o-kk-bAv"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="foodName" destination="8Fm-xD-0Eu" id="ukL-d2-nZz"/>
@@ -1311,6 +1208,7 @@
                     </view>
                     <connections>
                         <outlet property="foodName" destination="x9K-4f-yxK" id="5EQ-k5-rq6"/>
+                        <outlet property="mealDescription" destination="sPg-KG-Ynw" id="GJi-1v-cXW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucO-cr-C4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1594,12 +1492,11 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6eL-eW-ZUv"/>
-        <segue reference="Z2j-Pu-SDJ"/>
-        <segue reference="ScG-t9-pLc"/>
-        <segue reference="dZx-8m-DKQ"/>
+        <segue reference="JNM-xr-FQu"/>
+        <segue reference="CkZ-ff-UQy"/>
+        <segue reference="D8n-u2-w6g"/>
         <segue reference="LjZ-LN-p1e"/>
-        <segue reference="fv4-Im-OpV"/>
+        <segue reference="y90-L0-zf9"/>
         <segue reference="0Yy-5m-bX6"/>
         <segue reference="zUA-Js-Fq7"/>
     </inferredMetricsTieBreakers>
