@@ -95,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="button_back (1)"/>
                                 <connections>
-                                    <segue destination="PcL-Ii-ViW" kind="show" id="IZd-7c-vOl"/>
+                                    <segue destination="PcL-Ii-ViW" kind="show" id="6eL-eW-ZUv"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kub-Fz-j5G" customClass="LineChartView" customModule="Charts">
@@ -1262,7 +1262,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNU-Zs-u2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3751.1999999999998" y="253.2233883058471"/>
+            <point key="canvasLocation" x="-3751" y="238"/>
         </scene>
         <!--Meal View Controller-->
         <scene sceneID="Ms1-NG-ZG4">
@@ -1311,7 +1311,6 @@
                     </view>
                     <connections>
                         <outlet property="foodName" destination="x9K-4f-yxK" id="5EQ-k5-rq6"/>
-                        <outlet property="mealDescription" destination="sPg-KG-Ynw" id="A6e-Oi-xag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucO-cr-C4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1483,6 +1482,103 @@
             </objects>
             <point key="canvasLocation" x="-5383" y="238"/>
         </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="sbe-eb-Yg4">
+            <objects>
+                <viewController id="0Ny-gX-vOa" customClass="CalendarViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cBJ-bv-aMY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-tb-2rn">
+                                <rect key="frame" x="164" y="390" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0ZD-xK-cpX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bAF-eQ-SFE"/>
+                    <connections>
+                        <segue destination="c7D-ss-NEv" kind="show" identifier="goToDailyInfo" id="dZQ-Hx-ct3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FZ-3P-IC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4444" y="1868.8155922038982"/>
+        </scene>
+        <!--Daily Information View Controller-->
+        <scene sceneID="DFT-k7-Eah">
+            <objects>
+                <viewController id="c7D-ss-NEv" customClass="DailyInformationViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ep5-U7-Ibn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-K4-ncV">
+                                <rect key="frame" x="16" y="142" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYi-6b-2FE" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="250" width="343" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="FYY-Fb-ndB"/>
+                                    <constraint firstAttribute="width" constant="343" id="vxb-Gv-nid"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kA5-j3-W4j" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="425" width="343" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="o6f-fm-esg"/>
+                                    <constraint firstAttribute="height" constant="210" id="wQj-ib-Ydg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yOJ-yv-cRW" firstAttribute="trailing" secondItem="kA5-j3-W4j" secondAttribute="trailing" constant="16" id="6be-wg-l2z"/>
+                            <constraint firstItem="yOJ-yv-cRW" firstAttribute="bottom" secondItem="kA5-j3-W4j" secondAttribute="bottom" constant="32" id="7wG-zc-7Xo"/>
+                            <constraint firstItem="yOJ-yv-cRW" firstAttribute="trailing" secondItem="wYi-6b-2FE" secondAttribute="trailing" constant="16" id="HEs-D5-meH"/>
+                            <constraint firstItem="kA5-j3-W4j" firstAttribute="top" secondItem="wYi-6b-2FE" secondAttribute="bottom" constant="8" id="ctg-zA-JJA"/>
+                            <constraint firstItem="wYi-6b-2FE" firstAttribute="top" secondItem="U9P-K4-ncV" secondAttribute="bottom" constant="87" id="ll5-bi-4q8"/>
+                            <constraint firstItem="wYi-6b-2FE" firstAttribute="leading" secondItem="yOJ-yv-cRW" secondAttribute="leading" constant="16" id="mMK-Zc-GF3"/>
+                            <constraint firstItem="kA5-j3-W4j" firstAttribute="leading" secondItem="yOJ-yv-cRW" secondAttribute="leading" constant="16" id="uRd-IB-ZSf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yOJ-yv-cRW"/>
+                    </view>
+                    <connections>
+                        <outlet property="DateLabel" destination="U9P-K4-ncV" id="QrT-tn-dZi"/>
+                        <outlet property="horizontalBarChart" destination="wYi-6b-2FE" id="4db-C4-IqP"/>
+                        <outlet property="pieChart" destination="kA5-j3-W4j" id="CMa-aj-iUg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gk3-Rk-h6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3623.1999999999998" y="1875.1124437781111"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y8t-pb-pGm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mmh-Dc-Gk2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="feQ-FG-ITa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Ny-gX-vOa" kind="relationship" relationship="rootViewController" id="8oa-tk-gRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmr-02-N8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5383.1999999999998" y="1868.8155922038982"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1200px-Good_Food_Display_-_NCI_Visuals_Online" width="1200" height="800"/>
@@ -1498,7 +1594,7 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CkZ-ff-UQy"/>
+        <segue reference="6eL-eW-ZUv"/>
         <segue reference="Z2j-Pu-SDJ"/>
         <segue reference="ScG-t9-pLc"/>
         <segue reference="dZx-8m-DKQ"/>

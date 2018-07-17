@@ -30,7 +30,7 @@ class MealViewController: UIViewController {
         
 
         foodName.text = meal.name
-        foodCalories.text = "Calories: " + String(meal.calories)
+       // foodCalories.text = "Calories: " + String(meal.calories)
         foodFats.text = "Fats: " + String(meal.fats)
         foodProteins.text = "Proteins: " + String(meal.proteins)
         foodCarbohydrates.text = "Carbohydrates: " + String(meal.carbs)

@@ -14,5 +14,6 @@ target 'mealify' do
   pod 'SwiftyJSON'
   pod 'Charts'
   pod 'ASHorizontalScrollView'
+  pod 'FSCalendar'
 
 end

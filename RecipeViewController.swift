@@ -42,7 +42,7 @@ class RecipeViewController: UIViewController {
             
             let dest = segue.destination as! ViewController
             
-            dest.Recipes += [recipe]
+          //dest.Recipe += [recipe]
         self.navigationController?.isNavigationBarHidden = true
             
         }
