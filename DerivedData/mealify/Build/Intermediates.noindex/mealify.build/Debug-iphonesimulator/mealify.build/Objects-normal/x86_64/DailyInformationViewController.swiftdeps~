@@ -18,7 +18,6 @@ depends-top-level:
 - !private "BarChartDataEntry"
 - !private "BarChartDataSet"
 - !private "ChartColorTemplates"
-- !private "ChartDataEntry"
 - "ChartViewDelegate"
 - "DailyInformationViewController"
 - "Double"
@@ -39,7 +38,6 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
-- !private ["6Charts12BarChartDataC", "addDataSet"]
 - !private ["6Charts12BarChartDataC", "init"]
 - !private ["6Charts17BarChartDataEntryC", "init"]
 - !private ["6Charts20BarChartDataProviderP", "animate"]
@@ -50,7 +48,6 @@ depends-member:
 - !private ["6Charts12BarChartViewC", "data"]
 - !private ["6Charts20BarLineChartViewBaseC", "animate"]
 - !private ["6Charts20BarLineChartViewBaseC", "data"]
-- !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "addDataSet"]
 - !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "init"]
 - !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "animate"]
 - !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "data"]
@@ -73,7 +70,6 @@ depends-member:
 - !private ["s7CVarArgP", "PieChartDataEntry"]
 - !private ["s7CVarArgP", "PieChartDataSet"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "addDataSet"]
 - !private ["s7CVarArgP", "animate"]
 - !private ["s7CVarArgP", "append"]
 - ["s7CVarArgP", "chartScaled"]
@@ -102,7 +98,6 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["6Charts16ChartBaseDataSetC", "colors"]
 - !private ["6Charts19ChartColorTemplatesC", "material"]
-- !private ["6Charts9ChartDataC", "addDataSet"]
 - !private ["6Charts9ChartDataC", "init"]
 - !private ["6Charts14ChartDataEntryC", "init"]
 - !private ["6Charts17ChartDataProviderP", "animate"]
@@ -150,7 +145,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "PieChartDataEntry"]
 - !private ["s28CustomDebugStringConvertibleP", "PieChartDataSet"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s28CustomDebugStringConvertibleP", "addDataSet"]
 - !private ["s28CustomDebugStringConvertibleP", "animate"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - ["s28CustomDebugStringConvertibleP", "chartScaled"]
@@ -192,7 +186,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "PieChartDataEntry"]
 - !private ["s23CustomStringConvertibleP", "PieChartDataSet"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "addDataSet"]
 - !private ["s23CustomStringConvertibleP", "animate"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - ["s23CustomStringConvertibleP", "chartScaled"]
@@ -223,7 +216,6 @@ depends-member:
 - !private ["7mealify30DailyInformationViewControllerC", "BarChartDataEntry"]
 - !private ["7mealify30DailyInformationViewControllerC", "BarChartDataSet"]
 - !private ["7mealify30DailyInformationViewControllerC", "ChartColorTemplates"]
-- !private ["7mealify30DailyInformationViewControllerC", "ChartDataEntry"]
 - ["7mealify30DailyInformationViewControllerC", "DateLabel"]
 - ["7mealify30DailyInformationViewControllerC", "Double"]
 - ["7mealify30DailyInformationViewControllerC", "HorizontalBarChartView"]
@@ -271,7 +263,6 @@ depends-member:
 - !private ["s9EquatableP", "PieChartDataEntry"]
 - !private ["s9EquatableP", "PieChartDataSet"]
 - ["s9EquatableP", ""]
-- !private ["s9EquatableP", "addDataSet"]
 - !private ["s9EquatableP", "animate"]
 - !private ["s9EquatableP", "append"]
 - ["s9EquatableP", "chartScaled"]
@@ -317,7 +308,6 @@ depends-member:
 - !private ["s8HashableP", "PieChartDataEntry"]
 - !private ["s8HashableP", "PieChartDataSet"]
 - ["s8HashableP", ""]
-- !private ["s8HashableP", "addDataSet"]
 - !private ["s8HashableP", "animate"]
 - ["s8HashableP", "chartScaled"]
 - ["s8HashableP", "chartTranslated"]
@@ -420,7 +410,6 @@ depends-member:
 - !private ["So8NSObjectC", "BarChartDataEntry"]
 - !private ["So8NSObjectC", "BarChartDataSet"]
 - !private ["So8NSObjectC", "ChartColorTemplates"]
-- !private ["So8NSObjectC", "ChartDataEntry"]
 - ["So8NSObjectC", "DateLabel"]
 - ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "HorizontalBarChartView"]
@@ -430,7 +419,6 @@ depends-member:
 - ["So8NSObjectC", "PieChartView"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UILabel"]
-- !private ["So8NSObjectC", "addDataSet"]
 - !private ["So8NSObjectC", "animate"]
 - ["So8NSObjectC", "chartScaled"]
 - ["So8NSObjectC", "chartTranslated"]
@@ -464,7 +452,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "PieChartDataEntry"]
 - !private ["So16NSObjectProtocolP", "PieChartDataSet"]
 - ["So16NSObjectProtocolP", ""]
-- !private ["So16NSObjectProtocolP", "addDataSet"]
 - !private ["So16NSObjectProtocolP", "animate"]
 - ["So16NSObjectProtocolP", "chartScaled"]
 - ["So16NSObjectProtocolP", "chartTranslated"]
@@ -685,7 +672,6 @@ depends-member:
 - !private ["So11UIResponderC", "BarChartDataEntry"]
 - !private ["So11UIResponderC", "BarChartDataSet"]
 - !private ["So11UIResponderC", "ChartColorTemplates"]
-- !private ["So11UIResponderC", "ChartDataEntry"]
 - ["So11UIResponderC", "DateLabel"]
 - ["So11UIResponderC", "Double"]
 - ["So11UIResponderC", "HorizontalBarChartView"]
@@ -813,7 +799,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "BarChartDataEntry"]
 - !private ["So16UIViewControllerC", "BarChartDataSet"]
 - !private ["So16UIViewControllerC", "ChartColorTemplates"]
-- !private ["So16UIViewControllerC", "ChartDataEntry"]
 - ["So16UIViewControllerC", "DateLabel"]
 - ["So16UIViewControllerC", "Double"]
 - ["So16UIViewControllerC", "HorizontalBarChartView"]
@@ -871,7 +856,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PieChartDataEntry"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PieChartDataSet"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "addDataSet"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "animate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "chartScaled"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "chartTranslated"]
@@ -1119,4 +1103,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "96e2f1b1aee11055366f2c6eec0e2845"
+interface-hash: "5de4729b081e62c023eed8a3d7179263"

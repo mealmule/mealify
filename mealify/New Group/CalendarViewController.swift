@@ -33,7 +33,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let calendar = FSCalendar(frame: CGRect(x: 10, y: 30, width: 360, height: 300))
+        let calendar = FSCalendar(frame: CGRect(x: 10, y: 60, width: 360, height: 300))
         calendar.dataSource = self
         calendar.delegate = self
         view.addSubview(calendar)

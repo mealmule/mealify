@@ -11,6 +11,7 @@ import Charts
 
 
 
+
 class DailyInformationViewController: UIViewController, RetrieveDateDelegate, ChartViewDelegate {
 
     @IBOutlet weak var DateLabel: UILabel!
@@ -24,6 +25,8 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     
     let macronutrients: [String] = ["Carbohydrates", "Fats", "Proteins"]
     let macronutrient_amount: [Double] = [50, 50, 50]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,20 +55,22 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     }
     
     func setHorizontalChart(dataPoints: [String], values: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
+        
+        var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
             let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
             
-            
             dataEntries.append(dataEntry)
         }
         
+        
         let chartDataset = BarChartDataSet(values: dataEntries, label: "Per unit")
+        
         chartDataset.colors = ChartColorTemplates.material()
         
-        var chartData = BarChartData()
-        chartData.addDataSet(chartDataset)
+        let chartData = BarChartData(dataSet: chartDataset)
+        
         
         horizontalBarChart.data = chartData
         horizontalBarChart.animate(yAxisDuration: 2.5)
