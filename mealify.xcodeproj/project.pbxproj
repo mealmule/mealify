@@ -21,11 +21,6 @@
 		7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D09919920EAD7C400C3EE56 /* ViewController3.swift */; };
 		7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D09919A20EAD7D400C3EE56 /* ViewController6.swift */; };
 		7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */; };
-		7D5412EC20FFE58A0044DB25 /* FriendInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5412E720FFE5880044DB25 /* FriendInviteViewController.swift */; };
-		7D5412ED20FFE58A0044DB25 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5412E820FFE5890044DB25 /* FriendsViewController.swift */; };
-		7D5412EE20FFE58A0044DB25 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5412E920FFE5890044DB25 /* FriendListViewController.swift */; };
-		7D5412EF20FFE58A0044DB25 /* FriendsInvite2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5412EA20FFE5890044DB25 /* FriendsInvite2ViewController.swift */; };
-		7D5412F020FFE58A0044DB25 /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5412EB20FFE58A0044DB25 /* FriendDetailViewController.swift */; };
 		7DBF2EE020EB034700E06F4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBF2EDF20EB034700E06F4C /* Info.plist */; };
 		7DEC6AF820EC57EA00471017 /* ViewController3LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6AF720EC57EA00471017 /* ViewController3LoginTest.swift */; };
 		7DEEDD1520FDD12C00812D42 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */; };
@@ -36,6 +31,12 @@
 		7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1320FDD12C00812D42 /* MealViewController.swift */; };
 		7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */; };
 		7DEEDD2420FDD53300812D42 /* DailyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */; };
+		9758456420FFF0F400AF647D /* FriendInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758455F20FFF0F300AF647D /* FriendInviteViewController.swift */; };
+		9758456520FFF0F400AF647D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456020FFF0F300AF647D /* FriendListViewController.swift */; };
+		9758456620FFF0F400AF647D /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456120FFF0F300AF647D /* FriendDetailViewController.swift */; };
+		9758456720FFF0F400AF647D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456220FFF0F400AF647D /* FriendsViewController.swift */; };
+		9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */; };
+		9758456A20FFF4A300AF647D /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456920FFF4A300AF647D /* Diary.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
 		BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79720F9C42D003286CE /* AppDelegate.swift */; };
 		BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79B20FB3184003286CE /* Nutrients.swift */; };
@@ -73,11 +74,6 @@
 		7D09919920EAD7C400C3EE56 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		7D09919A20EAD7D400C3EE56 /* ViewController6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
-		7D5412E720FFE5880044DB25 /* FriendInviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendInviteViewController.swift; path = ../../fengFriends/mealify/FriendInviteViewController.swift; sourceTree = "<group>"; };
-		7D5412E820FFE5890044DB25 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = ../../fengFriends/mealify/FriendsViewController.swift; sourceTree = "<group>"; };
-		7D5412E920FFE5890044DB25 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendListViewController.swift; path = ../../fengFriends/mealify/FriendListViewController.swift; sourceTree = "<group>"; };
-		7D5412EA20FFE5890044DB25 /* FriendsInvite2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsInvite2ViewController.swift; path = ../../fengFriends/mealify/FriendsInvite2ViewController.swift; sourceTree = "<group>"; };
-		7D5412EB20FFE58A0044DB25 /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendDetailViewController.swift; path = ../../fengFriends/mealify/FriendDetailViewController.swift; sourceTree = "<group>"; };
 		7DBF2EDF20EB034700E06F4C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEC6AED20EC573C00471017 /* mealifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEC6AF120EC573C00471017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +87,12 @@
 		7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyInformationViewController.swift; sourceTree = "<group>"; };
 		7DEEDD2220FDD53300812D42 /* UINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UINavigationController.h; path = "mealify/New Group/UINavigationController.h"; sourceTree = "<group>"; };
+		9758455F20FFF0F300AF647D /* FriendInviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInviteViewController.swift; sourceTree = "<group>"; };
+		9758456020FFF0F300AF647D /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		9758456120FFF0F300AF647D /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		9758456220FFF0F400AF647D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsInvite2ViewController.swift; sourceTree = "<group>"; };
+		9758456920FFF4A300AF647D /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB6D79720F9C42D003286CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB6D79B20FB3184003286CE /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
@@ -157,16 +159,17 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
+				9758456920FFF4A300AF647D /* Diary.swift */,
 				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
 				BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */,
 				7D09919620EAD7A700C3EE56 /* ViewController1.swift */,
 				7D09919820EAD7BA00C3EE56 /* ViewController2.swift */,
 				7D09919920EAD7C400C3EE56 /* ViewController3.swift */,
-				7D5412EB20FFE58A0044DB25 /* FriendDetailViewController.swift */,
-				7D5412E720FFE5880044DB25 /* FriendInviteViewController.swift */,
-				7D5412E920FFE5890044DB25 /* FriendListViewController.swift */,
-				7D5412EA20FFE5890044DB25 /* FriendsInvite2ViewController.swift */,
-				7D5412E820FFE5890044DB25 /* FriendsViewController.swift */,
+				9758456120FFF0F300AF647D /* FriendDetailViewController.swift */,
+				9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */,
+				9758455F20FFF0F300AF647D /* FriendInviteViewController.swift */,
+				9758456020FFF0F300AF647D /* FriendListViewController.swift */,
+				9758456220FFF0F400AF647D /* FriendsViewController.swift */,
 				7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */,
 				7D09919420EAD79400C3EE56 /* ViewController4.swift */,
 				BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */,
@@ -405,32 +408,33 @@
 			files = (
 				BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */,
 				24C9C8B420EB67E100082B56 /* addFoodViewController.swift in Sources */,
-				7D5412ED20FFE58A0044DB25 /* FriendsViewController.swift in Sources */,
+				9758456520FFF0F400AF647D /* FriendListViewController.swift in Sources */,
 				7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */,
 				7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */,
 				7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */,
 				7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */,
 				7DEEDD1720FDD12C00812D42 /* ViewController.swift in Sources */,
 				7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */,
+				9758456620FFF0F400AF647D /* FriendDetailViewController.swift in Sources */,
 				BFD0AFAB20FEC19600CE2204 /* TodayMealViewController.swift in Sources */,
+				9758456A20FFF4A300AF647D /* Diary.swift in Sources */,
 				7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */,
-				7D5412EE20FFE58A0044DB25 /* FriendListViewController.swift in Sources */,
 				24DE748420E7352300125859 /* ChartsViewController.swift in Sources */,
 				7D0991A420EAD7F700C3EE56 /* ViewController2.swift in Sources */,
 				7DEEDD2420FDD53300812D42 /* DailyInformationViewController.swift in Sources */,
 				BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */,
-				7D5412F020FFE58A0044DB25 /* FriendDetailViewController.swift in Sources */,
 				7DEEDD1620FDD12C00812D42 /* MealTableViewCell.swift in Sources */,
 				24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */,
 				BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */,
+				9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */,
 				BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */,
-				7D5412EF20FFE58A0044DB25 /* FriendsInvite2ViewController.swift in Sources */,
 				7D0991A320EAD7F700C3EE56 /* ViewController5.swift in Sources */,
 				7DEEDD1520FDD12C00812D42 /* MealTableViewController.swift in Sources */,
 				7D0991A220EAD7F700C3EE56 /* ViewController1.swift in Sources */,
 				7D0991A020EAD7F700C3EE56 /* ViewController4.swift in Sources */,
+				9758456720FFF0F400AF647D /* FriendsViewController.swift in Sources */,
 				7DEEDD1920FDD12C00812D42 /* Numbers.swift in Sources */,
-				7D5412EC20FFE58A0044DB25 /* FriendInviteViewController.swift in Sources */,
+				9758456420FFF0F400AF647D /* FriendInviteViewController.swift in Sources */,
 				BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,6 +28,16 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Hides the back button on navigation bar and implement your own.
+        //This gives the back button more options, for example, you can do other things
+        //when the back button is pressed.
+        self.navigationItem.hidesBackButton = true
+        let newButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DailyInformationViewController.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newButton
+        
+        //Whenever this view is loaded, don't hide the navigation bar.
+        self.navigationController?.isNavigationBarHidden = false
+        
         DateLabel.text = dateChosen
         
         setHorizontalChart(dataPoints: micronutrients, values: micronutrient_amount)
@@ -38,6 +48,19 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    //Back button functionality.
+    //Replace previous back button so that this one can have some functionality to it
+    //For example, I wanted to hide the navigation bar when the back button is pressed
+    @objc func back(sender: UIBarButtonItem) {
+        
+        //Functionality
+        //Hide the navigation bar again
+        self.navigationController?.isNavigationBarHidden = true
+        
+        //This leads you back to the previous view controller.
+        _ = navigationController?.popViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {

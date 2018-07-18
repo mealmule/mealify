@@ -68,13 +68,10 @@ class ViewController: UIViewController {
         //Number of calories left in the day.
         //Center the text and set it to a number
         //Default number is 0
-        kcalsLeft.textAlignment = .center;
-        kcalsLeft.text = String(kCalories);
         
         //Number of calories recommended for today's meal in the day.
         //set it to a number
         //Default number is 0, units is Kcals
-        mealRecommend.text = recommendedCalories(calories: bCalories);
         
         
     }
@@ -142,10 +139,70 @@ class ViewController: UIViewController {
         
     }
     
+    let shapeLayer = CAShapeLayer()
+    //Variables
+    var folateGoal: Int = 0
+    var ironGoal: Int = 0
+    var magnesiumGoal: Int = 0
+    var vitaminDGoal: Int = 0
+    var dailyWaterConsume: Int = 0
+    var dailyWaterGlassNumber: Int = 0
     
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var magGoalTxt: UILabel!
+    @IBOutlet weak var dGoalTxt: UILabel!
+    @IBOutlet weak var ironGoalTxt: UILabel!
+    @IBOutlet weak var folateGoalTxt: UILabel!
+    @IBOutlet weak var waterGoalTxt: UILabel!
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        // initialize daily nutrient goals
+        initGoals()
+        folateGoalTxt.text = String(folateGoal) + "mg"
+        ironGoalTxt.text = String(ironGoal) + "mg"
+        dGoalTxt.text = String(vitaminDGoal) + "mg"
+        magGoalTxt.text = String(magnesiumGoal) + "mg"
+//        waterGoalTxt.text = String(dailyWaterConsume) + "ml"
+        
+        // progressbar animation
+        // draw the score circle and its animation
+        let center = CGPoint(x: self.view.frame.width/2, y: 153)
+        
+        // define stroke colors
+        let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
+        let strokeColor = UIColor(hue: 0.1528, saturation: 0.88, brightness: 0.97, alpha: 1.0)
+        
+        // create the track layer
+        let circularPath = UIBezierPath(arcCenter: center, radius: 56, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi , clockwise: true)
+        
+        let trackLayer = CAShapeLayer();
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = trackColor.cgColor
+        trackLayer.lineWidth = 10
+        trackLayer.fillColor = UIColor.clear.cgColor
+        // make the edge of stroke round and smooth
+        trackLayer.lineCap = kCALineCapRound
+        contentView.layer.addSublayer(trackLayer)
+        
+        // create the shape layer
+        shapeLayer.path = circularPath.cgPath
+        
+        shapeLayer.strokeColor = strokeColor.cgColor
+        shapeLayer.lineWidth = 10
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        // make the edge of stroke round and smooth
+        shapeLayer.lineCap = kCALineCapRound
+        
+        shapeLayer.strokeEnd = 0
+        contentView.layer.addSublayer(shapeLayer)
+        circleAnimation()
+        
+        //
+        
+        
         
         //Firebase part
         ref = Database.database().reference()
@@ -215,6 +272,28 @@ class ViewController: UIViewController {
 
         
     }
+    
+    private func initGoals() {
+        folateGoal = 400
+        ironGoal = 8
+        magnesiumGoal = 240
+        vitaminDGoal = 100
+        dailyWaterConsume = 2000
+        dailyWaterGlassNumber = dailyWaterConsume / 250
+    }
+    
+    @objc private func circleAnimation() {
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        basicAnimation.toValue = 0.5
+        basicAnimation.duration = 2
+        
+        // for animation to stay in the end
+        basicAnimation.fillMode = kCAFillModeForwards
+        basicAnimation.isRemovedOnCompletion = false
+        
+        shapeLayer.add(basicAnimation, forKey: "urSoBasic")
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
