@@ -291,14 +291,6 @@ class TodayMealTableViewController: UITableViewController {
             selectedMeal = meals[indexPath.row]
         }
         
-        for i in mealNutrients{
-            
-            if i.foodID == selectedMeal.foodID{
-                selectedMeal.nutrients += [i]
-            }
-            
-        }
-        
         //let dest = segue.destination as! ViewController
         
         

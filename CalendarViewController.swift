@@ -90,8 +90,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToMain" {
-            let viewController = segue.destination as! ViewController
-            viewController.dateChosen = dateChosen
+            dateChosenGlo = dateChosen
         }
     }
     

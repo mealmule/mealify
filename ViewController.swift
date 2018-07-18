@@ -12,6 +12,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+
+import FirebaseDatabase
 
 //-1 is yesterday
 //0 is today
@@ -20,8 +24,7 @@ import UIKit
 //Global variables
 
 var today = Number()
-
-
+var dateChosenGlo: String?
 
 class ViewController: UIViewController {
     
@@ -39,10 +42,9 @@ class ViewController: UIViewController {
 //    var today = Date()
     let dateFormatter = DateFormatter()
     var todayFormatted = ""
-    
-    
-    
-    var dateChosen: String?
+
+    var ref: DatabaseReference?
+    var databaseHandle: DatabaseHandle?
 
     
     var Recipes = [Recipe]()
@@ -150,6 +152,7 @@ class ViewController: UIViewController {
         //Hides the navigation bar
         self.navigationController?.isNavigationBarHidden = true
         
+        ref = Database.database().reference()
         //get data for today, yesterday, and tomorrow
         getToday()
 
@@ -162,17 +165,36 @@ class ViewController: UIViewController {
         dateFormatter.timeStyle = .none
         todayFormatted = dateFormatter.string(from: Date())
         
-        if dateChosen == nil{
+        if dateChosenGlo == nil{
+            dateChosenGlo = todayFormatted
             dateLabel.text = "Today"
         }
         else{
-            if dateChosen == todayFormatted{
+            if dateChosenGlo == todayFormatted{
                 dateLabel.text = "Today"
             }
             else{
-                dateLabel.text = dateChosen
+                dateLabel.text = dateChosenGlo
             }
         }
+        
+        let userID = (Auth.auth().currentUser?.uid)!
+        
+        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").observe(.childAdded, with: { (snapshot) in
+            
+            today.userMeals = []
+            if let allNames = snapshot.value as? [String:AnyObject] {
+                
+                let userInterest = allNames["name"] as! String
+                let foodID = allNames["FoodID"] as! Int
+                
+                
+                today.userMeals += [Meal(name: userInterest, foodID: foodID)]
+                
+            }
+            
+            
+        })
 
         
     }

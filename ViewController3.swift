@@ -66,6 +66,7 @@ class ViewController3: UIViewController {
                 
                 if let allNames = snapshot.value as? [String:AnyObject] {
                     
+                    
                     let userInterest = allNames["FoodDescription"] as! String
                     let foodID = allNames["FoodID"] as! Int
                     print(userInterest);
