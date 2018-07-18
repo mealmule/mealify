@@ -1,5 +1,5 @@
 //
-//  MealTableViewController.swift
+//  TodayMealTableViewController.swift
 //  Home
 //
 //  Created by Vincent Yu on 2018-06-29.
@@ -15,7 +15,7 @@
 import UIKit
 
 
-class MealTableViewController: UITableViewController {
+class TodayMealTableViewController: UITableViewController {
     
     //Properties and variables
     var meals = [Meal]()
@@ -26,34 +26,22 @@ class MealTableViewController: UITableViewController {
     var filteredLoaded = 0
     let searchController = UISearchController(searchResultsController: nil)
     
-
+    
     //This adds new meals into the array.
     //TODO:
     //For now, they are sample meals, but can import meals from database later
     private func loadMoreMeals() {
         
-//        if isFiltering(){
-//
-//            for i in filteredLoaded...(filteredLoaded + toLoad - 1){
-//                if i < allFilteredMeals.count{
-//                    filteredMeals += [allFilteredMeals[i]]
-//                }
-//            }
-//
-//            filteredLoaded += toLoad
-//
-//        }
-//        else{
         if !isFiltering(){
             for i in loaded...(loaded + toLoad - 1){
-                if i < allMeals.count{
-                    meals += [allMeals[i]]
+                if i < today.userMeals.count{
+                    meals += [today.userMeals[i]]
                 }
             }
             
             loaded += toLoad
         }
-      
+        
         
         tableView.reloadData()
         print(loaded)
@@ -66,18 +54,16 @@ class MealTableViewController: UITableViewController {
     private func loadMoreFilteredMeals() {
         
         if isFiltering(){
-
+            
             for i in filteredLoaded...(filteredLoaded + toLoad - 1){
                 if i < allFilteredMeals.count{
                     filteredMeals += [allFilteredMeals[i]]
                 }
             }
-
+            
             filteredLoaded += toLoad
-
+            
         }
-        
-        
         
         tableView.reloadData()
         print(loaded)
@@ -96,7 +82,7 @@ class MealTableViewController: UITableViewController {
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filteredLoaded = 0
         filteredMeals = []
-        allFilteredMeals = allMeals.filter({( meal : Meal) -> Bool in
+        allFilteredMeals = today.userMeals.filter({( meal : Meal) -> Bool in
             return meal.name.lowercased().contains(searchText.lowercased())
         })
         
@@ -127,7 +113,7 @@ class MealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -135,7 +121,7 @@ class MealTableViewController: UITableViewController {
         //This gives the back button more options, for example, you can do other things
         //when the back button is pressed.
         self.navigationItem.hidesBackButton = true
-        let newButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MealTableViewController.back(sender:)))
+        let newButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(TodayMealTableViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newButton
         
         //Whenever this view is loaded, don't hide the navigation bar.
@@ -156,7 +142,7 @@ class MealTableViewController: UITableViewController {
         
         
         
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -165,32 +151,32 @@ class MealTableViewController: UITableViewController {
     }
     
     
-  
+    
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         
         // Change 10.0 to adjust the distance from bottom
         if maximumOffset - currentOffset <= 10.0 {
-            if !isFiltering() && allMeals.count > loaded{
+            if !isFiltering() && today.userMeals.count > loaded{
                 self.loadMoreMeals()
             }
             else if isFiltering() && allFilteredMeals.count > filteredLoaded{
                 self.loadMoreFilteredMeals()
             }
-
+            
         }
     }
-
     
-//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: NSIndexPath) {
-//        print(indexPath.row)
-//        let lastElement = meals.count - 1
-//        if indexPath.row == lastElement {
-//
-//            loadMoreMeals()
-//        }
-//    }
+    
+    //    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: NSIndexPath) {
+    //        print(indexPath.row)
+    //        let lastElement = meals.count - 1
+    //        if indexPath.row == lastElement {
+    //
+    //            loadMoreMeals()
+    //        }
+    //    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -202,25 +188,25 @@ class MealTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
- 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //return the amount of meals based on what you type on the search bar.
         if isFiltering() {
-           return filteredMeals.count
+            return filteredMeals.count
         }
         
         return meals.count
     }
     
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Table view cells are reused and should be dequeued using a cell identifier.
-        let cellIdentifier = "MealTableViewCell"
+        let cellIdentifier = "TodayMealTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TodayMealTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of TodayMealTableViewCell.")
         }
         
         
@@ -286,7 +272,7 @@ class MealTableViewController: UITableViewController {
         
         //connect to table view
         
-        guard let selectedMealCell = sender as? MealTableViewCell else {
+        guard let selectedMealCell = sender as? TodayMealTableViewCell else {
             fatalError("Unexpected sender: (String(describing: sender))")
         }
         
@@ -317,12 +303,11 @@ class MealTableViewController: UITableViewController {
         
         
         //If the identifier goes back to view controller, then update the foods within that view controller
-        if segue.identifier == "newFoods"{
+        if segue.identifier == "removeFoods"{
             
-            let dest = segue.destination as! MealViewController
+            let dest = segue.destination as! TodayMealViewController
             
             dest.meal = selectedMeal
-            
             
         }
         
@@ -337,7 +322,7 @@ class MealTableViewController: UITableViewController {
 }
 
 //Extension for search bar
-extension MealTableViewController: UISearchResultsUpdating {
+extension TodayMealTableViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)

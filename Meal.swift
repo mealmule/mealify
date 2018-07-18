@@ -35,6 +35,7 @@ class Meal {
     }
     
     
+    
     //Init with name set to "Food" and everything else set to 0.
     init(){
         
@@ -43,4 +44,11 @@ class Meal {
         
     }
     
+}
+
+
+extension Meal: Equatable {
+    public static func ==(lhs: Meal, rhs: Meal) -> Bool {
+        return lhs.foodID == rhs.foodID
+    }
 }

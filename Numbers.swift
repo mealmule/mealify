@@ -26,8 +26,6 @@ class Number {
     var lCals: Int
     var dCals: Int
     
-    let date: DateN
-    
     //Arrays for breakfast, lunch and dinner
     var userMeals = [Meal]()
     
@@ -37,8 +35,7 @@ class Number {
         self.bCals = bCals
         self.lCals = lCals
         self.dCals = dCals
-        
-        self.date = DateN()
+    
         
     }
     
@@ -49,8 +46,6 @@ class Number {
         self.lCals = lCals
         self.dCals = dCals
         
-        self.date = DateN(yy: year, mm: month, dd: day)
-        
     }
     
     init(day_before: Bool){
@@ -60,7 +55,6 @@ class Number {
         self.lCals = 0
         self.dCals = 0
         
-        self.date = DateN(yesterday: day_before)
         
     }
     
@@ -71,7 +65,6 @@ class Number {
         self.lCals = 0
         self.dCals = 0
         
-        self.date = DateN(tomorrow: day_after)
         
     }
     
@@ -81,8 +74,6 @@ class Number {
         self.bCals = 0
         self.lCals = 0
         self.dCals = 0
-        
-        self.date = DateN()
         
         
     }

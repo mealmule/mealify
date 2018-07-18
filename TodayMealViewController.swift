@@ -1,19 +1,15 @@
 //
-//  MealViewController.swift
-//  Home
+//  TodayMealViewController.swift
+//  mealify
 //
-//  Created by Vincent Yu on 2018-06-29.
-//  Team name: Meal Mules
-//  Changes made: Added Name, calories, proteins, fats, carbohydrates of the meal to display
-//                Added segue to home page with updated numbers
-//  Known bugs: None so far
+//  Created by vincent on 2018-07-17.
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
 import UIKit
 
-class MealViewController: UIViewController {
-    
+class TodayMealViewController: UIViewController {
+
     //Properties
     var meal = Meal()
     var mealNutrients: String = ""
@@ -21,13 +17,8 @@ class MealViewController: UIViewController {
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var mealDescription: UITextView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         
         foodName.text = meal.name
         foodName.adjustsFontSizeToFitWidth = true
@@ -48,19 +39,16 @@ class MealViewController: UIViewController {
         }
         
         mealDescription.text = mealNutrients
-        
-        
-        
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -70,22 +58,18 @@ class MealViewController: UIViewController {
         
         //Dest is the Home view. Change properties below
         //If the identifier goes back to view controller, then update the foods within that view controller
-        if segue.identifier == "updateFoods"{
-                
+        if segue.identifier == "updateRemovedFoods"{
+            
             //Check the days of the app, add meal to array depending on day and types of meal
+  
+            let itemToRemove = meal
+            if let i = today.userMeals.index(of: itemToRemove) {
+                today.userMeals.remove(at: i)
+            }
        
-            today.userMeals += [meal]
-            
-            //TODO
-            
-            
-            
-            
-          
         }
-            
-         
+        
+        
     }
-    
-    
+
 }

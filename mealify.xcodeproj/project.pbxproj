@@ -29,7 +29,6 @@
 		7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1120FDD12B00812D42 /* Meal.swift */; };
 		7DEEDD1920FDD12C00812D42 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1220FDD12C00812D42 /* Numbers.swift */; };
 		7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1320FDD12C00812D42 /* MealViewController.swift */; };
-		7DEEDD1B20FDD12C00812D42 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1420FDD12C00812D42 /* Day.swift */; };
 		7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */; };
 		7DEEDD2420FDD53300812D42 /* DailyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
@@ -41,6 +40,9 @@
 		BFB6D79A20F9E28D003286CE /* NutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79920F9E28D003286CE /* NutrientsViewController.swift */; };
 		BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79B20FB3184003286CE /* Nutrients.swift */; };
 		BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */; };
+		BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */; };
+		BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */; };
+		BFD0AFAB20FEC19600CE2204 /* TodayMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,6 @@
 		7DEEDD1120FDD12B00812D42 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		7DEEDD1220FDD12C00812D42 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		7DEEDD1320FDD12C00812D42 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
-		7DEEDD1420FDD12C00812D42 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyInformationViewController.swift; sourceTree = "<group>"; };
 		7DEEDD2220FDD53300812D42 /* UINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UINavigationController.h; path = "mealify/New Group/UINavigationController.h"; sourceTree = "<group>"; };
@@ -94,6 +95,9 @@
 		BFB6D79920F9E28D003286CE /* NutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewController.swift; sourceTree = "<group>"; };
 		BFB6D79B20FB3184003286CE /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
 		BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientMealInfo.swift; sourceTree = "<group>"; };
+		BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMealTableViewController.swift; sourceTree = "<group>"; };
+		BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMealTableViewCell.swift; sourceTree = "<group>"; };
+		BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMealViewController.swift; sourceTree = "<group>"; };
 		CC754CCEB0777F0F89C9D0F8 /* Pods-mealify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealify.release.xcconfig"; path = "Pods/Target Support Files/Pods-mealify/Pods-mealify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +157,8 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
+				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
+				BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */,
 				7D09919620EAD7A700C3EE56 /* ViewController1.swift */,
 				7D09919820EAD7BA00C3EE56 /* ViewController2.swift */,
 				BFB6D79320F9B37C003286CE /* RecipeViewController.swift */,
@@ -161,8 +167,8 @@
 				7D09919420EAD79400C3EE56 /* ViewController4.swift */,
 				BFB6D79920F9E28D003286CE /* NutrientsViewController.swift */,
 				BFB6D79120F9AF53003286CE /* Recipe.swift */,
+				BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */,
 				BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */,
-				7DEEDD1420FDD12C00812D42 /* Day.swift */,
 				7DEEDD1120FDD12B00812D42 /* Meal.swift */,
 				7DEEDD0F20FDD12B00812D42 /* MealTableViewCell.swift */,
 				7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */,
@@ -402,12 +408,12 @@
 				BFB6D78A20F9A43F003286CE /* RecipeTableViewCell.swift in Sources */,
 				7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */,
 				7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */,
-				7DEEDD1B20FDD12C00812D42 /* Day.swift in Sources */,
 				BFB6D79A20F9E28D003286CE /* NutrientsViewController.swift in Sources */,
 				7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */,
 				7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */,
 				7DEEDD1720FDD12C00812D42 /* ViewController.swift in Sources */,
 				7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */,
+				BFD0AFAB20FEC19600CE2204 /* TodayMealViewController.swift in Sources */,
 				BFB6D78820F9A3AA003286CE /* RecipeTableViewController.swift in Sources */,
 				7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */,
 				24DE748420E7352300125859 /* ChartsViewController.swift in Sources */,
@@ -416,7 +422,9 @@
 				BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */,
 				7DEEDD1620FDD12C00812D42 /* MealTableViewCell.swift in Sources */,
 				24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */,
+				BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */,
 				BFB6D79420F9B37C003286CE /* RecipeViewController.swift in Sources */,
+				BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */,
 				7D0991A320EAD7F700C3EE56 /* ViewController5.swift in Sources */,
 				7DEEDD1520FDD12C00812D42 /* MealTableViewController.swift in Sources */,
 				7D0991A220EAD7F700C3EE56 /* ViewController1.swift in Sources */,

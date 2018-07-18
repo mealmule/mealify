@@ -441,6 +441,101 @@
             </objects>
             <point key="canvasLocation" x="-1706.4000000000001" y="287.40629685157421"/>
         </scene>
+        <!--Today Meal View Controller-->
+        <scene sceneID="456-73-12D">
+            <objects>
+                <viewController id="K9S-1f-I7g" customClass="TodayMealViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="seL-Ye-vK5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPl-4C-5AY">
+                                <rect key="frame" x="16" y="104" width="343" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nutrition values for 1 serving" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgj-9u-g8G">
+                                <rect key="frame" x="0.0" y="186" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RcE-i1-YOs">
+                                <rect key="frame" x="16" y="269" width="343" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-EZ-zFm">
+                                <rect key="frame" x="129" y="559" width="123" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <state key="normal" title="Remove Meal">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PcL-Ii-ViW" kind="show" identifier="updateRemovedFoods" id="Q5O-fQ-Og5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8JC-lQ-2Of"/>
+                    </view>
+                    <connections>
+                        <outlet property="foodName" destination="fPl-4C-5AY" id="zue-iP-sfy"/>
+                        <outlet property="mealDescription" destination="RcE-i1-YOs" id="n1g-Yd-XgC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9N-hB-bFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7594" y="-681"/>
+        </scene>
+        <!--Today Meal Table View Controller-->
+        <scene sceneID="o3k-PP-nKC">
+            <objects>
+                <tableViewController id="pzV-KO-kKP" customClass="TodayMealTableViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0K0-et-Cd7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayMealTableViewCell" rowHeight="90" id="fHl-NY-ads" customClass="TodayMealTableViewCell" customModule="mealify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fHl-NY-ads" id="Jm2-f1-Rag">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9V-gE-AHf">
+                                            <rect key="frame" x="16" y="11" width="343" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="foodName" destination="f9V-gE-AHf" id="YSm-lm-LoC"/>
+                                    <segue destination="K9S-1f-I7g" kind="show" identifier="removeFoods" id="aik-jb-pKk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pzV-KO-kKP" id="Odz-0m-jNa"/>
+                            <outlet property="delegate" destination="pzV-KO-kKP" id="d3Q-9o-EJW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22h-cZ-luT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6655.1999999999998" y="-357.57121439280365"/>
+        </scene>
         <!--View Controller3-->
         <scene sceneID="DHD-hK-FEz">
             <objects>
@@ -924,28 +1019,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-RO-G6Y">
-                                <rect key="frame" x="16" y="20" width="81" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <state key="normal" title="Yesterday">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dayBefore:" destination="eEg-nl-cHd" eventType="touchUpInside" id="1H7-5H-saQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-z2-37J">
-                                <rect key="frame" x="285" y="20" width="74" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <state key="normal" title="Tomorrow">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dayAfter:" destination="eEg-nl-cHd" eventType="touchUpInside" id="2cz-vl-7XK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsg-WW-WsD">
                                 <rect key="frame" x="140" y="58" width="95" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -953,6 +1026,9 @@
                                 <state key="normal" title="More Dates">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0Ny-gX-vOa" kind="show" id="ijs-bf-Sio"/>
+                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osy-0k-CbH">
                                 <rect key="frame" x="19" y="277" width="75" height="3"/>
@@ -1009,20 +1085,6 @@
                                 <rect key="frame" x="329" y="103" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="settings"/>
-                                <connections>
-                                    <segue destination="Mmh-Dc-Gk2" kind="show" id="Kz4-8R-LMh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJx-cB-OdC">
-                                <rect key="frame" x="159" y="22" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                <state key="normal" title="Today">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dayNow:" destination="eEg-nl-cHd" eventType="touchUpInside" id="GWd-YP-HX7"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-N5-8sc">
                                 <rect key="frame" x="20" y="303" width="334" height="83"/>
@@ -1093,21 +1155,31 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-0O-0BG">
+                                <rect key="frame" x="187" y="422" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Today Meals"/>
+                                <connections>
+                                    <segue destination="pzV-KO-kKP" kind="show" id="TBu-gc-qjH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-SS-sgK">
+                                <rect key="frame" x="20" y="29" width="339" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="YMm-yi-mPC"/>
                     </view>
                     <navigationItem key="navigationItem" id="mDQ-yr-EJR"/>
                     <connections>
-                        <outlet property="after" destination="sfX-z2-37J" id="imt-yJ-yLH"/>
-                        <outlet property="before" destination="Nmv-RO-G6Y" id="zEY-pc-Dlm"/>
+                        <outlet property="dateLabel" destination="RNa-SS-sgK" id="Jbr-Jt-L3Z"/>
                         <outlet property="kcalsLeft" destination="pGc-u4-75f" id="4Wd-TT-7Hp"/>
                         <outlet property="mealFoods" destination="cI0-ss-X5f" id="rSW-a3-tu9"/>
                         <outlet property="mealRecommend" destination="oOS-CG-mKC" id="LS7-I7-J0N"/>
-                        <outlet property="now" destination="EJx-cB-OdC" id="e3s-pC-HSo"/>
-                        <outlet property="todayButton" destination="EJx-cB-OdC" id="h53-Vy-v3s"/>
-                        <outlet property="tomorrowButton" destination="sfX-z2-37J" id="5XE-yY-4pP"/>
-                        <outlet property="yesterdayButton" destination="Nmv-RO-G6Y" id="tr0-Jd-jdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIz-j4-wSX" sceneMemberID="firstResponder"/>
@@ -1387,24 +1459,17 @@
                     <view key="view" contentMode="scaleToFill" id="cBJ-bv-aMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-tb-2rn">
-                                <rect key="frame" x="164" y="390" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0ZD-xK-cpX"/>
                     </view>
                     <navigationItem key="navigationItem" id="bAF-eQ-SFE"/>
                     <connections>
-                        <segue destination="c7D-ss-NEv" kind="show" identifier="goToDailyInfo" id="dZQ-Hx-ct3"/>
+                        <segue destination="eEg-nl-cHd" kind="show" identifier="goToMain" id="Eu3-h2-GFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FZ-3P-IC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4444" y="1868.8155922038982"/>
+            <point key="canvasLocation" x="-4559" y="1934"/>
         </scene>
         <!--Daily Information View Controller-->
         <scene sceneID="DFT-k7-Eah">
@@ -1459,24 +1524,6 @@
             </objects>
             <point key="canvasLocation" x="-3623.1999999999998" y="1875.1124437781111"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Y8t-pb-pGm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mmh-Dc-Gk2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="feQ-FG-ITa">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0Ny-gX-vOa" kind="relationship" relationship="rootViewController" id="8oa-tk-gRI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmr-02-N8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5383.1999999999998" y="1868.8155922038982"/>
-        </scene>
     </scenes>
     <resources>
         <image name="1200px-Good_Food_Display_-_NCI_Visuals_Online" width="1200" height="800"/>
@@ -1492,9 +1539,8 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JNM-xr-FQu"/>
-        <segue reference="CkZ-ff-UQy"/>
-        <segue reference="D8n-u2-w6g"/>
+        <segue reference="Q5O-fQ-Og5"/>
+        <segue reference="Eu3-h2-GFF"/>
         <segue reference="LjZ-LN-p1e"/>
         <segue reference="y90-L0-zf9"/>
         <segue reference="0Yy-5m-bX6"/>

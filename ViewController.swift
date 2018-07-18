@@ -18,11 +18,9 @@ import UIKit
 //1 is tomorrow
 
 //Global variables
-var day: Int = 0
 
 var today = Number()
-var yesterday = Number(day_before: true)
-var tomorrow = Number(day_after: true)
+
 
 
 class ViewController: UIViewController {
@@ -32,12 +30,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var kcalsLeft: UILabel!
     @IBOutlet weak var mealRecommend: UILabel!
 
+    @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var todayButton: UIButton!
-    @IBOutlet weak var tomorrowButton: UIButton!
-    @IBOutlet weak var yesterdayButton: UIButton!
+
     
     @IBOutlet weak var mealFoods: UILabel!
+    
+//    var today = Date()
+    let dateFormatter = DateFormatter()
+    var todayFormatted = ""
+    
+    
+    
+    var dateChosen: String?
 
     
     var Recipes = [Recipe]()
@@ -50,7 +55,7 @@ class ViewController: UIViewController {
         
         let ret: String = "Recommend: " + String(calories) + " Kcals";
         return ret;
-        
+
     }
     
     
@@ -93,37 +98,7 @@ class ViewController: UIViewController {
         
     }
     
-    //This function will set all the numbers to the yesterday's recommendations
-    //Kcals left will be changed
-    //Breakfast recommendation calories will be changed
-    //Lunch recommendation calories will be changed
-    //Dinner recommendation calories will be changed
-    private func getYesterday(){
-        
-        yesterday.kCals = 4256
-        yesterday.bCals = 216
-        yesterday.lCals = 997
-        yesterday.dCals = 216
-        
-        
-        
-    }
     
-    //This function will set all the numbers to the tomorrow's recommendations
-    //Kcals left will be changed
-    //Breakfast recommendation calories will be changed
-    //Lunch recommendation calories will be changed
-    //Dinner recommendation calories will be changed
-    private func getTomorrow(){
-        
-        tomorrow.kCals = 526
-        tomorrow.bCals = 125
-        tomorrow.lCals = 168
-        tomorrow.dCals = 732
-        
-        
-        
-    }
     
     
     //This function will direct the user to today.
@@ -136,53 +111,13 @@ class ViewController: UIViewController {
     
     @IBAction func dayNow(_ sender: Any) {
         
-        todayButton.setTitleColor(.blue, for: .normal)
-        yesterdayButton.setTitleColor(.gray, for: .normal)
-        tomorrowButton.setTitleColor(.gray, for: .normal)
-        
-        
-        day = 0
         printNumbers(kCalories: today.kCals, bCalories: today.bCals, lCalories: today.lCals, dCalories: today.dCals)
         printFoods()
     }
     
-    //This function will direct the user to the day before today.
-    //The new page will be the same as today except with different numbers
-    //Different progress, and Kcals left/recommended.
-    //The page will have the same numbers when the user leaves the page and comes back
-    //The page does not have to be new, it can be the same page with different numbers
-    //so every time this button is pressed, it will just display different numbers
-    @IBOutlet weak var before: UIButton!
+
     
-    @IBAction func dayBefore(_ sender: Any){
-        
-        todayButton.setTitleColor(.gray, for: .normal)
-        yesterdayButton.setTitleColor(.blue, for: .normal)
-        tomorrowButton.setTitleColor(.gray, for: .normal)
-        
-        day = -1
-        printNumbers(kCalories: yesterday.kCals, bCalories: yesterday.bCals, lCalories: yesterday.lCals, dCalories: yesterday.dCals)
-        printFoods()
-    }
-    
-    //This function will direct the user to the day after today.
-    //The new page will be the same as today except with different numbers
-    //Different progress, and Kcals left/recommended.
-    //The page will have the same numbers when the user leaves the page and comes back
-    //The page does not have to be new, it can be the same page with different numbers
-    //so every time this button is pressed, it will just display different numbers
-    @IBOutlet weak var after: UIButton!
-    
-    @IBAction func dayAfter(_ sender: Any){
-        
-        todayButton.setTitleColor(.gray, for: .normal)
-        yesterdayButton.setTitleColor(.gray, for: .normal)
-        tomorrowButton.setTitleColor(.blue, for: .normal)
-        
-        day = 1
-        printNumbers(kCalories: tomorrow.kCals, bCalories: tomorrow.bCals, lCalories: tomorrow.lCals, dCalories: tomorrow.dCals)
-        printFoods()
-    }
+
     
     //Print foods function will print the foods that the user added to either breakfast, lunch, or dinner
     //This is dependent on what day the user is currently displaying (today, tomorrow, yesterday)
@@ -191,62 +126,18 @@ class ViewController: UIViewController {
     //If the count is 0 then print "none", else print all the foods in the array
     public func printFoods(){
         
-        
-        //Check to see if current day displayed is equal to today
-        if day == 0{
+        //This section is for today's breakfast foods
+        if today.userMeals.count == 0{
+            mealFoods.text = "Foods: None"
+        } else{
             
-            //This section is for today's breakfast foods
-            if today.userMeals.count == 0{
-                mealFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in today.userMeals {
-                    n += i.name + ", "
-                }
-                mealFoods.text = n
-                
+            var n: String = "Foods: "
+            for i in today.userMeals {
+                n += i.name + ", "
             }
+            mealFoods.text = n
             
         }
-            
-            //Check to see if current day displayed is equal to yesterday
-        else if day == -1{
-            
-            //This section is for yesterday's breakfast foods
-            if yesterday.userMeals.count == 0{
-                mealFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in yesterday.userMeals {
-                    n += i.name + ", "
-                }
-                mealFoods.text = n
-                
-            }
-           
-        }
-            
-            //Check to see if current day displayed is equal to tomorrow
-        else if day == 1{
-            
-            ////This section is for tomorrow's breakfast foods
-            if tomorrow.userMeals.count == 0{
-                mealFoods.text = "Foods: None"
-            } else{
-                
-                var n: String = "Foods: "
-                for i in tomorrow.userMeals {
-                    n += i.name + ", "
-                }
-                mealFoods.text = n
-                
-            }
-            
-        }
-        
-        
         
         
     }
@@ -261,18 +152,28 @@ class ViewController: UIViewController {
         
         //get data for today, yesterday, and tomorrow
         getToday()
-        getYesterday()
-        getTomorrow()
+
         
         //Load data numbers dependent on what day it is
-        if day == 0{
-            dayNow(now)
-        } else if day == -1{
-            dayBefore(before)
-        } else if day == 1{
-            dayAfter(after)
-        }
+        dayNow(now)
         
+        
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        todayFormatted = dateFormatter.string(from: Date())
+        
+        if dateChosen == nil{
+            dateLabel.text = "Today"
+        }
+        else{
+            if dateChosen == todayFormatted{
+                dateLabel.text = "Today"
+            }
+            else{
+                dateLabel.text = dateChosen
+            }
+        }
+
         
     }
     

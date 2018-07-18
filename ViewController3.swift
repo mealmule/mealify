@@ -42,7 +42,7 @@ class ViewController3: UIViewController {
                         if snapshot.hasChild(self.todayFormatted) {
                             
                         } else {
-                            self.ref?.child("nutrientHistory").child(userID!).child(self.todayFormatted).setValue(["kCals": 0, "proteins": 0, "fats": 0, "carbohydrates": 0])
+                            self.ref?.child("nutrientHistory").child(userID!).child(self.todayFormatted).setValue(["kCals": 0, "proteins": 0, "fats": 0, "carbohydrates": 0, "moisture": 0, "iron": 0, "magnesium": 0, "vitaminD": 0, "folate": 0])
                             
                         }
                     })
