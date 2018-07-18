@@ -3,6 +3,11 @@
 //  mealify
 //
 //  Created by vincent on 2018-07-17.
+
+//  Team name: Meal Mules
+//  Changes made:
+//                  added table cell food name label
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 

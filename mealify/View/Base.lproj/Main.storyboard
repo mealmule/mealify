@@ -1138,11 +1138,7 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Recommend" id="kyy-hg-dzv">
-                                        <connections>
-                                            <segue destination="WQW-QA-kDb" kind="show" identifier="recipes" id="JNM-xr-FQu"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Recommend" id="kyy-hg-dzv"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rny-dH-PLK"/>
                                     <barButtonItem title="Friends" id="PjO-VO-ohw"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sCX-TQ-EZL"/>
@@ -1287,153 +1283,6 @@
             </objects>
             <point key="canvasLocation" x="-3751.1999999999998" y="1083.5082458770617"/>
         </scene>
-        <!--Nutrients View Controller-->
-        <scene sceneID="akj-Om-Ca8">
-            <objects>
-                <viewController id="r6W-vP-za3" customClass="NutrientsViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B5Z-uA-dkb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="qUy-Ga-trL"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jOH-DY-Wdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-8954" y="59"/>
-        </scene>
-        <!--Recipe View Controller-->
-        <scene sceneID="iPk-jo-83u">
-            <objects>
-                <viewController id="flJ-Nj-UiQ" customClass="RecipeViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GVA-rc-rQY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1200px-Good_Food_Display_-_NCI_Visuals_Online" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-wP-ICr">
-                                <rect key="frame" x="16" y="81" width="244" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salmon Sashimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-RE-4HK">
-                                <rect key="frame" x="16" y="260" width="343" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YTy-Gx-S2v">
-                                <rect key="frame" x="16" y="296" width="343" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23I-0W-PM1">
-                                <rect key="frame" x="16" y="514" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="circle"/>
-                                <connections>
-                                    <segue destination="r6W-vP-za3" kind="show" identifier="viewNutrients" id="dqR-WH-rCm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg0-wS-2KS">
-                                <rect key="frame" x="239" y="514" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="circle"/>
-                                <connections>
-                                    <segue destination="eEg-nl-cHd" kind="show" identifier="backToMain" id="D8n-u2-w6g"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View Nutrients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFa-bU-8Th">
-                                <rect key="frame" x="18" y="563" width="117" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add to Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iu-lI-Bzr">
-                                <rect key="frame" x="251" y="563" width="96" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Wfa-Vb-0t9"/>
-                    </view>
-                    <connections>
-                        <outlet property="recipeDescription" destination="YTy-Gx-S2v" id="5eY-DA-ECJ"/>
-                        <outlet property="recipeImage" destination="jkb-wP-ICr" id="ajy-XM-F4K"/>
-                        <outlet property="recipeName" destination="pFz-RE-4HK" id="tki-dA-5gp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ds-y4-mxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7778.3999999999996" y="78.710644677661179"/>
-        </scene>
-        <!--Recipe Table View Controller-->
-        <scene sceneID="u2B-bP-V4c">
-            <objects>
-                <tableViewController id="WQW-QA-kDb" customClass="RecipeTableViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="249" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IJ1-Kl-YXH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeTableViewCell" rowHeight="249" id="lNf-Ej-EyJ" customClass="RecipeTableViewCell" customModule="mealify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="249"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lNf-Ej-EyJ" id="PlX-82-mjj" customClass="RecipeTableViewCell" customModule="mealify" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="248.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1200px-Good_Food_Display_-_NCI_Visuals_Online" translatesAutoresizingMaskIntoConstraints="NO" id="zDH-Nq-90X">
-                                            <rect key="frame" x="16" y="11" width="343" height="161"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salmon Sashimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo6-43-aMG">
-                                            <rect key="frame" x="16" y="180" width="343" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contains:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaQ-74-d74">
-                                            <rect key="frame" x="16" y="209" width="76" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Protein, Vitamin A and Vitamin D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-fM-uDq">
-                                            <rect key="frame" x="100" y="209" width="259" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="recipeImage" destination="zDH-Nq-90X" id="RPh-RY-rsv"/>
-                                    <outlet property="recipeName" destination="qo6-43-aMG" id="kDs-nr-fRn"/>
-                                    <outlet property="recipeNutrients" destination="EDK-fM-uDq" id="RSr-NL-XC4"/>
-                                    <segue destination="flJ-Nj-UiQ" kind="show" identifier="newRecipe" id="O5v-ea-a62"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="WQW-QA-kDb" id="pYO-qs-IpP"/>
-                            <outlet property="delegate" destination="WQW-QA-kDb" id="MWT-Mw-hFt"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DJT-pP-3I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-6516" y="858.62068965517244"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KwI-IA-WEB">
             <objects>
@@ -1526,7 +1375,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1200px-Good_Food_Display_-_NCI_Visuals_Online" width="1200" height="800"/>
         <image name="Asset 1@300x" width="801" height="2001"/>
         <image name="Asset 2@300x" width="867" height="2000"/>
         <image name="blank" width="333" height="83"/>

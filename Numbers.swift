@@ -6,6 +6,7 @@
 //  Team name: Meal Mules
 //  Changes made: Added numbers for the home page depending on what day it is
 //                Added breakfast, lunch, and dinner arrays
+//                added more nutrients, and removed some properties
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //

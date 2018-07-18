@@ -6,6 +6,7 @@
 //  Team name: Meal Mules
 //  Changes made: Added Name, calories, proteins, fats, carbohydrates of the meal to display
 //                Added segue to home page with updated numbers
+//                Added more nutrients to display
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
@@ -121,16 +122,9 @@ class MealViewController: UIViewController {
             ref = Database.database().reference()
             let userID = (Auth.auth().currentUser?.uid)!
             
-            print(proteins)
-            print(fats)
-            print(carbohydrates)
-            print(moisture)
-            print(iron)
-            print(magnesium)
-            print(vitaminD)
-            print(folate)
-            print(meal.foodID)
-            self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").child(meal.name).setValue(["kCals": 0, "proteins": proteins, "fats": fats, "carbohydrates": carbohydrates, "moisture": moisture, "iron": iron, "magnesium": magnesium, "vitaminD": vitaminD, "folate": folate, "foodID": meal.foodID, "name": meal.name])
+            
+            //Add the new meal into the database
+        self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").child(meal.name).setValue(["kCals": 0, "proteins": proteins, "fats": fats, "carbohydrates": carbohydrates, "moisture": moisture, "iron": iron, "magnesium": magnesium, "vitaminD": vitaminD, "folate": folate, "foodID": meal.foodID, "name": meal.name])
             
             self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: { (snapshot) in
                 

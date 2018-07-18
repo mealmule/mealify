@@ -3,6 +3,12 @@
 //  mealify
 //
 //  Created by vincent on 2018-07-17.
+//  Team name: Meal Mules
+//  Changes made: Added table that contains all user eaten for given day foods
+//                Added Search bar to search for any foods
+//                Added segue to page where it displays the meal
+//                Added database for meals
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -38,6 +44,7 @@ class TodayMealViewController: UIViewController {
         foodName.minimumScaleFactor = 0.7
         foodName.numberOfLines = 0
         
+        //Search for nutrients in nutrients array
         for i in meal.nutrients{
             
             for k in nutrients{
@@ -46,6 +53,7 @@ class TodayMealViewController: UIViewController {
                     let temp = Double(round(Double(truncating: i.nutrientValue) * 100) / 100)
                     mealNutrients += k.nutrientName + ": " + String("\(temp)") + k.nutrientUnit + "\n \n"
                     
+                    //Save nutrient code to add to database
                     if k.nutrientCode == 203{
                         proteins = temp
                     }
@@ -110,6 +118,7 @@ class TodayMealViewController: UIViewController {
                 today.userMeals.remove(at: i)
             }
             
+            //Delete the meal from the database
             self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").child(meal.name).removeValue {error,ref  in
                 if error != nil{
                     print("error \(String(describing: error))")

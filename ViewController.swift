@@ -7,6 +7,8 @@
 //  Changes made: Added buttons for all tappable objects
 //                Added functionality to yesterday, today, and tomorrow buttons
 //                Added functionality to add breakfast, add lunch, add dinner buttons
+//                Added firebase to retrieve all information from database
+//                Deleted days, and breakfast, lunch, and dinner
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
@@ -17,9 +19,6 @@ import FirebaseAuth
 
 import FirebaseDatabase
 
-//-1 is yesterday
-//0 is today
-//1 is tomorrow
 
 //Global variables
 
@@ -47,7 +46,7 @@ class ViewController: UIViewController {
     var databaseHandle: DatabaseHandle?
 
     
-    var Recipes = [Recipe]()
+
     
     
     
@@ -62,8 +61,8 @@ class ViewController: UIViewController {
     
     
     //Prints the numbers for the day
-    //It will print Kcals, breakfast recommended calories
-    //lunch recommended calories, and dinner recommended calories
+    //It will print Kcals, meal recommended calories
+
     private func printNumbers(kCalories: Int, bCalories: Int, lCalories: Int, dCalories: Int) {
         
         //Number of calories left in the day.
@@ -72,7 +71,7 @@ class ViewController: UIViewController {
         kcalsLeft.textAlignment = .center;
         kcalsLeft.text = String(kCalories);
         
-        //Number of calories recommended for today's breakfast in the day.
+        //Number of calories recommended for today's meal in the day.
         //set it to a number
         //Default number is 0, units is Kcals
         mealRecommend.text = recommendedCalories(calories: bCalories);
@@ -86,9 +85,8 @@ class ViewController: UIViewController {
     
     //This function will set all the numbers to the current day's recommendations
     //Kcals left will be changed
-    //Breakfast recommendation calories will be changed
-    //Lunch recommendation calories will be changed
-    //Dinner recommendation calories will be changed
+    //meal recommendation calories will be changed
+
     private func getToday(){
         
         today.kCals = 50
@@ -121,14 +119,14 @@ class ViewController: UIViewController {
     
 
     
-    //Print foods function will print the foods that the user added to either breakfast, lunch, or dinner
+    //Print foods function will print the foods that the user added to meal
     //This is dependent on what day the user is currently displaying (today, tomorrow, yesterday)
-    //And it will display different foods for all breakfast. lunch and dinner.
+    //And it will display different foods for all meal. lunch and dinner.
     //This will get an array, and checks the count.
     //If the count is 0 then print "none", else print all the foods in the array
     public func printFoods(){
-        
-        //This section is for today's breakfast foods
+        print("CALLED")
+        //This section is for today's meal foods
         if today.userMeals.count == 0{
             mealFoods.text = "Foods: None"
         } else{
@@ -148,6 +146,61 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        //Firebase part
+        ref = Database.database().reference()
+        
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        todayFormatted = dateFormatter.string(from: Date())
+        
+        //Change the label of the date on top of the view controller
+        if dateChosenGlo == nil{
+            //When just logged in
+            dateChosenGlo = todayFormatted
+            dateLabel.text = "Today"
+        }
+        else{
+            //when selected day on calendar
+            if dateChosenGlo == todayFormatted{
+                dateLabel.text = "Today"
+            }
+            //When selected any other day on the calendar
+            else{
+                dateLabel.text = dateChosenGlo
+            }
+        }
+        
+        let userID = (Auth.auth().currentUser?.uid)!
+        today.userMeals = []
+
+        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").observe(.childAdded, with: { (snapshot) in
+            
+  
+            if let allNames = snapshot.value as? [String:AnyObject] {
+                
+                let userInterest = allNames["name"] as! String
+                let foodID = allNames["foodID"] as! Int
+                var meal = Meal(name: userInterest, foodID: foodID)
+                
+                for i in mealNutrients{
+                    
+                    if i.foodID == meal.foodID{
+                        meal.nutrients += [i]
+                    }
+                    
+                }
+                
+                today.userMeals += [meal]
+                print(today.userMeals.count)
+            }
+            //Load data numbers dependent on what day it is
+            self.dayNow(self.now)
+            
+            
+        })
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         //Hides the navigation bar
         self.navigationController?.isNavigationBarHidden = true
@@ -157,44 +210,8 @@ class ViewController: UIViewController {
         getToday()
 
         
-        //Load data numbers dependent on what day it is
-        dayNow(now)
         
         
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        todayFormatted = dateFormatter.string(from: Date())
-        
-        if dateChosenGlo == nil{
-            dateChosenGlo = todayFormatted
-            dateLabel.text = "Today"
-        }
-        else{
-            if dateChosenGlo == todayFormatted{
-                dateLabel.text = "Today"
-            }
-            else{
-                dateLabel.text = dateChosenGlo
-            }
-        }
-        
-        let userID = (Auth.auth().currentUser?.uid)!
-        
-        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").observe(.childAdded, with: { (snapshot) in
-            
-            today.userMeals = []
-            if let allNames = snapshot.value as? [String:AnyObject] {
-                
-                let userInterest = allNames["name"] as! String
-                let foodID = allNames["FoodID"] as! Int
-                
-                
-                today.userMeals += [Meal(name: userInterest, foodID: foodID)]
-                
-            }
-            
-            
-        })
 
         
     }
@@ -206,9 +223,7 @@ class ViewController: UIViewController {
     
     //When button is clicked to direct to new view, that view depends on which button you tap (for same view)
     //This function passes data from current view to navigation bar to the actual next view.
-    //Add breakfast button changes title to Breakfasts
-    //Add lunch button changes title to Lunches
-    //Add dinner button changes title to Dinners
+    //Add meal button changes title to meals
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
@@ -224,15 +239,7 @@ class ViewController: UIViewController {
         }
 
         
-        else if segue.identifier == "recipes"{
-            
-            //connect to table view
-            let dest = segue.destination as! RecipeTableViewController
-            
-            //Dest is the Meal table view. Change properties below
-            dest.title = "Explore Recipes"
-            
-        }
+
         
         
         
