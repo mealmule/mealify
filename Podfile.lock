@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - ASHorizontalScrollView (1.5.1)
   - Charts (3.1.1):
     - Charts/Core (= 3.1.1)
   - Charts/Core (3.1.1)
@@ -29,6 +30,7 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
+  - FSCalendar (2.7.9)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
@@ -43,15 +45,18 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - ASHorizontalScrollView
   - Charts
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - FSCalendar
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - ASHorizontalScrollView
     - Charts
     - Firebase
     - FirebaseAnalytics
@@ -59,6 +64,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FSCalendar
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - leveldb-library
@@ -67,6 +73,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  ASHorizontalScrollView: 9c98b9226509540075b6398c92f68fb474bea7e9
   Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
@@ -74,12 +81,13 @@ SPEC CHECKSUMS:
   FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
   FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 13b4146c5bb881841385e08f1c5166786072bac1
+PODFILE CHECKSUM: 4d408de7192f0a33a9b059653317bf53614b2e58
 
 COCOAPODS: 1.5.3

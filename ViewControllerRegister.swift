@@ -39,7 +39,7 @@ class ViewControllerRegister: UIViewController {
                         
                         dateInitialize = self.dateFormatter.string(from: self.cal.date(byAdding: .day, value: -i, to: self.today)!)
                         
-                        self.databaseRef?.child("nutrientHistory").child(userID).child(dateInitialize).setValue(["kCals": 0, "proteins": 0, "fats": 0, "carbohydrates": 0])
+                        self.databaseRef?.child("nutrientHistory").child(userID).child(dateInitialize).setValue(["email": self.emailtext.text, "pass": self.passwordtext.text, "kCals": 0, "proteins": 0, "fats": 0, "carbohydrates": 0, "iron": 0, "magnesium": 0, "vitaminD": 0, "folate": 0, "moisture": 0])
                         
                     }
                     self.performSegue(withIdentifier: "gotoqa", sender: self)

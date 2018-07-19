@@ -6,6 +6,7 @@
 //  Team name: Meal Mules
 //  Changes made: Added numbers for the home page depending on what day it is
 //                Added breakfast, lunch, and dinner arrays
+//                added more nutrients, and removed some properties
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
@@ -26,12 +27,17 @@ class Number {
     var lCals: Int
     var dCals: Int
     
-    let date: DateN
+    var proteins: Double
+    var fats : Double
+    var carbohydrates: Double
+    var moisture: Double
+    var iron: Double
+    var magnesium: Double
+    var vitaminD: Double
+    var folate: Double
     
     //Arrays for breakfast, lunch and dinner
-    var breakfastMeals = [Meal]()
-    var lunchMeals = [Meal]()
-    var dinnerMeals = [Meal]()
+    var userMeals = [Meal]()
     
     init(kCals: Int, bCals: Int, lCals: Int, dCals: Int){
         
@@ -39,43 +45,37 @@ class Number {
         self.bCals = bCals
         self.lCals = lCals
         self.dCals = dCals
-        
-        self.date = DateN()
+    
+        self.proteins = 0
+        self.fats = 0
+        self.carbohydrates = 0
+        self.iron = 0
+        self.magnesium = 0
+        self.vitaminD = 0
+        self.folate = 0
+        self.moisture = 0
         
     }
     
-    init(kCals: Int, bCals: Int, lCals: Int, dCals: Int, year: Int, month: Int, day: Int){
-        
-        self.kCals = kCals
-        self.bCals = bCals
-        self.lCals = lCals
-        self.dCals = dCals
-        
-        self.date = DateN(yy: year, mm: month, dd: day)
-        
-    }
-    
-    init(day_before: Bool){
+    init(proteins: Double, fats: Double, carbohydrates: Double, iron: Double, magnesium: Double, vitaminD: Double, folate: Double, moisuture: Double){
         
         self.kCals = 0
         self.bCals = 0
         self.lCals = 0
         self.dCals = 0
         
-        self.date = DateN(yesterday: day_before)
+        self.proteins = proteins
+        self.fats = fats
+        self.carbohydrates = carbohydrates
+        self.iron = iron
+        self.magnesium = magnesium
+        self.vitaminD = vitaminD
+        self.folate = folate
+        self.moisture = moisuture
         
     }
     
-    init(day_after: Bool){
-        
-        self.kCals = 0
-        self.bCals = 0
-        self.lCals = 0
-        self.dCals = 0
-        
-        self.date = DateN(tomorrow: day_after)
-        
-    }
+
     
     init(){
         
@@ -84,7 +84,14 @@ class Number {
         self.lCals = 0
         self.dCals = 0
         
-        self.date = DateN()
+        self.proteins = 0
+        self.fats = 0
+        self.carbohydrates = 0
+        self.iron = 0
+        self.magnesium = 0
+        self.vitaminD = 0
+        self.folate = 0
+        self.moisture = 0
         
         
     }

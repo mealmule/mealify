@@ -81,7 +81,7 @@ class FriendsViewController: UIViewController {
                     
                 }else{
                     print("snapshot does not exists!")
-                    self.feedbackmessage.text = "Enter the correct friend code stupid user"
+                    self.feedbackmessage.text = "Enter the correct friend code :)"
                 }
                 
                 // ...

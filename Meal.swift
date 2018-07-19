@@ -22,42 +22,33 @@ class Meal {
     
     //Properties of the meals.
     let name: String
-    let calories: Int
-    let fats: Int
-    let proteins: Int
-    let carbs: Int
+    let foodID: Int
+    var nutrients = [NutrientMealInfo]()
+    
     
     //Init with all variales
-    init(name: String, calories: Int, fats: Int, proteins: Int, carbs: Int){
+    init(name: String, foodID: Int){
         
         self.name = name
-        self.calories = calories
-        self.fats = fats
-        self.proteins = proteins
-        self.carbs = carbs
+        self.foodID = foodID
         
     }
     
-    //Init with just name, everything else is set to 0
-    init(name: String){
-        
-        self.name = name
-        self.calories = 0
-        self.fats = 0
-        self.proteins = 0
-        self.carbs = 0
-        
-    }
+    
     
     //Init with name set to "Food" and everything else set to 0.
     init(){
         
         self.name = "Food"
-        self.calories = 0
-        self.fats = 0
-        self.proteins = 0
-        self.carbs = 0
+        self.foodID = 0
         
     }
     
+}
+
+
+extension Meal: Equatable {
+    public static func ==(lhs: Meal, rhs: Meal) -> Bool {
+        return lhs.foodID == rhs.foodID
+    }
 }

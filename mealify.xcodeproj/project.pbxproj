@@ -10,7 +10,6 @@
 		241016A220E4820C00E2E215 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241016A120E4820B00E2E215 /* GoogleService-Info.plist */; };
 		24C9C8B420EB67E100082B56 /* addFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9C8B320EB67E100082B56 /* addFoodViewController.swift */; };
 		24DE748420E7352300125859 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE748320E7352300125859 /* ChartsViewController.swift */; };
-		24DECF3720B9E4DF007F678D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DECF3620B9E4DF007F678D /* AppDelegate.swift */; };
 		24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DECF3820B9E4DF007F678D /* ViewControllerJ.swift */; };
 		24DECF3C20B9E4E0007F678D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DECF3A20B9E4E0007F678D /* Main.storyboard */; };
 		24DECF3E20B9E4E1007F678D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DECF3D20B9E4E1007F678D /* Assets.xcassets */; };
@@ -24,15 +23,27 @@
 		7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */; };
 		7DBF2EE020EB034700E06F4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DBF2EDF20EB034700E06F4C /* Info.plist */; };
 		7DEC6AF820EC57EA00471017 /* ViewController3LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEC6AF720EC57EA00471017 /* ViewController3LoginTest.swift */; };
-		9737864F20FAB90E0053AFF0 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864820FAB90D0053AFF0 /* MealTableViewCell.swift */; };
-		9737865020FAB90E0053AFF0 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864920FAB90D0053AFF0 /* Meal.swift */; };
-		9737865120FAB90E0053AFF0 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864A20FAB90D0053AFF0 /* MealTableViewController.swift */; };
-		9737865220FAB90E0053AFF0 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864B20FAB90D0053AFF0 /* Numbers.swift */; };
-		9737865320FAB90E0053AFF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864C20FAB90D0053AFF0 /* ViewController.swift */; };
-		9737865420FAB90E0053AFF0 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864D20FAB90D0053AFF0 /* Day.swift */; };
-		9737865520FAB90E0053AFF0 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737864E20FAB90E0053AFF0 /* MealViewController.swift */; };
-		97E341AD20FDACC3007D4298 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E341AC20FDACC3007D4298 /* Diary.swift */; };
+		7DEEDD1520FDD12C00812D42 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */; };
+		7DEEDD1620FDD12C00812D42 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD0F20FDD12B00812D42 /* MealTableViewCell.swift */; };
+		7DEEDD1720FDD12C00812D42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1020FDD12B00812D42 /* ViewController.swift */; };
+		7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1120FDD12B00812D42 /* Meal.swift */; };
+		7DEEDD1920FDD12C00812D42 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1220FDD12C00812D42 /* Numbers.swift */; };
+		7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD1320FDD12C00812D42 /* MealViewController.swift */; };
+		7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */; };
+		7DEEDD2420FDD53300812D42 /* DailyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */; };
+		9758456420FFF0F400AF647D /* FriendInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758455F20FFF0F300AF647D /* FriendInviteViewController.swift */; };
+		9758456520FFF0F400AF647D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456020FFF0F300AF647D /* FriendListViewController.swift */; };
+		9758456620FFF0F400AF647D /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456120FFF0F300AF647D /* FriendDetailViewController.swift */; };
+		9758456720FFF0F400AF647D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456220FFF0F400AF647D /* FriendsViewController.swift */; };
+		9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */; };
+		9758456A20FFF4A300AF647D /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456920FFF4A300AF647D /* Diary.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
+		BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79720F9C42D003286CE /* AppDelegate.swift */; };
+		BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79B20FB3184003286CE /* Nutrients.swift */; };
+		BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */; };
+		BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */; };
+		BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */; };
+		BFD0AFAB20FEC19600CE2204 /* TodayMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +61,6 @@
 		24C9C8B320EB67E100082B56 /* addFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFoodViewController.swift; sourceTree = "<group>"; };
 		24DE748320E7352300125859 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		24DECF3320B9E4DF007F678D /* mealify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealify.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24DECF3620B9E4DF007F678D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24DECF3820B9E4DF007F678D /* ViewControllerJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerJ.swift; sourceTree = "<group>"; };
 		24DECF3B20B9E4E0007F678D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24DECF3D20B9E4E1007F678D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,15 +78,28 @@
 		7DEC6AED20EC573C00471017 /* mealifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEC6AF120EC573C00471017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEC6AF720EC57EA00471017 /* ViewController3LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3LoginTest.swift; sourceTree = "<group>"; };
-		9737864820FAB90D0053AFF0 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTableViewCell.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/MealTableViewCell.swift"; sourceTree = "<group>"; };
-		9737864920FAB90D0053AFF0 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/Meal.swift"; sourceTree = "<group>"; };
-		9737864A20FAB90D0053AFF0 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealTableViewController.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/MealTableViewController.swift"; sourceTree = "<group>"; };
-		9737864B20FAB90D0053AFF0 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Numbers.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/Numbers.swift"; sourceTree = "<group>"; };
-		9737864C20FAB90D0053AFF0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/ViewController.swift"; sourceTree = "<group>"; };
-		9737864D20FAB90D0053AFF0 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Day.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/Day.swift"; sourceTree = "<group>"; };
-		9737864E20FAB90E0053AFF0 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealViewController.swift; path = "../../../Downloads/drive-download-20180714T230420Z-001/MealViewController.swift"; sourceTree = "<group>"; };
-		97E341AC20FDACC3007D4298 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		7DEEDD0F20FDD12B00812D42 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		7DEEDD1020FDD12B00812D42 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7DEEDD1120FDD12B00812D42 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		7DEEDD1220FDD12C00812D42 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		7DEEDD1320FDD12C00812D42 /* MealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyInformationViewController.swift; sourceTree = "<group>"; };
+		7DEEDD2220FDD53300812D42 /* UINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UINavigationController.h; path = "mealify/New Group/UINavigationController.h"; sourceTree = "<group>"; };
+		9758455F20FFF0F300AF647D /* FriendInviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInviteViewController.swift; sourceTree = "<group>"; };
+		9758456020FFF0F300AF647D /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		9758456120FFF0F300AF647D /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		9758456220FFF0F400AF647D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsInvite2ViewController.swift; sourceTree = "<group>"; };
+		9758456920FFF4A300AF647D /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB6D79720F9C42D003286CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFB6D79B20FB3184003286CE /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
+		BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientMealInfo.swift; sourceTree = "<group>"; };
+		BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMealTableViewController.swift; sourceTree = "<group>"; };
+		BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMealTableViewCell.swift; sourceTree = "<group>"; };
+		BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMealViewController.swift; sourceTree = "<group>"; };
 		CC754CCEB0777F0F89C9D0F8 /* Pods-mealify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealify.release.xcconfig"; path = "Pods/Target Support Files/Pods-mealify/Pods-mealify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +151,7 @@
 		24DE748220E7348200125859 /* Other Files */ = {
 			isa = PBXGroup;
 			children = (
-				24DECF3620B9E4DF007F678D /* AppDelegate.swift */,
+				BFB6D79720F9C42D003286CE /* AppDelegate.swift */,
 			);
 			path = "Other Files";
 			sourceTree = "<group>";
@@ -136,22 +159,34 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
-				97E341AC20FDACC3007D4298 /* Diary.swift */,
+				9758456920FFF4A300AF647D /* Diary.swift */,
+				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
+				BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */,
 				7D09919620EAD7A700C3EE56 /* ViewController1.swift */,
 				7D09919820EAD7BA00C3EE56 /* ViewController2.swift */,
 				7D09919920EAD7C400C3EE56 /* ViewController3.swift */,
+				9758456120FFF0F300AF647D /* FriendDetailViewController.swift */,
+				9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */,
+				9758455F20FFF0F300AF647D /* FriendInviteViewController.swift */,
+				9758456020FFF0F300AF647D /* FriendListViewController.swift */,
+				9758456220FFF0F400AF647D /* FriendsViewController.swift */,
 				7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */,
 				7D09919420EAD79400C3EE56 /* ViewController4.swift */,
+				BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */,
+				BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */,
+				7DEEDD1120FDD12B00812D42 /* Meal.swift */,
+				7DEEDD0F20FDD12B00812D42 /* MealTableViewCell.swift */,
+				7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */,
+				7DEEDD1320FDD12C00812D42 /* MealViewController.swift */,
+				7DEEDD1220FDD12C00812D42 /* Numbers.swift */,
+				7DEEDD1020FDD12B00812D42 /* ViewController.swift */,
+				7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */,
+				7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */,
+				7DEEDD2220FDD53300812D42 /* UINavigationController.h */,
+				BFB6D79B20FB3184003286CE /* Nutrients.swift */,
 				7DBF2EDF20EB034700E06F4C /* Info.plist */,
 				7D09919720EAD7B000C3EE56 /* ViewController5.swift */,
 				7D09919A20EAD7D400C3EE56 /* ViewController6.swift */,
-				9737864D20FAB90D0053AFF0 /* Day.swift */,
-				9737864920FAB90D0053AFF0 /* Meal.swift */,
-				9737864820FAB90D0053AFF0 /* MealTableViewCell.swift */,
-				9737864A20FAB90D0053AFF0 /* MealTableViewController.swift */,
-				9737864E20FAB90E0053AFF0 /* MealViewController.swift */,
-				9737864B20FAB90D0053AFF0 /* Numbers.swift */,
-				9737864C20FAB90D0053AFF0 /* ViewController.swift */,
 				24DECF3520B9E4DF007F678D /* mealify */,
 				7DEC6AEE20EC573C00471017 /* mealifyTests */,
 				24DECF3420B9E4DF007F678D /* Products */,
@@ -337,8 +372,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-mealify/Pods-mealify-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ASHorizontalScrollView/ASHorizontalScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -347,8 +384,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASHorizontalScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -367,25 +406,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */,
 				24C9C8B420EB67E100082B56 /* addFoodViewController.swift in Sources */,
+				9758456520FFF0F400AF647D /* FriendListViewController.swift in Sources */,
 				7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */,
-				9737865220FAB90E0053AFF0 /* Numbers.swift in Sources */,
-				9737865120FAB90E0053AFF0 /* MealTableViewController.swift in Sources */,
-				9737865020FAB90E0053AFF0 /* Meal.swift in Sources */,
-				97E341AD20FDACC3007D4298 /* Diary.swift in Sources */,
+				7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */,
 				7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */,
+				7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */,
+				7DEEDD1720FDD12C00812D42 /* ViewController.swift in Sources */,
+				7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */,
+				9758456620FFF0F400AF647D /* FriendDetailViewController.swift in Sources */,
+				BFD0AFAB20FEC19600CE2204 /* TodayMealViewController.swift in Sources */,
+				9758456A20FFF4A300AF647D /* Diary.swift in Sources */,
 				7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */,
 				24DE748420E7352300125859 /* ChartsViewController.swift in Sources */,
 				7D0991A420EAD7F700C3EE56 /* ViewController2.swift in Sources */,
+				7DEEDD2420FDD53300812D42 /* DailyInformationViewController.swift in Sources */,
+				BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */,
+				7DEEDD1620FDD12C00812D42 /* MealTableViewCell.swift in Sources */,
 				24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */,
-				24DECF3720B9E4DF007F678D /* AppDelegate.swift in Sources */,
-				9737865420FAB90E0053AFF0 /* Day.swift in Sources */,
-				9737864F20FAB90E0053AFF0 /* MealTableViewCell.swift in Sources */,
+				BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */,
+				9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */,
+				BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */,
 				7D0991A320EAD7F700C3EE56 /* ViewController5.swift in Sources */,
+				7DEEDD1520FDD12C00812D42 /* MealTableViewController.swift in Sources */,
 				7D0991A220EAD7F700C3EE56 /* ViewController1.swift in Sources */,
-				9737865320FAB90E0053AFF0 /* ViewController.swift in Sources */,
 				7D0991A020EAD7F700C3EE56 /* ViewController4.swift in Sources */,
-				9737865520FAB90E0053AFF0 /* MealViewController.swift in Sources */,
+				9758456720FFF0F400AF647D /* FriendsViewController.swift in Sources */,
+				7DEEDD1920FDD12C00812D42 /* Numbers.swift in Sources */,
+				9758456420FFF0F400AF647D /* FriendInviteViewController.swift in Sources */,
+				BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
