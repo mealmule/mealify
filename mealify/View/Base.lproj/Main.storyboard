@@ -603,7 +603,7 @@
                                 <color key="highlightedColor" red="1" green="0.99971767581551729" blue="0.99907769649365863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.72483420369999996" green="0.88585841659999998" blue="0.92944073679999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="XsC-N2-QjB"/>
                     </view>
                     <connections>
@@ -1795,11 +1795,10 @@
         <image name="statsBar" width="158" height="3"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c96-gI-yXQ"/>
         <segue reference="XRg-Hd-Th6"/>
         <segue reference="sGf-5u-le4"/>
         <segue reference="Bcg-Xh-wvL"/>
-        <segue reference="eTb-ES-tdF"/>
+        <segue reference="CkZ-ff-UQy"/>
         <segue reference="E5n-2p-RJ0"/>
         <segue reference="c7L-KO-qp1"/>
         <segue reference="y90-L0-zf9"/>
