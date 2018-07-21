@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/justinlew/Documents/iOS_dev/mealify.io/Pods/FirebaseCore/Firebase/Core/FIRVersion.m
+  /Users/justinlew/Documents/iOS_dev/mealify/Pods/FirebaseCore/Firebase/Core/FIRVersion.m

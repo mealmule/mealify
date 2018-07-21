@@ -164,6 +164,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import FSCalendar;
 @import Charts;
 @import Foundation;
 #endif
@@ -198,9 +199,24 @@ SWIFT_CLASS("_TtC7mealify12AppDelegate2")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class LineChartView;
+@class UIBarButtonItem;
+@class FSCalendar;
+@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC7mealify22CalendarViewController")
+@interface CalendarViewController : UIViewController <ChartViewDelegate, FSCalendarDataSource, FSCalendarDelegate>
+- (void)viewDidLoad;
+- (void)backWithSender:(UIBarButtonItem * _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (void)calendar:(FSCalendar * _Nonnull)calendar didSelectDate:(NSDate * _Nonnull)date atMonthPosition:(FSCalendarMonthPosition)monthPosition;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class LineChartView;
 
 SWIFT_CLASS("_TtC7mealify20ChartsViewController")
 @interface ChartsViewController : UIViewController <ChartViewDelegate>
@@ -212,6 +228,90 @@ SWIFT_CLASS("_TtC7mealify20ChartsViewController")
 @end
 
 @class UILabel;
+@class HorizontalBarChartView;
+@class PieChartView;
+
+SWIFT_CLASS("_TtC7mealify30DailyInformationViewController")
+@interface DailyInformationViewController : UIViewController <ChartViewDelegate>
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DateLabel;
+@property (nonatomic, weak) IBOutlet HorizontalBarChartView * _Null_unspecified horizontalBarChart;
+@property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified pieChart;
+- (void)viewDidLoad;
+- (void)backWithSender:(UIBarButtonItem * _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7mealify26FriendDetailViewController")
+@interface FriendDetailViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified friendname;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)removefriendbutton:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+@class UITableViewCell;
+
+SWIFT_CLASS("_TtC7mealify26FriendInviteViewController")
+@interface FriendInviteViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableviewstuff;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7mealify24FriendListViewController")
+@interface FriendListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified friendListTableView;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIButton;
+
+SWIFT_CLASS("_TtC7mealify28FriendsInvite2ViewController")
+@interface FriendsInvite2ViewController : UIViewController
+@property (nonatomic, weak, getter=friend, setter=setFriend:) IBOutlet UILabel * _Null_unspecified friend_;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified test;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified feedback;
+- (IBAction)accept:(UIButton * _Nonnull)sender;
+- (IBAction)reject:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITextField;
+
+SWIFT_CLASS("_TtC7mealify21FriendsViewController")
+@interface FriendsViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified friendtext;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified feedbackmessage;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)searchfriend:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7mealify17MealTableViewCell")
 @interface MealTableViewCell : UITableViewCell
@@ -222,14 +322,13 @@ SWIFT_CLASS("_TtC7mealify17MealTableViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIBarButtonItem;
-@class UITableView;
-@class UIStoryboardSegue;
+@class UIScrollView;
 
 SWIFT_CLASS("_TtC7mealify23MealTableViewController")
 @interface MealTableViewController : UITableViewController
 - (void)backWithSender:(UIBarButtonItem * _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -246,14 +345,12 @@ SWIFT_CLASS("_TtC7mealify23MealTableViewController")
 - (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
 @end
 
+@class UITextView;
 
 SWIFT_CLASS("_TtC7mealify18MealViewController")
 @interface MealViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodName;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodCalories;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodFats;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodProteins;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodCarbohydrates;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified mealDescription;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
@@ -261,8 +358,6 @@ SWIFT_CLASS("_TtC7mealify18MealViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
-@class UIButton;
 @class UIImageView;
 @class UISlider;
 
@@ -291,24 +386,64 @@ SWIFT_CLASS("_TtC7mealify20SecondViewController")
 @end
 
 
+SWIFT_CLASS("_TtC7mealify22TodayMealTableViewCell")
+@interface TodayMealTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodName;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7mealify28TodayMealTableViewController")
+@interface TodayMealTableViewController : UITableViewController
+- (void)backWithSender:(UIBarButtonItem * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface TodayMealTableViewController (SWIFT_EXTENSION(mealify)) <UISearchResultsUpdating>
+- (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
+@end
+
+
+SWIFT_CLASS("_TtC7mealify23TodayMealViewController")
+@interface TodayMealViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified foodName;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified mealDescription;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIView;
+
 SWIFT_CLASS("_TtC7mealify14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified kcalsLeft;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified breakfastRecommend;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lunchRecommend;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dinnerRecommend;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified todayButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified tomorrowButton;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified yesterdayButton;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified breakfastFoods;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lunchFoods;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dinnerFoods;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified mealRecommend;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified mealFoods;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified now;
 - (IBAction)dayNow:(id _Nonnull)sender;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified before;
-- (IBAction)dayBefore:(id _Nonnull)sender;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified after;
-- (IBAction)dayAfter:(id _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified contentView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified magGoalTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dGoalTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified ironGoalTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified folateGoalTxt;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified waterGoalTxt;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;

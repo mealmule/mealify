@@ -6,8 +6,27 @@
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
+// Change log:
+// ----- Version 1 ------
+// Import charts to view controller to output pie chart and horitzontal bar chart
+// Specified actual date of input depending on the calendar date chosen by the user
+
+// ----- Version 2 ------
+// Query from databse to obtain actual data of users
+// Pipe data to charts API
+
+
+// Bugs:
+// ----- Bug 1 ------
+// Have to obtain dateChosen from calendar but I'm waiting on Juey to change the view first :)
+// The app works nonetheless hahaha
+
+
 import UIKit
 import Charts
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 
 
@@ -19,14 +38,24 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     
     var dateChosen: String?
     
-    let micronutrients: [String] = ["Folate", "Iron", "Magnesium", "Vitamin A", "Vitamin D"]
-    let micronutrient_amount: [Double] = [50, 100, 75, 50, 100]
+    var ref : DatabaseReference?
+    
+    var today = Date()
+    
+    let micronutrients: [String] = ["Folate", "Iron", "Magnesium", "Vitamin D"]
+    var micronutrient_amount: [Double] = []
     
     let macronutrients: [String] = ["Carbohydrates", "Fats", "Proteins"]
-    let macronutrient_amount: [Double] = [50, 50, 50]
+    var macronutrient_amount: [Double] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
+        let userID = (Auth.auth().currentUser?.uid)!
         
         //Hides the back button on navigation bar and implement your own.
         //This gives the back button more options, for example, you can do other things
@@ -40,13 +69,38 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         
         DateLabel.text = dateChosen
         
-        setHorizontalChart(dataPoints: micronutrients, values: micronutrient_amount)
+        // use todays date for now
+        // ***********************
+        // ***********************
         
-        setPieChart(dataPoints: macronutrients, values: macronutrient_amount)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        var todayFormatted = formatter.string(from: today)
         
+        // ***********************
+        // ***********************
+        // ***********************
         
+    self.ref?.child("nutrientHistory").child(userID).child(todayFormatted).observeSingleEvent(of: .value, with: {(snapshot) in
+        let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+        self.micronutrient_amount = [
+            snapDictionary["folate"]! as! Double,
+            snapDictionary["iron"]! as! Double,
+            snapDictionary["magnesium"]! as! Double,
+            snapDictionary["vitaminD"]! as! Double
+        ]
+        self.macronutrient_amount = [
+            snapDictionary["carbohydrates"]! as! Double,
+            snapDictionary["fats"]! as! Double,
+            snapDictionary["proteins"]! as! Double
+        ]
+        print(self.micronutrient_amount)
+        print(self.macronutrient_amount)
+        self.setHorizontalChart(dataPoints: self.micronutrients, values: self.micronutrient_amount)
+        self.setPieChart(dataPoints: self.macronutrients, values: self.macronutrient_amount)
+    })
         
-
         // Do any additional setup after loading the view.
     }
     

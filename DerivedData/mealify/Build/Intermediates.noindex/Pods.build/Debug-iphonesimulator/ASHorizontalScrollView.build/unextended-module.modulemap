@@ -1,0 +1,10 @@
+framework module ASHorizontalScrollView {
+  umbrella header "ASHorizontalScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ASHorizontalScrollView.__Swift {
+    exclude header "ASHorizontalScrollView-Swift.h"
+}

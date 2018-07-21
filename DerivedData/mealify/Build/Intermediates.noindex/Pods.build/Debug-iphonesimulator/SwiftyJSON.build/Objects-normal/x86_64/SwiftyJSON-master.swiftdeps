@@ -1,5 +1,5 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
-options: "0203d22fd4dca9d46e7fc1f7eacdd50b"
-build_time: [1530680031, 296099000]
+options: "33da852f1b5e8c01f303daf7acb23368"
+build_time: [1532210307, 659136000]
 inputs:
-  "/Users/justinlew/Documents/iOS_dev/mealify.io/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [1530679809, 0]
+  "/Users/justinlew/Documents/iOS_dev/mealify/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [1531546988, 0]
