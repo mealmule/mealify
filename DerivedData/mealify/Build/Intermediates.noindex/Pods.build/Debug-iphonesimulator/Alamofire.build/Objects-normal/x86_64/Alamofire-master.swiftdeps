@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "9ffc6051eddfdb62f377716303692701"
-build_time: [1531547330, 846051000]
+build_time: [1531810612, 224285000]
 inputs:
   "/Users/justinlew/Documents/iOS_dev/mealify/Pods/Alamofire/Source/AFError.swift": [1531546988, 0]
   "/Users/justinlew/Documents/iOS_dev/mealify/Pods/Alamofire/Source/Alamofire.swift": [1531546988, 0]

@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "4b8971d20367a10289fefd256d9fb88f"
-build_time: [1531547337, 913382000]
+build_time: [1531810612, 301139000]
 inputs:
   "/Users/justinlew/Documents/iOS_dev/mealify/Pods/Charts/Source/Charts/Jobs/AnimatedMoveViewJob.swift": [1531546988, 0]
   "/Users/justinlew/Documents/iOS_dev/mealify/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift": [1531546988, 0]

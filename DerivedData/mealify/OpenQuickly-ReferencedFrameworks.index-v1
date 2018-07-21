@@ -50,8 +50,8 @@
 	<string>FirebaseDynamicLinks</string>
 	<string>UIKit</string>
 	<string>Fabric</string>
-	<string>Foundation</string>
 	<string>FirebaseMLVisionBarcodeModel</string>
+	<string>Foundation</string>
 	<string>sys</string>
 	<string>Quartz</string>
 	<string>FirebaseFirestore</string>

@@ -1,0 +1,420 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PieChartData"
+provides-nominal:
+- "6Charts12PieChartDataC"
+provides-member:
+- ["6Charts12PieChartDataC", ""]
+provides-dynamic-lookup:
+- "addDataSet"
+- "dataSet"
+- "dataSets"
+- "entryForHighlight"
+- "getDataSetByIndex"
+- "getDataSetByLabel"
+- "removeDataSetByIndex"
+- "yValueSum"
+depends-top-level:
+- !private "!="
+- !private "+="
+- !private "..<"
+- !private "<"
+- !private "<="
+- !private "=="
+- !private ">"
+- !private ">="
+- !private "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "ChartData"
+- "ChartDataEntry"
+- "Double"
+- "Highlight"
+- "IChartDataSet"
+- "IPieChartDataSet"
+- "Int"
+- "PieChartData"
+- "String"
+- !private "StringLiteralType"
+- "TernaryPrecedence"
+- !private "assert"
+- !private "||"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "caseInsensitiveCompare"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Int"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_dataSets"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "addDataSet"]
+- !private ["s7CVarArgP", "assert"]
+- !private ["s7CVarArgP", "caseInsensitiveCompare"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dataSet"]
+- !private ["s7CVarArgP", "dataSets"]
+- !private ["s7CVarArgP", "getDataSetByIndex"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "x"]
+- !private ["s7CVarArgP", "y"]
+- ["6Charts9ChartDataC", "Bool"]
+- ["6Charts9ChartDataC", "ChartDataEntry"]
+- ["6Charts9ChartDataC", "Double"]
+- ["6Charts9ChartDataC", "Highlight"]
+- ["6Charts9ChartDataC", "IChartDataSet"]
+- ["6Charts9ChartDataC", "IPieChartDataSet"]
+- ["6Charts9ChartDataC", "Int"]
+- ["6Charts9ChartDataC", "String"]
+- ["6Charts9ChartDataC", ""]
+- !private ["6Charts9ChartDataC", "_dataSets"]
+- ["6Charts9ChartDataC", "addDataSet"]
+- !private ["6Charts9ChartDataC", "assert"]
+- ["6Charts9ChartDataC", "dataSet"]
+- ["6Charts9ChartDataC", "dataSets"]
+- ["6Charts9ChartDataC", "entryForHighlight"]
+- ["6Charts9ChartDataC", "getDataSetByIndex"]
+- ["6Charts9ChartDataC", "getDataSetByLabel"]
+- ["6Charts9ChartDataC", "init"]
+- ["6Charts9ChartDataC", "removeDataSetByIndex"]
+- ["6Charts9ChartDataC", "yValueSum"]
+- !private ["6Charts14ChartDataEntryC", "y"]
+- !private ["6Charts18ChartDataEntryBaseC", "y"]
+- !private ["s10CollectionP", "caseInsensitiveCompare"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "caseInsensitiveCompare"]
+- !private ["s10ComparableP", "init"]
+- !private ["SC16ComparisonResultO", "orderedSame"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_dataSets"]
+- !private ["s28CustomDebugStringConvertibleP", "addDataSet"]
+- !private ["s28CustomDebugStringConvertibleP", "assert"]
+- !private ["s28CustomDebugStringConvertibleP", "caseInsensitiveCompare"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSet"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSets"]
+- !private ["s28CustomDebugStringConvertibleP", "getDataSetByIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "caseInsensitiveCompare"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "caseInsensitiveCompare"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_dataSets"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addDataSet"]
+- !private ["s23CustomStringConvertibleP", "assert"]
+- !private ["s23CustomStringConvertibleP", "caseInsensitiveCompare"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "dataSet"]
+- !private ["s23CustomStringConvertibleP", "dataSets"]
+- !private ["s23CustomStringConvertibleP", "getDataSetByIndex"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "x"]
+- !private ["s23CustomStringConvertibleP", "y"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "caseInsensitiveCompare"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "caseInsensitiveCompare"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_dataSets"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addDataSet"]
+- !private ["s9EquatableP", "assert"]
+- !private ["s9EquatableP", "caseInsensitiveCompare"]
+- !private ["s9EquatableP", "count"]
+- !private ["s9EquatableP", "dataSet"]
+- !private ["s9EquatableP", "dataSets"]
+- !private ["s9EquatableP", "getDataSetByIndex"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "orderedSame"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "x"]
+- !private ["s9EquatableP", "y"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "caseInsensitiveCompare"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "caseInsensitiveCompare"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "caseInsensitiveCompare"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "Int"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_dataSets"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addDataSet"]
+- !private ["s8HashableP", "assert"]
+- !private ["s8HashableP", "caseInsensitiveCompare"]
+- !private ["s8HashableP", "dataSet"]
+- !private ["s8HashableP", "dataSets"]
+- !private ["s8HashableP", "getDataSetByIndex"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "orderedSame"]
+- !private ["s8HashableP", "x"]
+- !private ["s8HashableP", "y"]
+- !private ["6Charts9HighlightC", "x"]
+- !private ["6Charts13IChartDataSetP", "entryCount"]
+- !private ["6Charts13IChartDataSetP", "entryForIndex"]
+- !private ["6Charts13IChartDataSetP", "label"]
+- !private ["6Charts16IPieChartDataSetP", "entryCount"]
+- !private ["6Charts16IPieChartDataSetP", "entryForIndex"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "caseInsensitiveCompare"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "caseInsensitiveCompare"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "caseInsensitiveCompare"]
+- !private ["So9NSCopyingP", "caseInsensitiveCompare"]
+- !private ["So21NSItemProviderReadingP", "caseInsensitiveCompare"]
+- !private ["So21NSItemProviderWritingP", "caseInsensitiveCompare"]
+- !private ["So16NSMutableCopyingP", "caseInsensitiveCompare"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "ChartDataEntry"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Highlight"]
+- ["So8NSObjectC", "IChartDataSet"]
+- ["So8NSObjectC", "IPieChartDataSet"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "_dataSets"]
+- ["So8NSObjectC", "addDataSet"]
+- !private ["So8NSObjectC", "assert"]
+- !private ["So8NSObjectC", "caseInsensitiveCompare"]
+- ["So8NSObjectC", "dataSet"]
+- ["So8NSObjectC", "dataSets"]
+- ["So8NSObjectC", "entryForHighlight"]
+- ["So8NSObjectC", "getDataSetByIndex"]
+- ["So8NSObjectC", "getDataSetByLabel"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "removeDataSetByIndex"]
+- !private ["So8NSObjectC", "x"]
+- !private ["So8NSObjectC", "y"]
+- ["So8NSObjectC", "yValueSum"]
+- !private ["So16NSObjectProtocolP", "Int"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "_dataSets"]
+- !private ["So16NSObjectProtocolP", "addDataSet"]
+- !private ["So16NSObjectProtocolP", "assert"]
+- !private ["So16NSObjectProtocolP", "caseInsensitiveCompare"]
+- !private ["So16NSObjectProtocolP", "dataSet"]
+- !private ["So16NSObjectProtocolP", "dataSets"]
+- !private ["So16NSObjectProtocolP", "getDataSetByIndex"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "x"]
+- !private ["So16NSObjectProtocolP", "y"]
+- !private ["So14NSSecureCodingP", "caseInsensitiveCompare"]
+- !private ["So8NSStringC", "caseInsensitiveCompare"]
+- !private ["s7NumericP", "init"]
+- ["6Charts12PieChartDataC", "Bool"]
+- ["6Charts12PieChartDataC", "ChartDataEntry"]
+- ["6Charts12PieChartDataC", "Double"]
+- ["6Charts12PieChartDataC", "Highlight"]
+- ["6Charts12PieChartDataC", "IChartDataSet"]
+- ["6Charts12PieChartDataC", "IPieChartDataSet"]
+- ["6Charts12PieChartDataC", "Int"]
+- ["6Charts12PieChartDataC", "String"]
+- !private ["6Charts12PieChartDataC", "_dataSets"]
+- ["6Charts12PieChartDataC", "addDataSet"]
+- !private ["6Charts12PieChartDataC", "assert"]
+- ["6Charts12PieChartDataC", "dataSet"]
+- ["6Charts12PieChartDataC", "dataSets"]
+- ["6Charts12PieChartDataC", "deinit"]
+- ["6Charts12PieChartDataC", "entryForHighlight"]
+- ["6Charts12PieChartDataC", "getDataSetByIndex"]
+- ["6Charts12PieChartDataC", "getDataSetByLabel"]
+- ["6Charts12PieChartDataC", "init"]
+- ["6Charts12PieChartDataC", "removeDataSetByIndex"]
+- ["6Charts12PieChartDataC", "yValueSum"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "caseInsensitiveCompare"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "orderedSame"]
+- !private ["s8SequenceP", "caseInsensitiveCompare"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "caseInsensitiveCompare"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "caseInsensitiveCompare"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "caseInsensitiveCompare"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "caseInsensitiveCompare"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "caseInsensitiveCompare"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "caseInsensitiveCompare"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "caseInsensitiveCompare"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "caseInsensitiveCompare"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "caseInsensitiveCompare"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "caseInsensitiveCompare"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_dataSets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addDataSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assert"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "caseInsensitiveCompare"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDataSetByIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "x"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "y"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "caseInsensitiveCompare"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "caseInsensitiveCompare"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- "s7CVarArgP"
+- "6Charts9ChartDataC"
+- !private "6Charts14ChartDataEntryC"
+- !private "6Charts18ChartDataEntryBaseC"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "SC16ComparisonResultO"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "6Charts9HighlightC"
+- !private "6Charts13IChartDataSetP"
+- !private "6Charts16IPieChartDataSetP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s7NumericP"
+- "6Charts12PieChartDataC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/justinlew/Documents/iOS_dev/mealify/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "f0ac9360b67405fae875a7907c4212fb"
