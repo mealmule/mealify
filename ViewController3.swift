@@ -15,9 +15,11 @@ var nutrients = [Nutrients]()
 
 class ViewController3: UIViewController {
 
+    
     @IBOutlet weak var emailtext: UITextField!
     
     @IBOutlet weak var passwordtext: UITextField!
+    
     
     var today = Date()
     let dateFormatter = DateFormatter()

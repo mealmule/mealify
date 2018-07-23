@@ -37,6 +37,7 @@
 		9758456720FFF0F400AF647D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456220FFF0F400AF647D /* FriendsViewController.swift */; };
 		9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */; };
 		9758456A20FFF4A300AF647D /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456920FFF4A300AF647D /* Diary.swift */; };
+		97EF8B6E21056333004E36C6 /* HeightSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF8B6D21056333004E36C6 /* HeightSlider.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
 		BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79720F9C42D003286CE /* AppDelegate.swift */; };
 		BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79B20FB3184003286CE /* Nutrients.swift */; };
@@ -93,6 +94,12 @@
 		9758456220FFF0F400AF647D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsInvite2ViewController.swift; sourceTree = "<group>"; };
 		9758456920FFF4A300AF647D /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		97EF8B6821054B4B004E36C6 /* Gravity-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Bold.otf"; sourceTree = "<group>"; };
+		97EF8B6921054B4B004E36C6 /* Gravity-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Light.otf"; sourceTree = "<group>"; };
+		97EF8B6A21054B4C004E36C6 /* Gravity-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Regular.otf"; sourceTree = "<group>"; };
+		97EF8B6B21054B4C004E36C6 /* Gravity-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Book.otf"; sourceTree = "<group>"; };
+		97EF8B6C21054B4C004E36C6 /* Gravity-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-BookItalic.otf"; sourceTree = "<group>"; };
+		97EF8B6D21056333004E36C6 /* HeightSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSlider.swift; sourceTree = "<group>"; };
 		A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB6D79720F9C42D003286CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB6D79B20FB3184003286CE /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
@@ -159,6 +166,7 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
+				97EF8B6D21056333004E36C6 /* HeightSlider.swift */,
 				9758456920FFF4A300AF647D /* Diary.swift */,
 				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
 				BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */,
@@ -207,6 +215,7 @@
 		24DECF3520B9E4DF007F678D /* mealify */ = {
 			isa = PBXGroup;
 			children = (
+				97EF8B6721054B08004E36C6 /* fonts */,
 				24DE748220E7348200125859 /* Other Files */,
 				24DE748120E7347B00125859 /* Model */,
 				24DE748020E7347400125859 /* Controller */,
@@ -226,6 +235,18 @@
 				7DEC6AF720EC57EA00471017 /* ViewController3LoginTest.swift */,
 			);
 			path = mealifyTests;
+			sourceTree = "<group>";
+		};
+		97EF8B6721054B08004E36C6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				97EF8B6821054B4B004E36C6 /* Gravity-Bold.otf */,
+				97EF8B6B21054B4C004E36C6 /* Gravity-Book.otf */,
+				97EF8B6C21054B4C004E36C6 /* Gravity-BookItalic.otf */,
+				97EF8B6921054B4B004E36C6 /* Gravity-Light.otf */,
+				97EF8B6A21054B4C004E36C6 /* Gravity-Regular.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		E76E5383EA5A163AC83ED616 /* Pods */ = {
@@ -425,6 +446,7 @@
 				BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */,
 				7DEEDD1620FDD12C00812D42 /* MealTableViewCell.swift in Sources */,
 				24DECF3920B9E4DF007F678D /* ViewControllerJ.swift in Sources */,
+				97EF8B6E21056333004E36C6 /* HeightSlider.swift in Sources */,
 				BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */,
 				9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */,
 				BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */,

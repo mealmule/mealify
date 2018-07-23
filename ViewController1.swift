@@ -19,8 +19,9 @@ class userInfo{                 //user class
 }
 
 class SecondViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBAction func heightSlider(_ sender: UISlider) {
+        userHeightCM.text = String(Int(sender.value))
         userHeight.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
     }
     
@@ -46,21 +47,35 @@ class SecondViewController: UIViewController {
         }
     }
     
+    // if weight arrows are tapped, the weight number changes.
+     @IBOutlet weak var userWeight: UITextField!
+    var weightInt: Int!
+    @IBAction func thinerBtn(_ sender: UIButton) {
+        weightInt = Int(userWeight.text!)
+        if(weightInt != 0) {
+            userWeight.text = String (weightInt! - 1)
+        }
+    }
+    @IBAction func heavierBtn(_ sender: UIButton) {
+        weightInt = Int(userWeight.text!)
+        userWeight.text = String (weightInt! + 1)
+        
+    }
+    
+    
     @IBOutlet weak var nextButton: UIButton!        //next view controller button
     @IBAction func nextButton(_ sender: UIButton) {
         nextButton.setTitleColor(UIColor .green, for: .normal)
     }
     
     @IBOutlet weak var female: UIButton!            //female button
-    @IBOutlet weak var girlImage: UIImageView!
-    
+    @IBOutlet weak var avatarImage: UIImageView!
     @IBAction func girl(_ sender: UIButton) {
-        girlImage.isHidden = false
-        female.setTitleColor(UIColor .green, for: .normal)
-        if(male.isHidden == false){
-            male.setTitleColor(UIColor .blue, for: .normal)
-            boyImage.isHidden = true
-        }
+        // change the button color to yellow if tapped
+        female.setTitleColor(yellow, for: .normal)
+        male.setTitleColor(grey, for: .normal)
+        // change the avatar image to girl
+        avatarImage.image = #imageLiteral(resourceName: "Asset 2@300x")
     }
     
     
@@ -68,28 +83,28 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var boyImage: UIImageView!
     
     @IBAction func boy(_ sender: UIButton) {
-        boyImage.isHidden = false
-        male.setTitleColor(UIColor .green, for: .normal)
-        if(female.isHidden == false){
-            female.setTitleColor(UIColor .blue, for: .normal)
-            girlImage.isHidden = true
-        }
+        // change button colors
+        male.setTitleColor(yellow, for: .normal)
+        female.setTitleColor(grey, for: .normal)
+        // change the avatar image to boy
+        avatarImage.image = #imageLiteral(resourceName: "Asset 1@300x")
     }
     
-    
-    
-    
-    @IBOutlet weak var userWeight: UITextField!
-    
-    @IBAction func weightSlider(_ sender: UISlider) {
-        userWeight.text = String(Int(sender.value))
-    }
     
     @IBOutlet weak var userHeight: UISlider!
 
     @IBOutlet weak var userHeightCM: UITextField!
-    @IBAction func heightSlider(_ sender: UISlider) {
-        userHeightCM.text = String(Int(sender.value))
+    var yellow: UIColor!
+    var grey: UIColor!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // define uicolors
+        yellow = UIColor(hue: 0.1139, saturation: 0.69, brightness: 0.96, alpha: 1.0)
+        grey = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 1.0)
+        
+        female.setTitleColor(yellow, for: .normal)
+        male.setTitleColor(grey, for: .normal)
     }
     
     
