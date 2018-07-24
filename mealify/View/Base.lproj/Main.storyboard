@@ -1182,7 +1182,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="sandwich"/>
                                                 <connections>
-                                                    <segue destination="pzV-KO-kKP" kind="show" id="TBu-gc-qjH"/>
+                                                    <segue destination="pzV-KO-kKP" kind="show" identifier="seeMeals" id="TBu-gc-qjH"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purpleBar" translatesAutoresizingMaskIntoConstraints="NO" id="aDc-73-KNU">

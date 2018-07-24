@@ -138,11 +138,6 @@ class TodayMealViewController: UIViewController {
             //Find user ID
             let userID = (Auth.auth().currentUser?.uid)!
             
-            //Remove the meal from the array
-            let itemToRemove = meal
-            if let i = today.userMeals.index(of: itemToRemove) {
-                today.userMeals.remove(at: i)
-            }
             
             //Delete the meal from the database
             self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").child(meal.name).removeValue {error,ref  in

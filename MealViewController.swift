@@ -138,10 +138,6 @@ class MealViewController: UIViewController {
             
             //Check the days of the app, add meal to array depending on day and types of meal
             
-            //Don't need this part
-            //today.userMeals += [meal]
-            //let dest = segue.destination as! ViewController
-            
             //Initialize ref to database reference
             ref = Database.database().reference()
             

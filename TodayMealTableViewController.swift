@@ -20,6 +20,9 @@ class TodayMealTableViewController: UITableViewController {
     
     //Properties and variables
     
+    //Get all meals the user has eaten on this day
+    var userMeals = [Meal]()
+    
     //Create a meals array to contain all meals to display
     var meals = [Meal]()
     
@@ -73,10 +76,10 @@ class TodayMealTableViewController: UITableViewController {
             for i in loaded...(loaded + toLoad - 1){
                 
                 //Check if it is in range
-                if i < today.userMeals.count{
+                if i < userMeals.count{
                     
                     //Add meal
-                    meals += [today.userMeals[i]]
+                    meals += [userMeals[i]]
                 }
             }
             
@@ -140,7 +143,7 @@ class TodayMealTableViewController: UITableViewController {
         filteredMeals = []
         
         //Filter allMeals
-        allFilteredMeals = today.userMeals.filter({( meal : Meal) -> Bool in
+        allFilteredMeals = userMeals.filter({( meal : Meal) -> Bool in
             return meal.name.lowercased().contains(searchText.lowercased())
         })
         
@@ -235,7 +238,7 @@ class TodayMealTableViewController: UITableViewController {
         if maximumOffset - currentOffset <= 10.0 {
             
             //Not filtering
-            if !isFiltering() && today.userMeals.count > loaded{
+            if !isFiltering() && userMeals.count > loaded{
                 self.loadMoreMeals()
             }
                 //Filtering
