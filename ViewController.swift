@@ -198,6 +198,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
+        
         //User Interface of the view controller begins here
         
         // initialize daily nutrient goals
@@ -336,6 +338,7 @@ class ViewController: UIViewController {
     //This function passes data from current view to navigation bar to the actual next view.
     //Add meal button changes title to meals
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         
         
         //Add Meal button is pressed
