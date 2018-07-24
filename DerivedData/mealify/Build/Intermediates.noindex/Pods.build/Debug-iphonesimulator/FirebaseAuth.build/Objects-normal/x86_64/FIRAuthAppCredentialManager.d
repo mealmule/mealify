@@ -1,7 +1,0 @@
-dependencies: \
-  /Users/justinlew/Documents/iOS_dev/mealify/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.m \
-  /Users/justinlew/Documents/iOS_dev/mealify/DerivedData/mealify/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseAuth.build/module.modulemap \
-  /Users/justinlew/Documents/iOS_dev/mealify/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.h \
-  /Users/justinlew/Documents/iOS_dev/mealify/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredential.h \
-  /Users/justinlew/Documents/iOS_dev/mealify/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthGlobalWorkQueue.h \
-  /Users/justinlew/Documents/iOS_dev/mealify/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthKeychain.h

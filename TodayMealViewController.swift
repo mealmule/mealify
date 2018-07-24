@@ -17,13 +17,27 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class TodayMealViewController: UIViewController {
 
+//This class is similar to mealviewcontroller, except it displays the food you've added
+//Instead of the food you want to add
+class TodayMealViewController: UIViewController {
+    
     //Properties
+    
+    //Create a meal to hold the meal selected in the meal table view controller
     var meal = Meal()
+    
+    //Create a string to display for the users
+    //This string will be of all nutrients the meal has
     var mealNutrients: String = ""
+    
+    //Firebase reference
     var ref: DatabaseReference?
     
+    
+    //Variables for all nutrients
+    //The variables are here so that we can keep track of each nutrient inside a variable
+    //so that it will be easier to add these nutrients into firebase.
     var proteins: Double = 0
     var fats : Double = 0
     var carbohydrates: Double = 0
@@ -33,27 +47,37 @@ class TodayMealViewController: UIViewController {
     var vitaminD: Double = 0
     var folate: Double = 0
     
+    //Label for food name and meal nutrients
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var mealDescription: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Food name properties
+        //Set the food title meal to meal name
         foodName.text = meal.name
+        
+        //Format it so that it will fit on the screen, even when meal has large amount of text
         foodName.adjustsFontSizeToFitWidth = true
         foodName.minimumScaleFactor = 0.7
         foodName.numberOfLines = 0
         
-        //Search for nutrients in nutrients array
+        //Find all meal nutrients, and add them to the meal description string
         for i in meal.nutrients{
             
+            //compare it to all the nutrients in the database
             for k in nutrients{
                 
+                //If there is a match, add it into the string
                 if i.nutrientID == k.nutrientCode{
+                    
+                    //Round it up to 2 digits
                     let temp = Double(round(Double(truncating: i.nutrientValue) * 100) / 100)
                     mealNutrients += k.nutrientName + ": " + String("\(temp)") + k.nutrientUnit + "\n \n"
                     
-                    //Save nutrient code to add to database
+                    //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
+                    //Then set those values to temp so that it can be added into the database
                     if k.nutrientCode == 203{
                         proteins = temp
                     }
@@ -86,17 +110,17 @@ class TodayMealViewController: UIViewController {
             
         }
         
+        //Update meal description
         mealDescription.text = mealNutrients
-
-        // Do any additional setup after loading the view.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -108,11 +132,13 @@ class TodayMealViewController: UIViewController {
         //If the identifier goes back to view controller, then update the foods within that view controller
         if segue.identifier == "updateRemovedFoods"{
             
+            //Initialize ref to database reference
             ref = Database.database().reference()
+            
+            //Find user ID
             let userID = (Auth.auth().currentUser?.uid)!
             
-            //Check the days of the app, add meal to array depending on day and types of meal
-  
+            //Remove the meal from the array
             let itemToRemove = meal
             if let i = today.userMeals.index(of: itemToRemove) {
                 today.userMeals.remove(at: i)
@@ -138,10 +164,10 @@ class TodayMealViewController: UIViewController {
                 self.self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).updateChildValues(["proteins": currentProteins - self.proteins, "fats": currentFats - self.fats, "carbohydrates": currentCarbohydrates - self.carbohydrates, "moisture": currentMoisture - self.moisture, "iron": currentIron - self.iron, "magnesium": currentMagnesium - self.magnesium, "vitaminD": currentVitaminD - self.vitaminD, "folate": currentFolate - self.folate])
                 //
             })
-       
+            
         }
         
         
     }
-
+    
 }

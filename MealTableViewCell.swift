@@ -11,8 +11,6 @@
 
 import UIKit
 
-//TODO: Add more properties to tabel cell
-//Maybe description, calories, or proteins.
 class MealTableViewCell: UITableViewCell {
     
     //Properties

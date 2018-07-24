@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
-options: "61993eb5461ce31da5e8840039528b0f"
-build_time: [1532210262, 914351000]
-inputs:
-  "/Users/justinlew/Documents/iOS_dev/mealify/Pods/ASHorizontalScrollView/Sources/ASHorizontalScrollView.swift": [1532210048, 0]

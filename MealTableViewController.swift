@@ -18,70 +18,35 @@ import UIKit
 class MealTableViewController: UITableViewController {
     
     //Properties and variables
+    
+    //Create a meals array to contain all meals to display
     var meals = [Meal]()
+    
+    //Create another meals array to contain all filtered meals to display
+    //All Filtered meals replace meals array when searching is being done.
     var allFilteredMeals = [Meal]()
+    
+    //filteredMeals is a subset of allFilteredMeals, this is for loading more filtered meals while scrolling
+    //Loads toLoad at a time until all filtered meals is loaded
     var filteredMeals = [Meal]()
+    
+    //toLoad is how many meals to load at a time every time you reach the bottom of the table
+    //This would reduce more lag while searching for meals (not loading 5000 meals at once)
     var toLoad = 35
+    
+    //How many unfiltered meals are loaded to display.
     var loaded = 0
+    
+    //How many filtered meals are loaded to display.
     var filteredLoaded = 0
+    
+    //searchController for implementing the search bar to search for meals.
     let searchController = UISearchController(searchResultsController: nil)
     
-
-    //This adds new meals into the array.
-    //TODO:
-    //For now, they are sample meals, but can import meals from database later
-    private func loadMoreMeals() {
-        
-//        if isFiltering(){
-//
-//            for i in filteredLoaded...(filteredLoaded + toLoad - 1){
-//                if i < allFilteredMeals.count{
-//                    filteredMeals += [allFilteredMeals[i]]
-//                }
-//            }
-//
-//            filteredLoaded += toLoad
-//
-//        }
-//        else{
-        if !isFiltering(){
-            for i in loaded...(loaded + toLoad - 1){
-                if i < allMeals.count{
-                    meals += [allMeals[i]]
-                }
-            }
-            
-            loaded += toLoad
-        }
-      
-        
-        tableView.reloadData()
-        print(loaded)
-        
-    }
     
-    //This adds new meals into the array.
-    //TODO:
-    //For now, they are sample meals, but can import meals from database later
-    private func loadMoreFilteredMeals() {
-        
-        if isFiltering(){
-
-            for i in filteredLoaded...(filteredLoaded + toLoad - 1){
-                if i < allFilteredMeals.count{
-                    filteredMeals += [allFilteredMeals[i]]
-                }
-            }
-
-            filteredLoaded += toLoad
-
-        }
-        
-        
-        
-        tableView.reloadData()
-        print(loaded)
-        
+    //Determines if you are filtering by checking the search bar and seeing if its empty
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
     }
     
     //Returns true or false, true being search bar is empty, false being it is not empty
@@ -90,26 +55,104 @@ class MealTableViewController: UITableViewController {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
+    
+    //TODO:
+    //*
+    //*
+    //*
+    //This adds new meals into the array.
+    //Adds toLoad amount of new meals to the array every time this function is called
+    //This is for scrolling through unfiltered meals, to load bits at a time
+    private func loadMoreMeals() {
+        
+        //If the user is not filtering, then load more meals
+        if !isFiltering(){
+            
+            //Goes through toLoad more meals and add those into the array
+            for i in loaded...(loaded + toLoad - 1){
+                
+                //Check if it is in range
+                if i < allMeals.count{
+                    
+                    //Add meal
+                    meals += [allMeals[i]]
+                    
+                }
+                
+            }
+            
+            //Update the loaded variable
+            loaded += toLoad
+        }
+        
+        //Reload the table data
+        tableView.reloadData()
+        print(loaded)
+        
+    }
+    
+    //TODO:
+    //*
+    //*
+    //*
+    //This adds new filtered meals into the array.
+    //Adds toLoad amount of new meals to the array every time this function is called
+    //This is for scrolling through filtered meals, to load bits at a time
+    private func loadMoreFilteredMeals() {
+        
+        //If the user is filtering, then load more meals
+        if isFiltering(){
+            
+            //Goes through toLoad more meals and add those into the array
+            for i in filteredLoaded...(filteredLoaded + toLoad - 1){
+                
+                //Check if it is in range
+                if i < allFilteredMeals.count{
+                    
+                    //Add meal
+                    filteredMeals += [allFilteredMeals[i]]
+                }
+            }
+            
+            //Update filteredLoaded variable
+            filteredLoaded += toLoad
+            
+        }
+        
+        //Reload data
+        tableView.reloadData()
+        print(loaded)
+        
+    }
+    
+    
+    //TODO:
+    //*
+    //*
+    //*
     //This function takes in whatever you type in from the search bar and compare it to all the meals in the list
     //This will then give the filtered version of the table
     //Reload data afterwards so that new filtered items appear whenever you type into the search bar
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        
+        //Set these values to 0 to reset filtered
         filteredLoaded = 0
         filteredMeals = []
+        
+        //Filter allMeals
         allFilteredMeals = allMeals.filter({( meal : Meal) -> Bool in
             return meal.name.lowercased().contains(searchText.lowercased())
         })
         
+        //Load the filtered meals
         loadMoreFilteredMeals()
         
-        //tableView.reloadData()
     }
     
-    //Determines if you are filtering by checking the search bar and seeing if its empty
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    
+    //Todo: Replace this function in an attempt to fix a bug
+    //*
+    //*
+    //*
     //Back button functionality.
     //Replace previous back button so that this one can have some functionality to it
     //For example, I wanted to hide the navigation bar when the back button is pressed
@@ -127,10 +170,17 @@ class MealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         
+        //Table view delegate and datasource
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //TODO: Rewrite this part to update
+        //*
+        //*
+        //*
+        //********//
+        
         //Hides the back button on navigation bar and implement your own.
         //This gives the back button more options, for example, you can do other things
         //when the back button is pressed.
@@ -141,7 +191,9 @@ class MealTableViewController: UITableViewController {
         //Whenever this view is loaded, don't hide the navigation bar.
         self.navigationController?.isNavigationBarHidden = false
         
-        //This loads all the sample meals and store them in the array
+        //********//
+        
+        //This loads meals and store them in the array
         loadMoreMeals()
         
         //Setup the Search Controller
@@ -156,7 +208,7 @@ class MealTableViewController: UITableViewController {
         
         
         
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -165,55 +217,59 @@ class MealTableViewController: UITableViewController {
     }
     
     
-  
+    
+    //TODO:
+    //*
+    //*
+    //*
+    //If the user scrolled all the way to the bottom, and there are more meals to load, then load more meals
+    //Compare the current offset with the maximum offset to find out if user is at the bottom
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        //Create current and maximum offset
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         
-        // Change 10.0 to adjust the distance from bottom
+        // Change 10.0 to adjust the distance from bottom, if distance is less than 10, then load more
         if maximumOffset - currentOffset <= 10.0 {
+            
+            //Not filtering
             if !isFiltering() && allMeals.count > loaded{
                 self.loadMoreMeals()
             }
+                //Filtering
             else if isFiltering() && allFilteredMeals.count > filteredLoaded{
                 self.loadMoreFilteredMeals()
             }
-
+            
         }
     }
-
     
-//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: NSIndexPath) {
-//        print(indexPath.row)
-//        let lastElement = meals.count - 1
-//        if indexPath.row == lastElement {
-//
-//            loadMoreMeals()
-//        }
-//    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
- 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //return the amount of meals based on what you type on the search bar.
         if isFiltering() {
-           return filteredMeals.count
+            return filteredMeals.count
         }
         
+        //Else return normal meals count
         return meals.count
     }
     
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Table view cells are reused and should be dequeued using a cell identifier.
@@ -226,21 +282,25 @@ class MealTableViewController: UITableViewController {
         
         // Fetches the appropriate meal for the data source layout.
         var meal : Meal
+        
+        //If user is filtering, then return the meal on the filtered array
         if isFiltering() {
             meal = filteredMeals[indexPath.row]
-        } else {
+        }
+            //Else if the user is not filtering, then return the meal on the unfiltered array
+        else {
             meal = meals[indexPath.row]
         }
         
+        //Change cell properties
         cell.foodName.text = meal.name
+        
+        //Adjust just in case text is too large
         cell.foodName.adjustsFontSizeToFitWidth = true
         cell.foodName.minimumScaleFactor = 0.7
         
         return cell
     }
-    
-    
-    
     
     
     /*
@@ -285,7 +345,6 @@ class MealTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         //connect to table view
-        
         guard let selectedMealCell = sender as? MealTableViewCell else {
             fatalError("Unexpected sender: (String(describing: sender))")
         }
@@ -298,13 +357,18 @@ class MealTableViewController: UITableViewController {
         
         //Check to see if filtered is on or off, return object dependent on the filter (search bar)
         var selectedMeal = Meal()
+        
+        //Return filtered meal if it is filtered
         if isFiltering(){
             selectedMeal = filteredMeals[indexPath.row]
         }
+            //Else return unfiltered meal
         else{
             selectedMeal = meals[indexPath.row]
         }
         
+        //This for loop adds nutrients into the the meal
+        //It will search through the whole database until it finds a matching ID, and add that in
         for i in mealNutrients{
             
             if i.foodID == selectedMeal.foodID{
@@ -313,26 +377,15 @@ class MealTableViewController: UITableViewController {
             
         }
         
-        //let dest = segue.destination as! ViewController
-        
-        
-        //If the identifier goes back to view controller, then update the foods within that view controller
+        //If the identifier goes to meal view controller then update the foods within that view controller
         if segue.identifier == "newFoods"{
             
             let dest = segue.destination as! MealViewController
-            
             dest.meal = selectedMeal
-            
             
         }
         
-        
-        
-        
-        
-        
     }
-    
     
 }
 

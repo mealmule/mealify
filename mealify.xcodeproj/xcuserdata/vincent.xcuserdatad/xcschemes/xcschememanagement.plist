@@ -7,7 +7,20 @@
 		<key>mealify.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>24DECF3220B9E4DF007F678D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DEC6AEC20EC573C00471017</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

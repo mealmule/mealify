@@ -6,6 +6,8 @@
 //  Team name: Meal Mules
 //  Changes made: Added name to get meal name
 //                  Added calories, fats, proteins, and carbs
+//                  Added nutrients array to keep track of nutrients
+//                  Added equatable extention to compare this object
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
@@ -16,7 +18,7 @@ import Foundation
 
 //Class for the meal object
 //Name of the meal
-//Meal properties includes name, calories, fats, proteins, and cars
+//Meal properties includes name, food ID, and nutrients array
 //TODO:
 class Meal {
     

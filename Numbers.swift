@@ -1,3 +1,5 @@
+//TECHNICALLY WE DONT EVEN NEED THIS
+//ILL REMOVE IT ON MONDAY
 //
 //  Numbers.swift
 //  Home
@@ -27,6 +29,8 @@ class Number {
     var lCals: Int
     var dCals: Int
     
+    
+    //All needed nutrients to display
     var proteins: Double
     var fats : Double
     var carbohydrates: Double
@@ -45,7 +49,7 @@ class Number {
         self.bCals = bCals
         self.lCals = lCals
         self.dCals = dCals
-    
+        
         self.proteins = 0
         self.fats = 0
         self.carbohydrates = 0
@@ -75,7 +79,7 @@ class Number {
         
     }
     
-
+    
     
     init(){
         

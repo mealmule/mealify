@@ -15,6 +15,7 @@ import Foundation
 
 class Nutrients {
     
+    //All the information about a nutrient
     var nutrientCode: Int
     var nutrientDecimals: Int
     var nutrientName: String
@@ -23,8 +24,11 @@ class Nutrients {
     var nutrientUnit: String
     var tagName: String
     
+    
+    //Initialize the nutrient by having all the nutrients as parameters
     init (nutrientCode: Int, nutrientDecimals: Int, nutrientName: String, nutrientNameF: String, nutrientSymbol: String, nutrientUnit: String, tagName: String){
         
+        //Set all of the nutrient values to the parameter values
         self.nutrientCode = nutrientCode
         self.nutrientDecimals = nutrientDecimals
         self.nutrientName = nutrientName
@@ -35,6 +39,6 @@ class Nutrients {
         
     }
     
- 
+    
     
 }
