@@ -11,6 +11,8 @@ import Firebase
 
 class ViewControllerRegister: UIViewController {
 
+    @IBOutlet weak var registerstatus: UILabel!
+    
     @IBOutlet weak var emailtext: UITextField!
     
     @IBOutlet weak var passwordtext: UITextField!
@@ -45,6 +47,8 @@ class ViewControllerRegister: UIViewController {
                     self.performSegue(withIdentifier: "gotoqa", sender: self)
                 } else {
                     print(error)
+                    self.registerstatus.text = "Please enter a valid email and a password at least 6 characters long!"
+                    self.registerstatus.textColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1.0)
                 }
             }
         }

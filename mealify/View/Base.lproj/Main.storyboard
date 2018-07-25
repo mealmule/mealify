@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -109,6 +108,13 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLogo@3x" translatesAutoresizingMaskIntoConstraints="NO" id="3uC-8j-4xB">
                                         <rect key="frame" x="0.0" y="448" width="278" height="219"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QOw-hu-W8E">
+                                        <rect key="frame" x="26" y="536" width="332" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -196,6 +202,7 @@
                     <connections>
                         <outlet property="emailtext" destination="Gmk-bc-Dkb" id="xIa-Um-bDN"/>
                         <outlet property="passwordtext" destination="6Qq-Sl-FE0" id="k7r-iO-cr8"/>
+                        <outlet property="registerstatus" destination="QOw-hu-W8E" id="8jr-u7-kYt"/>
                         <segue destination="voi-kX-ZXv" kind="show" identifier="gotoqa" id="LjZ-LN-p1e"/>
                     </connections>
                 </viewController>
@@ -858,6 +865,13 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLogo@3x" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-RI-qhd">
                                         <rect key="frame" x="0.0" y="448" width="278" height="219"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-78-vB5">
+                                        <rect key="frame" x="74" y="364" width="242" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -923,6 +937,7 @@
                     <connections>
                         <outlet property="emailtext" destination="yEG-y3-HG8" id="3ZY-Bx-NEb"/>
                         <outlet property="passwordtext" destination="1Gj-DA-S1r" id="w9N-Wl-Soq"/>
+                        <outlet property="statuslabel" destination="ud6-78-vB5" id="WQF-Tu-Uzl"/>
                         <segue destination="PcL-Ii-ViW" kind="show" identifier="loggedin" id="CkZ-ff-UQy"/>
                     </connections>
                 </viewController>
@@ -2028,7 +2043,6 @@
         <image name="thumb" width="4" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z2j-Pu-SDJ"/>
         <segue reference="CkZ-ff-UQy"/>
         <segue reference="ScG-t9-pLc"/>
         <segue reference="LjZ-LN-p1e"/>
