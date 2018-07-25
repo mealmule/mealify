@@ -165,9 +165,10 @@ class ViewController: UIViewController {
                 //Get name and foodID from the node
                 let userInterest = allNames["name"] as! String
                 let foodID = allNames["foodID"] as! Int
+                let mealNumber = allNames["mealNumber"] as! Int
                 
                 //Turn it into a meal
-                let meal = Meal(name: userInterest, foodID: foodID)
+                let meal = Meal(name: userInterest, foodID: foodID, mealNumber: mealNumber)
               
                 
                 //Include all nutrients into that meal
@@ -350,6 +351,10 @@ class ViewController: UIViewController {
             //Dest is the Meal table view. Change properties below
             dest.title = "Meals"
             
+            //Give number of meals to next
+            dest.numberOfDayMeals = today.userMeals.count
+            print("HEAHEA: " + String(today.userMeals.count))
+            
         }
         
         //Add Meal button is pressed
@@ -361,6 +366,9 @@ class ViewController: UIViewController {
             //Dest is the Meal table view. Change properties below
             dest.title = "Day's Meals"
             dest.userMeals = today.userMeals
+            
+            //Give number of meals to next
+            dest.numberOfDayMeals = today.userMeals.count
             
         }
         

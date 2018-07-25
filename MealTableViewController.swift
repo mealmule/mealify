@@ -19,6 +19,9 @@ class MealTableViewController: UITableViewController {
     
     //Properties and variables
     
+    //Get number of meals user currently have for the day
+    var numberOfDayMeals = 0
+    
     //Create a meals array to contain all meals to display
     var meals = [Meal]()
     
@@ -375,6 +378,8 @@ class MealTableViewController: UITableViewController {
             
             let dest = segue.destination as! MealViewController
             dest.meal = selectedMeal
+            
+            dest.numberOfDayMeals = numberOfDayMeals
             
         }
         

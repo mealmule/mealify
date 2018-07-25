@@ -1170,7 +1170,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="add-1"/>
                                                 <connections>
-                                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addMeal" id="Z2j-Pu-SDJ"/>
+                                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addMeals" id="Z2j-Pu-SDJ"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-Up-aEd">
@@ -1826,7 +1826,7 @@
         <image name="thumb" width="4" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TEs-fY-jFB"/>
+        <segue reference="Z2j-Pu-SDJ"/>
         <segue reference="Q5O-fQ-Og5"/>
         <segue reference="ScG-t9-pLc"/>
         <segue reference="LjZ-LN-p1e"/>

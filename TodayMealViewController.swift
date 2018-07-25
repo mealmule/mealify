@@ -24,6 +24,9 @@ class TodayMealViewController: UIViewController {
     
     //Properties
     
+    //Get number of meals user currently have for the day
+    var numberOfDayMeals = 0
+    
     //Create a meal to hold the meal selected in the meal table view controller
     var meal = Meal()
     
@@ -51,10 +54,19 @@ class TodayMealViewController: UIViewController {
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var mealDescription: UITextView!
     
+    
+    //Rounding function that will round to 2 decimal places
+    private func roundOff(toRound: Double) -> Double{
+        return Double(round(toRound * 100) / 100)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Food name properties
+        
+        
+        
         //Set the food title meal to meal name
         foodName.text = meal.name
         
@@ -140,7 +152,7 @@ class TodayMealViewController: UIViewController {
             
             
             //Delete the meal from the database
-            self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").child(meal.name).removeValue {error,ref  in
+            self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").child(String(meal.mealNumber)).removeValue {error,ref  in
                 if error != nil{
                     print("error \(String(describing: error))")
                 }
@@ -156,7 +168,7 @@ class TodayMealViewController: UIViewController {
                 let currentMagnesium = snapDictionary["magnesium"]! as! Double
                 let currentVitaminD = snapDictionary["vitaminD"]! as! Double
                 let currentFolate = snapDictionary["folate"]! as! Double
-                self.self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).updateChildValues(["proteins": currentProteins - self.proteins, "fats": currentFats - self.fats, "carbohydrates": currentCarbohydrates - self.carbohydrates, "moisture": currentMoisture - self.moisture, "iron": currentIron - self.iron, "magnesium": currentMagnesium - self.magnesium, "vitaminD": currentVitaminD - self.vitaminD, "folate": currentFolate - self.folate])
+                self.self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).updateChildValues(["proteins": self.roundOff(toRound: currentProteins - self.proteins), "fats": self.roundOff(toRound: currentFats - self.fats), "carbohydrates": self.roundOff(toRound: currentCarbohydrates - self.carbohydrates), "moisture": self.roundOff(toRound: currentMoisture - self.moisture), "iron": self.roundOff(toRound: currentIron - self.iron), "magnesium": self.roundOff(toRound: currentMagnesium - self.magnesium), "vitaminD": self.roundOff(toRound: currentVitaminD - self.vitaminD), "folate": self.roundOff(toRound: currentFolate - self.folate)])
                 //
             })
             

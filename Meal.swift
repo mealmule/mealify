@@ -25,14 +25,16 @@ class Meal {
     //Properties of the meals.
     let name: String
     let foodID: Int
+    let mealNumber: Int
     var nutrients = [NutrientMealInfo]()
     
     
     //Init with all variales
-    init(name: String, foodID: Int){
+    init(name: String, foodID: Int, mealNumber: Int){
         
         self.name = name
         self.foodID = foodID
+        self.mealNumber = mealNumber
         
     }
     
@@ -43,6 +45,7 @@ class Meal {
         
         self.name = "Food"
         self.foodID = 0
+        self.mealNumber = -1
         
     }
     
