@@ -121,6 +121,11 @@
                                         <color key="textColor" red="0.304464864" green="0.304464864" blue="0.304464864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="highlightedColor" red="1" green="0.99971767580000004" blue="0.9990776965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSX-CF-Q77">
+                                        <rect key="frame" x="255" y="45" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1814,7 +1819,7 @@
         <image name="dismiss" width="21" height="22"/>
         <image name="face1" width="109" height="109"/>
         <image name="greyLine" width="242" height="2"/>
-        <image name="greyLogo@3x" width="252" height="221"/>
+        <image name="greyLogo@3x" width="252" height="219"/>
         <image name="logo_2" width="233" height="117"/>
         <image name="nextBtn" width="69" height="69"/>
         <image name="purpleBar" width="3" height="104"/>
