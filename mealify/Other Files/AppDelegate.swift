@@ -21,6 +21,12 @@ class AppDelegate2: UIResponder, UIApplicationDelegate {
         
         let myDatabase = Database.database().reference()
         
+        //Change all back button colors to grey
+        UINavigationBar.appearance().tintColor = UIColor(rgb: 0x9b9b9b)
+        
+        //Clear the title text for all the back buttons
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(-1000, 0), for:UIBarMetrics.default)
+        
         return true
     }
     
@@ -47,5 +53,25 @@ class AppDelegate2: UIResponder, UIApplicationDelegate {
     }
     
     
+}
+
+
+//Extension for UIColor where you can choose which color you want, rgb
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
 }
 

@@ -25,6 +25,8 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
 //loads friendlist into the viewcontroller
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.isNavigationBarHidden = false
 
         ref = Database.database().reference()
         print("Current user is \(userID!)")
@@ -43,6 +45,23 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         
     }
 
+    //Todo:
+    //*
+    //*
+    //*
+    //Back button functionality.
+    //Give functionality to the back button so whenever it is pressed, it will perform an action
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
+        
+        //Is popped from the view controller (back button)
+        if self.isMovingFromParentViewController {
+            
+            //Hide navigation bar
+            self.navigationController?.isNavigationBarHidden = true
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

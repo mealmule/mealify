@@ -13,6 +13,8 @@ var allMeals = [Meal]()
 var mealNutrients = [NutrientMealInfo]()
 var nutrients = [Nutrients]()
 
+
+
 class ViewController3: UIViewController {
 
     
@@ -21,7 +23,7 @@ class ViewController3: UIViewController {
     @IBOutlet weak var passwordtext: UITextField!
     
     
-    var today = Date()
+    var today2 = Date()
     let dateFormatter = DateFormatter()
     let cal = Calendar.current
     var todayFormatted = ""
@@ -118,6 +120,8 @@ class ViewController3: UIViewController {
             })
         }
         
+        
+        
     }
     
     override func viewDidLoad() {
@@ -128,7 +132,7 @@ class ViewController3: UIViewController {
         ref = Database.database().reference()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        todayFormatted = dateFormatter.string(from: today)
+        todayFormatted = dateFormatter.string(from: today2)
         
         LoadMealsAndNutrients()
         

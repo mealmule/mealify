@@ -39,12 +39,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         view.addSubview(calendar)
         self.calendar = calendar
         
-        //Hides the back button on navigation bar and implement your own.
-        //This gives the back button more options, for example, you can do other things
-        //when the back button is pressed.
-        self.navigationItem.hidesBackButton = true
-        let newButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CalendarViewController.back(sender:)))
-        self.navigationItem.leftBarButtonItem = newButton
         
         //Whenever this view is loaded, don't hide the navigation bar.
         self.navigationController?.isNavigationBarHidden = false
@@ -54,17 +48,21 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     }
     
     
+    //Todo:
+    //*
+    //*
+    //*
     //Back button functionality.
-    //Replace previous back button so that this one can have some functionality to it
-    //For example, I wanted to hide the navigation bar when the back button is pressed
-    @objc func back(sender: UIBarButtonItem) {
+    //Give functionality to the back button so whenever it is pressed, it will perform an action
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
         
-        //Functionality
-        //Hide the navigation bar again
-        self.navigationController?.isNavigationBarHidden = true
-        
-        //This leads you back to the previous view controller.
-        _ = navigationController?.popViewController(animated: true)
+        //Is popped from the view controller (back button)
+        if self.isMovingFromParentViewController {
+            
+            //Hide navigation bar
+            self.navigationController?.isNavigationBarHidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {

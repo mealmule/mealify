@@ -9,6 +9,7 @@
 //                Added functionality to add breakfast, add lunch, add dinner buttons
 //                Added firebase to retrieve all information from database
 //                Deleted days, and breakfast, lunch, and dinner
+//                Fixed duplicate bug where add meals would add multiple meals
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
@@ -20,9 +21,6 @@ import FirebaseDatabase
 
 
 //Global variables
-
-//The selected day's properties (meals, nutrients)
-var today = Number()
 
 //The date chosen from the calendar
 var dateChosenGlo: String?
@@ -40,6 +38,8 @@ class ViewController: UIViewController {
     
     
     let shapeLayer = CAShapeLayer()
+    //The selected day's properties (meals, nutrients)
+    var today = Number()
     
     //Variables
     var folateGoal: Int = 0
@@ -106,44 +106,10 @@ class ViewController: UIViewController {
     }
     
     
-    //TODO: This function is no longer needed as we are printing the nutrients on another page/and we are no longer hard coding.
-    //*
-    //*
-    //*
-    //This function will set all the numbers to the current day's recommendations
-    //Kcals left will be changed
-    //meal recommendation calories will be changed
-    private func getToday(){
-        
-        today.kCals = 50
-        today.bCals = 810
-        today.lCals = 803
-        today.dCals = 1598
-        
-    }
     
     
     
-    //TODO: This function is no longer needed as we are no longer doing Yesterday, today, tomorrow
-    //*
-    //*
-    //*
-    //This function will direct the user to today.
-    //The new page will be the same as today except with different numbers
-    //Different progress, and Kcals left/recommended.
-    //The page will have the same numbers when the user leaves the page and comes back
-    //The page does not have to be new, it can be the same page with different numbers
-    //so every time this button is pressed, it will just display different numbers
-    @IBOutlet weak var now: UIButton!
-    @IBAction func dayNow(_ sender: Any) {
-        printNumbers(kCalories: today.kCals, bCalories: today.bCals, lCalories: today.lCals, dCalories: today.dCals)
-        printFoods()
-    }
-    
-    
-    
-    
-    //TODO: Change this function to private instead of public
+    //TODO:
     //*
     //*
     //*
@@ -152,7 +118,7 @@ class ViewController: UIViewController {
     //And it will display different foods for all meal. lunch and dinner.
     //This will get an array, and checks the count.
     //If the count is 0 then print "none", else print all the foods in the array
-    public func printFoods(){
+    private func printFoods(){
         
         print("printFoods CALLED")
         //If there are no foods inside the selected date's database, then set this to display none
@@ -179,9 +145,59 @@ class ViewController: UIViewController {
     }
     
     
+    //TODO:
+    //*
+    //*
+    //*
+    //This function retrieves data from the database so that you can it will give user all meals from that day
+    //It will store the meals into today.userMeals, and will be used in other view controllers
+    //today will be initialized every time this view controller is called, initializing today.userMeals to empty is not necessary
+    private func loadFromDatabase(){
+        
+        //Get the userID, and remove all elements in today.userMeals
+        let userID = (Auth.auth().currentUser?.uid)!
+        
+        //Retrieve all meals from the user on selected date and put them in today.userMeals()
+        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").observe(.childAdded, with: { (snapshot) in
+            
+            if let allNames = snapshot.value as? [String:AnyObject] {
+
+                //Get name and foodID from the node
+                let userInterest = allNames["name"] as! String
+                let foodID = allNames["foodID"] as! Int
+                
+                //Turn it into a meal
+                let meal = Meal(name: userInterest, foodID: foodID)
+              
+                
+                //Include all nutrients into that meal
+                for i in mealNutrients{
+                    
+                    if i.foodID == meal.foodID{
+                        meal.nutrients += [i]
+                    }
+                    
+                }
+                
+                //Add meal into array
+                self.today.userMeals += [meal]
+
+            }
+            
+            //Load data numbers dependent on what day it is
+            self.printFoods()
+
+            
+        })
+        
+    }
+ 
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        
         
         
         //User Interface of the view controller begins here
@@ -241,10 +257,10 @@ class ViewController: UIViewController {
         //*
         //*
         
-        //Initialize ref
-        today.userMeals = []
-        
+        //initialize ref
         ref = Database.database().reference()
+        
+        
         
         //Get today's date in string format.
         dateFormatter.dateStyle = .medium
@@ -268,43 +284,13 @@ class ViewController: UIViewController {
             }
         }
         
-        //Get the userID, and remove all elements in today.userMeals
-        let userID = (Auth.auth().currentUser?.uid)!
-        
-        //Retrieve all meals from the user on selected date and put them in today.userMeals()
-        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").observe(.childAdded, with: { (snapshot) in
-            
-            if let allNames = snapshot.value as? [String:AnyObject] {
-                
-                let userInterest = allNames["name"] as! String
-                let foodID = allNames["foodID"] as! Int
-                var meal = Meal(name: userInterest, foodID: foodID)
-                
-                for i in mealNutrients{
-                    
-                    if i.foodID == meal.foodID{
-                        meal.nutrients += [i]
-                    }
-                    
-                }
-                
-                today.userMeals += [meal]
-                print(today.userMeals.count)
-            }
-            //Load data numbers dependent on what day it is
-            self.dayNow(self.now)
-            
-            
-        })
+     
+        loadFromDatabase()
         
         
         // Do any additional setup after loading the view, typically from a nib.
         //Hides the navigation bar
         self.navigationController?.isNavigationBarHidden = true
-        
-        ref = Database.database().reference()
-        //get data for today, yesterday, and tomorrow
-        getToday()
         
         
         
@@ -354,6 +340,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
+        
         //Add Meal button is pressed
         if segue.identifier == "addMeals"{
             
@@ -362,6 +349,18 @@ class ViewController: UIViewController {
             
             //Dest is the Meal table view. Change properties below
             dest.title = "Meals"
+            
+        }
+        
+        //Add Meal button is pressed
+        if segue.identifier == "seeMeals"{
+            
+            //connect to table view
+            let dest = segue.destination as! TodayMealTableViewController
+            
+            //Dest is the Meal table view. Change properties below
+            dest.title = "Day's Meals"
+            dest.userMeals = today.userMeals
             
         }
         
