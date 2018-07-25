@@ -1348,7 +1348,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="add-1"/>
                                                 <connections>
-                                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addMeal" id="Z2j-Pu-SDJ"/>
+                                                    <segue destination="TwL-Jn-gus" kind="show" identifier="addMeals" id="Z2j-Pu-SDJ"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-Up-aEd">
@@ -2118,7 +2118,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Z2j-Pu-SDJ"/>
+<<<<<<< HEAD
         <segue reference="Q5O-fQ-Og5"/>
+=======
+        <segue reference="CkZ-ff-UQy"/>
+>>>>>>> fixed more meals
         <segue reference="ScG-t9-pLc"/>
         <segue reference="LjZ-LN-p1e"/>
         <segue reference="usW-NJ-2qE"/>
