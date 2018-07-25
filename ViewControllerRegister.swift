@@ -16,7 +16,9 @@ class ViewControllerRegister: UIViewController {
     @IBOutlet weak var emailtext: UITextField!
     
     @IBOutlet weak var passwordtext: UITextField!
+    @IBOutlet weak var confirmpassword: UITextField!
     
+    @IBOutlet weak var username: UITextField!
     var today = Date()
     let dateFormatter = DateFormatter()
     let cal = Calendar.current
@@ -27,6 +29,7 @@ class ViewControllerRegister: UIViewController {
     
     @IBAction func registerbutton(_ sender: Any) {
         if let email = emailtext.text, let pass = passwordtext.text{
+            if passwordtext.text! == confirmpassword.text! {
             Auth.auth().createUser(withEmail: email, password: pass) { (authResult, error) in
                 if let u = authResult {
                     print("Registration complete!")
@@ -44,12 +47,16 @@ class ViewControllerRegister: UIViewController {
                         self.databaseRef?.child("nutrientHistory").child(userID).child(dateInitialize).setValue(["email": self.emailtext.text, "pass": self.passwordtext.text, "kCals": 0, "proteins": 0, "fats": 0, "carbohydrates": 0, "iron": 0, "magnesium": 0, "vitaminD": 0, "folate": 0, "moisture": 0])
                         
                     }
+                    self.databaseRef?.child("nutrientHistory").child(userID).child("username").setValue(self.username.text!)
                     self.performSegue(withIdentifier: "gotoqa", sender: self)
                 } else {
                     print(error)
                     self.registerstatus.text = "Please enter a valid email and a password at least 6 characters long!"
                     self.registerstatus.textColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1.0)
                 }
+            } //
+            }else{
+                registerstatus.text! = "Please enter the same password for both fields!"
             }
         }
     }
