@@ -19,7 +19,14 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     var userID = Auth.auth().currentUser?.uid
     var ref: DatabaseReference!
     var myIndex = 0
-
+    
+    // get user healthScore
+    var healthScore = 8.9
+    // get friend's healthScore
+    var FriendHealthScore = 7.2
+    @IBOutlet weak var mealKingImg: UIImageView!
+    @IBOutlet weak var healthScoreLabel: UILabel!
+    
     @IBOutlet weak var friendListTableView: UITableView!
     
 //loads friendlist into the viewcontroller
@@ -42,6 +49,13 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+        if (healthScore > FriendHealthScore) {
+            mealKingImg.image = #imageLiteral(resourceName: "mealKing")
+        } else {
+            mealKingImg.image = #imageLiteral(resourceName: "mule")
+        }
+        healthScoreLabel.text = String(healthScore)
         
     }
 
