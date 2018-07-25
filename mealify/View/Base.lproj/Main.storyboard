@@ -58,12 +58,6 @@
                                         <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hJ-Jo-89i">
-                                        <rect key="frame" x="74" y="236" width="242" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="rNt-a0-grF">
                                         <rect key="frame" x="74" y="264" width="242" height="2"/>
                                     </imageView>
@@ -115,6 +109,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hJ-Jo-89i">
+                                        <rect key="frame" x="74" y="236" width="242" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -200,9 +200,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmpassword" destination="3PQ-jc-2rw" id="SeW-Xs-Vcb"/>
                         <outlet property="emailtext" destination="Gmk-bc-Dkb" id="xIa-Um-bDN"/>
                         <outlet property="passwordtext" destination="6Qq-Sl-FE0" id="k7r-iO-cr8"/>
                         <outlet property="registerstatus" destination="QOw-hu-W8E" id="8jr-u7-kYt"/>
+                        <outlet property="username" destination="6hJ-Jo-89i" id="51y-ou-MYo"/>
                         <segue destination="voi-kX-ZXv" kind="show" identifier="gotoqa" id="LjZ-LN-p1e"/>
                     </connections>
                 </viewController>
@@ -2043,7 +2045,6 @@
         <image name="thumb" width="4" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z2j-Pu-SDJ"/>
         <segue reference="CkZ-ff-UQy"/>
         <segue reference="ScG-t9-pLc"/>
         <segue reference="LjZ-LN-p1e"/>
