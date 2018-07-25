@@ -45,9 +45,6 @@ class ViewControllerRegister: UIViewController {
                     self.performSegue(withIdentifier: "gotoqa", sender: self)
                 } else {
                     print(error)
-                    //print("invalid email address")
-                    // = "Please valid email and password that is at least 6 characters long"
-                    // = UIColor(red: 1, green: 0, blue: 0, alpha: 1.0)
                 }
             }
         }
