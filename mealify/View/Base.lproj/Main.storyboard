@@ -1860,6 +1860,7 @@
         <image name="thumb" width="4" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Z2j-Pu-SDJ"/>
         <segue reference="CkZ-ff-UQy"/>
         <segue reference="ScG-t9-pLc"/>
         <segue reference="LjZ-LN-p1e"/>
