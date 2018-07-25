@@ -363,6 +363,10 @@ class MealTableViewController: UITableViewController {
             selectedMeal = meals[indexPath.row]
         }
         
+        
+        //Wipe the array first
+        selectedMeal.nutrients = []
+        
         //This for loop adds nutrients into the the meal
         //It will search through the whole database until it finds a matching ID, and add that in
         for i in mealNutrients{

@@ -39,6 +39,8 @@
 		9758456A20FFF4A300AF647D /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456920FFF4A300AF647D /* Diary.swift */; };
 		97EF8B6E21056333004E36C6 /* HeightSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF8B6D21056333004E36C6 /* HeightSlider.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
+		BFB3F277210923A40026398B /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F276210923A40026398B /* Measure.swift */; };
+		BFB3F279210925AF0026398B /* MeasureConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F278210925AF0026398B /* MeasureConversion.swift */; };
 		BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79720F9C42D003286CE /* AppDelegate.swift */; };
 		BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79B20FB3184003286CE /* Nutrients.swift */; };
 		BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */; };
@@ -101,6 +103,8 @@
 		97EF8B6C21054B4C004E36C6 /* Gravity-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-BookItalic.otf"; sourceTree = "<group>"; };
 		97EF8B6D21056333004E36C6 /* HeightSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSlider.swift; sourceTree = "<group>"; };
 		A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB3F276210923A40026398B /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		BFB3F278210925AF0026398B /* MeasureConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureConversion.swift; sourceTree = "<group>"; };
 		BFB6D79720F9C42D003286CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB6D79B20FB3184003286CE /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
 		BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientMealInfo.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
+				BFB3F278210925AF0026398B /* MeasureConversion.swift */,
+				BFB3F276210923A40026398B /* Measure.swift */,
 				97EF8B6D21056333004E36C6 /* HeightSlider.swift */,
 				9758456920FFF4A300AF647D /* Diary.swift */,
 				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
@@ -428,10 +434,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */,
+				BFB3F279210925AF0026398B /* MeasureConversion.swift in Sources */,
 				24C9C8B420EB67E100082B56 /* addFoodViewController.swift in Sources */,
 				9758456520FFF0F400AF647D /* FriendListViewController.swift in Sources */,
 				7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */,
 				7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */,
+				BFB3F277210923A40026398B /* Measure.swift in Sources */,
 				7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */,
 				7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */,
 				7DEEDD1720FDD12C00812D42 /* ViewController.swift in Sources */,

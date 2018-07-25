@@ -49,10 +49,14 @@ class TodayMealViewController: UIViewController {
     var magnesium: Double = 0
     var vitaminD: Double = 0
     var folate: Double = 0
+    var factor: Double = 0.0
+    
+    var stringCount: String = ""
     
     //Label for food name and meal nutrients
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var mealDescription: UITextView!
+    @IBOutlet weak var measureAmount: UILabel!
     
     
     //Rounding function that will round to 2 decimal places
@@ -74,6 +78,51 @@ class TodayMealViewController: UIViewController {
         foodName.adjustsFontSizeToFitWidth = true
         foodName.minimumScaleFactor = 0.7
         foodName.numberOfLines = 0
+        
+        //Go through conversion to find the measure name and conversion factor value
+        //After those are found, then you can multiply conversion factor value with nutrient value
+        //And you can get the measure description to display
+        for i in conversion{
+            
+            
+            if meal.foodID == i.foodID{
+                
+                
+                //Get the measure description
+                for j in measures{
+                    
+                    if i.measureID == j.measureID{
+                        
+                        //We want grams and ml units, not 1/6 pie (20 cm diamater) or something
+                        //So we want the shortest string to have more probability of grams and ml units
+                        //Stringcount is 0 so we put anything in here for now
+                        if stringCount.count == 0{
+                            
+                            measureAmount.text = "Measure: " + j.measureDescription
+                            stringCount = j.measureDescription
+                            
+                            //Got the conversionFactorValue
+                            factor = i.conversionFactorValue
+                            
+                        }
+                            //else if it is not 0, then compare and get least length
+                        else if j.measureDescription.count < stringCount.count{
+                            
+                            measureAmount.text = "Measure: " + j.measureDescription
+                            stringCount = j.measureDescription
+                            
+                            //Got the conversionFactorValue
+                            factor = i.conversionFactorValue
+                            
+                        }
+                            //else break
+                        else{
+                            break
+                        }
+                    }
+                }
+            }
+        }
         
         //Find all meal nutrients, and add them to the meal description string
         for i in meal.nutrients{

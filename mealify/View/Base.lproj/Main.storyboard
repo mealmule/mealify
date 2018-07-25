@@ -742,6 +742,7 @@
                     <connections>
                         <outlet property="foodName" destination="fPl-4C-5AY" id="zue-iP-sfy"/>
                         <outlet property="mealDescription" destination="RcE-i1-YOs" id="n1g-Yd-XgC"/>
+                        <outlet property="measureAmount" destination="Sgj-9u-g8G" id="XUX-IM-8I6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9N-hB-bFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1648,6 +1649,7 @@
                     <connections>
                         <outlet property="foodName" destination="x9K-4f-yxK" id="5EQ-k5-rq6"/>
                         <outlet property="mealDescription" destination="sPg-KG-Ynw" id="GJi-1v-cXW"/>
+                        <outlet property="measureAmount" destination="s77-dl-HBe" id="LfX-Zq-MzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucO-cr-C4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2043,8 +2045,7 @@
         <image name="thumb" width="4" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z2j-Pu-SDJ"/>
-        <segue reference="CkZ-ff-UQy"/>
+        <segue reference="Q5O-fQ-Og5"/>
         <segue reference="ScG-t9-pLc"/>
         <segue reference="LjZ-LN-p1e"/>
         <segue reference="usW-NJ-2qE"/>
