@@ -120,7 +120,6 @@ class ViewController: UIViewController {
     //If the count is 0 then print "none", else print all the foods in the array
     private func printFoods(){
         
-        print("printFoods CALLED")
         //If there are no foods inside the selected date's database, then set this to display none
         if today.userMeals.count == 0{
             mealFoods.text = "Foods: None"

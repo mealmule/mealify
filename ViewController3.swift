@@ -80,9 +80,7 @@ class ViewController3: UIViewController {
                     
                     let userInterest = allNames["FoodDescription"] as! String
                     let foodID = allNames["FoodID"] as! Int
-                    print(userInterest);
                     allMeals += [Meal(name: userInterest, foodID: foodID, mealNumber: -1)]
-                    //self.tableView.reloadData()
                     
                 }
                 
