@@ -23,6 +23,8 @@ class ViewController3: UIViewController {
     @IBOutlet weak var passwordtext: UITextField!
     
     
+    @IBOutlet weak var statuslabel: UILabel!
+    
     var today2 = Date()
     let dateFormatter = DateFormatter()
     let cal = Calendar.current
@@ -53,6 +55,9 @@ class ViewController3: UIViewController {
                     self.performSegue(withIdentifier: "loggedin", sender: self)
                 } else {
                     print(error)
+                    print("Invalid email or password, please try again!")
+                    self.statuslabel.text = "Invalid email or password, please try again!"
+                    self.statuslabel.textColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1.0)
                 }
             }
         }

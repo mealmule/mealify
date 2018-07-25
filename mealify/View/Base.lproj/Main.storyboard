@@ -836,6 +836,13 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="vyW-pL-2fs">
                                         <rect key="frame" x="74" y="298" width="242" height="2"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="characterWrap" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="49E-he-xrR">
+                                        <rect key="frame" x="74" y="367" width="242" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -886,6 +893,7 @@
                     <connections>
                         <outlet property="emailtext" destination="yEG-y3-HG8" id="3ZY-Bx-NEb"/>
                         <outlet property="passwordtext" destination="1Gj-DA-S1r" id="w9N-Wl-Soq"/>
+                        <outlet property="statuslabel" destination="49E-he-xrR" id="pyC-d8-Hv7"/>
                         <segue destination="PcL-Ii-ViW" kind="show" identifier="loggedin" id="CkZ-ff-UQy"/>
                     </connections>
                 </viewController>
