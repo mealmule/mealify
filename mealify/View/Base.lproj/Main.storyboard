@@ -781,6 +781,13 @@
                                         <color key="textColor" red="0.304464864" green="0.304464864" blue="0.304464864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="highlightedColor" red="1" green="0.99971767580000004" blue="0.9990776965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rgD-JL-GHS">
+                                        <rect key="frame" x="74" y="344" width="242" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -791,6 +798,7 @@
                     <connections>
                         <outlet property="emailtext" destination="yEG-y3-HG8" id="3ZY-Bx-NEb"/>
                         <outlet property="passwordtext" destination="1Gj-DA-S1r" id="w9N-Wl-Soq"/>
+                        <outlet property="statuslabel" destination="rgD-JL-GHS" id="5Y6-bs-0Fa"/>
                         <segue destination="PcL-Ii-ViW" kind="show" identifier="loggedin" id="CkZ-ff-UQy"/>
                     </connections>
                 </viewController>
