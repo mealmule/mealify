@@ -23,8 +23,9 @@ class ViewController3: UIViewController {
     @IBOutlet weak var passwordtext: UITextField!
     
     
-    //@IBOutlet weak var statuslabel: UILabel!
     @IBOutlet weak var statuslabel: UILabel!
+    //@IBOutlet weak var statuslabel: UILabel!
+    //@IBOutlet weak var statuslabel: UILabel!
     
     var today2 = Date()
     let dateFormatter = DateFormatter()
