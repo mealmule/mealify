@@ -1697,12 +1697,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-K4-ncV">
-                                <rect key="frame" x="16" y="142" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYi-6b-2FE" customClass="HorizontalBarChartView" customModule="Charts">
                                 <rect key="frame" x="16" y="250" width="343" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1719,6 +1713,25 @@
                                     <constraint firstAttribute="height" constant="210" id="wQj-ib-Ydg"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrO-GZ-zSQ">
+                                <rect key="frame" x="16" y="221" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWW-LS-k0W">
+                                <rect key="frame" x="114" y="189" width="146" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Profile Photo"/>
+                                <connections>
+                                    <action selector="profileButton:" destination="c7D-ss-NEv" eventType="touchUpInside" id="OV4-3g-3hD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdF-dI-sOa">
+                                <rect key="frame" x="123" y="36" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1726,15 +1739,15 @@
                             <constraint firstItem="IDR-Ck-xmj" firstAttribute="top" secondItem="kA5-j3-W4j" secondAttribute="bottom" constant="32" id="7wG-zc-7Xo"/>
                             <constraint firstAttribute="trailing" secondItem="wYi-6b-2FE" secondAttribute="trailing" constant="16" id="HEs-D5-meH"/>
                             <constraint firstItem="kA5-j3-W4j" firstAttribute="top" secondItem="wYi-6b-2FE" secondAttribute="bottom" constant="8" id="ctg-zA-JJA"/>
-                            <constraint firstItem="wYi-6b-2FE" firstAttribute="top" secondItem="U9P-K4-ncV" secondAttribute="bottom" constant="87" id="ll5-bi-4q8"/>
                             <constraint firstItem="wYi-6b-2FE" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leading" constant="16" id="mMK-Zc-GF3"/>
                             <constraint firstItem="kA5-j3-W4j" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leading" constant="16" id="uRd-IB-ZSf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="DateLabel" destination="U9P-K4-ncV" id="QrT-tn-dZi"/>
+                        <outlet property="DateLabel" destination="wrO-GZ-zSQ" id="F33-Tj-Nly"/>
                         <outlet property="horizontalBarChart" destination="wYi-6b-2FE" id="4db-C4-IqP"/>
                         <outlet property="pieChart" destination="kA5-j3-W4j" id="CMa-aj-iUg"/>
+                        <outlet property="profilePicture" destination="hdF-dI-sOa" id="qny-PN-Jo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk3-Rk-h6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2126,7 +2139,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CkZ-ff-UQy"/>
-        <segue reference="ScG-t9-pLc"/>
+        <segue reference="Eu3-h2-GFF"/>
         <segue reference="LjZ-LN-p1e"/>
         <segue reference="usW-NJ-2qE"/>
         <segue reference="aun-NV-0SZ"/>

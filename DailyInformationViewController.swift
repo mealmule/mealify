@@ -27,14 +27,44 @@ import Charts
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
+import SDWebImage
 
 
-
-class DailyInformationViewController: UIViewController, RetrieveDateDelegate, ChartViewDelegate {
+class DailyInformationViewController: UIViewController, RetrieveDateDelegate, ChartViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var horizontalBarChart: HorizontalBarChartView!
     @IBOutlet weak var pieChart: PieChartView!
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBAction func profileButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Change Profile Photo", message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Remove Current Photo", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler:
+            { action in
+                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+                    imagePicker.allowsEditing = true
+                    self.present(imagePicker, animated: true, completion: nil)
+                }
+            }
+        ))
+        alert.addAction(UIAlertAction(title: "Choose from Library", style: .default, handler:
+            { action in
+                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                    imagePicker.allowsEditing = true
+                    self.present(imagePicker, animated: true, completion: nil)
+                }
+            }
+        ))
+        self.present(alert, animated: true)
+    }
     
     var dateChosen: String?
     
@@ -52,10 +82,17 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let userID = (Auth.auth().currentUser?.uid)!
         
         ref = Database.database().reference()
         
-        let userID = (Auth.auth().currentUser?.uid)!
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let reference = storageRef.child("images/profile/\(userID).png")
+        reference.downloadURL { (url, error) in
+            self.profilePicture.sd_setImage(with: url)
+        }
+        
         
         //Whenever this view is loaded, don't hide the navigation bar.
         self.navigationController?.isNavigationBarHidden = false
@@ -164,6 +201,30 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         
 
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.dismiss(animated: true, completion: nil)
+        
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        let storage = Storage.storage()
+        var data = Data()
+        data = UIImagePNGRepresentation(chosenImage)!
+        let storageReference = storage.reference()
+        let userID = (Auth.auth().currentUser?.uid)!
+        var imageReference = storageReference.child("images/profile/\(userID).png")
+        _ = imageReference.putData(data, metadata: nil, completion: {(metadata, error) in
+            guard let metadata = metadata else {
+                print(error)
+                return
+            }
+        })
+        
+        
+        
+    }
+    
+
     
     
 

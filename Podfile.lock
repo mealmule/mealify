@@ -15,6 +15,9 @@ PODS:
   - Firebase/Database (5.4.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (= 5.0.2)
+  - Firebase/Storage (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.0.0)
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
@@ -30,6 +33,12 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
+  - FirebaseStorage (3.0.0):
+    - FirebaseCore (~> 5.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (5.0.1):
+    - Firebase/Storage (~> 5.0)
+    - SDWebImage (~> 4.0)
   - FSCalendar (2.7.9)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
@@ -41,6 +50,9 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
@@ -50,6 +62,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Storage
+  - FirebaseUI/Storage
   - FSCalendar
   - SwiftyJSON
 
@@ -64,11 +78,14 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseStorage
+    - FirebaseUI
     - FSCalendar
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - SDWebImage
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -81,13 +98,16 @@ SPEC CHECKSUMS:
   FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
   FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+  FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
+  FirebaseUI: 5d97d3d5d6a019fc960eb573ea6ce9fb8c310669
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 4d408de7192f0a33a9b059653317bf53614b2e58
+PODFILE CHECKSUM: ca34afc7d867b9d65afb682e6dd028650db6c593
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3
