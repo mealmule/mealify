@@ -30,8 +30,27 @@ class FriendsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.isNavigationBarHidden = false
 
         // Do any additional setup after loading the view.
+    }
+    
+    //Todo:
+    //*
+    //*
+    //*
+    //Back button functionality.
+    //Give functionality to the back button so whenever it is pressed, it will perform an action
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
+        
+        //Is popped from the view controller (back button)
+        if self.isMovingFromParentViewController {
+            
+            //Hide navigation bar
+            self.navigationController?.isNavigationBarHidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,8 @@ import Firebase
 var allMeals = [Meal]()
 var mealNutrients = [NutrientMealInfo]()
 var nutrients = [Nutrients]()
+var measures = [Measure]()
+var conversion = [MeasureConversion]()
 
 
 
@@ -35,6 +37,8 @@ class ViewController3: UIViewController {
     var ref1: DatabaseReference!
     var ref2: DatabaseReference!
     var ref3: DatabaseReference!
+    var ref4: DatabaseReference!
+    var ref5: DatabaseReference!
     var databaseHandle: DatabaseHandle?
     
     
@@ -71,6 +75,8 @@ class ViewController3: UIViewController {
         ref1 = Database.database(url: "https://mealify-7babd-2e44f.firebaseio.com/").reference()
         ref2 = Database.database(url: "https://mealify-7babd-78a83.firebaseio.com/").reference()
         ref3 = Database.database(url: "https://mealify-7babd-a6cd5.firebaseio.com/").reference()
+        ref4 = Database.database(url: "https://mealify-7babd-b53b7.firebaseio.com/").reference()
+        ref5 = Database.database(url: "https://mealify-7babd-cf680.firebaseio.com/").reference()
         
         if allMeals.count == 0{
             databaseHandle = ref1?.observe(.childAdded, with: { (snapshot) in
@@ -122,6 +128,37 @@ class ViewController3: UIViewController {
                     
                     nutrients += [Nutrients(nutrientCode: nutrientCode, nutrientDecimals: nutrientDecimals, nutrientName: nutrientName, nutrientNameF: nutrientNameF, nutrientSymbol: nutrientSymbol, nutrientUnit: nutrientUnit, tagName: tagName)]
                     //self.tableView.reloadData()
+                }
+                
+            })
+        }
+        
+        if measures.count == 0{
+            databaseHandle = ref4?.observe(.childAdded, with: { (snapshot) in
+                
+                if let allNames = snapshot.value as? [String:AnyObject] {
+                    
+                    
+                    let measureID = allNames["MeasureID"] as! Int
+                    let measureDescription = allNames["MeasureDescription"] as! String
+                    measures += [Measure(measureDescription: measureDescription, measureID: measureID)]
+                    
+                }
+                
+            })
+        }
+        
+        if conversion.count == 0{
+            databaseHandle = ref5?.observe(.childAdded, with: { (snapshot) in
+                
+                if let allNames = snapshot.value as? [String:AnyObject] {
+                    
+                    
+                    let measureID = allNames["MeasureID"] as! Int
+                    let foodID = allNames["FoodID"] as! Int
+                    let conversionFactorValue = allNames["ConversionFactorValue"] as! Double
+                    conversion += [MeasureConversion(foodID: foodID, measureID: measureID, conversionFactorValue: conversionFactorValue)]
+                    
                 }
                 
             })

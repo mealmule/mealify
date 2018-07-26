@@ -94,8 +94,7 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         }
         
         
-        //Whenever this view is loaded, don't hide the navigation bar.
-        self.navigationController?.isNavigationBarHidden = false
+        
         
         DateLabel.text = dateChosen
         

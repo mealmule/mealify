@@ -187,6 +187,7 @@ class ViewController: UIViewController {
             
             //Load data numbers dependent on what day it is
             self.printFoods()
+            
 
             
         })

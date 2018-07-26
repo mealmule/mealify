@@ -33,7 +33,6 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.isNavigationBarHidden = false
 
         ref = Database.database().reference()
         print("Current user is \(userID!)")
