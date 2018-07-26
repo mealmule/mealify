@@ -67,7 +67,7 @@ class FriendsViewController: UIViewController {
         if friendtext.text != "" {
         var someArr : [String] = []
             let friendcode = friendtext.text
-        //ref?.child("nutrientHistory").childByAutoId().setValue(friendtext.text)
+            if userID! != friendtext.text!{
             ref.child("nutrientHistory").child(friendtext.text!).observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
                 print(snapshot.value)
@@ -83,9 +83,6 @@ class FriendsViewController: UIViewController {
                         for i in friendRequestList as! NSDictionary{
                             print(friendRequestList[i.key]!!)
                             someArr.append(friendRequestList[i.key]!! as! String)
-                            //if(friendcode == i.value){
-                            //    flag = 1;
-                            //}
                         }
                         for j in someArr{
                             if(self.userID! == j){
@@ -106,10 +103,12 @@ class FriendsViewController: UIViewController {
                 // ...
             }) { (error) in
                 print(error.localizedDescription)
+            }//////////////
+            }else{
+                feedbackmessage.text = "You cannot add yourself as a friend!"
             }
-            
             friendtext.text = ""
-        }
+        }//not this one
     }
     
     
