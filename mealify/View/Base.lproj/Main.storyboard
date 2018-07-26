@@ -683,6 +683,29 @@
             </objects>
             <point key="canvasLocation" x="-1706.4000000000001" y="287.40629685157421"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bkR-yU-XKv">
+            <objects>
+                <tabBarController id="ccu-pM-7bb" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="8fw-qm-Mqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.94481116529999998" green="0.62358033660000001" blue="0.61957895760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.94481116529999998" green="0.62358033660000001" blue="0.61957895760000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eEg-nl-cHd" kind="relationship" relationship="viewControllers" id="d1U-la-xZd"/>
+                        <segue destination="PVr-ok-wBM" kind="relationship" relationship="viewControllers" id="YQE-V0-fKD"/>
+                        <segue destination="c7D-ss-NEv" kind="relationship" relationship="viewControllers" id="W9S-cR-xdn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MP-pQ-ca5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2978" y="260"/>
+        </scene>
         <!--Today Meal View Controller-->
         <scene sceneID="456-73-12D">
             <objects>
@@ -813,7 +836,7 @@
                                             <color key="titleColor" red="0.402416355" green="0.40383082590000002" blue="0.40807423860000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginbutton:" destination="Cae-wl-QqE" eventType="touchUpInside" id="Zb0-VF-1l5"/>
+                                            <segue destination="ccu-pM-7bb" kind="show" id="dth-JU-YsZ"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yEG-y3-HG8">
@@ -1138,7 +1161,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="submit"/>
                                 <connections>
-                                    <segue destination="PcL-Ii-ViW" kind="show" id="eTb-ES-tdF"/>
+                                    <segue destination="ccu-pM-7bb" kind="show" id="qve-hs-qg5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're all set!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-7J-0g3">
@@ -1259,7 +1282,7 @@
             </objects>
             <point key="canvasLocation" x="-5383" y="1084"/>
         </scene>
-        <!--View Controller-->
+        <!--Diary-->
         <scene sceneID="Waj-Oj-gsl">
             <objects>
                 <viewController id="eEg-nl-cHd" customClass="ViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
@@ -1268,14 +1291,14 @@
                         <viewControllerLayoutGuide type="bottom" id="pfO-YY-htf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ucF-cB-mjn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXq-rz-4Bx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD8-Lz-j29" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CD8-Lz-j29" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsg-WW-WsD">
                                                 <rect key="frame" x="140" y="58" width="95" height="37"/>
@@ -1495,31 +1518,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Apo-NF-v9P">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Recommend" id="kyy-hg-dzv"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rny-dH-PLK"/>
-                                    <barButtonItem title="Friends" id="PjO-VO-ohw">
-                                        <connections>
-                                            <segue destination="PVr-ok-wBM" kind="show" id="jhp-Pu-XTs"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sCX-TQ-EZL"/>
-                                    <barButtonItem title="Plan" id="sdN-pv-wKB"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="g3K-Rn-d6D"/>
-                                    <barButtonItem title="Me" id="S4o-uM-oRD">
-                                        <connections>
-                                            <segue destination="c7D-ss-NEv" kind="show" id="G7r-hR-t18"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pfO-YY-htf" firstAttribute="top" secondItem="aXq-rz-4Bx" secondAttribute="bottom" constant="44" id="Aav-LR-dbq"/>
                             <constraint firstItem="MjB-pi-Xyy" firstAttribute="bottom" secondItem="aXq-rz-4Bx" secondAttribute="top" constant="20" id="G3X-IH-gta"/>
                             <constraint firstItem="aXq-rz-4Bx" firstAttribute="height" secondItem="ucF-cB-mjn" secondAttribute="height" priority="250" id="Kyi-ew-8UR"/>
                             <constraint firstAttribute="trailing" secondItem="aXq-rz-4Bx" secondAttribute="trailing" id="kV9-w3-wge"/>
@@ -1527,6 +1528,7 @@
                             <constraint firstItem="aXq-rz-4Bx" firstAttribute="leading" secondItem="ucF-cB-mjn" secondAttribute="leading" id="rng-gl-DsS"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Diary" image="nav_me_grey" selectedImage="nav_me_color" id="Gsq-El-g7o"/>
                     <navigationItem key="navigationItem" id="mDQ-yr-EJR"/>
                     <connections>
                         <outlet property="contentView" destination="CD8-Lz-j29" id="WsS-c7-1HN"/>
@@ -1655,9 +1657,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eEg-nl-cHd" kind="relationship" relationship="rootViewController" id="sjZ-8o-7p6"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyL-xH-HkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1685,7 +1684,7 @@
             </objects>
             <point key="canvasLocation" x="-4559" y="1934"/>
         </scene>
-        <!--Daily Information View Controller-->
+        <!--Me-->
         <scene sceneID="DFT-k7-Eah">
             <objects>
                 <viewController id="c7D-ss-NEv" customClass="DailyInformationViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
@@ -1694,11 +1693,11 @@
                         <viewControllerLayoutGuide type="bottom" id="IDR-Ck-xmj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ep5-U7-Ibn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYi-6b-2FE" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="250" width="343" height="167"/>
+                                <rect key="frame" x="16" y="201" width="343" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="167" id="FYY-Fb-ndB"/>
@@ -1706,7 +1705,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kA5-j3-W4j" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="425" width="343" height="210"/>
+                                <rect key="frame" x="16" y="376" width="343" height="210"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="o6f-fm-esg"/>
@@ -1743,6 +1742,7 @@
                             <constraint firstItem="kA5-j3-W4j" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leading" constant="16" id="uRd-IB-ZSf"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="nav_user_grey" selectedImage="nav_user_color" id="D7F-tM-WS9"/>
                     <connections>
                         <outlet property="DateLabel" destination="wrO-GZ-zSQ" id="F33-Tj-Nly"/>
                         <outlet property="horizontalBarChart" destination="wYi-6b-2FE" id="4db-C4-IqP"/>
@@ -1897,7 +1897,7 @@
             </objects>
             <point key="canvasLocation" x="-8366" y="622"/>
         </scene>
-        <!--Friend List View Controller-->
+        <!--Community-->
         <scene sceneID="70p-ao-zsH">
             <objects>
                 <viewController id="PVr-ok-wBM" customClass="FriendListViewController" customModule="mealify" customModuleProvider="target" sceneMemberID="viewController">
@@ -1906,11 +1906,11 @@
                         <viewControllerLayoutGuide type="bottom" id="guA-2F-FTV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kL8-Xs-eXh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="767"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6f-jZ-6M1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="767"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-LP-nKl" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="703"/>
@@ -1923,7 +1923,7 @@
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S5v-f6-gxR">
-                                                <rect key="frame" x="25" y="435" width="325" height="332"/>
+                                                <rect key="frame" x="25" y="435" width="325" height="283"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="F1V-yX-CKQ">
@@ -2008,6 +2008,7 @@
                             <constraint firstItem="O6f-jZ-6M1" firstAttribute="centerX" secondItem="kL8-Xs-eXh" secondAttribute="centerX" id="nHu-hf-wuU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Community" image="nav_community_grey" selectedImage="nav_community_color" id="XfQ-Oq-p2Q"/>
                     <size key="freeformSize" width="375" height="767"/>
                     <connections>
                         <outlet property="friendListTableView" destination="S5v-f6-gxR" id="4L8-FN-nj4"/>
@@ -2126,6 +2127,12 @@
         <image name="greyLogo@3x" width="252" height="219"/>
         <image name="logo_2" width="233" height="117"/>
         <image name="mealKing" width="157" height="216"/>
+        <image name="nav_community_color" width="25" height="17"/>
+        <image name="nav_community_grey" width="26" height="20"/>
+        <image name="nav_me_color" width="25" height="23"/>
+        <image name="nav_me_grey" width="25" height="23"/>
+        <image name="nav_user_color" width="25" height="25"/>
+        <image name="nav_user_grey" width="25" height="25"/>
         <image name="nextBtn" width="69" height="69"/>
         <image name="purpleBar" width="3" height="104"/>
         <image name="sandwich" width="96" height="96"/>
@@ -2139,8 +2146,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CkZ-ff-UQy"/>
-        <segue reference="Eu3-h2-GFF"/>
+        <segue reference="d1U-la-xZd"/>
         <segue reference="LjZ-LN-p1e"/>
+        <segue reference="qve-hs-qg5"/>
         <segue reference="usW-NJ-2qE"/>
         <segue reference="aun-NV-0SZ"/>
         <segue reference="Xf6-uQ-aVZ"/>
