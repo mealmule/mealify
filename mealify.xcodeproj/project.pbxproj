@@ -37,6 +37,7 @@
 		9758456720FFF0F400AF647D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456220FFF0F400AF647D /* FriendsViewController.swift */; };
 		9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */; };
 		9758456A20FFF4A300AF647D /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758456920FFF4A300AF647D /* Diary.swift */; };
+		9797480C210A5701004218FA /* ExploreMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797480B210A5701004218FA /* ExploreMealViewController.swift */; };
 		97EF8B6E21056333004E36C6 /* HeightSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF8B6D21056333004E36C6 /* HeightSlider.swift */; };
 		A8DBA99C84080F71630088AC /* Pods_mealify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A205466FCBA1809B9C49BF0B /* Pods_mealify.framework */; };
 		BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79720F9C42D003286CE /* AppDelegate.swift */; };
@@ -94,6 +95,7 @@
 		9758456220FFF0F400AF647D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsInvite2ViewController.swift; sourceTree = "<group>"; };
 		9758456920FFF4A300AF647D /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		9797480B210A5701004218FA /* ExploreMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMealViewController.swift; sourceTree = SOURCE_ROOT; };
 		97EF8B6821054B4B004E36C6 /* Gravity-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Bold.otf"; sourceTree = "<group>"; };
 		97EF8B6921054B4B004E36C6 /* Gravity-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Light.otf"; sourceTree = "<group>"; };
 		97EF8B6A21054B4C004E36C6 /* Gravity-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Regular.otf"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				7DBF2EDF20EB034700E06F4C /* Info.plist */,
 				7D09919720EAD7B000C3EE56 /* ViewController5.swift */,
 				7D09919A20EAD7D400C3EE56 /* ViewController6.swift */,
+				9797480B210A5701004218FA /* ExploreMealViewController.swift */,
 				24DECF3520B9E4DF007F678D /* mealify */,
 				7DEC6AEE20EC573C00471017 /* mealifyTests */,
 				24DECF3420B9E4DF007F678D /* Products */,
@@ -452,6 +455,7 @@
 				BFD0AFA920FEBBA900CE2204 /* TodayMealTableViewCell.swift in Sources */,
 				9758456820FFF0F400AF647D /* FriendsInvite2ViewController.swift in Sources */,
 				BFD0AFA120FEAFA800CE2204 /* TodayMealTableViewController.swift in Sources */,
+				9797480C210A5701004218FA /* ExploreMealViewController.swift in Sources */,
 				7D0991A320EAD7F700C3EE56 /* ViewController5.swift in Sources */,
 				7DEEDD1520FDD12C00812D42 /* MealTableViewController.swift in Sources */,
 				7D0991A220EAD7F700C3EE56 /* ViewController1.swift in Sources */,
