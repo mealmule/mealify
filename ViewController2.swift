@@ -7,11 +7,16 @@
 //
 
 import UIKit
-
+import Firebase
+import FirebaseDatabase
 class ViewController2: UIViewController {
+    var ref: DatabaseReference?
+    let userID = (Auth.auth().currentUser?.uid)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,6 +31,7 @@ class ViewController2: UIViewController {
         fish.setTitleColor(UIColor .green, for: .normal)
        
         if((pork.titleColor(for: .normal) == .green) || (beef.titleColor(for: .normal) == .green) || (chicken.titleColor(for: .normal) == .green) || (noMeat.titleColor(for: .normal) == .green)){
+    
             pork.setTitleColor(UIColor .blue, for: .normal)
             beef.setTitleColor(UIColor .blue, for: .normal)
             chicken.setTitleColor(UIColor .blue, for: .normal)
@@ -40,6 +46,7 @@ class ViewController2: UIViewController {
         pork.setTitleColor(UIColor .green, for: .normal)
         
         if((fish.titleColor(for: .normal) == .green) || (beef.titleColor(for: .normal) == .green) || (chicken.titleColor(for: .normal) == .green) || (noMeat.titleColor(for: .normal) == .green)){
+       
             fish.setTitleColor(UIColor .blue, for: .normal)
             beef.setTitleColor(UIColor .blue, for: .normal)
             chicken.setTitleColor(UIColor .blue, for: .normal)
@@ -54,6 +61,7 @@ class ViewController2: UIViewController {
         beef.setTitleColor(UIColor .green, for: .normal)
         
         if((pork.titleColor(for: .normal) == .green) || (fish.titleColor(for: .normal) == .green) || (chicken.titleColor(for: .normal) == .green) || (noMeat.titleColor(for: .normal) == .green)){
+      
             pork.setTitleColor(UIColor .blue, for: .normal)
             fish.setTitleColor(UIColor .blue, for: .normal)
             chicken.setTitleColor(UIColor .blue, for: .normal)
@@ -68,6 +76,7 @@ class ViewController2: UIViewController {
         chicken.setTitleColor(UIColor .green, for: .normal)
         
         if((pork.titleColor(for: .normal) == .green) || (beef.titleColor(for: .normal) == .green) || (fish.titleColor(for: .normal) == .green) || (noMeat.titleColor(for: .normal) == .green)){
+
             pork.setTitleColor(UIColor .blue, for: .normal)
             beef.setTitleColor(UIColor .blue, for: .normal)
             fish.setTitleColor(UIColor .blue, for: .normal)
@@ -81,12 +90,27 @@ class ViewController2: UIViewController {
         noMeat.setTitleColor(UIColor .green, for: .normal)
         
         if((pork.titleColor(for: .normal) == .green) || (beef.titleColor(for: .normal) == .green) || (chicken.titleColor(for: .normal) == .green) || (fish.titleColor(for: .normal) == .green)){
+
             pork.setTitleColor(UIColor .blue, for: .normal)
             beef.setTitleColor(UIColor .blue, for: .normal)
             chicken.setTitleColor(UIColor .blue, for: .normal)
             fish.setTitleColor(UIColor .blue, for: .normal)
         }
  
+    }
+    @IBOutlet weak var nextButton: UIButton!
+    @IBAction func next(_ sender: UIButton) {
+        if(pork.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("meatPref").setValue("pork")
+        }else if(fish.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("meatPref").setValue("fish")
+        }else if(beef.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("meatPref").setValue("beef")
+        }else if(noMeat.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("meatPref").setValue("noMeat")
+        }else if(chicken.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("meatPref").setValue("chicken")
+        }
     }
     
     @IBOutlet weak var backButton: UIButton!

@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ViewController5: UIViewController {
+    var ref: DatabaseReference?
+    let userID = (Auth.auth().currentUser?.uid)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+
     }
     @IBOutlet weak var ricee: UIButton!
     @IBAction func rice(_ sender: UIButton) {
@@ -60,5 +66,16 @@ class ViewController5: UIViewController {
         }
         
     
+    }
+    @IBAction func next(_ sender: Any) {
+        if(ricee.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("carbPref").setValue("rice")
+        }else if(breadd.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("carbPref").setValue("bread")
+        }else if(peass.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("carbPref").setValue("peas")
+        }else if(potatoess.titleColor(for: .normal) == .green){
+            self.ref?.child("nutrientHistory").child(userID).child("carbPref").setValue("potatoes")
+        }
     }
 }

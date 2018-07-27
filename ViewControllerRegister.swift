@@ -8,12 +8,14 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class ViewControllerRegister: UIViewController {
 
     //@IBOutlet weak var registerstatus: UILabel!
-    
+    var ref: DatabaseReference?
     @IBOutlet weak var username: UITextField!
+    
     @IBOutlet weak var emailtext: UITextField!
     
     @IBOutlet weak var passwordtext: UITextField!
@@ -30,6 +32,7 @@ class ViewControllerRegister: UIViewController {
     var databaseRef : DatabaseReference?
     
     
+    @IBOutlet weak var registerButtonNode: UIButton!
     @IBAction func registerbutton(_ sender: Any) {
         if let email = emailtext.text, let pass = passwordtext.text{
             if passwordtext.text! == confirmpassword.text! {
@@ -72,6 +75,7 @@ class ViewControllerRegister: UIViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         todayFormatted = dateFormatter.string(from: today)
+        ref = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
