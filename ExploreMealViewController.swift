@@ -270,10 +270,10 @@ class ExploreMealViewController: UIViewController {
         
         let temp = max(proteinsDiff, fatsDiff, carbohydratesDiff, ironDiff, magnesiumDiff, vitaminDDiff)
         
-        
+        print(temp)
         //Find the max of all of the differences, and choose the food that is close to the number temp
         //This would give a meal that is closely related to the nutrientDiff, and you may get what you need
-        if temp < 0{
+        if temp <= 0{
             recMeal.text = "No more recommended foods for today!"
         }
         else if temp == proteinsDiff{

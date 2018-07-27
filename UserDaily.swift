@@ -295,15 +295,6 @@ class UserDaily{
             
         }
         
-        self.proteinsDaily = 47
-        self.fatsDaily = 40
-        self.carbohydratesDaily = 130
-        self.moistureDaily = 3000
-        self.ironDaily = 10
-        self.magnesiumDaily = 375
-        self.vitaminDDaily = 600
-        self.folateDaily = 400
-        
     }
     
     
