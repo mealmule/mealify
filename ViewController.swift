@@ -319,16 +319,18 @@ class ViewController: UIViewController, ChartViewDelegate {
         // Query the nutrient history for micro and macronutrients for a given day
         self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: {(snapshot) in
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+            
+
             self.micronutrient_amount = [
-                snapDictionary["folate"]! as! Double,
-                snapDictionary["iron"]! as! Double,
-                snapDictionary["magnesium"]! as! Double,
-                snapDictionary["vitaminD"]! as! Double
+                snapDictionary["folate"] as? Double ?? 0.0,
+                snapDictionary["iron"] as? Double ?? 0.0,
+                snapDictionary["magnesium"] as? Double ?? 0.0,
+                snapDictionary["vitaminD"] as? Double ?? 0.0
             ]
             self.macronutrient_amount = [
-                snapDictionary["carbohydrates"]! as! Double,
-                snapDictionary["fats"]! as! Double,
-                snapDictionary["proteins"]! as! Double
+                snapDictionary["carbohydrates"] as? Double ?? 0.0,
+                snapDictionary["fats"] as? Double ?? 0.0,
+                snapDictionary["proteins"] as? Double ?? 0.0
             ]
             print(self.micronutrient_amount)
             print(self.macronutrient_amount)
