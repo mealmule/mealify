@@ -1599,6 +1599,7 @@
                         <outlet property="contentView" destination="CD8-Lz-j29" id="WsS-c7-1HN"/>
                         <outlet property="dGoalTxt" destination="wC7-hC-dhL" id="Afw-GX-dKq"/>
                         <outlet property="dateLabel" destination="RNa-SS-sgK" id="Jbr-Jt-L3Z"/>
+                        <outlet property="face" destination="jtW-Up-aEd" id="qCG-iM-h9h"/>
                         <outlet property="folateGoalTxt" destination="8bb-sY-9aY" id="i9C-cM-0cF"/>
                         <outlet property="horizontalBarChart" destination="q1F-zV-3aF" id="arC-rw-es3"/>
                         <outlet property="ironGoalTxt" destination="T4Z-X8-ej5" id="Vy0-oW-dcz"/>

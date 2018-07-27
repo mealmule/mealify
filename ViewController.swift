@@ -51,7 +51,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     var today = Number()
     
     //Variables
-    var userScore: Float = 2.9
+    var userScore: Float = 9
     var folateGoal: Int = 0
     var ironGoal: Int = 0
     var magnesiumGoal: Int = 0
@@ -208,6 +208,8 @@ class ViewController: UIViewController, ChartViewDelegate {
         
     }
  
+    // happy face indicates user's daily socre status
+    @IBOutlet weak var face: UIImageView!
     
     override func viewDidLoad() {
         
@@ -235,9 +237,13 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         // if user score is meet certain level, change the stroke color of the circle
         if (userScore >= 3 && userScore < 7.5) {
-            strokeColor = UIColor(hue: 0.2, saturation: 0.74, brightness: 0.92, alpha: 1.0)
+            strokeColor = UIColor(hue: 0.2472, saturation: 0.61, brightness: 0.9, alpha: 1.0)
+            face.image = #imageLiteral(resourceName: "face_2")
         } else if (userScore >= 7.5) {
-            strokeColor = UIColor(hue: 0.2444, saturation: 0.84, brightness: 0.82, alpha: 1.0)
+            strokeColor = UIColor(hue: 0.2472, saturation: 0.42, brightness: 0.91, alpha: 1.0)
+            face.image = #imageLiteral(resourceName: "face_3")
+        } else {
+            face.image = #imageLiteral(resourceName: "face1")
         }
 
         
