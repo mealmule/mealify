@@ -44,8 +44,12 @@ class ExploreMealViewController: UIViewController {
     var today = Number()
     var userInfo = UserDaily(gender: "male", age: 19)
     
+    //Percentage of accuracy needed to recommend meal
+    let acc: Double = 0.4 + (Double(Double(arc4random()) / Double(UINT32_MAX)) * 0.30)
+    
     //Button to click to recommend meal
     @IBAction func loadRecommended(_ sender: Any) {
+        recMeal.text = "Loading..."
         recommend()
     }
     
@@ -217,6 +221,50 @@ class ExploreMealViewController: UIViewController {
                     foodID = k.foodID
                 }
                 
+                if nutrientID == 203{
+                    
+                    if min > userInfo.proteinsDaily * acc && min < userInfo.proteinsDaily / acc{
+                        break
+                    }
+                    
+                }
+                else if nutrientID == 204{
+                    
+                    if min > userInfo.fatsDaily * acc && min < userInfo.fatsDaily / acc{
+                        break
+                    }
+                    
+                }
+                else if nutrientID == 205{
+                    
+                    if min > userInfo.carbohydratesDaily * acc && min < userInfo.carbohydratesDaily / acc{
+                        break
+                    }
+                    
+                }
+                else if nutrientID == 303{
+                    
+                    if min > userInfo.ironDaily * acc && min < userInfo.ironDaily / acc{
+                        break
+                    }
+                    
+                }
+                else if nutrientID == 304{
+                    
+                    if min > userInfo.magnesiumDaily * acc && min < userInfo.magnesiumDaily / acc{
+                        break
+                    }
+                    
+                }
+                else if nutrientID == 324{
+                    
+                    if min > userInfo.vitaminDDaily * acc && min < userInfo.vitaminDDaily / acc{
+                        break
+                    }
+                    
+                }
+                
+                
                
             }
         
@@ -332,7 +380,7 @@ class ExploreMealViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        print(acc)
         loadNutrients()
         
         
