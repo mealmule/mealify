@@ -82,6 +82,17 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // make profile picture circular
+        
+        profilePicture.layer.borderWidth = 1
+        profilePicture.layer.masksToBounds = false
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.height/2
+        profilePicture.clipsToBounds = true
+        
+        
+        
+        
         let userID = (Auth.auth().currentUser?.uid)!
         
         ref = Database.database().reference()
@@ -162,23 +173,46 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     }
     
     func setHorizontalChart(dataPoints: [String], values: [Double]) {
+        let xaxis : XAxis = XAxis()
+        let chartFormatter = ChartFormatter(labels: micronutrients)
+        
+        
         var dataEntries: [ChartDataEntry] = []
+        let colors: [UIColor] = [
+            UIColor(red: 238, green: 130, blue: 238),
+            UIColor(red: 218, green: 112, blue: 214),
+            UIColor(red: 255, green: 0, blue: 255),
+            UIColor(red: 216, green: 191, blue: 216)
+        ]
         
         for i in 0..<dataPoints.count {
+            print(i)
             let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
-            
             
             dataEntries.append(dataEntry)
         }
         
         let chartDataset = BarChartDataSet(values: dataEntries, label: "Per unit")
-        chartDataset.colors = ChartColorTemplates.material()
+
+        xaxis.valueFormatter = chartFormatter
         
-        var chartData = BarChartData()
+        
+        
+        chartDataset.colors = ChartColorTemplates.joyful()
+        let chartData = BarChartData()
         chartData.addDataSet(chartDataset)
+        horizontalBarChart.leftAxis.enabled = false
+        horizontalBarChart.rightAxis.enabled = false
+        horizontalBarChart.legend.enabled = false
         
+//        horizontalBarChart.xAxis.enabled = true
+        horizontalBarChart.xAxis.granularity = 1
         horizontalBarChart.data = chartData
+        
+        
+        horizontalBarChart.xAxis.valueFormatter = xaxis.valueFormatter
         horizontalBarChart.animate(yAxisDuration: 2.5)
+        horizontalBarChart.chartDescription?.text = ""
         
     }
     
@@ -189,15 +223,15 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
             let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i])
             dataEntries.append(dataEntry)
         }
+        let chartDataset = PieChartDataSet(values: dataEntries, label: nil)
         
-        let chartDataset = PieChartDataSet(values: dataEntries, label: "Macronutrients")
-        
-        chartDataset.colors = ChartColorTemplates.material()
+        chartDataset.colors = ChartColorTemplates.vordiplom()
         
         let chartData = PieChartData(dataSet: chartDataset)
         pieChart.data = chartData
         pieChart.animate(yAxisDuration: 2.5)
-        
+        pieChart.legend.enabled = false
+        pieChart.chartDescription?.text = ""
 
     }
     
@@ -238,3 +272,14 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     */
 
 }
+
+//public class ChartFormatter: NSObject, IAxisValueFormatter {
+//    var labels: [String] = []
+//    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+//        return labels[Int(value)]
+//    }
+//    init(labels: [String]) {
+//        super.init()
+//        self.labels = labels
+//    }
+//}

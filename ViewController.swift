@@ -18,6 +18,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import Charts
 
 
 //Global variables
@@ -26,7 +27,7 @@ import FirebaseDatabase
 var dateChosenGlo: String?
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ChartViewDelegate {
     
     
     //Properties and labels
@@ -34,6 +35,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var mealRecommend: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mealFoods: UILabel!
+    @IBOutlet weak var horizontalBarChart: HorizontalBarChartView!
+    
+    @IBOutlet weak var pieChart: PieChartView!
+    let micronutrients: [String] = ["Folate", "Iron", "Magnesium", "Vitamin D"]
+    var micronutrient_amount: [Double] = []
+    
+    let macronutrients: [String] = ["Carbohydrates", "Fats", "Proteins"]
+    var macronutrient_amount: [Double] = []
     
     
     
@@ -203,7 +212,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        
+        let userID = (Auth.auth().currentUser?.uid)!
         
         
         //User Interface of the view controller begins here
@@ -307,7 +316,27 @@ class ViewController: UIViewController {
         //Hides the navigation bar
         self.navigationController?.isNavigationBarHidden = true
         
-        
+        // Query the nutrient history for micro and macronutrients for a given day
+        self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: {(snapshot) in
+            let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+            
+
+            self.micronutrient_amount = [
+                snapDictionary["folate"] as? Double ?? 0.0,
+                snapDictionary["iron"] as? Double ?? 0.0,
+                snapDictionary["magnesium"] as? Double ?? 0.0,
+                snapDictionary["vitaminD"] as? Double ?? 0.0
+            ]
+            self.macronutrient_amount = [
+                snapDictionary["carbohydrates"] as? Double ?? 0.0,
+                snapDictionary["fats"] as? Double ?? 0.0,
+                snapDictionary["proteins"] as? Double ?? 0.0
+            ]
+            print(self.micronutrient_amount)
+            print(self.macronutrient_amount)
+            self.setHorizontalChart(dataPoints: self.micronutrients, values: self.micronutrient_amount)
+            self.setPieChart(dataPoints: self.macronutrients, values: self.macronutrient_amount)
+        })
         
         
         
@@ -388,5 +417,78 @@ class ViewController: UIViewController {
         
     }
     
+    func setHorizontalChart(dataPoints: [String], values: [Double]) {
+        let xaxis : XAxis = XAxis()
+        let chartFormatter = ChartFormatter(labels: micronutrients)
+        
+        
+        var dataEntries: [ChartDataEntry] = []
+        let colors: [UIColor] = [
+            UIColor(red: 238, green: 130, blue: 238),
+            UIColor(red: 218, green: 112, blue: 214),
+            UIColor(red: 255, green: 0, blue: 255),
+            UIColor(red: 216, green: 191, blue: 216)
+        ]
+        
+        for i in 0..<dataPoints.count {
+            print(i)
+            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+            
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataset = BarChartDataSet(values: dataEntries, label: "Per unit")
+        
+        xaxis.valueFormatter = chartFormatter
+        
+        
+        
+        chartDataset.colors = ChartColorTemplates.joyful()
+        let chartData = BarChartData()
+        chartData.addDataSet(chartDataset)
+        horizontalBarChart.leftAxis.enabled = false
+        horizontalBarChart.rightAxis.enabled = false
+        horizontalBarChart.legend.enabled = false
+        
+        //        horizontalBarChart.xAxis.enabled = true
+        horizontalBarChart.xAxis.granularity = 1
+        horizontalBarChart.data = chartData
+        
+        
+        horizontalBarChart.xAxis.valueFormatter = xaxis.valueFormatter
+        horizontalBarChart.animate(yAxisDuration: 2.5)
+        horizontalBarChart.chartDescription?.text = ""
+        
+    }
+    
+    func setPieChart(dataPoints: [String], values: [Double]) {
+        var dataEntries: [PieChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i])
+            dataEntries.append(dataEntry)
+        }
+        let chartDataset = PieChartDataSet(values: dataEntries, label: nil)
+        
+        chartDataset.colors = ChartColorTemplates.vordiplom()
+        
+        let chartData = PieChartData(dataSet: chartDataset)
+        pieChart.data = chartData
+        pieChart.animate(yAxisDuration: 2.5)
+        pieChart.legend.enabled = false
+        pieChart.chartDescription?.text = ""
+        
+    }
+    
 }
 
+public class ChartFormatter: NSObject, IAxisValueFormatter {
+    var labels: [String] = []
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        return labels[Int(value)]
+    }
+    init(labels: [String]) {
+        super.init()
+        self.labels = labels
+    }
+}
