@@ -113,7 +113,7 @@ class ViewController3: UIViewController {
             })
         }
         
-        if nutrients.count < 8{
+        if nutrients.count <= 8{
             databaseHandle = ref3?.observe(.childAdded, with: { (snapshot) in
                 
                 if let allNames = snapshot.value as? [String:AnyObject] {

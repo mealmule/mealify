@@ -1,5 +1,4 @@
-//TECHNICALLY WE DONT EVEN NEED THIS
-//ILL REMOVE IT ON MONDAY
+
 //
 //  Numbers.swift
 //  Home
@@ -24,11 +23,7 @@ import Foundation
 class Number {
     
     //Properties
-    var kCals: Int
-    var bCals: Int
-    var lCals: Int
-    var dCals: Int
-    
+
     
     //All needed nutrients to display
     var proteins: Double
@@ -43,30 +38,10 @@ class Number {
     //Arrays for breakfast, lunch and dinner
     var userMeals = [Meal]()
     
-    init(kCals: Int, bCals: Int, lCals: Int, dCals: Int){
-        
-        self.kCals = kCals
-        self.bCals = bCals
-        self.lCals = lCals
-        self.dCals = dCals
-        
-        self.proteins = 0
-        self.fats = 0
-        self.carbohydrates = 0
-        self.iron = 0
-        self.magnesium = 0
-        self.vitaminD = 0
-        self.folate = 0
-        self.moisture = 0
-        
-    }
+
     
     init(proteins: Double, fats: Double, carbohydrates: Double, iron: Double, magnesium: Double, vitaminD: Double, folate: Double, moisuture: Double){
         
-        self.kCals = 0
-        self.bCals = 0
-        self.lCals = 0
-        self.dCals = 0
         
         self.proteins = proteins
         self.fats = fats
@@ -83,10 +58,6 @@ class Number {
     
     init(){
         
-        self.kCals = 0
-        self.bCals = 0
-        self.lCals = 0
-        self.dCals = 0
         
         self.proteins = 0
         self.fats = 0
