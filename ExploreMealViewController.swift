@@ -3,6 +3,10 @@
 //  mealify
 //
 //  Created by Juey on 2018-07-26.
+//  Team name: Meal Mules
+//  Changes made: Added ability to see user nutrients
+//                Added abilitiy to see recommended meals
+//  Known bugs: Meal recommend needs to be redone
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -15,14 +19,18 @@ import FirebaseDatabase
 
 class ExploreMealViewController: UIViewController {
 
+    
+    //Labels
     @IBOutlet weak var userNutrients: UITextView!
     @IBOutlet weak var recMeal: UILabel!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     
+    //Firebase references
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
     
+    //Nurient differences, difference from your current intake and what you should intake
     var proteinsDiff: Double = 0
     var fatsDiff: Double = 0
     var carbohydratesDiff: Double = 0
@@ -32,14 +40,20 @@ class ExploreMealViewController: UIViewController {
     var vitaminDDiff: Double = 0
     var folateDiff: Double = 0
     
+    //Get today's number and user info
     var today = Number()
     var userInfo = UserDaily(gender: "male", age: 19)
     
-    
+    //Button to click to recommend meal
     @IBAction func loadRecommended(_ sender: Any) {
         recommend()
     }
     
+    //TODO:
+    //*
+    //*
+    //*
+    //Loads all nutrients from database
     private func loadNutrients(){
     
         ref = Database.database().reference()

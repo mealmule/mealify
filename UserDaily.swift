@@ -3,6 +3,9 @@
 //  mealify
 //
 //  Created by vincent on 2018-07-27.
+//  Team name: Meal Mules
+//  Changes made: Added nutrients you should intake daily
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -10,9 +13,12 @@ import Foundation
 
 class UserDaily{
     
+    //User info
     var gender: String
     var age: Float
     
+    //The number of nutrients you should have daily
+    //This amount is dependent on what age you are and your gender
     var proteinsDaily: Double = 0
     var fatsDaily: Double = 0
     var carbohydratesDaily: Double = 0
@@ -23,6 +29,7 @@ class UserDaily{
     var folateDaily: Double = 0
   
     
+    //Normal initialization
     init (){
         
         self.gender = "male"
@@ -39,6 +46,7 @@ class UserDaily{
         
     }
     
+    //Else take in gender and age, and determine your daily intake
     init (gender: String, age: Float){
         
         self.gender = gender
