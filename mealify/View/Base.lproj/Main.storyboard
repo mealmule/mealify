@@ -63,9 +63,6 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="usernameSet:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mp8-r1-L8f"/>
-                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="rNt-a0-grF">
                                         <rect key="frame" x="74" y="264" width="242" height="2"/>
@@ -2099,7 +2096,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hXs-nL-pFs"/>
-        <segue reference="FY3-nk-p63"/>
+        <segue reference="LjZ-LN-p1e"/>
         <segue reference="aun-NV-0SZ"/>
         <segue reference="5S2-hR-3uI"/>
     </inferredMetricsTieBreakers>
