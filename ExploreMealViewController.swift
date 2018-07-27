@@ -42,7 +42,7 @@ class ExploreMealViewController: UIViewController {
     
     //Get today's number and user info
     var today = Number()
-    var userInfo = UserDaily(gender: "male", age: 19)
+    var userInfo = UserDaily()
     
     //Percentage of accuracy needed to recommend meal
     let acc: Double = 0.4 + (Double(Double(arc4random()) / Double(UINT32_MAX)) * 0.30)
@@ -111,6 +111,22 @@ class ExploreMealViewController: UIViewController {
             }
             
         
+        })
+        
+        //Retrieve all user info from the user on selected date and put them in today.userMeals()
+        databaseHandle = ref?.child("nutrientHistory").child(userID).observe(.value, with: { (snapshot) in
+            
+            if let allNames = snapshot.value as? [String:AnyObject] {
+                
+                let age = Float(allNames["age"] as! String)
+                let gender = allNames["gender"] as! String
+                
+                self.userInfo = UserDaily(gender: gender, age: age!)
+                
+            }
+           
+            
+            
         })
     
     }
