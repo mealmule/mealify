@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     var today = Number()
     
     //Variables
-    var userScore: Float = 8.9
+    var userScore: Float = 2.9
     var folateGoal: Int = 0
     var ironGoal: Int = 0
     var magnesiumGoal: Int = 0
@@ -50,7 +50,8 @@ class ViewController: UIViewController {
     var dailyWaterConsume: Int = 0
     var dailyWaterGlassNumber: Int = 0
     
-    var strokeColor: UIColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
+    // initialize progress bar color as yellow
+    var strokeColor: UIColor = UIColor(hue: 0.1528, saturation: 0.88, brightness: 0.97, alpha: 1.0)
     
     @IBOutlet weak var contentView: UIView!
     
@@ -231,14 +232,14 @@ class ViewController: UIViewController {
 
         
         // create the track layer
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: 56, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: .zero, radius: 58, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
         
         let trackLayer = CAShapeLayer();
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = trackColor.cgColor
         trackLayer.lineWidth = 10
         trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 153)
+        trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
         
         // make the edge of stroke round and smooth
         trackLayer.lineCap = kCALineCapRound
@@ -250,7 +251,7 @@ class ViewController: UIViewController {
         shapeLayer.strokeColor = strokeColor.cgColor
         shapeLayer.lineWidth = 10
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 153)
+        shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         
         // make the edge of stroke round and smooth
