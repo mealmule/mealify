@@ -11,14 +11,17 @@ import Firebase
 
 class ViewControllerRegister: UIViewController {
 
-    @IBOutlet weak var registerstatus: UILabel!
+    //@IBOutlet weak var registerstatus: UILabel!
     
+    @IBOutlet weak var username: UITextField!
     @IBOutlet weak var emailtext: UITextField!
     
     @IBOutlet weak var passwordtext: UITextField!
+    //@IBOutlet weak var confirmpassword: UITextField!
     @IBOutlet weak var confirmpassword: UITextField!
     
-    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var registerstatus: UILabel!
+    //@IBOutlet weak var username: UITextField!
     var today = Date()
     let dateFormatter = DateFormatter()
     let cal = Calendar.current
