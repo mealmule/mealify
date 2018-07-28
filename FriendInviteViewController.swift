@@ -27,20 +27,43 @@ class FriendInviteViewController: UIViewController, UITableViewDataSource, UITab
     var userID = Auth.auth().currentUser?.uid
     var myIndex = 0
     var friendRequestArr : [String] = []
+    var friendRequestArrUsername : [String] = []
+    var databaseUniqueID : [String] = []
     
     
 //Gathers the list of friend invitation from firebase and sends it to the user tableview
     func getinfo() -> Int{
         ref = Database.database().reference()
         print("Current user is \(userID!)")
-        ref.child("nutrientHistory").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("nutrientHistory").child(userID!).observe(.value, with: { (snapshot) in
+            self.friendRequestArr = []
+            self.databaseUniqueID = []
+            self.friendRequestArr = []
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
             if let friendRequestList = snapDictionary["friendrequest"]{
                 for i in friendRequestList as! NSDictionary{
                     self.friendRequestArr.append(friendRequestList[i.key]!! as! String)
                 }
-                self.tableviewstuff.reloadData()
-                print("Friend Request Arr \(self.friendRequestArr)")
+                self.ref.child("nutrientHistory").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let snapDictionary2 = snapshot.value as? [String : AnyObject] ?? [:]
+                    for i in snapDictionary2 as! NSDictionary{
+                        self.databaseUniqueID.append(i.key as! String)
+                    }
+                    //print("THIS IS TESTING \(self.databaseUniqueID)")
+                    for i in 0 ..< (self.friendRequestArr.count){
+                        for j in 0 ..< (self.databaseUniqueID.count){
+                            if self.friendRequestArr[i] == self.databaseUniqueID[j]
+                            {
+                                self.friendRequestArrUsername.append(snapDictionary2[self.databaseUniqueID[j]]!["username"]!! as! String)
+                            }
+                        }
+                    }
+                    self.tableviewstuff.reloadData()
+                    
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+                ////////////////////
             }
         }) { (error) in
             print(error.localizedDescription)
@@ -66,14 +89,14 @@ class FriendInviteViewController: UIViewController, UITableViewDataSource, UITab
 //gathers how many columns there are in the tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return (friendRequestArr.count)
+        return (friendRequestArrUsername.count)
     }
     
 //puts the information into the cell of the tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = friendRequestArr[indexPath.row]
+        cell.textLabel?.text = friendRequestArrUsername[indexPath.row]
         return(cell)
     }
 
@@ -90,6 +113,7 @@ class FriendInviteViewController: UIViewController, UITableViewDataSource, UITab
             let nextviewcontroller = segue.destination as! FriendsInvite2ViewController
             nextviewcontroller.someIndex = myIndex
             nextviewcontroller.somelist = friendRequestArr
+            nextviewcontroller.somelist2 = friendRequestArrUsername
             
         }
 

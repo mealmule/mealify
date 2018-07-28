@@ -19,6 +19,9 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     var userID = Auth.auth().currentUser?.uid
     var ref: DatabaseReference!
     var myIndex = 0
+    var friendRequestArrUsername : [String] = []
+    var databaseUniqueID : [String] = []
+    
     
     // get user healthScore
     var healthScore = 8.9
@@ -36,28 +39,58 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
 
         ref = Database.database().reference()
         print("Current user is \(userID!)")
-        ref.child("nutrientHistory").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("nutrientHistory").child(userID!).observe(.value, with: { (snapshot) in
+            self.friendRequestArrUsername = []
+            self.databaseUniqueID = []
+            self.friendRequestArr = []
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
             if let friendRequestList = snapDictionary["friendlist"]{
                 for i in friendRequestList as! NSDictionary{
                     self.friendRequestArr.append(friendRequestList[i.key]!! as! String)
                 }
-                self.friendListTableView.reloadData()
-                print("Friend Request Arr \(self.friendRequestArr)")
+                /////////////////////////
+                self.ref.child("nutrientHistory").observeSingleEvent(of: .value, with: { (snapshot) in
+                    self.databaseUniqueID = []
+                    let snapDictionary2 = snapshot.value as? [String : AnyObject] ?? [:]
+                    for i in snapDictionary2 as! NSDictionary{
+                        self.databaseUniqueID.append(i.key as! String)
+                    }
+                    //print("THIS IS TESTING \(self.databaseUniqueID)")
+                    for i in 0 ..< (self.friendRequestArr.count){
+                        for j in 0 ..< (self.databaseUniqueID.count){
+                            if self.friendRequestArr[i] == self.databaseUniqueID[j]
+                            {
+                                self.friendRequestArrUsername.append(snapDictionary2[self.databaseUniqueID[j]]!["username"]!! as! String)
+                            }
+                        }
+                    }
+                    self.friendListTableView.reloadData()
+                    
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+                /////////////////////////
+                
             }
         }) { (error) in
             print(error.localizedDescription)
         }
         
+        
+        
+        
+        
+        
+        
+        
+        //////////////////////////////////////////////////////
         if (healthScore > FriendHealthScore) {
             mealKingImg.image = #imageLiteral(resourceName: "mealKing")
         } else {
             mealKingImg.image = #imageLiteral(resourceName: "mule")
         }
         healthScoreLabel.text = String(healthScore)
-        
     }
-
     //Todo:
     //*
     //*
@@ -83,13 +116,13 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return (friendRequestArr.count)
+        return (friendRequestArrUsername.count)
     }
 
 //Puts all user into the tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell2")
-        cell.textLabel?.text = friendRequestArr[indexPath.row]
+        cell.textLabel?.text = friendRequestArrUsername[indexPath.row]
         return(cell)
     }
 
@@ -106,12 +139,6 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             let nextviewcontroller = segue.destination as! FriendDetailViewController
             nextviewcontroller.someIndex = myIndex
             nextviewcontroller.somelist = friendRequestArr
-
         }
-        
     }
-
-    
-    
-
 }
