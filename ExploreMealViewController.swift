@@ -23,7 +23,6 @@ class ExploreMealViewController: UIViewController {
     //Labels
     @IBOutlet weak var userNutrients: UITextView!
     @IBOutlet weak var recMeal: UILabel!
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     
     //Firebase references
@@ -40,6 +39,7 @@ class ExploreMealViewController: UIViewController {
     var vitaminDDiff: Double = 0
     var folateDiff: Double = 0
     
+    var recommendedMeal = Meal()
     var pSegue = true
     
     //Get today's number and user info
@@ -133,61 +133,6 @@ class ExploreMealViewController: UIViewController {
     
     }
     
-    //TODO: MORE EFFICIECNY
-    //*
-    //*
-    //*
-    //Returns the meal factor based on the meal amount
-    private func factorMeal(foodID: Int) -> Double{
-        
-        var stringCount: String = ""
-        var factor: Double = 0
-        //Go through conversion to find the measure name and conversion factor value
-        //After those are found, then you can multiply conversion factor value with nutrient value
-        //And you can get the measure description to display
-        for i in conversion{
-            
-            
-            if foodID == i.foodID{
-                
-                
-                //Get the measure description
-                for j in measures{
-                    
-                    if i.measureID == j.measureID{
-                        
-                        //We want grams and ml units, not 1/6 pie (20 cm diamater) or something
-                        //So we want the shortest string to have more probability of grams and ml units
-                        //Stringcount is 0 so we put anything in here for now
-                        if stringCount.count == 0{
-                            
-                            stringCount = j.measureDescription
-                            
-                            //Got the conversionFactorValue
-                            factor = i.conversionFactorValue
-                            
-                        }
-                            //else if it is not 0, then compare and get least length
-                        else if j.measureDescription.count < stringCount.count{
-                            
-                            stringCount = j.measureDescription
-                            
-                            //Got the conversionFactorValue
-                            factor = i.conversionFactorValue
-                            
-                        }
-                            //else break
-                        else{
-                            break
-                        }
-                    }
-                }
-            }
-        }
-        
-        return factor
-        
-    }
     
     //Absolute value of a double function
     private func absD(number: Double) -> Double{
@@ -199,6 +144,32 @@ class ExploreMealViewController: UIViewController {
             return number
         }
         
+    }
+    
+    func binarySearch(arr: [Meal], searchItem: Int) -> Int {
+        var lowerIndex = 0;
+        var upperIndex = arr.count - 1
+        
+        
+        
+        
+        while (true) {
+            
+            let currentIndex = (lowerIndex + upperIndex)/2
+            
+            if(arr[currentIndex].foodID == searchItem) {
+                return currentIndex
+                
+            }
+            else {
+                if (arr[currentIndex].foodID > searchItem) {
+                    upperIndex = currentIndex - 1
+                }
+                else {
+                    lowerIndex = currentIndex + 1
+                }
+            }
+        }
     }
     
     
@@ -213,7 +184,7 @@ class ExploreMealViewController: UIViewController {
         var checkDiff: Double
         var min: Double = 10000
         var firstCheck: Bool = true
-        var recommendedMeal = Meal()
+        
         
         var foodID: Int = -1
         
@@ -225,10 +196,12 @@ class ExploreMealViewController: UIViewController {
             //If there is a match, add it into the string
             if k.nutrientID == nutrientID{
                 
+                let index = binarySearch(arr: allMeals, searchItem: k.foodID)
+                
                 //Round it up to 2 digits
                 //Find the least difference so you can recommend most accurate meal
                 
-                checkDiff = Double(round(Double(truncating: k.nutrientValue) * factorMeal(foodID: k.foodID) * 100) / 100)
+                checkDiff = Double(round(Double(truncating: k.nutrientValue) * allMeals[index].factor * 100) / 100)
                 if firstCheck{
                     min = checkDiff
                     foodID = k.foodID
@@ -239,48 +212,7 @@ class ExploreMealViewController: UIViewController {
                     foodID = k.foodID
                 }
                 
-                if nutrientID == 203{
-                    
-                    if min > userInfo.proteinsDaily * acc && min < userInfo.proteinsDaily / acc{
-                        break
-                    }
-                    
-                }
-                else if nutrientID == 204{
-                    
-                    if min > userInfo.fatsDaily * acc && min < userInfo.fatsDaily / acc{
-                        break
-                    }
-                    
-                }
-                else if nutrientID == 205{
-                    
-                    if min > userInfo.carbohydratesDaily * acc && min < userInfo.carbohydratesDaily / acc{
-                        break
-                    }
-                    
-                }
-                else if nutrientID == 303{
-                    
-                    if min > userInfo.ironDaily * acc && min < userInfo.ironDaily / acc{
-                        break
-                    }
-                    
-                }
-                else if nutrientID == 304{
-                    
-                    if min > userInfo.magnesiumDaily * acc && min < userInfo.magnesiumDaily / acc{
-                        break
-                    }
-                    
-                }
-                else if nutrientID == 324{
-                    
-                    if min > userInfo.vitaminDDaily * acc && min < userInfo.vitaminDDaily / acc{
-                        break
-                    }
-                    
-                }
+             
                 
                 
                
@@ -402,6 +334,8 @@ class ExploreMealViewController: UIViewController {
         print(acc)
         loadNutrients()
         
+        loadFromDatabase()
+        
         
         // Do any additional setup after loading the view.
     }
@@ -419,6 +353,43 @@ class ExploreMealViewController: UIViewController {
         return true
     }
     
+    //TODO:
+    //*
+    //*
+    //*
+    //This function retrieves data from the database so that you can it will give user all meals from that day
+    //It will store the meals into today.userMeals, and will be used in other view controllers
+    //today will be initialized every time this view controller is called, initializing today.userMeals to empty is not necessary
+    private func loadFromDatabase(){
+        
+        //Get the userID, and remove all elements in today.userMeals
+        let userID = (Auth.auth().currentUser?.uid)!
+        
+        //Retrieve all meals from the user on selected date and put them in today.userMeals()
+        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).child("meals").observe(.childAdded, with: { (snapshot) in
+            
+            if let allNames = snapshot.value as? [String:AnyObject] {
+                
+                //Get name and foodID from the node
+                let userInterest = allNames["name"] as! String
+                let foodID = allNames["foodID"] as! Int
+                let mealNumber = allNames["mealNumber"] as! Int
+                
+                //Turn it into a meal
+                let meal = Meal(name: userInterest, foodID: foodID, mealNumber: mealNumber)
+                
+                
+                //Add meal into array
+                self.today.userMeals += [meal]
+                
+            }
+            
+            
+        })
+        
+        
+    }
+    
 
     
     // MARK: - Navigation
@@ -430,7 +401,12 @@ class ExploreMealViewController: UIViewController {
         
         if segue.identifier == "mealDescription"{
             
-            //let dest
+            let dest = segue.destination as! MealViewController
+            dest.meal = recommendedMeal
+            
+            dest.title = "Recommended Meal"
+            
+            dest.numberOfDayMeals = today.userMeals.count
             
         }
     }

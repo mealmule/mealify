@@ -15,19 +15,7 @@ class AppDelegate2: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    var ref1: DatabaseReference!
-    var ref2: DatabaseReference!
-    var ref3: DatabaseReference!
-    var ref4: DatabaseReference!
-    var ref5: DatabaseReference!
-    var databaseHandle: DatabaseHandle?
-    
-    var mealsFilled = false
-    var mealNutrientsFilled = false
-    var nutrientsFilled = false
-    var measureFilled = false
-    var conversionFilled = false
-    var rep = true
+
     
     
     

@@ -22,6 +22,8 @@ var conversion = [MeasureConversion]()
 class LaunchViewController: UIViewController {
     
     
+    @IBOutlet weak var loadingLabel: UILabel!
+    
     var ref1: DatabaseReference!
     var ref2: DatabaseReference!
     var ref3: DatabaseReference!
@@ -45,8 +47,11 @@ class LaunchViewController: UIViewController {
             
             
             if done{
-                print("Done Loading")
+                print("Done Loading all meals")
                 self.group.leave()
+            }
+            else{
+                self.loadingLabel.text = "Loading all meals"
             }
             
             
@@ -61,8 +66,12 @@ class LaunchViewController: UIViewController {
             
             
             if message == ""{
-                print("Done Loading")
+                print("Done Loading all meal nutrients")
+                
                 self.group.leave()
+            }
+            else{
+                self.loadingLabel.text = "Loading all meal nutrients"
             }
             
          
@@ -80,8 +89,12 @@ class LaunchViewController: UIViewController {
         loadNutrients(completionHandler: {message in
             
             if message == ""{
-                print("Done Loading")
+                print("Done Loading all nutrients")
                 self.group.leave()
+            }
+            else{
+                self.loadingLabel.text = "Loading all nutrients"
+
             }
             
             
@@ -98,10 +111,13 @@ class LaunchViewController: UIViewController {
             
             
             if message == ""{
-                print("Done Loading")
+                print("Done Loading all measure amounts")
+            
                 self.group.leave()
             }
-            
+            else{
+                self.loadingLabel.text = "Loading all measure amounts"
+            }
             
             
         })
@@ -109,15 +125,18 @@ class LaunchViewController: UIViewController {
     }
     
     func getData5(){
-        print("Done HEHEHe")
+
         group.enter()
         loadConversion(completionHandler: {message in
             
             
             
             if message == ""{
-                print("Done Loading")
+                print("Done Loading all conversion values")
                 self.group.leave()
+            }
+            else{
+                self.loadingLabel.text = "Loading all conversions"
             }
             
             
@@ -325,7 +344,7 @@ class LaunchViewController: UIViewController {
         print("CONvERSION 19505: " + String(conversion.count))
         
         
-        
+        loadingLabel.text = "Loading all nutrients in each meal"
         allMeals.sort(by: {$0.foodID < $1.foodID})
         
         for k in mealNutrients{
@@ -334,20 +353,10 @@ class LaunchViewController: UIViewController {
             allMeals[index].nutrients += [k]
             
             
-            
-//            for i in allMeals{
-//
-//                if i.foodID == k.foodID{
-//                    i.nutrients += [k]
-//                    break
-//                }
-//
-//            }
-            
         }
         
-        print("DONE 1")
-        
+        print("Loaded all nutrients in each meal")
+        loadingLabel.text = "Loading factors and measure amounts into each meal"
             
       
         measures.sort(by: {$0.measureID < $1.measureID})
@@ -390,7 +399,7 @@ class LaunchViewController: UIViewController {
             
         }
         
-        print("DONE 2")
+        print("Loaded factors and measure amounts into each meal")
             
         
         

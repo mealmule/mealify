@@ -62,10 +62,34 @@ class MealViewController: UIViewController {
         return Double(round(toRound * 100) / 100)
     }
     
+    //Todo:
+    //*
+    //*
+    //*
+    //Back button functionality.
+    //Give functionality to the back button so whenever it is pressed, it will perform an action
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
+        
+        //Is popped from the view controller (back button)
+        if self.isMovingFromParentViewController {
+            
+            if self.title == "Recommended Meal"{
+                //Hide navigation bar
+                self.navigationController?.isNavigationBarHidden = true
+            }
+
+        }
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.title == "Recommended Meal"{
+            self.navigationController?.isNavigationBarHidden = false
+        }
         
         
         //Food name properties
@@ -160,6 +184,10 @@ class MealViewController: UIViewController {
         //Dest is the Home view. Change properties below
         //If the identifier goes back to view controller, then update the foods within that view controller
         if segue.identifier == "updateFoods"{
+            
+            if self.title == "Recommended Meal"{
+                self.navigationController?.isNavigationBarHidden = true
+            }
             
             //Check the days of the app, add meal to array depending on day and types of meal
             
