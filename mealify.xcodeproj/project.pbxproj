@@ -43,6 +43,8 @@
 		BFB3F27D210A6FFE0026398B /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F27C210A6FFE0026398B /* Measure.swift */; };
 		BFB3F27F210A702B0026398B /* MeasureConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F27E210A702B0026398B /* MeasureConversion.swift */; };
 		BFB3F281210B15D10026398B /* UserDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F280210B15D10026398B /* UserDaily.swift */; };
+		BFB3F283210C70BC0026398B /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F282210C70BC0026398B /* Launch.swift */; };
+		BFB3F287210D31C70026398B /* NutrientFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3F286210D31C70026398B /* NutrientFile.swift */; };
 		BFB6D79820F9C42D003286CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79720F9C42D003286CE /* AppDelegate.swift */; };
 		BFB6D79C20FB3184003286CE /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79B20FB3184003286CE /* Nutrients.swift */; };
 		BFB6D79E20FB3634003286CE /* NutrientMealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */; };
@@ -109,6 +111,8 @@
 		BFB3F27C210A6FFE0026398B /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		BFB3F27E210A702B0026398B /* MeasureConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureConversion.swift; sourceTree = "<group>"; };
 		BFB3F280210B15D10026398B /* UserDaily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDaily.swift; sourceTree = "<group>"; };
+		BFB3F282210C70BC0026398B /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		BFB3F286210D31C70026398B /* NutrientFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientFile.swift; sourceTree = "<group>"; };
 		BFB6D79720F9C42D003286CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB6D79B20FB3184003286CE /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
 		BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientMealInfo.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
+				BFB3F286210D31C70026398B /* NutrientFile.swift */,
+				BFB3F282210C70BC0026398B /* Launch.swift */,
 				BFB3F280210B15D10026398B /* UserDaily.swift */,
 				BFB3F27E210A702B0026398B /* MeasureConversion.swift */,
 				BFB3F27C210A6FFE0026398B /* Measure.swift */,
@@ -446,11 +452,13 @@
 				9758456520FFF0F400AF647D /* FriendListViewController.swift in Sources */,
 				7D0991A620EAD7F700C3EE56 /* ViewController6.swift in Sources */,
 				7DEEDD1820FDD12C00812D42 /* Meal.swift in Sources */,
+				BFB3F287210D31C70026398B /* NutrientFile.swift in Sources */,
 				7D0991A520EAD7F700C3EE56 /* ViewController3.swift in Sources */,
 				7DEEDD2320FDD53300812D42 /* CalendarViewController.swift in Sources */,
 				7DEEDD1720FDD12C00812D42 /* ViewController.swift in Sources */,
 				7DEEDD1A20FDD12C00812D42 /* MealViewController.swift in Sources */,
 				9758456620FFF0F400AF647D /* FriendDetailViewController.swift in Sources */,
+				BFB3F283210C70BC0026398B /* Launch.swift in Sources */,
 				BFD0AFAB20FEC19600CE2204 /* TodayMealViewController.swift in Sources */,
 				9758456A20FFF4A300AF647D /* Diary.swift in Sources */,
 				7D0991BE20EAECD800C3EE56 /* ViewControllerRegister.swift in Sources */,

@@ -81,50 +81,9 @@ class MealViewController: UIViewController {
         measureAmount.minimumScaleFactor = 0.7
         measureAmount.numberOfLines = 0
         
-        //Go through conversion to find the measure name and conversion factor value
-        //After those are found, then you can multiply conversion factor value with nutrient value
-        //And you can get the measure description to display
-        for i in conversion{
-            
-            
-            if meal.foodID == i.foodID{
-                
-                
-                //Get the measure description
-                for j in measures{
-                    
-                    if i.measureID == j.measureID{
-                        
-                        //We want grams and ml units, not 1/6 pie (20 cm diamater) or something
-                        //So we want the shortest string to have more probability of grams and ml units
-                        //Stringcount is 0 so we put anything in here for now
-                        if stringCount.count == 0{
-                            
-                            measureAmount.text = "Measure: " + j.measureDescription
-                            stringCount = j.measureDescription
-                            
-                            //Got the conversionFactorValue
-                            factor = i.conversionFactorValue
-                            
-                        }
-                            //else if it is not 0, then compare and get least length
-                        else if j.measureDescription.count < stringCount.count{
-                            
-                            measureAmount.text = "Measure: " + j.measureDescription
-                            stringCount = j.measureDescription
-                            
-                            //Got the conversionFactorValue
-                            factor = i.conversionFactorValue
-                            
-                        }
-                            //else break
-                        else{
-                            break
-                        }
-                    }
-                }
-            }
-        }
+        measureAmount.text = meal.measure
+        factor = meal.factor
+        print("FACTOR: " + String(meal.factor))
         
         //Find all meal nutrients, and add them to the meal description string
         for i in meal.nutrients{
@@ -137,7 +96,13 @@ class MealViewController: UIViewController {
                     
                     //Round it up to 2 digits
                     let temp = Double(round(Double(truncating: i.nutrientValue) * factor * 100) / 100)
-                    mealNutrients += k.nutrientName + ": " + String("\(temp)") + k.nutrientUnit + "\n \n"
+                    
+                    if i.nutrientID == 806{
+                        mealNutrients += k.nutrientName + ": " + String("\(temp)") + "µg" + "\n \n"
+                    }
+                    else{
+                        mealNutrients += k.nutrientName + ": " + String("\(temp)") + k.nutrientUnit + "\n \n"
+                    }
                     
                     //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
                     //Then set those values to temp so that it can be added into the database

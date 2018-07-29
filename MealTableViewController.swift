@@ -364,16 +364,16 @@ class MealTableViewController: UITableViewController {
         }
         
         
-        selectedMeal.nutrients = []
-        //This for loop adds nutrients into the the meal
-        //It will search through the whole database until it finds a matching ID, and add that in
-        for i in mealNutrients{
-            
-            if i.foodID == selectedMeal.foodID{
-                selectedMeal.nutrients += [i]
-            }
-            
-        }
+//        selectedMeal.nutrients = []
+//        //This for loop adds nutrients into the the meal
+//        //It will search through the whole database until it finds a matching ID, and add that in
+//        for i in mealNutrients{
+//            
+//            if i.foodID == selectedMeal.foodID{
+//                selectedMeal.nutrients += [i]
+//            }
+//            
+//        }
         
         //If the identifier goes to meal view controller then update the foods within that view controller
         if segue.identifier == "newFoods"{

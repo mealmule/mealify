@@ -9,10 +9,26 @@
 import UIKit
 import Firebase
 
+
 @UIApplicationMain
 class AppDelegate2: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    
+    var ref1: DatabaseReference!
+    var ref2: DatabaseReference!
+    var ref3: DatabaseReference!
+    var ref4: DatabaseReference!
+    var ref5: DatabaseReference!
+    var databaseHandle: DatabaseHandle?
+    
+    var mealsFilled = false
+    var mealNutrientsFilled = false
+    var nutrientsFilled = false
+    var measureFilled = false
+    var conversionFilled = false
+    var rep = true
+    
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -27,8 +43,11 @@ class AppDelegate2: UIResponder, UIApplicationDelegate {
         //Clear the title text for all the back buttons
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(-1000, 0), for:UIBarMetrics.default)
         
+        
         return true
     }
+    
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -40,6 +40,8 @@ class ExploreMealViewController: UIViewController {
     var vitaminDDiff: Double = 0
     var folateDiff: Double = 0
     
+    var pSegue = true
+    
     //Get today's number and user info
     var today = Number()
     var userInfo = UserDaily()
@@ -346,13 +348,14 @@ class ExploreMealViewController: UIViewController {
             
         }
         
-        let temp = max(proteinsDiff, fatsDiff, carbohydratesDiff, ironDiff, magnesiumDiff, vitaminDDiff)
+        let temp = max(proteinsDiff, fatsDiff, carbohydratesDiff, ironDiff, magnesiumDiff, vitaminDDiff, moistureDiff, folateDiff)
         
         print(temp)
         //Find the max of all of the differences, and choose the food that is close to the number temp
         //This would give a meal that is closely related to the nutrientDiff, and you may get what you need
         if temp <= 0{
             recMeal.text = "No more recommended foods for today!"
+            pSegue = false
         }
         else if temp == proteinsDiff{
             recommendedMeal(nutrientID: 203, compareNumber: temp)
@@ -381,15 +384,15 @@ class ExploreMealViewController: UIViewController {
             recommendedMeal(nutrientID: 324, compareNumber: temp)
         }
         
-//        else if temp == moistureDiff{
-//
-//            recommendedMeal(nutrientID: 255, compareNumber: temp)
-//        }
-//
-//        else if temp == folateDiff{
-//
-//            recommendedMeal(nutrientID: 806, compareNumber: temp)
-//        }
+        else if temp == moistureDiff{
+
+            recommendedMeal(nutrientID: 255, compareNumber: temp)
+        }
+
+        else if temp == folateDiff{
+
+            recommendedMeal(nutrientID: 806, compareNumber: temp)
+        }
     }
     
     
@@ -408,15 +411,29 @@ class ExploreMealViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if !pSegue || recMeal.text == "" || recMeal.text == "No Meal to view!"  {
+            recMeal.text = "No Meal to view!"
+            return false
+        }
+        return true
+    }
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "mealDescription"{
+            
+            //let dest
+            
+        }
     }
-    */
+ 
 
 }

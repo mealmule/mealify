@@ -28,6 +28,8 @@ class Meal {
     let mealNumber: Int
     var nutrients = [NutrientMealInfo]()
     
+    var factor: Double
+    var measure: String
     
     //Init with all variales
     init(name: String, foodID: Int, mealNumber: Int){
@@ -35,6 +37,9 @@ class Meal {
         self.name = name
         self.foodID = foodID
         self.mealNumber = mealNumber
+        self.factor = 1
+        
+        self.measure = ""
         
     }
     
@@ -46,6 +51,9 @@ class Meal {
         self.name = "Food"
         self.foodID = 0
         self.mealNumber = -1
+        self.factor = 1
+        
+        self.measure = ""
         
     }
     

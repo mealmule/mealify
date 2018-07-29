@@ -140,7 +140,13 @@ class TodayMealViewController: UIViewController {
                     
                     //Round it up to 2 digits
                     let temp = Double(round(Double(truncating: i.nutrientValue) * factor * 100) / 100)
-                    mealNutrients += k.nutrientName + ": " + String("\(temp)") + k.nutrientUnit + "\n \n"
+                    
+                    if i.nutrientID == 806{
+                        mealNutrients += k.nutrientName + ": " + String("\(temp)") + "µg" + "\n \n"
+                    }
+                    else{
+                        mealNutrients += k.nutrientName + ": " + String("\(temp)") + k.nutrientUnit + "\n \n"
+                    }
                     
                     //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
                     //Then set those values to temp so that it can be added into the database
