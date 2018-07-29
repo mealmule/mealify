@@ -29,7 +29,6 @@ var dateChosenGlo: String?
 
 class ViewController: UIViewController, ChartViewDelegate {
     
-    
     //Properties and labels
     @IBOutlet weak var kcalsLeft: UILabel!
     @IBOutlet weak var mealRecommend: UILabel!
@@ -40,9 +39,11 @@ class ViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var pieChart: PieChartView!
     let micronutrients: [String] = ["Folate", "Iron", "Magnesium", "Vitamin D"]
     var micronutrient_amount: [Double] = []
+    var micronutrient_score: [Double] = []
     
     let macronutrients: [String] = ["Carbohydrates", "Fats", "Proteins"]
     var macronutrient_amount: [Double] = []
+    var macronutrient_score: [Double] = []
     
     
     
@@ -51,16 +52,19 @@ class ViewController: UIViewController, ChartViewDelegate {
     var today = Number()
     
     //Variables
-    var userScore: Float = 9
-    var folateGoal: Int = 0
-    var ironGoal: Int = 0
-    var magnesiumGoal: Int = 0
-    var vitaminDGoal: Int = 0
-    var dailyWaterConsume: Int = 0
+    var userScore: Double = 0.0
+    var folateGoal: Double = 0
+    var ironGoal: Double = 0
+    var magnesiumGoal: Double = 0
+    var vitaminDGoal: Double = 0
+    var dailyWaterConsume: Double = 0
     var dailyWaterGlassNumber: Int = 0
+    var proteinGoal: Double = 0
+    var carbGoal: Double = 0
+    var fatGoal: Double = 0
     
     // initialize progress bar color as yellow
-    var strokeColor: UIColor = UIColor(hue: 0.1528, saturation: 0.88, brightness: 0.97, alpha: 1.0)
+    var strokeColor: UIColor = UIColor(hue: 0.2472, saturation: 0.42, brightness: 0.91, alpha: 1.0)
     
     @IBOutlet weak var contentView: UIView!
     
@@ -80,6 +84,9 @@ class ViewController: UIViewController, ChartViewDelegate {
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
     
+    //Get the userID
+    let userID = (Auth.auth().currentUser?.uid)!
+    var userInfo = UserDaily()
     
     
     
@@ -211,6 +218,21 @@ class ViewController: UIViewController, ChartViewDelegate {
     // happy face indicates user's daily socre status
     @IBOutlet weak var face: UIImageView!
     
+    fileprivate func drawFace() {
+        // if user score is meet certain level, change the stroke color of the circle
+        if (userScore >= 3 && userScore < 7.5) {
+            strokeColor = UIColor(hue: 0.2472, saturation: 0.61, brightness: 0.9, alpha: 1.0)
+            face.image = #imageLiteral(resourceName: "face_2")
+        } else if (userScore >= 7.5) {
+            strokeColor = UIColor(hue: 0.2472, saturation: 0.42, brightness: 0.91, alpha: 1.0)
+            face.image = #imageLiteral(resourceName: "face_3")
+        } else {
+            face.image = #imageLiteral(resourceName: "face1")
+        }
+        // draw the progress indicator
+        circleAnimation()
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -222,9 +244,9 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         // initialize daily nutrient goals
         initGoals()
-        folateGoalTxt.text = String(folateGoal) + "mg"
+        folateGoalTxt.text = String(folateGoal) + "µg"
         ironGoalTxt.text = String(ironGoal) + "mg"
-        dGoalTxt.text = String(vitaminDGoal) + "mg"
+        dGoalTxt.text = String(vitaminDGoal) + "IU"
         magGoalTxt.text = String(magnesiumGoal) + "mg"
         
         //waterGoalTxt.text = String(dailyWaterConsume) + "ml"
@@ -235,16 +257,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         // define stroke colors
         let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
         
-        // if user score is meet certain level, change the stroke color of the circle
-        if (userScore >= 3 && userScore < 7.5) {
-            strokeColor = UIColor(hue: 0.2472, saturation: 0.61, brightness: 0.9, alpha: 1.0)
-            face.image = #imageLiteral(resourceName: "face_2")
-        } else if (userScore >= 7.5) {
-            strokeColor = UIColor(hue: 0.2472, saturation: 0.42, brightness: 0.91, alpha: 1.0)
-            face.image = #imageLiteral(resourceName: "face_3")
-        } else {
-            face.image = #imageLiteral(resourceName: "face1")
-        }
+        drawFace()
 
         
         // create the track layer
@@ -329,20 +342,50 @@ class ViewController: UIViewController, ChartViewDelegate {
             
 
             self.micronutrient_amount = [
-                snapDictionary["folate"] as? Double ?? 0.0,
-                snapDictionary["iron"] as? Double ?? 0.0,
-                snapDictionary["magnesium"] as? Double ?? 0.0,
-                snapDictionary["vitaminD"] as? Double ?? 0.0
+                (snapDictionary["folate"] as? Double ?? 0.0)/self.folateGoal,
+                (snapDictionary["iron"] as? Double ?? 0.0)/self.ironGoal,
+                (snapDictionary["magnesium"] as? Double ?? 0.0)/self.magnesiumGoal,
+                (snapDictionary["vitaminD"] as? Double ?? 0.0)/self.vitaminDGoal
             ]
             self.macronutrient_amount = [
-                snapDictionary["carbohydrates"] as? Double ?? 0.0,
-                snapDictionary["fats"] as? Double ?? 0.0,
-                snapDictionary["proteins"] as? Double ?? 0.0
+                (snapDictionary["carbohydrates"] as? Double ?? 0.0)/self.carbGoal,
+                (snapDictionary["fats"] as? Double ?? 0.0)/self.fatGoal,
+                (snapDictionary["proteins"] as? Double ?? 0.0)/self.proteinGoal
             ]
+            
+            var userScoreContainer: Double = 0.0
+            
+            // add up all numbers
+            for i in self.micronutrient_amount {
+                
+                if i > 1{
+                    userScoreContainer = userScoreContainer + 1
+                }
+                else{
+                   userScoreContainer = userScoreContainer + i
+                }
+            }
+            
+            for i in self.macronutrient_amount {
+                if i > 1 {
+                    // don't do anything if it's over toay's goal
+                    userScoreContainer = userScoreContainer + 1
+                } else {
+                    userScoreContainer = userScoreContainer + i
+                }
+            }
+            
+            self.userScore = round (userScoreContainer / 7 * 10)
+            self.drawFace()
+            
+            print("user score: ", self.userScore)
+            print("user score container: ", userScoreContainer)
+            
             print(self.micronutrient_amount)
             print(self.macronutrient_amount)
             self.setHorizontalChart(dataPoints: self.micronutrients, values: self.micronutrient_amount)
             self.setPieChart(dataPoints: self.macronutrients, values: self.macronutrient_amount)
+            
         })
         
         
@@ -357,12 +400,35 @@ class ViewController: UIViewController, ChartViewDelegate {
     //*
     //Changes the variables in these goals to hard coded values
     private func initGoals() {
-        folateGoal = 400
-        ironGoal = 8
-        magnesiumGoal = 240
-        vitaminDGoal = 100
-        dailyWaterConsume = 2000
-        dailyWaterGlassNumber = dailyWaterConsume / 250
+        var age: Float! = 0
+        var gender: String! = "female"
+        
+        //Retrieve all user info from the user on selected date and put them in today.userMeals()
+        databaseHandle = ref?.child("nutrientHistory").child(userID).observe(.value, with: { (snapshot) in
+            
+            if let allNames = snapshot.value as? [String:AnyObject] {
+                
+                age = Float(allNames["age"] as! String)
+                gender = allNames["gender"] as! String
+                
+                self.userInfo = UserDaily(gender: gender, age: age!)
+                
+            }
+        })
+        
+        var user = UserDaily(gender: gender, age: age)
+        
+        // get daily goals from UserDaily class based on gender and age
+        proteinGoal = user.proteinsDaily
+        carbGoal = user.carbohydratesDaily
+        fatGoal = user.fatsDaily
+        folateGoal = user.folateDaily
+        ironGoal = user.ironDaily
+        vitaminDGoal = user.vitaminDDaily
+        magnesiumGoal = user.magnesiumDaily
+        
+        dailyWaterConsume = user.moistureDaily
+        dailyWaterGlassNumber = Int (dailyWaterConsume / 250)
     }
     
     
