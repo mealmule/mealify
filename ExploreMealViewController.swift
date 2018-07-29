@@ -6,7 +6,8 @@
 //  Team name: Meal Mules
 //  Changes made: Added ability to see user nutrients
 //                Added abilitiy to see recommended meals
-//  Known bugs: Meal recommend needs to be redone
+//                Redid all the algorithms
+//  Known bugs: none
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -21,7 +22,6 @@ class ExploreMealViewController: UIViewController {
 
     
     //Labels
-    @IBOutlet weak var userNutrients: UITextView!
     @IBOutlet weak var recMeal: UILabel!
     
     
@@ -46,8 +46,8 @@ class ExploreMealViewController: UIViewController {
     var today = Number()
     var userInfo = UserDaily()
     
-    //Percentage of accuracy needed to recommend meal
-    let acc: Double = 0.1
+    //The accuracy allowed for each nutrietn when recommending meals
+    //For example, if a meal has upperAcc times the nutrients you need, then drop meal
     let upperAcc: Double = 1.75
 
     
@@ -105,7 +105,6 @@ class ExploreMealViewController: UIViewController {
                     str += "Proteins: " + String(proteins) + "g\n\n"
                     str += "VitaminD: " + String(vitaminD) + "IU\n\n"
                     
-                    self.userNutrients.text = str
                     
                 }
             }
@@ -148,6 +147,13 @@ class ExploreMealViewController: UIViewController {
         
     }
     
+    //TODO:
+    //*
+    //*
+    //*
+    //Precondition: array must be sorted
+    //If element is not found, then return nil
+    //Else return the index in which the object is contained
     func binarySearch(arr: [Meal], searchItem: Int) -> Int {
         var lowerIndex = 0;
         var upperIndex = arr.count - 1
@@ -187,9 +193,6 @@ class ExploreMealViewController: UIViewController {
         var min: Double = 0
         
         var firstCheck = true
-        
-
-        
         
         
         //Look through all the meal's nutrients and find the one equal to protein
@@ -275,7 +278,7 @@ class ExploreMealViewController: UIViewController {
                     }
                 }
 
-
+            
 
 
 
@@ -333,6 +336,7 @@ class ExploreMealViewController: UIViewController {
             
         }
         
+        //Find the max difference of the nutrients
         let temp = max(proteinsDiff, fatsDiff, carbohydratesDiff, ironDiff, magnesiumDiff, vitaminDDiff, moistureDiff, folateDiff)
         
         print(temp)
@@ -342,7 +346,6 @@ class ExploreMealViewController: UIViewController {
             recMeal.text = "No more recommended foods for today!"
             pSegue = false
         }
-            
         else if temp == proteinsDiff{
             recommendedMeal(nutrientID: 203, compareNumber: temp)
         }
@@ -385,7 +388,6 @@ class ExploreMealViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(acc)
         loadNutrients()
         
         loadFromDatabase()

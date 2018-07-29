@@ -1230,13 +1230,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-fe-xyE">
-                                <rect key="frame" x="363" y="28" width="12" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended Meal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDI-TE-oAJ">
                                 <rect key="frame" x="16" y="28" width="343" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1274,7 +1267,6 @@
                     <tabBarItem key="tabBarItem" title="Explore Meals" selectedImage="nav_recipe_grey@3x" id="yEq-cV-M07"/>
                     <connections>
                         <outlet property="recMeal" destination="qyJ-L5-xTq" id="KIj-FT-8oe"/>
-                        <outlet property="userNutrients" destination="Fhz-fe-xyE" id="LSO-VS-7Gh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8e2-bC-7eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
