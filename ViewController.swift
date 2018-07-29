@@ -183,22 +183,11 @@ class ViewController: UIViewController, ChartViewDelegate {
             if let allNames = snapshot.value as? [String:AnyObject] {
 
                 //Get name and foodID from the node
-                let userInterest = allNames["name"] as! String
                 let foodID = allNames["foodID"] as! Int
-                let mealNumber = allNames["mealNumber"] as! Int
                 
                 //Turn it into a meal
-                let meal = Meal(name: userInterest, foodID: foodID, mealNumber: mealNumber)
+                let meal = allMeals[self.binarySearch(arr: allMeals, searchItem: foodID)]
               
-                
-                //Include all nutrients into that meal
-                for i in mealNutrients{
-                    
-                    if i.foodID == meal.foodID{
-                        meal.nutrients += [i]
-                    }
-                    
-                }
                 
                 //Add meal into array
                 self.today.userMeals += [meal]
@@ -213,6 +202,39 @@ class ViewController: UIViewController, ChartViewDelegate {
         })
         
         
+    }
+    
+    //TODO:
+    //*
+    //*
+    //*
+    //Precondition: array must be sorted
+    //If element is not found, then return nil
+    //Else return the index in which the object is contained
+    func binarySearch(arr: [Meal], searchItem: Int) -> Int {
+        var lowerIndex = 0;
+        var upperIndex = arr.count - 1
+        
+        
+        
+        
+        while (true) {
+            
+            let currentIndex = (lowerIndex + upperIndex)/2
+            
+            if(arr[currentIndex].foodID == searchItem) {
+                return currentIndex
+                
+            }
+            else {
+                if (arr[currentIndex].foodID > searchItem) {
+                    upperIndex = currentIndex - 1
+                }
+                else {
+                    lowerIndex = currentIndex + 1
+                }
+            }
+        }
     }
  
     // happy face indicates user's daily socre status
