@@ -47,7 +47,9 @@ class ExploreMealViewController: UIViewController {
     var userInfo = UserDaily()
     
     //Percentage of accuracy needed to recommend meal
-    let acc: Double = 0.4 + (Double(Double(arc4random()) / Double(UINT32_MAX)) * 0.30)
+    let acc: Double = 0.1
+    let upperAcc: Double = 1.75
+
     
     //Button to click to recommend meal
     @IBAction func loadRecommended(_ sender: Any) {
@@ -182,54 +184,105 @@ class ExploreMealViewController: UIViewController {
             
         //Variables needed to do this
         var checkDiff: Double
-        var min: Double = 10000
-        var firstCheck: Bool = true
+        var min: Double = 0
         
+        var firstCheck = true
         
-        var foodID: Int = -1
+
+        
         
         
         //Look through all the meal's nutrients and find the one equal to protein
         for k in mealNutrients{
             
-                
+            var isBad = false
+
+
             //If there is a match, add it into the string
             if k.nutrientID == nutrientID{
-                
+
                 let index = binarySearch(arr: allMeals, searchItem: k.foodID)
-                
+
                 //Round it up to 2 digits
                 //Find the least difference so you can recommend most accurate meal
-                
+
                 checkDiff = Double(round(Double(truncating: k.nutrientValue) * allMeals[index].factor * 100) / 100)
                 if firstCheck{
                     min = checkDiff
-                    foodID = k.foodID
+                    recommendedMeal = allMeals[index]
                     firstCheck = false
                 }
-                else if absD(number: checkDiff - compareNumber) < absD(number: min - compareNumber){
-                    min = checkDiff
-                    foodID = k.foodID
+                
+                for i in allMeals[index].nutrients{
+                    
+                    //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
+                    //Then set those values to temp so that it can be added into the database
+                    if i.nutrientID == 203{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: proteinsDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 204{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: fatsDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 205{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: carbohydratesDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 255{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: moistureDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 303{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: ironDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 304{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: magnesiumDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 324{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: vitaminDDiff){
+                            isBad = true
+                        }
+                    }
+                    else if i.nutrientID == 806{
+                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: folateDiff){
+                            isBad = true
+                        }
+                    }
+                    
                 }
                 
-             
+                for j in today.userMeals{
+                    
+                    if j.foodID == k.foodID{
+                        isBad = true
+                    }
+                    
+                }
                 
-                
-               
+                if !isBad{
+                    if absD(number: checkDiff - compareNumber) < absD(number: min - compareNumber){
+                        min = checkDiff
+                        recommendedMeal = allMeals[index]
+                    }
+                }
+
+
+
+
+
             }
-        
+
         }
         
-        
-        //Look through all meals
-        for i in allMeals{
-            
-            if i.foodID == foodID{
-                recommendedMeal = i
-                break
-            }
-            
-        }
         
         //Give the user the meal
         recMeal.text = recommendedMeal.name
@@ -289,6 +342,7 @@ class ExploreMealViewController: UIViewController {
             recMeal.text = "No more recommended foods for today!"
             pSegue = false
         }
+            
         else if temp == proteinsDiff{
             recommendedMeal(nutrientID: 203, compareNumber: temp)
         }
