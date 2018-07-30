@@ -184,10 +184,11 @@ class ViewController: UIViewController, ChartViewDelegate {
 
                 //Get name and foodID from the node
                 let foodID = allNames["foodID"] as! Int
+                let mn = allNames["mealNumber"] as! Int
                 
                 //Turn it into a meal
-                let meal = allMeals[self.binarySearch(arr: allMeals, searchItem: foodID)]
-              
+                var meal = allMeals[self.binarySearch(arr: allMeals, searchItem: foodID)]
+                meal.mealNumber = mn
                 
                 //Add meal into array
                 self.today.userMeals += [meal]
@@ -253,6 +254,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         }
         // draw the progress indicator
         circleAnimation()
+        print("User score: " + String(userScore))
     }
     
     override func viewDidLoad() {
@@ -377,31 +379,57 @@ class ViewController: UIViewController, ChartViewDelegate {
             
             var userScoreContainer: Double = 0.0
             
+//            // add up all numbers
+//            for i in self.micronutrient_amount {
+//
+//                if i > 1{
+//                    userScoreContainer = userScoreContainer + 1
+//                }
+//                else{
+//                   userScoreContainer = userScoreContainer +
+//                }
+//            }
+            
             // add up all numbers
-            for i in self.micronutrient_amount {
+            for i in 0...self.micronutrient_amount.count - 1 {
                 
-                if i > 1{
-                    userScoreContainer = userScoreContainer + 1
+                if self.micronutrient_amount[i] > 1{
+                    userScoreContainer = userScoreContainer + 1.0
                 }
                 else{
-                   userScoreContainer = userScoreContainer + i
+                    userScoreContainer = userScoreContainer + self.micronutrient_amount[i]
                 }
             }
             
-            for i in self.macronutrient_amount {
-                if i > 1 {
-                    // don't do anything if it's over toay's goal
-                    userScoreContainer = userScoreContainer + 1
-                } else {
-                    userScoreContainer = userScoreContainer + i
+//            for i in self.macronutrient_amount {
+//                if i > 1 {
+//                    // don't do anything if it's over toay's goal
+//                    userScoreContainer = userScoreContainer + 1
+//                } else {
+//                    userScoreContainer = userScoreContainer + i
+//                }
+//            }
+            
+            // add up all numbers
+            for i in 0...self.macronutrient_amount.count - 1 {
+                
+                if self.macronutrient_amount[i] > 1{
+                    userScoreContainer = userScoreContainer + 1.0
+                }
+                else{
+                    userScoreContainer = userScoreContainer + self.macronutrient_amount[i]
                 }
             }
             
-            self.userScore = round (userScoreContainer / 7 * 10)
+            self.userScore = Double(round(Double(userScoreContainer / 7 * 10) * 10) / 10)
             self.drawFace()
             
             print("user score: ", self.userScore)
             print("user score container: ", userScoreContainer)
+            print("folate: " + String(self.micronutrient_amount[0]))
+            print("iron: " + String(self.micronutrient_amount[1]))
+            print("magnesium: " + String(self.micronutrient_amount[2]))
+            print("vitaminD: " + String(self.micronutrient_amount[3]))
             
             print(self.micronutrient_amount)
             print(self.macronutrient_amount)
@@ -527,7 +555,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         for i in 0..<dataPoints.count {
             print(i)
-            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+            let dataEntry = BarChartDataEntry(x: Double(i) * 5, y: values[i])
             
             dataEntries.append(dataEntry)
         }
@@ -539,14 +567,30 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         
         chartDataset.colors = ChartColorTemplates.joyful()
+        // chartDataset.colors = colors
         let chartData = BarChartData()
         chartData.addDataSet(chartDataset)
         horizontalBarChart.leftAxis.enabled = false
         horizontalBarChart.rightAxis.enabled = false
+        horizontalBarChart.rightAxis.drawGridLinesEnabled = false
+        horizontalBarChart.rightAxis.drawAxisLineEnabled = true
+        horizontalBarChart.rightAxis.drawTopYLabelEntryEnabled = true
+        horizontalBarChart.rightAxis.drawLabelsEnabled = true
         horizontalBarChart.legend.enabled = false
         
         //        horizontalBarChart.xAxis.enabled = true
-        horizontalBarChart.xAxis.granularity = 1
+        horizontalBarChart.xAxis.labelPosition = .bottom
+        horizontalBarChart.xAxis.drawAxisLineEnabled = false
+        horizontalBarChart.xAxis.drawGridLinesEnabled = false
+        
+        // *************
+        
+        horizontalBarChart.xAxis.granularity = 5
+        horizontalBarChart.xAxis.labelFont = .systemFont(ofSize: 12)
+//        horizontalBarChart.xAxis.xOffset = 0
+        horizontalBarChart.extraLeftOffset = 40
+        
+        // **************
         horizontalBarChart.data = chartData
         
         
@@ -580,7 +624,7 @@ class ViewController: UIViewController, ChartViewDelegate {
 public class ChartFormatter: NSObject, IAxisValueFormatter {
     var labels: [String] = []
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return labels[Int(value)]
+        return labels[Int(value)/5]
     }
     init(labels: [String]) {
         super.init()

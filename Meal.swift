@@ -25,7 +25,7 @@ class Meal {
     //Properties of the meals.
     let name: String
     let foodID: Int
-    let mealNumber: Int
+    var mealNumber: Int
     var nutrients = [NutrientMealInfo]()
     
     var factor: Double
