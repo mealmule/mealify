@@ -71,6 +71,12 @@ class FriendDetailViewController: UIViewController {
                     }
                     for j in 0..<self.friendlist.count{
                         if self.friendname.text! == self.friendlist[j]{
+                            self.ref.child("nutrientHistory").child(self.friendlist[j]).observeSingleEvent(of: .value, with: { (snapshot) in
+                                print("THIS IS FRIENDLIST OF THE OTHER USER \(self.friendlist[j])")
+                            })
+                            {(error) in
+                                print(error.localizedDescription)
+                            }
                             self.ref?.child("nutrientHistory").child(self.userID!).child("friendlist").child(self.friendkey[j]).setValue(nil)
                             self.status = 1
                         }

@@ -30,8 +30,8 @@ class FriendsInvite2ViewController: UIViewController {
     @IBOutlet weak var test: UILabel!
     @IBOutlet weak var feedback: UILabel!
     
-//function that allows user to accept the friend invitation and creates a childnode in friendlist on firebase database
-//if user does not have friendlist node, it will be automatically created for him/her upon adding friends
+    //function that allows user to accept the friend invitation and creates a childnode in friendlist on firebase database
+    //if user does not have friendlist node, it will be automatically created for him/her upon adding friends
     @IBAction func accept(_ sender: UIButton) {
         print("This is the status of the accept button \(status)")
         if status == 0 {
@@ -52,8 +52,9 @@ class FriendsInvite2ViewController: UIViewController {
                         if self.valueArray[j] == self.acceptname{
                             self.ref?.child("nutrientHistory").child(self.userID!).child("friendrequest").child(self.keyArray[j]).setValue(nil)
                             self.ref?.child("nutrientHistory").child(self.userID!).child("friendlist").childByAutoId().setValue(self.valueArray[j])
+                            self.ref?.child("nutrientHistory").child(self.valueArray[j]).child("friendlist").childByAutoId().setValue(self.userID!)
                             
-                             self.status = 1 //now user cannot press accept or reject button, must go back to the tableview
+                            self.status = 1 //now user cannot press accept or reject button, must go back to the tableview
                         }
                     }
                     
@@ -64,9 +65,9 @@ class FriendsInvite2ViewController: UIViewController {
         }
         
     }
-
-//function that rejects the friend invitation
-//the friendrequest in the database will remove this friend request
+    
+    //function that rejects the friend invitation
+    //the friendrequest in the database will remove this friend request
     @IBAction func reject(_ sender: UIButton) {
         print("This is the status of the accept button \(status)")
         if status == 0{
@@ -94,20 +95,20 @@ class FriendsInvite2ViewController: UIViewController {
             }
         }
     }
-
-//shows the friend name
+    
+    //shows the friend name
     override func viewDidLoad() {
         super.viewDidLoad()
         print(somelist)
         friend.text = somelist2[someIndex]
         acceptname = somelist[someIndex]
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
-
+    
+    
 }
