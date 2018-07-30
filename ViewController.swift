@@ -266,53 +266,53 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         //User Interface of the view controller begins here
         
-        // initialize daily nutrient goals
-        initGoals()
-        folateGoalTxt.text = String(folateGoal) + "µg"
-        ironGoalTxt.text = String(ironGoal) + "mg"
-        dGoalTxt.text = String(vitaminDGoal) + "IU"
-        magGoalTxt.text = String(magnesiumGoal) + "mg"
-        
-        //waterGoalTxt.text = String(dailyWaterConsume) + "ml"
-        
-        // progressbar animation
-        // draw the score circle and its animation
-        
-        // define stroke colors
-        let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
-        
-        drawFace()
-
-        
-        // create the track layer
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: 58, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
-        
-        let trackLayer = CAShapeLayer();
-        trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = trackColor.cgColor
-        trackLayer.lineWidth = 10
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
-        
-        // make the edge of stroke round and smooth
-        trackLayer.lineCap = kCALineCapRound
-        contentView.layer.addSublayer(trackLayer)
-        
-        // create the shape layer
-        shapeLayer.path = circularPath.cgPath
-        
-        shapeLayer.strokeColor = strokeColor.cgColor
-        shapeLayer.lineWidth = 10
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
-        shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
-        
-        // make the edge of stroke round and smooth
-        shapeLayer.lineCap = kCALineCapRound
-        
-        shapeLayer.strokeEnd = 0
-        contentView.layer.addSublayer(shapeLayer)
-        circleAnimation()
+//        // initialize daily nutrient goals
+//        initGoals()
+//        folateGoalTxt.text = String(folateGoal) + "µg"
+//        ironGoalTxt.text = String(ironGoal) + "mg"
+//        dGoalTxt.text = String(vitaminDGoal) + "IU"
+//        magGoalTxt.text = String(magnesiumGoal) + "mg"
+//
+//        //waterGoalTxt.text = String(dailyWaterConsume) + "ml"
+//
+//        // progressbar animation
+//        // draw the score circle and its animation
+//
+//        // define stroke colors
+//        let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
+//
+//        drawFace()
+//
+//
+//        // create the track layer
+//        let circularPath = UIBezierPath(arcCenter: .zero, radius: 58, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
+//
+//        let trackLayer = CAShapeLayer();
+//        trackLayer.path = circularPath.cgPath
+//        trackLayer.strokeColor = trackColor.cgColor
+//        trackLayer.lineWidth = 10
+//        trackLayer.fillColor = UIColor.clear.cgColor
+//        trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
+//
+//        // make the edge of stroke round and smooth
+//        trackLayer.lineCap = kCALineCapRound
+//        contentView.layer.addSublayer(trackLayer)
+//
+//        // create the shape layer
+//        shapeLayer.path = circularPath.cgPath
+//
+//        shapeLayer.strokeColor = strokeColor.cgColor
+//        shapeLayer.lineWidth = 10
+//        shapeLayer.fillColor = UIColor.clear.cgColor
+//        shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
+//        shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
+//
+//        // make the edge of stroke round and smooth
+//        shapeLayer.lineCap = kCALineCapRound
+//
+//        shapeLayer.strokeEnd = 0
+//        contentView.layer.addSublayer(shapeLayer)
+//        circleAnimation()
         
         //User interface code ends here.
         
@@ -352,8 +352,7 @@ class ViewController: UIViewController, ChartViewDelegate {
             }
         }
         
-     
-        loadFromDatabase()
+
         
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -362,6 +361,63 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         // Query the nutrient history for micro and macronutrients for a given day
         self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: {(snapshot) in
+            
+            
+            //User Interface of the view controller begins here
+            
+            // initialize daily nutrient goals
+            self.initGoals()
+            self.folateGoalTxt.text = String(self.folateGoal) + "µg"
+            self.ironGoalTxt.text = String(self.ironGoal) + "mg"
+            self.dGoalTxt.text = String(self.vitaminDGoal) + "IU"
+            self.magGoalTxt.text = String(self.magnesiumGoal) + "mg"
+            
+            //waterGoalTxt.text = String(dailyWaterConsume) + "ml"
+            
+            // progressbar animation
+            // draw the score circle and its animation
+            
+            // define stroke colors
+            let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
+            
+            self.drawFace()
+            
+            
+            // create the track layer
+            let circularPath = UIBezierPath(arcCenter: .zero, radius: 58, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
+            
+            let trackLayer = CAShapeLayer();
+            trackLayer.path = circularPath.cgPath
+            trackLayer.strokeColor = trackColor.cgColor
+            trackLayer.lineWidth = 10
+            trackLayer.fillColor = UIColor.clear.cgColor
+            trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
+            
+            // make the edge of stroke round and smooth
+            trackLayer.lineCap = kCALineCapRound
+            self.contentView.layer.addSublayer(trackLayer)
+            
+            // create the shape layer
+            self.shapeLayer.path = circularPath.cgPath
+            
+            self.shapeLayer.strokeColor = self.strokeColor.cgColor
+            self.shapeLayer.lineWidth = 10
+            self.shapeLayer.fillColor = UIColor.clear.cgColor
+            self.shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
+            self.shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
+            
+            // make the edge of stroke round and smooth
+            self.shapeLayer.lineCap = kCALineCapRound
+            
+            self.shapeLayer.strokeEnd = 0
+            self.contentView.layer.addSublayer(self.shapeLayer)
+            self.circleAnimation()
+            
+            //User interface code ends here.
+            
+            
+            self.loadFromDatabase()
+            
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
             
 
@@ -379,16 +435,7 @@ class ViewController: UIViewController, ChartViewDelegate {
             
             var userScoreContainer: Double = 0.0
             
-//            // add up all numbers
-//            for i in self.micronutrient_amount {
-//
-//                if i > 1{
-//                    userScoreContainer = userScoreContainer + 1
-//                }
-//                else{
-//                   userScoreContainer = userScoreContainer +
-//                }
-//            }
+
             
             // add up all numbers
             for i in 0...self.micronutrient_amount.count - 1 {
@@ -401,14 +448,7 @@ class ViewController: UIViewController, ChartViewDelegate {
                 }
             }
             
-//            for i in self.macronutrient_amount {
-//                if i > 1 {
-//                    // don't do anything if it's over toay's goal
-//                    userScoreContainer = userScoreContainer + 1
-//                } else {
-//                    userScoreContainer = userScoreContainer + i
-//                }
-//            }
+
             
             // add up all numbers
             for i in 0...self.macronutrient_amount.count - 1 {
