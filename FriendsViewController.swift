@@ -91,14 +91,18 @@ class FriendsViewController: UIViewController {
                                 print("duplicates in friends list")
                             }
                         }
-                        if(flag == 0){self.ref?.child("nutrientHistory").child(friendcode!).child("friendrequest").childByAutoId().setValue(String(self.userID!))}
+                        if(flag == 0){self.ref?.child("nutrientHistory").child(friendcode!).child("friendrequest").childByAutoId().setValue(String(self.userID!))
+                            
+                        }else{
+                            self.feedbackmessage.text = "You have already sent this person an invite!"
+                        }
                     }else{
                     self.ref?.child("nutrientHistory").child(friendcode!).child("friendrequest").childByAutoId().setValue(String(self.userID!))
                     }
                     
                 }else{
                     print("snapshot does not exists!")
-                    self.feedbackmessage.text = "Enter the correct friend code :)"
+                    self.feedbackmessage.text = "Friend code does not exist! Please try again"
                 }
                 
                 // ...
