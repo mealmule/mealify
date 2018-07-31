@@ -367,6 +367,7 @@ class MealTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "filters"{
+            print("LOADEDAEDA")
             loadFromMain = false
         }
         
