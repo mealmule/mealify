@@ -19,10 +19,14 @@ class FriendDetailViewController: UIViewController {
     var status = 0
     var someIndex = 0;
     var somelist : [String] = []
+    var somelist2 : [String] = []
     var friendlist : [String] = []
     var friendkey : [String] = []
+    var friendlist2 : [String] = []
+    var friendkey2 : [String] = []
     var userID = Auth.auth().currentUser?.uid
     var ref: DatabaseReference!
+    var tempfriendname = "test"
     
     @IBOutlet weak var friendname: UILabel!
     
@@ -30,7 +34,8 @@ class FriendDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        friendname.text = somelist[someIndex]
+        tempfriendname = somelist[someIndex]
+        friendname.text = somelist2[someIndex]
         self.navigationController?.isNavigationBarHidden = false
     }
     
@@ -70,7 +75,7 @@ class FriendDetailViewController: UIViewController {
                         
                     }
                     for j in 0..<self.friendlist.count{
-                        if self.friendname.text! == self.friendlist[j]{
+                        if self.tempfriendname == self.friendlist[j]{
                             self.ref.child("nutrientHistory").child(self.friendlist[j]).observeSingleEvent(of: .value, with: { (snapshot) in
                                 print("THIS IS FRIENDLIST OF THE OTHER USER \(self.friendlist[j])")
                             })
@@ -79,6 +84,23 @@ class FriendDetailViewController: UIViewController {
                             }
                             self.ref?.child("nutrientHistory").child(self.userID!).child("friendlist").child(self.friendkey[j]).setValue(nil)
                             self.status = 1
+                            self.ref.child("nutrientHistory").child(self.tempfriendname).observeSingleEvent(of: .value, with: { (snapshot) in
+                                let snapDictionary2 = snapshot.value as? [String : AnyObject] ?? [:]
+                                if let friendList2 = snapDictionary2["friendlist"]{
+                                    for k in friendList2 as! NSDictionary{
+                                        self.friendlist2.append(friendList2[k.key] as! String)
+                                        self.friendkey2.append(k.key as! String)
+                                    }
+                                    for m in 0..<self.friendlist2.count{
+                                        if self.friendlist2[m] == self.userID!{
+                                            self.ref?.child("nutrientHistory").child(self.tempfriendname).child("friendlist").child(self.friendkey2[m]).setValue(nil)
+                                        }
+                                    }
+                                }
+                            })
+                            {(error) in
+                                print(error.localizedDescription)
+                            }
                         }
                     }
                 

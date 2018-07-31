@@ -139,6 +139,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             let nextviewcontroller = segue.destination as! FriendDetailViewController
             nextviewcontroller.someIndex = myIndex
             nextviewcontroller.somelist = friendRequestArr
+            nextviewcontroller.somelist2 = friendRequestArrUsername
         }
     }
 }
