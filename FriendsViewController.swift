@@ -26,11 +26,13 @@ class FriendsViewController: UIViewController {
 
     @IBOutlet weak var friendtext: UITextField!
     @IBOutlet weak var feedbackmessage: UILabel!
+    @IBOutlet weak var userFriendCode: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userFriendCode.text = userID
         self.navigationController?.isNavigationBarHidden = false
 
         // Do any additional setup after loading the view.
@@ -57,6 +59,7 @@ class FriendsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     //Friend add function
     //Searches through the database and check if user exists
