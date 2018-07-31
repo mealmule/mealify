@@ -70,7 +70,7 @@ class ExploreMealViewController: UIViewController {
         let userID = (Auth.auth().currentUser?.uid)!
     
         //Retrieve all user info from the user on selected date and put them in today.userMeals()
-        databaseHandle = ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observe(.value, with: { (snapshot) in
+        ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: { (snapshot) in
     
             if snapshot.hasChild("proteins") {
                 if let allNames = snapshot.value as? [String:AnyObject] {
@@ -103,6 +103,7 @@ class ExploreMealViewController: UIViewController {
                 
             }
             
+            self.recommend()
         
         })
         
@@ -146,30 +147,34 @@ class ExploreMealViewController: UIViewController {
     //Precondition: array must be sorted
     //If element is not found, then return nil
     //Else return the index in which the object is contained
-    func binarySearch(arr: [Meal], searchItem: Int) -> Int {
+    func binarySearch(arr: [Meal], searchItem: Int) -> Int? {
         
-        //We need a lower value and an upper value
-        var lowerIndex = 0;
-        var upperIndex = arr.count - 1
+        //Low and High
+        var low = 0;
+        var high = arr.count - 1
         
-        //While the element is not found
+        //Bisection method // Binary search
         while (true) {
             
-            //Index is between the lower and upper
-            let currentIndex = (lowerIndex + upperIndex)/2
+            //Get the middle of high and low
+            let middle = (low + high)/2
             
-            //If found, return the index
-            if(arr[currentIndex].foodID == searchItem) {
-                return currentIndex
+            //If Item is found, return the index
+            if(arr[middle].foodID == searchItem) {
+                return middle
                 
             }
-            //Else update values
+                //Else if not found, return nil
+            else if low > high{
+                return nil
+            }
+                //Else update the values
             else {
-                if (arr[currentIndex].foodID > searchItem) {
-                    upperIndex = currentIndex - 1
+                if (arr[middle].foodID > searchItem) {
+                    high = middle - 1
                 }
                 else {
-                    lowerIndex = currentIndex + 1
+                    low = middle + 1
                 }
             }
         }
@@ -204,81 +209,82 @@ class ExploreMealViewController: UIViewController {
             if k.nutrientID == nutrientID{
 
                 //Binary search for more efficiency
-                let index = binarySearch(arr: allMeals, searchItem: k.foodID)
+                if let index = binarySearch(arr: allMeals, searchItem: k.foodID){
 
-                //Round it up to 2 digits
-                //Find the least difference so you can recommend most accurate meal
-                //Check diff to see if the meal is good enough
-                checkDiff = Double(round(Double(truncating: k.nutrientValue) * allMeals[index].factor * 100) / 100)
-                if firstCheck{
-                    min = checkDiff
-                    recommendedMeal = allMeals[index]
-                    firstCheck = false
-                }
-                
-                for i in allMeals[index].nutrients{
-                    
-                    //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
-                    if i.nutrientID == 203{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: proteinsDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 204{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: fatsDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 205{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: carbohydratesDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 255{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: moistureDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 303{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: ironDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 304{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: magnesiumDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 324{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: vitaminDDiff){
-                            isBad = true
-                        }
-                    }
-                    else if i.nutrientID == 806{
-                        if Double(truncating: i.nutrientValue) > upperAcc * absD(number: folateDiff){
-                            isBad = true
-                        }
-                    }
-                    
-                }
-                
-                //If the meal is already in today's meal, then throw away the meal
-                for j in today.userMeals{
-                    
-                    if j.foodID == k.foodID{
-                        isBad = true
-                    }
-                    
-                }
-                
-                //If its not bad, then potentially replace the
-                if !isBad{
-                    if absD(number: checkDiff - compareNumber) < absD(number: min - compareNumber){
+                    //Round it up to 2 digits
+                    //Find the least difference so you can recommend most accurate meal
+                    //Check diff to see if the meal is good enough
+                    checkDiff = Double(round(Double(truncating: k.nutrientValue) * allMeals[index].factor * 100) / 100)
+                    if firstCheck{
                         min = checkDiff
                         recommendedMeal = allMeals[index]
+                        firstCheck = false
                     }
-                }
+                    
+                    for i in allMeals[index].nutrients{
+                        
+                        //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
+                        if i.nutrientID == 203{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: proteinsDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 204{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: fatsDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 205{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: carbohydratesDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 255{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: moistureDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 303{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: ironDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 304{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: magnesiumDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 324{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: vitaminDDiff){
+                                isBad = true
+                            }
+                        }
+                        else if i.nutrientID == 806{
+                            if Double(truncating: i.nutrientValue) > upperAcc * absD(number: folateDiff){
+                                isBad = true
+                            }
+                        }
+                        
+                    }
+                    
+                    //If the meal is already in today's meal, then throw away the meal
+                    for j in today.userMeals{
+                        
+                        if j.foodID == k.foodID{
+                            isBad = true
+                        }
+                        
+                    }
+                    
+                    //If its not bad, then potentially replace the
+                    if !isBad{
+                        if absD(number: checkDiff - compareNumber) < absD(number: min - compareNumber){
+                            min = checkDiff
+                            recommendedMeal = allMeals[index]
+                        }
+                    }
 
+                }
             }
 
         }

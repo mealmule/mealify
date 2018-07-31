@@ -396,8 +396,9 @@ class LaunchViewController: UIViewController {
             
             //Use binary search to search for meal
             //Add nutrient into meal if meal is found
-            let index = binarySearch(arr: allMeals, searchItem: k.foodID)
-            allMeals[index].nutrients += [k]
+            if let index = binarySearch(arr: allMeals, searchItem: k.foodID){
+                allMeals[index].nutrients += [k]
+            }
             
             
             
@@ -419,12 +420,8 @@ class LaunchViewController: UIViewController {
             
                 
             //Get the measure description
-            //Binary search measures
-            if  let index = binarySearchMeasure(arr: measures, searchItem: i.measureID){
-                
-                //Binary serach allMeals
-                let index2 = binarySearch(arr: allMeals, searchItem: i.foodID)
-            
+            //Binary search measures and meals
+            if  let index = binarySearchMeasure(arr: measures, searchItem: i.measureID), let index2 = binarySearch(arr: allMeals, searchItem: i.foodID) {
                 
                 //We want grams and ml units, not 1/6 pie (20 cm diamater) or something
                 //So we want the shortest string to have more probability of grams and ml units
@@ -470,27 +467,34 @@ class LaunchViewController: UIViewController {
     //Precondition: array must be sorted
     //If element is not found, then return nil
     //Else return the index in which the object is contained
-    func binarySearch(arr: [Meal], searchItem: Int) -> Int {
-        var lowerIndex = 0;
-        var upperIndex = arr.count - 1
+    func binarySearch(arr: [Meal], searchItem: Int) -> Int? {
         
+        //Low and High
+        var low = 0;
+        var high = arr.count - 1
         
-        
-        
+        //Bisection method // Binary search
         while (true) {
             
-            let currentIndex = (lowerIndex + upperIndex)/2
+            //Get the middle of high and low
+            let middle = (low + high)/2
             
-            if(arr[currentIndex].foodID == searchItem) {
-                return currentIndex
+            //If Item is found, return the index
+            if(arr[middle].foodID == searchItem) {
+                return middle
                 
             }
+                //Else if not found, return nil
+            else if low > high{
+                return nil
+            }
+                //Else update the values
             else {
-                if (arr[currentIndex].foodID > searchItem) {
-                    upperIndex = currentIndex - 1
+                if (arr[middle].foodID > searchItem) {
+                    high = middle - 1
                 }
                 else {
-                    lowerIndex = currentIndex + 1
+                    low = middle + 1
                 }
             }
         }
@@ -504,30 +508,36 @@ class LaunchViewController: UIViewController {
     //If element is not found, then return nil
     //Else return the index in which the object is contained
     func binarySearchMeasure(arr: [Measure], searchItem: Int) -> Int? {
-        var lowerIndex = 0;
-        var upperIndex = arr.count - 1
+        
+        
+         //Low and High
+        var low = 0;
+        var high = arr.count - 1
         
         
         
-        
+        //Bisection method // Binary search
         while (true) {
             
-            let currentIndex = (lowerIndex + upperIndex)/2
+            //Get the middle of high and low
+            let middle = (low + high)/2
             
-            if(arr[currentIndex].measureID == searchItem) {
-                return currentIndex
+            //If Item is found, return the index
+            if(arr[middle].measureID == searchItem) {
+                return middle
                 
             }
-            else if lowerIndex > upperIndex{
+                //Else if not found, return nil
+            else if low > high{
                 return nil
             }
-                
+                //Else update the values
             else {
-                if (arr[currentIndex].measureID > searchItem) {
-                    upperIndex = currentIndex - 1
+                if (arr[middle].measureID > searchItem) {
+                    high = middle - 1
                 }
                 else {
-                    lowerIndex = currentIndex + 1
+                    low = middle + 1
                 }
             }
         }
