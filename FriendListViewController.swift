@@ -13,6 +13,8 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
+import SDWebImage
 
 class FriendListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     var friendRequestArr : [String] = []
@@ -21,6 +23,8 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     var myIndex = 0
     var friendRequestArrUsername : [String] = []
     var databaseUniqueID : [String] = []
+    
+    
     
     
     // get user healthScore
@@ -90,6 +94,10 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             mealKingImg.image = #imageLiteral(resourceName: "mule")
         }
         healthScoreLabel.text = String(healthScore)
+        
+        // initializing storage reference in Firebase
+        
+        
     }
     //Todo:
     //*
@@ -121,9 +129,10 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
 
 //Puts all user into the tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell2")
-        cell.textLabel?.text = friendRequestArrUsername[indexPath.row]
-        return(cell)
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "cell2")
+            cell.textLabel?.text = self.friendRequestArrUsername[indexPath.row]
+            return(cell)
+        
     }
 
 //Performs segue and sends user into friend detail view
