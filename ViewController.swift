@@ -74,6 +74,9 @@ class ViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var folateGoalTxt: UILabel!
     @IBOutlet weak var waterGoalTxt: UILabel!
     
+    @IBOutlet weak var carbProgress: UIProgressView!
+    @IBOutlet weak var proteinProgress: UIProgressView!
+    @IBOutlet weak var fatProgress: UIProgressView!
     
     
     //Get today's date
@@ -432,6 +435,11 @@ class ViewController: UIViewController, ChartViewDelegate {
                 (snapDictionary["fats"] as? Double ?? 0.0)/self.fatGoal,
                 (snapDictionary["proteins"] as? Double ?? 0.0)/self.proteinGoal
             ]
+
+            // load progress bar with values
+            self.carbProgress.setProgress(Float(self.macronutrient_amount[0]), animated: true)
+            self.proteinProgress.setProgress(Float(self.macronutrient_amount[2]), animated: true)
+            self.fatProgress.setProgress(Float(self.macronutrient_amount[1]), animated: true)
             
             var userScoreContainer: Double = 0.0
             
@@ -598,10 +606,10 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         var dataEntries: [ChartDataEntry] = []
         let colors: [UIColor] = [
-            UIColor(red: 238, green: 130, blue: 238),
-            UIColor(red: 218, green: 112, blue: 214),
-            UIColor(red: 255, green: 0, blue: 255),
-            UIColor(red: 216, green: 191, blue: 216)
+            UIColor(red: 248, green: 231, blue: 28),
+            UIColor(red: 248, green: 231, blue: 28),
+            UIColor(red: 152, green: 214, blue: 224),
+            UIColor(red: 152, green: 214, blue: 224)
         ]
         
         for i in 0..<dataPoints.count {
