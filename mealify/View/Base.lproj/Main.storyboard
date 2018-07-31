@@ -1079,7 +1079,7 @@
                                 <rect key="frame" x="320" y="269" width="47" height="150"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="160" minValue="100" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="owr-cB-RYU" customClass="HeightSlider" customModule="mealify" customModuleProvider="target">
-                                <rect key="frame" x="245" y="307" width="97" height="31"/>
+                                <rect key="frame" x="245" y="352" width="97" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -1410,19 +1410,19 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-Yu-ezb">
-                                                <rect key="frame" x="42.5" y="210" width="39.5" height="17"/>
+                                                <rect key="frame" x="45.5" y="210" width="38" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-56-qwJ">
-                                                <rect key="frame" x="164" y="210" width="47.5" height="17"/>
+                                                <rect key="frame" x="165.5" y="210" width="44.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqh-1a-EIr">
-                                                <rect key="frame" x="306" y="210" width="27" height="17"/>
+                                                <rect key="frame" x="304.5" y="210" width="27" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="9Z1-6r-PgI"/>
                                                     <constraint firstAttribute="width" constant="27" id="hSi-GF-adg"/>
@@ -1454,7 +1454,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-e0-V4o">
-                                                <rect key="frame" x="96" y="279" width="74.5" height="20"/>
+                                                <rect key="frame" x="96" y="279" width="73" height="20"/>
                                                 <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2042,63 +2042,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYi-6b-2FE" customClass="HorizontalBarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="201" width="343" height="167"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="167" id="FYY-Fb-ndB"/>
-                                    <constraint firstAttribute="width" constant="343" id="vxb-Gv-nid"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kA5-j3-W4j" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="376" width="343" height="210"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="o6f-fm-esg"/>
-                                    <constraint firstAttribute="height" constant="210" id="wQj-ib-Ydg"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrO-GZ-zSQ">
-                                <rect key="frame" x="16" y="221" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWW-LS-k0W">
-                                <rect key="frame" x="114" y="189" width="146" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWW-LS-k0W">
+                                <rect key="frame" x="114" y="208" width="146" height="30"/>
                                 <state key="normal" title="Change Profile Photo"/>
                                 <connections>
                                     <action selector="profileButton:" destination="c7D-ss-NEv" eventType="touchUpInside" id="OV4-3g-3hD"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdF-dI-sOa">
-                                <rect key="frame" x="123" y="36" width="128" height="128"/>
+                                <rect key="frame" x="123" y="72" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1O-Ee-Ng1" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="19" y="297" width="337" height="234"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekly Intake Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-ia-gEj">
+                                        <rect key="frame" x="95" y="143" width="135" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="337" id="PIJ-hk-mw2"/>
+                                    <constraint firstAttribute="height" constant="234" id="xZ5-qS-shz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kA5-j3-W4j" secondAttribute="trailing" constant="16" id="6be-wg-l2z"/>
-                            <constraint firstItem="IDR-Ck-xmj" firstAttribute="top" secondItem="kA5-j3-W4j" secondAttribute="bottom" constant="32" id="7wG-zc-7Xo"/>
-                            <constraint firstAttribute="trailing" secondItem="wYi-6b-2FE" secondAttribute="trailing" constant="16" id="HEs-D5-meH"/>
-                            <constraint firstItem="kA5-j3-W4j" firstAttribute="top" secondItem="wYi-6b-2FE" secondAttribute="bottom" constant="8" id="ctg-zA-JJA"/>
-                            <constraint firstItem="wYi-6b-2FE" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leading" constant="16" id="mMK-Zc-GF3"/>
-                            <constraint firstItem="kA5-j3-W4j" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leading" constant="16" id="uRd-IB-ZSf"/>
+                            <constraint firstItem="J1O-Ee-Ng1" firstAttribute="top" secondItem="uWW-LS-k0W" secondAttribute="bottom" constant="59" id="1he-4r-TMW"/>
+                            <constraint firstItem="J1O-Ee-Ng1" firstAttribute="centerY" secondItem="Ep5-U7-Ibn" secondAttribute="centerY" constant="105" id="7Gf-lf-VwC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uWW-LS-k0W" secondAttribute="trailing" constant="99" id="7Sc-15-vGo"/>
+                            <constraint firstItem="uWW-LS-k0W" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leadingMargin" constant="98" id="NI0-Z9-4PW"/>
+                            <constraint firstItem="J1O-Ee-Ng1" firstAttribute="leading" secondItem="Ep5-U7-Ibn" secondAttribute="leadingMargin" constant="3" id="hOm-zW-lNm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J1O-Ee-Ng1" secondAttribute="trailing" constant="3" id="rbO-qA-5X9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="nav_user_grey" selectedImage="nav_user_color" id="D7F-tM-WS9"/>
                     <connections>
-                        <outlet property="DateLabel" destination="wrO-GZ-zSQ" id="F33-Tj-Nly"/>
-                        <outlet property="horizontalBarChart" destination="wYi-6b-2FE" id="4db-C4-IqP"/>
-                        <outlet property="pieChart" destination="kA5-j3-W4j" id="CMa-aj-iUg"/>
+                        <outlet property="lineChartView" destination="J1O-Ee-Ng1" id="70J-QG-Saf"/>
                         <outlet property="profilePicture" destination="hdF-dI-sOa" id="qny-PN-Jo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk3-Rk-h6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="3694"/>
+            <point key="canvasLocation" x="-532" y="3693.1034482758623"/>
         </scene>
         <!--Friends Invite2 View Controller-->
         <scene sceneID="v38-40-h0o">

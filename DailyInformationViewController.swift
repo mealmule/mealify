@@ -36,6 +36,8 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var horizontalBarChart: HorizontalBarChartView!
     @IBOutlet weak var pieChart: PieChartView!
+    @IBOutlet weak var lineChartView: LineChartView!
+    
     @IBOutlet weak var profilePicture: UIImageView!
     @IBAction func profileButton(_ sender: Any) {
         let alert = UIAlertController(title: "Change Profile Photo", message: nil, preferredStyle: .actionSheet)
@@ -71,12 +73,18 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     var ref : DatabaseReference?
     
     var today = Date()
-    
+    let dateFormatter = DateFormatter()
+    let cal = Calendar.current
+    var days : [String]!
     let micronutrients: [String] = ["Folate", "Iron", "Magnesium", "Vitamin D"]
     var micronutrient_amount: [Double] = []
     
     let macronutrients: [String] = ["Carbohydrates", "Fats", "Proteins"]
     var macronutrient_amount: [Double] = []
+    
+    var carbohydrates : [Double] = []
+    var proteins : [Double] = []
+    var fats : [Double] = []
     
     
     
@@ -103,43 +111,35 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         reference.downloadURL { (url, error) in
             self.profilePicture.sd_setImage(with: url)
         }
-        
-        
-        
-        
-        DateLabel.text = dateChosen
-        
-        // use todays date for now
-        // ***********************
-        // ***********************
-        
+
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         var todayFormatted = formatter.string(from: today)
+
+        var dateArray : [String] = []
+        var dateInitialize = ""
+        for i in 0...7 {
+            dateInitialize = formatter.string(from: self.cal.date(byAdding: .day, value: -i, to: self.today)!)
+            //            print(dateInitialize)
+            dateArray.insert(dateInitialize, at: 0)
+            
+        }
         
-        // ***********************
-        // ***********************
-        // ***********************
+        print(dateArray)
+        // this querys the carbs, fats and proteins for the past few days
+        ref?.child("nutrientHistory/\(userID)").observe(.value, with: { (snapshot) in
+            let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            for i in dateArray {
+                self.carbohydrates.append(snapDictionary[i]!["carbohydrates"] as? Double ?? 0.0)
+                self.fats.append(snapDictionary[i]!["fats"] as? Double ?? 0.0)
+                self.proteins.append(snapDictionary[i]!["proteins"] as? Double ?? 0.0)
+            }
+            self.setChart(dataPoints: dateArray, values: self.carbohydrates, values2: self.fats, values3: self.proteins)
+        })
         
-    self.ref?.child("nutrientHistory").child(userID).child(todayFormatted).observeSingleEvent(of: .value, with: {(snapshot) in
-        let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
-        self.micronutrient_amount = [
-            snapDictionary["folate"]! as! Double,
-            snapDictionary["iron"]! as! Double,
-            snapDictionary["magnesium"]! as! Double,
-            snapDictionary["vitaminD"]! as! Double
-        ]
-        self.macronutrient_amount = [
-            snapDictionary["carbohydrates"]! as! Double,
-            snapDictionary["fats"]! as! Double,
-            snapDictionary["proteins"]! as! Double
-        ]
-        print(self.micronutrient_amount)
-        print(self.macronutrient_amount)
-        self.setHorizontalChart(dataPoints: self.micronutrients, values: self.micronutrient_amount)
-        self.setPieChart(dataPoints: self.macronutrients, values: self.macronutrient_amount)
-    })
+        
         
         // Do any additional setup after loading the view.
     }
@@ -171,68 +171,64 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         print(date)
         DateLabel.text = date
     }
+
     
-    func setHorizontalChart(dataPoints: [String], values: [Double]) {
-        let xaxis : XAxis = XAxis()
-        let chartFormatter = ChartFormatter(labels: micronutrients)
+    func setChart(dataPoints: [String], values: [Double], values2: [Double], values3: [Double]) {
+        lineChartView.noDataText = "There is no data to output. Please input some data!"
+        //        lineChartView.delegate = self
         
-        
-        var dataEntries: [ChartDataEntry] = []
-        let colors: [UIColor] = [
-            UIColor(red: 238, green: 130, blue: 238),
-            UIColor(red: 218, green: 112, blue: 214),
-            UIColor(red: 255, green: 0, blue: 255),
-            UIColor(red: 216, green: 191, blue: 216)
-        ]
+        var dataEntries1 : [ChartDataEntry] = []
+        var dataEntries2 : [ChartDataEntry] = []
+        var dataEntries3 : [ChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            print(i)
-            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+            let carbohydratesDataEntry = ChartDataEntry(x: Double(i), y: values[i])
+            let fatsDataEntry = ChartDataEntry(x: Double(i), y: values2[i])
+            let proteinsDataEntry = ChartDataEntry(x: Double(i), y: values3[i])
+            dataEntries1.append(carbohydratesDataEntry)
+            dataEntries2.append(fatsDataEntry)
+            dataEntries3.append(proteinsDataEntry)
             
-            dataEntries.append(dataEntry)
         }
         
-        let chartDataset = BarChartDataSet(values: dataEntries, label: "Per unit")
-
-        xaxis.valueFormatter = chartFormatter
+        let carbohydratesChartDataSet = LineChartDataSet(values: dataEntries1, label: "Carbohydrates")
+        let fatsChartDataSet = LineChartDataSet(values: dataEntries2, label: "Fats")
+        let proteinsChartDataSet = LineChartDataSet(values: dataEntries3, label: "Proteins")
         
         
+        // Make the lines cubic
         
-        chartDataset.colors = ChartColorTemplates.joyful()
-        let chartData = BarChartData()
-        chartData.addDataSet(chartDataset)
-        horizontalBarChart.leftAxis.enabled = false
-        horizontalBarChart.rightAxis.enabled = false
-        horizontalBarChart.legend.enabled = false
+//        carbohydratesChartDataSet.mode = .cubicBezier
+//        fatsChartDataSet.mode = .cubicBezier
+//        proteinsChartDataSet.mode = .cubicBezier
         
-//        horizontalBarChart.xAxis.enabled = true
-        horizontalBarChart.xAxis.granularity = 1
-        horizontalBarChart.data = chartData
+        // Change colours for all four lines
+        
+        carbohydratesChartDataSet.colors = [UIColor(red: 0, green: 1, blue: 0, alpha: 1)]
+        fatsChartDataSet.colors = [UIColor(red: 1, green: 0, blue: 0, alpha: 1)]
+        proteinsChartDataSet.colors = [UIColor(red: 0.2, green: 0.3, blue: 0.5, alpha: 1)]
         
         
-        horizontalBarChart.xAxis.valueFormatter = xaxis.valueFormatter
-        horizontalBarChart.animate(yAxisDuration: 2.5)
-        horizontalBarChart.chartDescription?.text = ""
+        //        caloriesChartDataSet.valueFont = UIFont(name: "Helvetica", size: 12.0)!
         
-    }
-    
-    func setPieChart(dataPoints: [String], values: [Double]) {
-        var dataEntries: [PieChartDataEntry] = []
+        // Lets go change the x-axis points later
         
-        for i in 0..<dataPoints.count {
-            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i])
-            dataEntries.append(dataEntry)
-        }
-        let chartDataset = PieChartDataSet(values: dataEntries, label: nil)
         
-        chartDataset.colors = ChartColorTemplates.vordiplom()
+        let chartData = LineChartData()
         
-        let chartData = PieChartData(dataSet: chartDataset)
-        pieChart.data = chartData
-        pieChart.animate(yAxisDuration: 2.5)
-        pieChart.legend.enabled = false
-        pieChart.chartDescription?.text = ""
-
+        
+        chartData.addDataSet(carbohydratesChartDataSet)
+        chartData.addDataSet(fatsChartDataSet)
+        chartData.addDataSet(proteinsChartDataSet)
+        lineChartView.data = chartData
+//        lineChartView.drawGridBackgroundEnabled = false
+        lineChartView.xAxis.drawGridLinesEnabled = false
+        lineChartView.xAxis.drawAxisLineEnabled = true
+        lineChartView.rightAxis.drawGridLinesEnabled = false
+        lineChartView.leftAxis.drawGridLinesEnabled = false
+        //        lineChartView.xAxis.labelPosition = .bottom
+        lineChartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
