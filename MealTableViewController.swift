@@ -19,6 +19,8 @@ class MealTableViewController: UITableViewController {
     
     //Properties and variables
     
+    var loadFromMain: Bool = true
+    
     //Get number of meals user currently have for the day
     var numberOfDayMeals = 0
     
@@ -75,10 +77,10 @@ class MealTableViewController: UITableViewController {
             for i in loaded...(loaded + toLoad - 1){
                 
                 //Check if it is in range
-                if i < allMeals.count{
+                if i < nutrientsFilteredMeals.count{
                     
                     //Add meal
-                    meals += [allMeals[i]]
+                    meals += [nutrientsFilteredMeals[i]]
                     
                 }
                 
@@ -143,7 +145,7 @@ class MealTableViewController: UITableViewController {
         filteredMeals = []
         
         //Filter allMeals
-        allFilteredMeals = allMeals.filter({( meal : Meal) -> Bool in
+        allFilteredMeals = nutrientsFilteredMeals.filter({( meal : Meal) -> Bool in
             return meal.name.lowercased().contains(searchText.lowercased())
         })
         
@@ -169,6 +171,31 @@ class MealTableViewController: UITableViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        loaded = 0
+        meals = []
+        
+        if nutrientsFilteredMeals.isEmpty{
+            
+            if !loadFromMain{
+                let alert = UIAlertController(title: "Alert", message: "No meals or ingredients found for filter settings. Reverting back to no filters", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            nutrientsFilteredMeals = allMeals
+        }
+        
+        if loadFromMain{
+            nutrientsFilteredMeals = allMeals
+        }
+        
+        //This loads meals and store them in the array
+        loadMoreMeals()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -189,8 +216,7 @@ class MealTableViewController: UITableViewController {
         
         //********//
         
-        //This loads meals and store them in the array
-        loadMoreMeals()
+        
         
         //Setup the Search Controller
         //Adds search bar functionality.
@@ -340,32 +366,37 @@ class MealTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        //connect to table view
-        guard let selectedMealCell = sender as? MealTableViewCell else {
-            fatalError("Unexpected sender: (String(describing: sender))")
+        if segue.identifier == "filters"{
+            loadFromMain = false
         }
         
-        //Getting the selected meal from the cell you clicked.
-        //If user clicked on one cell, the returned value will be the cell you clicked.
-        guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
-            fatalError("The selected cell is not being displayed by the table")
-        }
-        
-        //Check to see if filtered is on or off, return object dependent on the filter (search bar)
-        var selectedMeal = Meal()
-        
-        //Return filtered meal if it is filtered
-        if isFiltering(){
-            selectedMeal = filteredMeals[indexPath.row]
-        }
-            //Else return unfiltered meal
-        else{
-            selectedMeal = meals[indexPath.row]
-        }
         
         
         //If the identifier goes to meal view controller then update the foods within that view controller
         if segue.identifier == "newFoods"{
+            
+            //connect to table view
+            guard let selectedMealCell = sender as? MealTableViewCell else {
+                fatalError("Unexpected sender: (String(describing: sender))")
+            }
+            
+            //Getting the selected meal from the cell you clicked.
+            //If user clicked on one cell, the returned value will be the cell you clicked.
+            guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            //Check to see if filtered is on or off, return object dependent on the filter (search bar)
+            var selectedMeal = Meal()
+            
+            //Return filtered meal if it is filtered
+            if isFiltering(){
+                selectedMeal = filteredMeals[indexPath.row]
+            }
+                //Else return unfiltered meal
+            else{
+                selectedMeal = meals[indexPath.row]
+            }
             
             let dest = segue.destination as! MealViewController
             dest.meal = selectedMeal
