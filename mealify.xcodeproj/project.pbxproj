@@ -101,7 +101,7 @@
 		9758456220FFF0F400AF647D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		9758456320FFF0F400AF647D /* FriendsInvite2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsInvite2ViewController.swift; sourceTree = "<group>"; };
 		9758456920FFF4A300AF647D /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
-		9797480B210A5701004218FA /* ExploreMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMealViewController.swift; sourceTree = SOURCE_ROOT; };
+		9797480B210A5701004218FA /* ExploreMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreMealViewController.swift; path = "Meals/Add Meals/ExploreMealViewController.swift"; sourceTree = SOURCE_ROOT; };
 		97EF8B6821054B4B004E36C6 /* Gravity-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Bold.otf"; sourceTree = "<group>"; };
 		97EF8B6921054B4B004E36C6 /* Gravity-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Light.otf"; sourceTree = "<group>"; };
 		97EF8B6A21054B4C004E36C6 /* Gravity-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Regular.otf"; sourceTree = "<group>"; };
@@ -180,16 +180,11 @@
 		24DECF2A20B9E4DF007F678D = {
 			isa = PBXGroup;
 			children = (
-				BF60BB9C210F9A820029C37B /* FilterViewController.swift */,
-				BFB3F286210D31C70026398B /* NutrientFile.swift */,
+				BF60BBA7211110710029C37B /* Meals */,
+				BF60BBA521110EEF0029C37B /* Objects */,
 				BFB3F282210C70BC0026398B /* Launch.swift */,
-				BFB3F280210B15D10026398B /* UserDaily.swift */,
-				BFB3F27E210A702B0026398B /* MeasureConversion.swift */,
-				BFB3F27C210A6FFE0026398B /* Measure.swift */,
 				97EF8B6D21056333004E36C6 /* HeightSlider.swift */,
 				9758456920FFF4A300AF647D /* Diary.swift */,
-				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
-				BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */,
 				7D09919620EAD7A700C3EE56 /* ViewController1.swift */,
 				7D09919820EAD7BA00C3EE56 /* ViewController2.swift */,
 				7D09919920EAD7C400C3EE56 /* ViewController3.swift */,
@@ -200,22 +195,13 @@
 				9758456220FFF0F400AF647D /* FriendsViewController.swift */,
 				7D0991BD20EAECD800C3EE56 /* ViewControllerRegister.swift */,
 				7D09919420EAD79400C3EE56 /* ViewController4.swift */,
-				BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */,
-				BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */,
-				7DEEDD1120FDD12B00812D42 /* Meal.swift */,
-				7DEEDD0F20FDD12B00812D42 /* MealTableViewCell.swift */,
-				7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */,
-				7DEEDD1320FDD12C00812D42 /* MealViewController.swift */,
-				7DEEDD1220FDD12C00812D42 /* Numbers.swift */,
 				7DEEDD1020FDD12B00812D42 /* ViewController.swift */,
 				7DEEDD2020FDD53200812D42 /* CalendarViewController.swift */,
 				7DEEDD2120FDD53300812D42 /* DailyInformationViewController.swift */,
 				7DEEDD2220FDD53300812D42 /* UINavigationController.h */,
-				BFB6D79B20FB3184003286CE /* Nutrients.swift */,
 				7DBF2EDF20EB034700E06F4C /* Info.plist */,
 				7D09919720EAD7B000C3EE56 /* ViewController5.swift */,
 				7D09919A20EAD7D400C3EE56 /* ViewController6.swift */,
-				9797480B210A5701004218FA /* ExploreMealViewController.swift */,
 				24DECF3520B9E4DF007F678D /* mealify */,
 				7DEC6AEE20EC573C00471017 /* mealifyTests */,
 				24DECF3420B9E4DF007F678D /* Products */,
@@ -268,6 +254,53 @@
 				97EF8B6A21054B4C004E36C6 /* Gravity-Regular.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		BF60BBA521110EEF0029C37B /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BFB3F286210D31C70026398B /* NutrientFile.swift */,
+				BFB3F280210B15D10026398B /* UserDaily.swift */,
+				BFB3F27E210A702B0026398B /* MeasureConversion.swift */,
+				BFB3F27C210A6FFE0026398B /* Measure.swift */,
+				BFB6D79D20FB3634003286CE /* NutrientMealInfo.swift */,
+				7DEEDD1220FDD12C00812D42 /* Numbers.swift */,
+				BFB6D79B20FB3184003286CE /* Nutrients.swift */,
+				7DEEDD1120FDD12B00812D42 /* Meal.swift */,
+			);
+			name = Objects;
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		BF60BBA7211110710029C37B /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				BF60BBA9211110900029C37B /* Remove Meals */,
+				BF60BBA8211110870029C37B /* Add Meals */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		BF60BBA8211110870029C37B /* Add Meals */ = {
+			isa = PBXGroup;
+			children = (
+				BF60BB9C210F9A820029C37B /* FilterViewController.swift */,
+				7DEEDD0F20FDD12B00812D42 /* MealTableViewCell.swift */,
+				7DEEDD0E20FDD12B00812D42 /* MealTableViewController.swift */,
+				7DEEDD1320FDD12C00812D42 /* MealViewController.swift */,
+				9797480B210A5701004218FA /* ExploreMealViewController.swift */,
+			);
+			path = "Add Meals";
+			sourceTree = "<group>";
+		};
+		BF60BBA9211110900029C37B /* Remove Meals */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0AFAA20FEC19600CE2204 /* TodayMealViewController.swift */,
+				BFD0AFA820FEBBA900CE2204 /* TodayMealTableViewCell.swift */,
+				BFD0AFA020FEAFA800CE2204 /* TodayMealTableViewController.swift */,
+			);
+			path = "Remove Meals";
 			sourceTree = "<group>";
 		};
 		E76E5383EA5A163AC83ED616 /* Pods */ = {
