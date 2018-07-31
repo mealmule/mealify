@@ -20,15 +20,6 @@ var magnesiumFilterGlo: String?
 var vitaminDFilterGlo: String?
 var folateFilterGlo: String?
 
-var proteinsGGlo: Bool = true
-var fatsGGlo: Bool = true
-var carbsGGlo: Bool = true
-var moistureGGlo: Bool = true
-var ironGGlo: Bool = true
-var magnesiumGGlo: Bool = true
-var vitaminDGGlo: Bool = true
-var folateGGlo: Bool = true
-
 class FilterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var proteinsFilter: UITextField!
@@ -68,24 +59,6 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         ironFilterGlo = ironFilter.text
         vitaminDFilterGlo = vitaminDFilter.text
         folateFilterGlo = folateFilter.text
-        
-        proteinsGGlo = true
-        fatsGGlo = true
-        carbsGGlo = true
-        moistureGGlo = true
-        ironGGlo = true
-        magnesiumGGlo = true
-        vitaminDGGlo = true
-        folateGGlo = true
-        
-        proteinsG.setOn(proteinsGGlo, animated: false)
-        fatsG.setOn(fatsGGlo, animated: false)
-        carbsG.setOn(carbsGGlo, animated: false)
-        moistureG.setOn(moistureGGlo, animated: false)
-        ironG.setOn(ironGGlo, animated: false)
-        magnesiumG.setOn(magnesiumGGlo, animated: false)
-        vitaminDG.setOn(vitaminDGGlo, animated: false)
-        folateG.setOn(folateGGlo, animated: false)
     }
     
     var proteinsIsG: Bool = true
@@ -117,14 +90,6 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         vitaminDFilter.text = vitaminDFilterGlo
         folateFilter.text = folateFilterGlo
         
-        proteinsG.setOn(proteinsGGlo, animated: true)
-        fatsG.setOn(fatsGGlo, animated: true)
-        carbsG.setOn(carbsGGlo, animated: true)
-        moistureG.setOn(moistureGGlo, animated: true)
-        ironG.setOn(ironGGlo, animated: true)
-        magnesiumG.setOn(magnesiumGGlo, animated: true)
-        vitaminDG.setOn(vitaminDGGlo, animated: true)
-        folateG.setOn(folateGGlo, animated: true)
         
         
         
@@ -178,12 +143,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if proteinsG.isOn{
                             
                             proteinsIsG = Double(truncating: k.nutrientValue) * i.factor >= proteins
-                            proteinsGGlo = true
                             
                         }
                         else{
                             proteinsIsG = Double(truncating: k.nutrientValue) * i.factor < proteins
-                            proteinsGGlo = false
                         }
                     }
                     else{
@@ -196,12 +159,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if fatsG.isOn{
                             
                             fatsIsG = Double(truncating: k.nutrientValue) * i.factor >= fats
-                            fatsGGlo = true
                             
                         }
                         else{
                             fatsIsG = Double(truncating: k.nutrientValue) * i.factor < fats
-                            fatsGGlo = false
                         }
                     }
                     else{
@@ -213,12 +174,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if carbsG.isOn{
                             
                             carbsIsG = Double(truncating: k.nutrientValue) * i.factor >= carbs
-                            carbsGGlo = true
                             
                         }
                         else{
                             carbsIsG = Double(truncating: k.nutrientValue) * i.factor < carbs
-                            carbsGGlo = false
                         }
                     }
                     else{
@@ -230,12 +189,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if moistureG.isOn{
                             
                             moistureIsG = Double(truncating: k.nutrientValue) * i.factor >= moisture
-                            moistureGGlo = true
                             
                         }
                         else{
                             moistureIsG = Double(truncating: k.nutrientValue) * i.factor < moisture
-                            moistureGGlo = false
                         }
                     }
                     else{
@@ -247,12 +204,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if ironG.isOn{
                             
                             ironIsG = Double(truncating: k.nutrientValue) * i.factor >= iron
-                            ironGGlo = true
                             
                         }
                         else{
                             ironIsG = Double(truncating: k.nutrientValue) * i.factor < iron
-                            ironGGlo = false
                         }
                     }
                     else{
@@ -264,12 +219,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if magnesiumG.isOn{
                             
                             magnesiumIsG = Double(truncating: k.nutrientValue) * i.factor >= magnesium
-                            magnesiumGGlo = true
                             
                         }
                         else{
                             magnesiumIsG = Double(truncating: k.nutrientValue) * i.factor < magnesium
-                            magnesiumGGlo = false
                         }
                     }
                     else{
@@ -281,12 +234,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if vitaminDG.isOn{
                             
                             vitaminDIsG = Double(truncating: k.nutrientValue) * i.factor >= vitaminD
-                            vitaminDGGlo = true
                             
                         }
                         else{
                             vitaminDIsG = Double(truncating: k.nutrientValue) * i.factor < vitaminD
-                            vitaminDGGlo = false
                         }
                     }
                     else{
@@ -299,12 +250,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                         if folateG.isOn{
                             
                             folateIsG = Double(truncating: k.nutrientValue) * i.factor >= folate
-                            folateGGlo = true
                             
                         }
                         else{
                             folateIsG = Double(truncating: k.nutrientValue) * i.factor < folate
-                            folateGGlo = false
                         }
                     }
                     else{
