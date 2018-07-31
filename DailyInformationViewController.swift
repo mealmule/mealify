@@ -247,7 +247,9 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
                 print(error)
                 return
             }
+            
         })
+        profilePicture.image = chosenImage
         
         
         
