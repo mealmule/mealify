@@ -42,7 +42,17 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     @IBAction func profileButton(_ sender: Any) {
         let alert = UIAlertController(title: "Change Profile Photo", message: nil, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Remove Current Photo", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Remove Current Photo", style: .default, handler:
+            { action in
+                var profilePictureReference = Storage.storage().reference().child("images/profile/\((Auth.auth().currentUser?.uid)!).png")
+                profilePictureReference.delete { error in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        self.profilePicture.image = nil
+                    }
+                }
+        }))
         alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler:
             { action in
                 if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -88,16 +98,20 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // make profile picture circular
+        
         
         profilePicture.layer.borderWidth = 1
         profilePicture.layer.masksToBounds = false
         profilePicture.layer.cornerRadius = profilePicture.frame.size.height/2
         profilePicture.clipsToBounds = true
         
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
         
         
         
@@ -105,8 +119,7 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
         
         ref = Database.database().reference()
         
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
+        
         let reference = storageRef.child("images/profile/\(userID).png")
         reference.downloadURL { (url, error) in
             self.profilePicture.sd_setImage(with: url)
@@ -138,6 +151,8 @@ class DailyInformationViewController: UIViewController, RetrieveDateDelegate, Ch
             }
             self.setChart(dataPoints: dateArray, values: self.carbohydrates, values2: self.fats, values3: self.proteins)
         })
+        
+        
         
         
         
