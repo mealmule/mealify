@@ -557,8 +557,19 @@ class ViewController: UIViewController, ChartViewDelegate {
             //Dest is the Meal table view. Change properties below
             dest.title = "Meals"
             
+            //Find the meal number to put into database
+            var maxi = 0
+            
+            for i in today.userMeals{
+                
+                if i.mealNumber > maxi{
+                    maxi = i.mealNumber
+                }
+                
+            }
+            
             //Give number of meals to next
-            dest.numberOfDayMeals = today.userMeals.count
+            dest.numberOfDayMeals = maxi + 1
             print("HEAHEA: " + String(today.userMeals.count))
             
         }

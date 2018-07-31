@@ -48,7 +48,7 @@ class ExploreMealViewController: UIViewController {
     
     //The accuracy allowed for each nutrietn when recommending meals
     //For example, if a meal has upperAcc times the nutrients you need, then drop meal
-    let upperAcc: Double = 1.75
+    let upperAcc: Double = 1.25
 
     
     //Button to click to recommend meal
@@ -462,7 +462,18 @@ class ExploreMealViewController: UIViewController {
             
             dest.title = "Recommended Meal"
             
-            dest.numberOfDayMeals = today.userMeals.count
+            //Find the meal number to put into database
+            var maxi = 0
+            
+            for i in today.userMeals{
+                
+                if i.mealNumber > maxi{
+                    maxi = i.mealNumber
+                }
+                
+            }
+            
+            dest.numberOfDayMeals = maxi + 1
             
         }
     }
