@@ -463,8 +463,6 @@ class ViewController: UIViewController, ChartViewDelegate {
             
             self.userScore = Double(round(Double(userScoreContainer / 7 * 10) * 10) / 10)
             self.drawFace()
-        self.ref?.child("nutrientHistory").child(userID).child("userScore").setValue(self.userScore)
-
             print("user score: ", self.userScore)
             print("user score container: ", userScoreContainer)
             print("folate: " + String(self.micronutrient_amount[0]))
@@ -479,7 +477,8 @@ class ViewController: UIViewController, ChartViewDelegate {
             
         })
         
-        
+        self.ref?.child("nutrientHistory").child(userID).child("userScore").setValue(self.userScore)
+
         
         
     }
