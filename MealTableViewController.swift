@@ -8,6 +8,7 @@
 //                Added Search bar to search for any foods
 //                Added segue to page where it displays the meal
 //                Added database for meals
+//                Added more filter items for more filtering
 //  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
@@ -171,15 +172,27 @@ class MealTableViewController: UITableViewController {
         }
     }
     
+    //TODO:
+    //*
+    //*
+    //*
+    //This function is called whenever this this view controller is shown
+    //This is for the filter feature where you press the back button to show this page again
+    //This would update the table with the filters
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        //Set loaded and meals to 0
         loaded = 0
         meals = []
         
+        //If the array is empty, then check if it is loaded from main, then set meals to all meals
         if nutrientsFilteredMeals.isEmpty{
             
+            //Not loaded, from main, so must be loaded from filters
             if !loadFromMain{
+                
+                //Set alert to pop up if this is the case (filter found no meals)
                 let alert = UIAlertController(title: "Alert", message: "No meals or ingredients found for filter settings. Reverting back to no filters", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
@@ -188,6 +201,7 @@ class MealTableViewController: UITableViewController {
             nutrientsFilteredMeals = allMeals
         }
         
+        //Else if it is from main, then set it to allMEals
         if loadFromMain{
             nutrientsFilteredMeals = allMeals
         }
@@ -366,6 +380,7 @@ class MealTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
+        //Filter segues
         if segue.identifier == "filters"{
             print("LOADEDAEDA")
             loadFromMain = false

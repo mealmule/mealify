@@ -11,6 +11,8 @@
 
 import UIKit
 
+//Global variables for filter text
+//This is so that you can store the text so that it can be saved when leaving view controller
 var proteinsFilterGlo: String?
 var fatsFilterGlo: String?
 var carbsFilterGlo: String?
@@ -20,6 +22,8 @@ var magnesiumFilterGlo: String?
 var vitaminDFilterGlo: String?
 var folateFilterGlo: String?
 
+//Global variables for switches
+//This is so that you can store the switch so that it can be saved when leaving view controller
 var proteinsGGlo: Bool = true
 var fatsGGlo: Bool = true
 var carbsGGlo: Bool = true
@@ -31,6 +35,7 @@ var folateGGlo: Bool = true
 
 class FilterViewController: UIViewController, UITextFieldDelegate {
     
+    //Labels for all the filters
     @IBOutlet weak var proteinsFilter: UITextField!
     @IBOutlet weak var fatsFilter: UITextField!
     @IBOutlet weak var carbsFilter: UITextField!
@@ -40,6 +45,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var vitaminDFilter: UITextField!
     @IBOutlet weak var folateFilter: UITextField!
     
+    //Switches for all the filters
     @IBOutlet weak var proteinsG: UISwitch!
     @IBOutlet weak var fatsG: UISwitch!
     @IBOutlet weak var carbsG: UISwitch!
@@ -49,8 +55,15 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var vitaminDG: UISwitch!
     @IBOutlet weak var folateG: UISwitch!
     
-    
+    //TODO:
+    //*
+    //*
+    //*
+    //Button that clears all the filter to default
+    //Change every thing back to what it was before
     @IBAction func clearFilters(_ sender: Any) {
+        
+        //Change all text to nil
         proteinsFilter.text = nil
         fatsFilter.text = nil
         carbsFilter.text = nil
@@ -60,6 +73,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         vitaminDFilter.text = nil
         folateFilter.text = nil
         
+        //Change all this to nil
         proteinsFilterGlo = proteinsFilter.text
         fatsFilterGlo = fatsFilter.text
         carbsFilterGlo = carbsFilter.text
@@ -69,6 +83,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         vitaminDFilterGlo = vitaminDFilter.text
         folateFilterGlo = folateFilter.text
         
+        //Change all switches to true
         proteinsGGlo = true
         fatsGGlo = true
         carbsGGlo = true
@@ -78,6 +93,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         vitaminDGGlo = true
         folateGGlo = true
         
+        //Switch all switches to true
         proteinsG.setOn(proteinsGGlo, animated: false)
         fatsG.setOn(fatsGGlo, animated: false)
         carbsG.setOn(carbsGGlo, animated: false)
@@ -86,8 +102,10 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         magnesiumG.setOn(magnesiumGGlo, animated: false)
         vitaminDG.setOn(vitaminDGGlo, animated: false)
         folateG.setOn(folateGGlo, animated: false)
+        
     }
     
+    //All the boolean variables to determine whether or not the switches are on
     var proteinsIsG: Bool = true
     var fatsIsG: Bool = true
     var carbsIsG: Bool = true
@@ -99,6 +117,8 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Text delegate
         proteinsFilter.delegate = self
         fatsFilter.delegate = self
         carbsFilter.delegate = self
@@ -108,6 +128,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         vitaminDFilter.delegate = self
         folateFilter.delegate = self
         
+        //Restore all previous filters
         proteinsFilter.text = proteinsFilterGlo
         fatsFilter.text = fatsFilterGlo
         carbsFilter.text = carbsFilterGlo
@@ -117,6 +138,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         vitaminDFilter.text = vitaminDFilterGlo
         folateFilter.text = folateFilterGlo
         
+        //Restore all previous switches
         proteinsG.setOn(proteinsGGlo, animated: true)
         fatsG.setOn(fatsGGlo, animated: true)
         carbsG.setOn(carbsGGlo, animated: true)
@@ -140,57 +162,82 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     override func viewWillDisappear(_ animated : Bool) {
         super.viewWillDisappear(animated)
         
-        if !nutrientsFilteredMeals.isEmpty{
-            proteinsFilterGlo = proteinsFilter.text
-            fatsFilterGlo = fatsFilter.text
-            carbsFilterGlo = carbsFilter.text
-            moistureFilterGlo = moistureFilter.text
-            magnesiumFilterGlo = magnesiumFilter.text
-            ironFilterGlo = ironFilter.text
-            vitaminDFilterGlo = vitaminDFilter.text
-            folateFilterGlo = folateFilter.text
-        }
         
         
         //Is popped from the view controller (back button)
         if self.isMovingFromParentViewController {
             
             //Hide navigation bar
+            //Get nturients from the All Meals
             check()
             
+            //If the nutrientsFiltered is not empty, store all the values
+            if !nutrientsFilteredMeals.isEmpty{
+                
+                proteinsFilterGlo = proteinsFilter.text
+                fatsFilterGlo = fatsFilter.text
+                carbsFilterGlo = carbsFilter.text
+                moistureFilterGlo = moistureFilter.text
+                magnesiumFilterGlo = magnesiumFilter.text
+                ironFilterGlo = ironFilter.text
+                vitaminDFilterGlo = vitaminDFilter.text
+                folateFilterGlo = folateFilter.text
+            }
             
         }
     }
     
+    
+    //TODO:
+    //*
+    //*
+    //*
+    //Check for meals that fufil all the filters
+    //This is dependent on all the filter fields
+    //If theres nothing in the text fields, those fields are always true
     func check(){
         
+        //Set this to empty for now
         nutrientsFilteredMeals = []
         
         
+        //Search through all the meals
         for i in allMeals{
             
+            //From all the nutrients in the meals
             for k in i.nutrients{
                 
                 //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
-                //Then set those values to temp so that it can be added into the database
+                //If nutrient ID = protein
                 if k.nutrientID == 203{
+                    
+                    //Get proteins filter if not nil
                     if let proteins = Double(proteinsFilter.text!){
+                        
+                        //If proteins switch is on, then it it is greater than
                         if proteinsG.isOn{
                             
+                            //Proteins bool is set to this
                             proteinsIsG = Double(truncating: k.nutrientValue) * i.factor >= proteins
+                            //Switch is on
                             proteinsGGlo = true
                             
                         }
+                            //Else it is less than
                         else{
+                            //Proteins bool is set to this
                             proteinsIsG = Double(truncating: k.nutrientValue) * i.factor < proteins
+                            //Switch is off
                             proteinsGGlo = false
                         }
                     }
+                        //Else by default, it is always true
                     else{
                         proteinsIsG = true
                     }
                     
                 }
+                    //Repeat for all the other nutrients, except its different nutrient id every time, and different varaibles
                 else if k.nutrientID == 204{
                     if let fats = Double(fatsFilter.text!){
                         if fatsG.isOn{
@@ -314,12 +361,12 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 
                 
             }
+        
             
-            print(proteinsIsG, fatsIsG,carbsIsG,ironIsG,magnesiumIsG,moistureIsG,vitaminDIsG,folateIsG)
+            //Now AND all of the nutrient booleans, and if all of them are true, then add the meal to the array
+            //This would give the array all the meals with all the filters
             if proteinsIsG && fatsIsG && carbsIsG && ironIsG && magnesiumIsG && moistureIsG && vitaminDIsG && folateIsG{
-                
                 nutrientsFilteredMeals += [i]
-                
             }
             
             
@@ -333,8 +380,15 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    
+    //TODO:
+    //*
+    //*
+    //*
+    //This function checks to see if the text fields are numbers
+    //If it is not numbers, do not allow the user to type it in
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        //Numbers that are invalid
         let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
         return string.rangeOfCharacter(from: invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
     }

@@ -96,16 +96,6 @@ class ExploreMealViewController: UIViewController {
                     self.today.vitaminD = vitaminD
                     
                     
-                    var str = "Carbohydrates: " + String(carbohydrates) + "g\n\n"
-                    str += "Fats: " + String(fats) + "g\n\n"
-                    str += "Folate: " + String(folate) + "mg\n\n"
-                    str += "Iron: " + String(iron) + "mg\n\n"
-                    str += "Magnesium: " + String(magnesium) + "mg\n\n"
-                    str += "Moisture: " + String(moisture) + "g\n\n"
-                    str += "Proteins: " + String(proteins) + "g\n\n"
-                    str += "VitaminD: " + String(vitaminD) + "IU\n\n"
-                    
-                    
                 }
             }
             else{
@@ -136,6 +126,8 @@ class ExploreMealViewController: UIViewController {
     
     
     //Absolute value of a double function
+    //Finds the absolute value of a double value, if it is negative, then it will be positive
+    //If it is not negative, then it will stay positive
     private func absD(number: Double) -> Double{
         
         if number < 0{
@@ -155,20 +147,23 @@ class ExploreMealViewController: UIViewController {
     //If element is not found, then return nil
     //Else return the index in which the object is contained
     func binarySearch(arr: [Meal], searchItem: Int) -> Int {
+        
+        //We need a lower value and an upper value
         var lowerIndex = 0;
         var upperIndex = arr.count - 1
         
-        
-        
-        
+        //While the element is not found
         while (true) {
             
+            //Index is between the lower and upper
             let currentIndex = (lowerIndex + upperIndex)/2
             
+            //If found, return the index
             if(arr[currentIndex].foodID == searchItem) {
                 return currentIndex
                 
             }
+            //Else update values
             else {
                 if (arr[currentIndex].foodID > searchItem) {
                     upperIndex = currentIndex - 1
@@ -181,34 +176,39 @@ class ExploreMealViewController: UIViewController {
     }
     
     
-    //TODO: MORE EFFICIENCY
+    //TODO:
     //*
     //*
     //*
     //Looks through all the meals and returns the one that has the best match
+    //The algorithm goes through all the user nutrients, and find the biggest difference between current intake what what you should intake
+    //Then The algorithm specifically finds the nutrient that searches for a meal closest to the difference on that nutrient
+    //There are some constraints, if other nutrients from that meal give too high of of nutrients, then drop the meal and keep looking
+    //If all the nutrients are met, then don't recommend a meal
     private func recommendedMeal(nutrientID: Int, compareNumber: Double){
             
         //Variables needed to do this
         var checkDiff: Double
         var min: Double = 0
-        
         var firstCheck = true
         
         
         //Look through all the meal's nutrients and find the one equal to protein
         for k in mealNutrients{
             
+            //Is bad determines if a meal is bad, and needs to be dropped
             var isBad = false
 
 
             //If there is a match, add it into the string
             if k.nutrientID == nutrientID{
 
+                //Binary search for more efficiency
                 let index = binarySearch(arr: allMeals, searchItem: k.foodID)
 
                 //Round it up to 2 digits
                 //Find the least difference so you can recommend most accurate meal
-
+                //Check diff to see if the meal is good enough
                 checkDiff = Double(round(Double(truncating: k.nutrientValue) * allMeals[index].factor * 100) / 100)
                 if firstCheck{
                     min = checkDiff
@@ -219,7 +219,6 @@ class ExploreMealViewController: UIViewController {
                 for i in allMeals[index].nutrients{
                     
                     //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
-                    //Then set those values to temp so that it can be added into the database
                     if i.nutrientID == 203{
                         if Double(truncating: i.nutrientValue) > upperAcc * absD(number: proteinsDiff){
                             isBad = true
@@ -263,6 +262,7 @@ class ExploreMealViewController: UIViewController {
                     
                 }
                 
+                //If the meal is already in today's meal, then throw away the meal
                 for j in today.userMeals{
                     
                     if j.foodID == k.foodID{
@@ -271,16 +271,13 @@ class ExploreMealViewController: UIViewController {
                     
                 }
                 
+                //If its not bad, then potentially replace the
                 if !isBad{
                     if absD(number: checkDiff - compareNumber) < absD(number: min - compareNumber){
                         min = checkDiff
                         recommendedMeal = allMeals[index]
                     }
                 }
-
-            
-
-
 
             }
 
@@ -305,7 +302,6 @@ class ExploreMealViewController: UIViewController {
         for k in nutrients{
             
             //Keep track of whether it is proteins, fats, carbohydrates, moisture, iron, magnesium, vitaminD, or folate
-            //Then set those values to temp so that it can be added into the database
             if k.nutrientCode == 203{
                 proteinsDiff = userInfo.proteinsDaily - today.proteins
             }
@@ -339,9 +335,9 @@ class ExploreMealViewController: UIViewController {
         //Find the max difference of the nutrients
         let temp = max(proteinsDiff, fatsDiff, carbohydratesDiff, ironDiff, magnesiumDiff, vitaminDDiff, moistureDiff, folateDiff)
         
-        print(temp)
         //Find the max of all of the differences, and choose the food that is close to the number temp
         //This would give a meal that is closely related to the nutrientDiff, and you may get what you need
+        //If temp is less than 0, that means all the nutrients are fulfilled, so don't recommend a meal
         if temp <= 0{
             recMeal.text = "No more recommended foods for today!"
             pSegue = false
@@ -388,8 +384,8 @@ class ExploreMealViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Load stuff from firebase
         loadNutrients()
-        
         loadFromDatabase()
         
         
