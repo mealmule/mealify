@@ -3,6 +3,9 @@
 //  mealify
 //
 //  Created by vincent on 2018-07-28.
+//  Team name: Meal Mules
+//  Changes made: Added Loading to screen
+//  Known bugs: None so far
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
 
@@ -471,26 +474,24 @@ class LaunchViewController: UIViewController {
     //If element is not found, then return nil
     //Else return the index in which the object is contained
     func binarySearch(arr: [Meal], searchItem: Int) -> Int {
-        var lowerIndex = 0;
-        var upperIndex = arr.count - 1
-        
-        
+        var low = 0;
+        var high = arr.count - 1
         
         
         while (true) {
             
-            let currentIndex = (lowerIndex + upperIndex)/2
+            let middle = (low + high)/2
             
-            if(arr[currentIndex].foodID == searchItem) {
-                return currentIndex
+            if(arr[middle].foodID == searchItem) {
+                return middle
                 
             }
             else {
-                if (arr[currentIndex].foodID > searchItem) {
-                    upperIndex = currentIndex - 1
+                if (arr[middle].foodID > searchItem) {
+                    high = middle - 1
                 }
                 else {
-                    lowerIndex = currentIndex + 1
+                    low = middle + 1
                 }
             }
         }
