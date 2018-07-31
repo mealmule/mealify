@@ -28,7 +28,7 @@ var dateChosenGlo: String?
 
 
 class ViewController: UIViewController, ChartViewDelegate {
-    
+
     //Properties and labels
     @IBOutlet weak var kcalsLeft: UILabel!
     @IBOutlet weak var mealRecommend: UILabel!
@@ -463,7 +463,8 @@ class ViewController: UIViewController, ChartViewDelegate {
             
             self.userScore = Double(round(Double(userScoreContainer / 7 * 10) * 10) / 10)
             self.drawFace()
-            
+        self.ref?.child("nutrientHistory").child(userID).child("userScore").setValue(self.userScore)
+
             print("user score: ", self.userScore)
             print("user score container: ", userScoreContainer)
             print("folate: " + String(self.micronutrient_amount[0]))

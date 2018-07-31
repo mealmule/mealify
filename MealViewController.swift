@@ -20,7 +20,8 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class MealViewController: UIViewController {
-    
+    let userID = (Auth.auth().currentUser?.uid)!
+
     //Properties
     
     var numberOfDayMeals = 0
@@ -86,7 +87,8 @@ class MealViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+
         if self.title == "Recommended Meal"{
             self.navigationController?.isNavigationBarHidden = false
         }
