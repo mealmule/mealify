@@ -1038,8 +1038,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 2@300x" translatesAutoresizingMaskIntoConstraints="NO" id="VyZ-zo-HV3">
                                 <rect key="frame" x="150" y="269" width="77" height="177"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-Uz-BRe">
-                                <rect key="frame" x="340" y="238" width="26" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-Uz-BRe">
+                                <rect key="frame" x="340" y="238" width="26" height="22"/>
                                 <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="18"/>
                                 <color key="textColor" red="0.70980876684188843" green="0.70979523658752441" blue="0.70980441570281982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1064,19 +1064,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFD-X4-IqJ">
-                                <rect key="frame" x="69" y="195" width="34" height="21"/>
+                                <rect key="frame" x="69" y="195" width="34" height="22"/>
                                 <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="18"/>
                                 <color key="textColor" red="0.70980876684188843" green="0.70979523658752441" blue="0.70980441570281982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="160" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zJ-fv-1fc">
-                                <rect key="frame" x="306" y="238" width="35" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="160" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zJ-fv-1fc">
+                                <rect key="frame" x="306" y="238" width="35" height="22"/>
                                 <color key="textColor" red="0.70980876684188843" green="0.70979523658752441" blue="0.70980441570281982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Gravity-Regular" family="Gravity" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scale" translatesAutoresizingMaskIntoConstraints="NO" id="fux-2P-GWc">
-                                <rect key="frame" x="320" y="269" width="47" height="150"/>
+                                <rect key="frame" x="320" y="270" width="47" height="149"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiJ-al-o8U">
                                 <rect key="frame" x="153" y="565" width="69" height="69"/>
@@ -1094,7 +1094,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="160" minValue="100" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="owr-cB-RYU" customClass="HeightSlider" customModule="mealify" customModuleProvider="target">
-                                <rect key="frame" x="245" y="267" width="153" height="56"/>
+                                <rect key="frame" x="245" y="268" width="153" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2423,12 +2423,6 @@
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F1V-yX-CKQ" id="9If-PD-eV8">
                                                             <rect key="frame" x="0.0" y="0.0" width="325" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGO-PO-UTz">
-                                                                    <rect key="frame" x="7" y="0.0" width="38" height="33"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                            </subviews>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
                                                 </prototypes>

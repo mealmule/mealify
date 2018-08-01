@@ -175,6 +175,17 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cell2")
             cell.textLabel?.text = self.concatArr[indexPath.row]
+//            let rowUserID = self.friendRequestArr[indexPath.row]
+//            let profilePictureRef = Storage.storage().reference().child("images/profile/\(rowUserID).png")
+//            profilePictureRef.downloadURL { (url, error) in
+//                cell.imageView?.layer.borderWidth = 1
+//                cell.imageView?.layer.masksToBounds = false
+////                cell.imageView?.layer.cornerRadius = 20
+////                cell.imageView?.clipsToBounds = true
+//                cell.imageView?.sd_setImage(with: url)
+//            }
+        
+    
             return(cell)
         
     }
