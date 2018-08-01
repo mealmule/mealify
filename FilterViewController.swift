@@ -135,6 +135,8 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Filters"
+        
         //Text delegate
         proteinsFilter.delegate = self
         fatsFilter.delegate = self
