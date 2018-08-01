@@ -22,7 +22,9 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     var ref: DatabaseReference!
     var myIndex = 0
     var friendRequestArrUsername : [String] = []
+    var friendScore : [Int] = []
     var databaseUniqueID : [String] = []
+    var healthScoreInt = 0
     
     
     
@@ -48,6 +50,12 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             self.databaseUniqueID = []
             self.friendRequestArr = []
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+            if let userHealthScore = snapDictionary["userScore"]{
+                //self.healthScoreLabel.text =  userHealthScore as! String
+                self.healthScoreInt = userHealthScore as! Int
+                self.healthScoreLabel.text = String(self.healthScoreInt)
+                
+            }
             if let friendRequestList = snapDictionary["friendlist"]{
                 for i in friendRequestList as! NSDictionary{
                     self.friendRequestArr.append(friendRequestList[i.key]!! as! String)
@@ -65,9 +73,28 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
                             if self.friendRequestArr[i] == self.databaseUniqueID[j]
                             {
                                 self.friendRequestArrUsername.append(snapDictionary2[self.databaseUniqueID[j]]!["username"]!! as! String)
+                                self.friendScore.append(snapDictionary2[self.databaseUniqueID[j]]!["userScore"]!! as! Int)
                             }
                         }
                     }
+                    
+                    //THIS IS A SORTING ALGORITHM!!!!!!
+                    var minimum : Int
+                    var temp : Int
+                    for i in 0..<self.friendScore.count{
+                        minimum = i
+                        for j in 0..<i{
+                            if self.friendScore[i] > self.friendScore[j]{
+                                minimum = j
+                            }
+                            temp = self.friendScore[i]
+                            self.friendScore[i] = self.friendScore[j]
+                            self.friendScore[j] = temp
+                        }
+                    }
+                    print("THIS IS THE SORTING ALGORITHM ARRAY \(self.friendScore)")
+                    ////////////////////////////////////
+                    
                     self.friendListTableView.reloadData()
                     
                 }) { (error) in
@@ -93,7 +120,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         } else {
             mealKingImg.image = #imageLiteral(resourceName: "mule")
         }
-        healthScoreLabel.text = String(healthScore)
+        //healthScoreLabel.text = String(healthScore)
         
         // initializing storage reference in Firebase
         
