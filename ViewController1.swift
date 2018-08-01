@@ -9,7 +9,13 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+
+
+
 class SecondViewController: UIViewController {
+    
+    
+
     var ref: DatabaseReference?
     let userID = (Auth.auth().currentUser?.uid)!
 
@@ -21,6 +27,15 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var oldness: UITextField!        //text field
     
     @IBAction func userOldness(_ sender: UITextField) {
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        if !loadFromMainIsTrue {
+            self.performSegue(withIdentifier: "backToRegs", sender: nil)
+        }
+        else {
+            self.performSegue(withIdentifier: "backToMain", sender: nil)
+        }
     }
     
     
@@ -100,6 +115,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var userHeightCM: UITextField!
     var yellow: UIColor!
     var grey: UIColor!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()

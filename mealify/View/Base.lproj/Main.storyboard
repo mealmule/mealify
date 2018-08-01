@@ -299,7 +299,7 @@
                                 <rect key="frame" x="16" y="27" width="19" height="31"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="voi-kX-ZXv" kind="show" id="nw9-Er-ImB"/>
+                                    <segue destination="voi-kX-ZXv" kind="show" identifier="" id="nw9-Er-ImB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="before start ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-I1-r1h">
@@ -1090,7 +1090,7 @@
                                 <rect key="frame" x="16" y="32" width="28" height="22"/>
                                 <state key="normal" image="dismiss"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="5S2-hR-3uI"/>
+                                    <action selector="backButton:" destination="voi-kX-ZXv" eventType="touchUpInside" id="Frv-U2-rmW"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="160" minValue="100" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="owr-cB-RYU" customClass="HeightSlider" customModule="mealify" customModuleProvider="target">
@@ -1185,6 +1185,8 @@
                         <outlet property="oldness" destination="VCX-db-UfV" id="SOv-eo-oOF"/>
                         <outlet property="userHeight" destination="owr-cB-RYU" id="KHO-iZ-X2B"/>
                         <outlet property="userHeightCM" destination="5zJ-fv-1fc" id="s1Y-CL-ov0"/>
+                        <segue destination="aah-sa-43E" kind="show" identifier="backToMain" id="lvX-e1-Asa"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToRegs" id="H5i-w4-zjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8y-rF-k23" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1530,7 +1532,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="settings"/>
                                                 <connections>
-                                                    <segue destination="voi-kX-ZXv" kind="show" id="FY3-nk-p63"/>
+                                                    <segue destination="voi-kX-ZXv" kind="show" identifier="More" id="FY3-nk-p63"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-Up-aEd">
@@ -2721,12 +2723,11 @@
         <image name="thumb" width="4" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qDW-M4-f9f"/>
-        <segue reference="L63-c6-e9j"/>
+        <segue reference="lvX-e1-Asa"/>
         <segue reference="CPW-FE-HxN"/>
-        <segue reference="FY3-nk-p63"/>
+        <segue reference="nw9-Er-ImB"/>
         <segue reference="Wrj-RH-YFn"/>
         <segue reference="zyn-aN-jeB"/>
-        <segue reference="5S2-hR-3uI"/>
+        <segue reference="H5i-w4-zjS"/>
     </inferredMetricsTieBreakers>
 </document>

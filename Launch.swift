@@ -17,6 +17,7 @@ var nutrients = [Nutrients]()
 var measures = [Measure]()
 var conversion = [MeasureConversion]()
 var nutrientsFilteredMeals = [Meal]()
+var loadFromMainIsTrue: Bool = false
 
 
 
