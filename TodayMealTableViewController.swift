@@ -20,9 +20,6 @@ class TodayMealTableViewController: UITableViewController {
     
     //Properties and variables
     
-    //Get number of meals user currently have for the day
-    var numberOfDayMeals = 0
-    
     //Get all meals the user has eaten on this day
     var userMeals = [Meal]()
     

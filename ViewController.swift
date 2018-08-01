@@ -618,9 +618,7 @@ class ViewController: UIViewController, ChartViewDelegate {
             //Dest is the Meal table view. Change properties below
             dest.title = "Day's Meals"
             dest.userMeals = today.userMeals
-            
-            //Give number of meals to next
-            dest.numberOfDayMeals = today.userMeals.count
+
             
         }
         
@@ -659,6 +657,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         let chartData = BarChartData()
         chartData.addDataSet(chartDataset)
         horizontalBarChart.leftAxis.enabled = false
+        horizontalBarChart.leftAxis.axisMinimum = 0
         horizontalBarChart.leftAxis.axisMaximum = 1
         horizontalBarChart.rightAxis.enabled = false
         horizontalBarChart.rightAxis.drawGridLinesEnabled = false
