@@ -22,9 +22,10 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     var ref: DatabaseReference!
     var myIndex = 0
     var friendRequestArrUsername : [String] = []
-    var friendScore : [Int] = []
+    var friendScore : [Double] = []
     var databaseUniqueID : [String] = []
-    var healthScoreInt = 0
+    var healthScoreInt : Double = 0.0
+    var concatArr : [String] = []
     
     
     
@@ -52,7 +53,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
             if let userHealthScore = snapDictionary["userScore"]{
                 //self.healthScoreLabel.text =  userHealthScore as! String
-                self.healthScoreInt = userHealthScore as! Int
+                self.healthScoreInt = userHealthScore as! Double
                 self.healthScoreLabel.text = String(self.healthScoreInt)
                 
             }
@@ -73,27 +74,43 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
                             if self.friendRequestArr[i] == self.databaseUniqueID[j]
                             {
                                 self.friendRequestArrUsername.append(snapDictionary2[self.databaseUniqueID[j]]!["username"]!! as! String)
-                                self.friendScore.append(snapDictionary2[self.databaseUniqueID[j]]!["userScore"]!! as! Int)
+                                self.friendScore.append(snapDictionary2[self.databaseUniqueID[j]]!["userScore"]!! as! Double)
                             }
                         }
                     }
                     
                     //THIS IS A SORTING ALGORITHM!!!!!!
-                    var minimum : Int
-                    var temp : Int
-                    for i in 0..<self.friendScore.count{
-                        minimum = i
-                        for j in 0..<i{
-                            if self.friendScore[i] > self.friendScore[j]{
-                                minimum = j
-                            }
-                            temp = self.friendScore[i]
-                            self.friendScore[i] = self.friendScore[j]
-                            self.friendScore[j] = temp
-                        }
-                    }
-                    print("THIS IS THE SORTING ALGORITHM ARRAY \(self.friendScore)")
+                    //Sorts the user from highest to lowest score
+//                    var minimum : Int
+//                    var temp : Double
+//                    var temp1 : String
+//                    var temp2 : String
+//                    print("THIS IS SORTING ALGORITH BEFOREEEE \(self.friendScore)")
+//                    for i in 0..<self.friendScore.count{
+//                        minimum = i
+//                        for j in 0..<i{
+//                            if self.friendScore[i] < self.friendScore[j]{
+//                                minimum = j
+//                            }
+//                            temp = self.friendScore[i]
+//                            self.friendScore[i] = self.friendScore[j]
+//                            self.friendScore[j] = temp
+//                        }
+//                    }
+//                    print("THIS IS THE SORTING ALGORITHM ARRAY \(self.friendScore)")
                     ////////////////////////////////////
+                    
+                    
+                    
+                    
+                    
+                    
+                    //Concatenating both userscores and username into tableview
+                    for i in 0..<self.friendScore.count{
+//self.concatArr.append(String(self.friendScore[i]) + "                 " + self.friendRequestArrUsername[i] )
+                        self.concatArr.append(self.friendRequestArrUsername[i] + "          "  + String(self.friendScore[i]))
+                    }
+                    print("THIS IS THE SUMMMMMMMMMMMMM \(self.concatArr)")
                     
                     self.friendListTableView.reloadData()
                     
@@ -151,13 +168,13 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return (friendRequestArrUsername.count)
+        return (concatArr.count)
     }
 
 //Puts all user into the tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cell2")
-            cell.textLabel?.text = self.friendRequestArrUsername[indexPath.row]
+            cell.textLabel?.text = self.concatArr[indexPath.row]
             return(cell)
         
     }
