@@ -90,16 +90,21 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
                     for i in 0..<self.friendScore.count{
                         minimum = i
                         for j in 0..<i{
-                            if self.friendScore[i] < self.friendScore[j]{
+                            if self.friendScore[i] > self.friendScore[j]{
                                 minimum = j
                             }
                             temp = self.friendScore[i]
                             self.friendScore[i] = self.friendScore[j]
                             self.friendScore[j] = temp
-                            temp2 = self.friendRequestArr[i]
+//                            temp1 = self.friendRequestArr[i]
+//                            self.friendRequestArr[i] = self.friendRequestArr[j]
+//                            self.friendRequestArr[j] = temp1
+//                            temp2 = self.friendRequestArrUsername[i]
+//                            self.friendRequestArr[i] = self.friendRequestArr[j]
+//                            self.friendRequestArr[j] = temp2
                         }
                     }
-//                    print("THIS IS THE SORTING ALGORITHM ARRAY \(self.friendScore)")
+                    print("THIS IS THE SORTING ALGORITHM ARRAY \(self.friendScore)")
                     ////////////////////////////////////
                     
                     
