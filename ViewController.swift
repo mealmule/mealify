@@ -28,6 +28,8 @@ var dateChosenGlo: String?
 
 
 class ViewController: UIViewController, ChartViewDelegate {
+    
+    let group = DispatchGroup()
 
     //Properties and labels
     @IBOutlet weak var kcalsLeft: UILabel!
@@ -363,130 +365,135 @@ class ViewController: UIViewController, ChartViewDelegate {
         self.navigationController?.isNavigationBarHidden = true
         
         // Query the nutrient history for micro and macronutrients for a given day
-        self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: {(snapshot) in
+        databaseHandle = self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observe(.value, with: {(snapshot) in
+            
+            
             
             
             //User Interface of the view controller begins here
             
             // initialize daily nutrient goals
             self.initGoals()
-            self.folateGoalTxt.text = String(self.folateGoal) + "µg"
-            self.ironGoalTxt.text = String(self.ironGoal) + "mg"
-            self.dGoalTxt.text = String(self.vitaminDGoal) + "IU"
-            self.magGoalTxt.text = String(self.magnesiumGoal) + "mg"
-            
-            //waterGoalTxt.text = String(dailyWaterConsume) + "ml"
-            
-            // progressbar animation
-            // draw the score circle and its animation
-            
-            // define stroke colors
-            let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
-            
-            self.drawFace()
-            
-            
-            // create the track layer
-            let circularPath = UIBezierPath(arcCenter: .zero, radius: 58, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
-            
-            let trackLayer = CAShapeLayer();
-            trackLayer.path = circularPath.cgPath
-            trackLayer.strokeColor = trackColor.cgColor
-            trackLayer.lineWidth = 10
-            trackLayer.fillColor = UIColor.clear.cgColor
-            trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
-            
-            // make the edge of stroke round and smooth
-            trackLayer.lineCap = kCALineCapRound
-            self.contentView.layer.addSublayer(trackLayer)
-            
-            // create the shape layer
-            self.shapeLayer.path = circularPath.cgPath
-            
-            self.shapeLayer.strokeColor = self.strokeColor.cgColor
-            self.shapeLayer.lineWidth = 10
-            self.shapeLayer.fillColor = UIColor.clear.cgColor
-            self.shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
-            self.shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
-            
-            // make the edge of stroke round and smooth
-            self.shapeLayer.lineCap = kCALineCapRound
-            
-            self.shapeLayer.strokeEnd = 0
-            self.contentView.layer.addSublayer(self.shapeLayer)
-            self.circleAnimation()
-            
-            //User interface code ends here.
-            
-            
             self.loadFromDatabase()
             
-            let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
-            
-
-            self.micronutrient_amount = [
-                (snapDictionary["folate"] as? Double ?? 0.0)/self.folateGoal,
-                (snapDictionary["iron"] as? Double ?? 0.0)/self.ironGoal,
-                (snapDictionary["magnesium"] as? Double ?? 0.0)/self.magnesiumGoal,
-                (snapDictionary["vitaminD"] as? Double ?? 0.0)/self.vitaminDGoal
-            ]
-            self.macronutrient_amount = [
-                (snapDictionary["carbohydrates"] as? Double ?? 0.0)/self.carbGoal,
-                (snapDictionary["fats"] as? Double ?? 0.0)/self.fatGoal,
-                (snapDictionary["proteins"] as? Double ?? 0.0)/self.proteinGoal
-            ]
-
-            // load progress bar with values
-            self.carbProgress.setProgress(Float(self.macronutrient_amount[0]), animated: true)
-            self.proteinProgress.setProgress(Float(self.macronutrient_amount[2]), animated: true)
-            self.fatProgress.setProgress(Float(self.macronutrient_amount[1]), animated: true)
-            
-            var userScoreContainer: Double = 0.0
-            
-
-            
-            // add up all numbers
-            for i in 0...self.micronutrient_amount.count - 1 {
+            self.group.notify(queue: .main){
                 
-                if self.micronutrient_amount[i] > 1{
-                    userScoreContainer = userScoreContainer + 1.0
-                }
-                else{
-                    userScoreContainer = userScoreContainer + self.micronutrient_amount[i]
-                }
-            }
-            
-
-            
-            // add up all numbers
-            for i in 0...self.macronutrient_amount.count - 1 {
+                self.folateGoalTxt.text = String(self.folateGoal) + "µg"
+                self.ironGoalTxt.text = String(self.ironGoal) + "mg"
+                self.dGoalTxt.text = String(self.vitaminDGoal) + "IU"
+                self.magGoalTxt.text = String(self.magnesiumGoal) + "mg"
                 
-                if self.macronutrient_amount[i] > 1{
-                    userScoreContainer = userScoreContainer + 1.0
+                //waterGoalTxt.text = String(dailyWaterConsume) + "ml"
+                
+                // progressbar animation
+                // draw the score circle and its animation
+                
+                // define stroke colors
+                let trackColor = UIColor(hue: 0, saturation: 0, brightness: 0.82, alpha: 0.2)
+                
+                self.drawFace()
+                
+                
+                // create the track layer
+                let circularPath = UIBezierPath(arcCenter: .zero, radius: 58, startAngle: 0, endAngle: 2 * CGFloat.pi , clockwise: true)
+                
+                let trackLayer = CAShapeLayer();
+                trackLayer.path = circularPath.cgPath
+                trackLayer.strokeColor = trackColor.cgColor
+                trackLayer.lineWidth = 10
+                trackLayer.fillColor = UIColor.clear.cgColor
+                trackLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
+                
+                // make the edge of stroke round and smooth
+                trackLayer.lineCap = kCALineCapRound
+                self.contentView.layer.addSublayer(trackLayer)
+                
+                // create the shape layer
+                self.shapeLayer.path = circularPath.cgPath
+                
+                self.shapeLayer.strokeColor = self.strokeColor.cgColor
+                self.shapeLayer.lineWidth = 10
+                self.shapeLayer.fillColor = UIColor.clear.cgColor
+                self.shapeLayer.position = CGPoint(x: self.view.frame.width/2, y: 125)
+                self.shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
+                
+                // make the edge of stroke round and smooth
+                self.shapeLayer.lineCap = kCALineCapRound
+                
+                self.shapeLayer.strokeEnd = 0
+                self.contentView.layer.addSublayer(self.shapeLayer)
+                self.circleAnimation()
+                
+                //User interface code ends here.
+                
+                
+                let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+                
+
+                self.micronutrient_amount = [
+                    (snapDictionary["folate"] as? Double ?? 0.0)/self.folateGoal,
+                    (snapDictionary["iron"] as? Double ?? 0.0)/self.ironGoal,
+                    (snapDictionary["magnesium"] as? Double ?? 0.0)/self.magnesiumGoal,
+                    (snapDictionary["vitaminD"] as? Double ?? 0.0)/self.vitaminDGoal
+                ]
+                self.macronutrient_amount = [
+                    (snapDictionary["carbohydrates"] as? Double ?? 0.0)/self.carbGoal,
+                    (snapDictionary["fats"] as? Double ?? 0.0)/self.fatGoal,
+                    (snapDictionary["proteins"] as? Double ?? 0.0)/self.proteinGoal
+                ]
+
+                // load progress bar with values
+                self.carbProgress.setProgress(Float(self.macronutrient_amount[0]), animated: true)
+                self.proteinProgress.setProgress(Float(self.macronutrient_amount[2]), animated: true)
+                self.fatProgress.setProgress(Float(self.macronutrient_amount[1]), animated: true)
+                
+                var userScoreContainer: Double = 0.0
+                
+
+                
+                // add up all numbers
+                for i in 0...self.micronutrient_amount.count - 1 {
+                    
+                    if self.micronutrient_amount[i] > 1{
+                        userScoreContainer = userScoreContainer + 1.0
+                    }
+                    else{
+                        userScoreContainer = userScoreContainer + self.micronutrient_amount[i]
+                    }
                 }
-                else{
-                    userScoreContainer = userScoreContainer + self.macronutrient_amount[i]
+                
+
+                
+                // add up all numbers
+                for i in 0...self.macronutrient_amount.count - 1 {
+                    
+                    if self.macronutrient_amount[i] > 1{
+                        userScoreContainer = userScoreContainer + 1.0
+                    }
+                    else{
+                        userScoreContainer = userScoreContainer + self.macronutrient_amount[i]
+                    }
                 }
+                
+                self.userScore = Double(round(Double(userScoreContainer / 7 * 10) * 10) / 10)
+                self.drawFace()
+                print("user score: ", self.userScore)
+                print("user score container: ", userScoreContainer)
+                print("folate: " + String(self.micronutrient_amount[0]))
+                print("iron: " + String(self.micronutrient_amount[1]))
+                print("magnesium: " + String(self.micronutrient_amount[2]))
+                print("vitaminD: " + String(self.micronutrient_amount[3]))
+                
+                self.ref?.child("nutrientHistory").child(userID).child("userScore").setValue(self.userScore)
+                
+                print(self.micronutrient_amount)
+                print(self.macronutrient_amount)
+                self.setHorizontalChart(dataPoints: self.micronutrients, values: self.micronutrient_amount)
+                self.setPieChart(dataPoints: self.macronutrients, values: self.macronutrient_amount)
             }
-            
-            self.userScore = Double(round(Double(userScoreContainer / 7 * 10) * 10) / 10)
-            self.drawFace()
-            print("user score: ", self.userScore)
-            print("user score container: ", userScoreContainer)
-            print("folate: " + String(self.micronutrient_amount[0]))
-            print("iron: " + String(self.micronutrient_amount[1]))
-            print("magnesium: " + String(self.micronutrient_amount[2]))
-            print("vitaminD: " + String(self.micronutrient_amount[3]))
-            
-            print(self.micronutrient_amount)
-            print(self.macronutrient_amount)
-            self.setHorizontalChart(dataPoints: self.micronutrients, values: self.micronutrient_amount)
-            self.setPieChart(dataPoints: self.macronutrients, values: self.macronutrient_amount)
             
         })
         
-        self.ref?.child("nutrientHistory").child(userID).child("userScore").setValue(self.userScore)
-
         
         
     }
@@ -498,35 +505,38 @@ class ViewController: UIViewController, ChartViewDelegate {
     //*
     //Changes the variables in these goals to hard coded values
     private func initGoals() {
-        var age: Float! = 0
-        var gender: String! = "female"
         
+        //Group dispatch here so it can wait for completion before executing code
+        group.enter()
         //Retrieve all user info from the user on selected date and put them in today.userMeals()
-        databaseHandle = ref?.child("nutrientHistory").child(userID).observe(.value, with: { (snapshot) in
+        ref?.child("nutrientHistory").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
             
             if let allNames = snapshot.value as? [String:AnyObject] {
                 
-                age = Float(allNames["age"] as! String)
-                gender = allNames["gender"] as! String
+                let age = Float(allNames["age"] as! String)
+                let gender = allNames["gender"] as! String
                 
                 self.userInfo = UserDaily(gender: gender, age: age!)
+                
+                // get daily goals from UserDaily class based on gender and age
+                self.proteinGoal = self.userInfo.proteinsDaily
+                self.carbGoal = self.userInfo.carbohydratesDaily
+                self.fatGoal = self.userInfo.fatsDaily
+                self.folateGoal = self.userInfo.folateDaily
+                self.ironGoal = self.userInfo.ironDaily
+                self.vitaminDGoal = self.userInfo.vitaminDDaily
+                self.magnesiumGoal = self.userInfo.magnesiumDaily
+                
+                self.dailyWaterConsume = self.userInfo.moistureDaily
+                self.dailyWaterGlassNumber = Int (self.dailyWaterConsume / 250)
+                
+                self.group.leave()
                 
             }
         })
         
-        var user = UserDaily(gender: gender, age: age)
         
-        // get daily goals from UserDaily class based on gender and age
-        proteinGoal = user.proteinsDaily
-        carbGoal = user.carbohydratesDaily
-        fatGoal = user.fatsDaily
-        folateGoal = user.folateDaily
-        ironGoal = user.ironDaily
-        vitaminDGoal = user.vitaminDDaily
-        magnesiumGoal = user.magnesiumDaily
         
-        dailyWaterConsume = user.moistureDaily
-        dailyWaterGlassNumber = Int (dailyWaterConsume / 250)
     }
     
     
