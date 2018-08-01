@@ -627,6 +627,8 @@ class ViewController: UIViewController, ChartViewDelegate {
     }
     
     func setHorizontalChart(dataPoints: [String], values: [Double]) {
+        print("these are the values")
+        print(values)
         let xaxis : XAxis = XAxis()
         let chartFormatter = ChartFormatter(labels: micronutrients)
         
@@ -657,6 +659,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         let chartData = BarChartData()
         chartData.addDataSet(chartDataset)
         horizontalBarChart.leftAxis.enabled = false
+        horizontalBarChart.leftAxis.axisMaximum = 1
         horizontalBarChart.rightAxis.enabled = false
         horizontalBarChart.rightAxis.drawGridLinesEnabled = false
         horizontalBarChart.rightAxis.drawAxisLineEnabled = true
