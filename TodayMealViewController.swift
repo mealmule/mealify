@@ -84,7 +84,13 @@ class TodayMealViewController: UIViewController {
         measureAmount.numberOfLines = 0
         
         
-        measureAmount.text = meal.measure
+        if meal.measure == ""{
+            measureAmount.text = "Measure: 1 serving"
+        }
+        else{
+            measureAmount.text = meal.measure
+        }
+        
         factor = meal.factor
         print("FACTOR: " + String(meal.factor))
         

@@ -8,11 +8,11 @@
 //                Added segue to home page with updated numbers
 //                Added more nutrients to display
 //                Added Firebase database to transfer user meals into database
-//  Known bugs: None so far
+//  Known bugs: Some meals don't have measure amounts
+//              This must be in firebase as it is tested in code
 //  Copyright © 2018 Meal Mules. All rights reserved.
 //
-//-----TODO-----: Remove nutrients in each meal when adding to database, and instead, add nutrients into user nutrients
-//                Add a meal property so that you can add more than one meal
+
 
 import UIKit
 import Firebase
@@ -107,7 +107,13 @@ class MealViewController: UIViewController {
         measureAmount.minimumScaleFactor = 0.7
         measureAmount.numberOfLines = 0
         
-        measureAmount.text = meal.measure
+        if meal.measure == ""{
+            measureAmount.text = "Measure: 1 serving"
+        }
+        else{
+            measureAmount.text = meal.measure
+        }
+        
         factor = meal.factor
         print("FACTOR: " + String(meal.factor))
         

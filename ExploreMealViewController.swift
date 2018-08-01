@@ -39,7 +39,11 @@ class ExploreMealViewController: UIViewController {
     var vitaminDDiff: Double = 0
     var folateDiff: Double = 0
     
+    //Recommended meal is stored in this variable
     var recommendedMeal = Meal()
+    
+    //Boolean value to check if theres a recommended meal or not
+    //If not, then do not segue
     var pSegue = true
     
     //Get today's number and user info
@@ -72,6 +76,7 @@ class ExploreMealViewController: UIViewController {
         //Retrieve all user info from the user on selected date and put them in today.userMeals()
         ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).observeSingleEvent(of: .value, with: { (snapshot) in
     
+            //If the user has at least proteins, then we know that it has all the other nutrients based on design
             if snapshot.hasChild("proteins") {
                 if let allNames = snapshot.value as? [String:AnyObject] {
                     
@@ -98,11 +103,13 @@ class ExploreMealViewController: UIViewController {
                     
                 }
             }
+                //Else set the values here
             else{
                 self.self.ref?.child("nutrientHistory").child(userID).child(dateChosenGlo!).updateChildValues(["proteins": 0, "fats":  0, "carbohydrates":  0, "moisture": 0, "iron": 0, "magnesium":  0, "vitaminD":   0, "folate":  0])
                 
             }
             
+            //Call the recommend function to recommend a meal and display it
             self.recommend()
         
         })
