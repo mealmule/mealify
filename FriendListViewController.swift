@@ -50,6 +50,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             self.friendRequestArrUsername = []
             self.databaseUniqueID = []
             self.friendRequestArr = []
+            //var max size
             let snapDictionary = snapshot.value as? [String : AnyObject] ?? [:]
             if let userHealthScore = snapDictionary["userScore"]{
                 //self.healthScoreLabel.text =  userHealthScore as! String
@@ -81,22 +82,23 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
                     
                     //THIS IS A SORTING ALGORITHM!!!!!!
                     //Sorts the user from highest to lowest score
-//                    var minimum : Int
-//                    var temp : Double
-//                    var temp1 : String
-//                    var temp2 : String
-//                    print("THIS IS SORTING ALGORITH BEFOREEEE \(self.friendScore)")
-//                    for i in 0..<self.friendScore.count{
-//                        minimum = i
-//                        for j in 0..<i{
-//                            if self.friendScore[i] < self.friendScore[j]{
-//                                minimum = j
-//                            }
-//                            temp = self.friendScore[i]
-//                            self.friendScore[i] = self.friendScore[j]
-//                            self.friendScore[j] = temp
-//                        }
-//                    }
+                    var minimum : Int
+                    var temp : Double
+                    var temp1 : String
+                    var temp2 : String
+                    print("THIS IS SORTING ALGORITH BEFOREEEE \(self.friendScore)")
+                    for i in 0..<self.friendScore.count{
+                        minimum = i
+                        for j in 0..<i{
+                            if self.friendScore[i] < self.friendScore[j]{
+                                minimum = j
+                            }
+                            temp = self.friendScore[i]
+                            self.friendScore[i] = self.friendScore[j]
+                            self.friendScore[j] = temp
+                            temp2 = self.friendRequestArr[i]
+                        }
+                    }
 //                    print("THIS IS THE SORTING ALGORITHM ARRAY \(self.friendScore)")
                     ////////////////////////////////////
                     
@@ -106,8 +108,9 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
                     
                     
                     //Concatenating both userscores and username into tableview
-                    for i in 0..<self.friendScore.count{
+                    for i in 0..<self.friendRequestArr.count{
 //self.concatArr.append(String(self.friendScore[i]) + "                 " + self.friendRequestArrUsername[i] )
+                        
                         self.concatArr.append(self.friendRequestArrUsername[i] + "          "  + String(self.friendScore[i]))
                     }
                     print("THIS IS THE SUMMMMMMMMMMMMM \(self.concatArr)")
