@@ -441,6 +441,23 @@ class ViewController: UIViewController, ChartViewDelegate {
                     (snapDictionary["fats"] as? Double ?? 0.0)/self.fatGoal,
                     (snapDictionary["proteins"] as? Double ?? 0.0)/self.proteinGoal
                 ]
+                
+                for i in 0...self.micronutrient_amount.count - 1{
+                    
+                    if self.micronutrient_amount[i] > 1{
+                        self.micronutrient_amount[i] = 1
+                    }
+                    
+                }
+                
+                for i in 0...self.macronutrient_amount.count - 1{
+                    
+                    if self.macronutrient_amount[i] > 1{
+                        self.macronutrient_amount[i] = 1
+                    }
+                    
+                }
+
 
                 // load progress bar with values
                 self.carbProgress.setProgress(Float(self.macronutrient_amount[0]), animated: true)
