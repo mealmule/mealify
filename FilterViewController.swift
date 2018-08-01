@@ -46,14 +46,30 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var folateFilter: UITextField!
     
     //Switches for all the filters
-    @IBOutlet weak var proteinsG: UISwitch!
-    @IBOutlet weak var fatsG: UISwitch!
-    @IBOutlet weak var carbsG: UISwitch!
-    @IBOutlet weak var moistureG: UISwitch!
-    @IBOutlet weak var ironG: UISwitch!
-    @IBOutlet weak var magnesiumG: UISwitch!
-    @IBOutlet weak var vitaminDG: UISwitch!
-    @IBOutlet weak var folateG: UISwitch!
+    @IBOutlet weak var proteinsG: UISegmentedControl!
+    @IBOutlet weak var fatsG: UISegmentedControl!
+    @IBOutlet weak var carbsG: UISegmentedControl!
+    @IBOutlet weak var moistureG: UISegmentedControl!
+    @IBOutlet weak var ironG: UISegmentedControl!
+    @IBOutlet weak var magnesiumG: UISegmentedControl!
+    @IBOutlet weak var vitaminDG: UISegmentedControl!
+    @IBOutlet weak var folateG: UISegmentedControl!
+    
+    func segmentState(sender: UISegmentedControl, state: Bool) {
+        
+        
+        if state == true{
+            
+            sender.selectedSegmentIndex = 1
+            
+        }
+        else{
+            
+            sender.selectedSegmentIndex = 0
+            
+        }
+        
+    }
     
     //TODO:
     //*
@@ -94,14 +110,15 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         folateGGlo = true
         
         //Switch all switches to true
-        proteinsG.setOn(proteinsGGlo, animated: false)
-        fatsG.setOn(fatsGGlo, animated: false)
-        carbsG.setOn(carbsGGlo, animated: false)
-        moistureG.setOn(moistureGGlo, animated: false)
-        ironG.setOn(ironGGlo, animated: false)
-        magnesiumG.setOn(magnesiumGGlo, animated: false)
-        vitaminDG.setOn(vitaminDGGlo, animated: false)
-        folateG.setOn(folateGGlo, animated: false)
+        segmentState(sender: proteinsG, state: true)
+        segmentState(sender: fatsG, state: true)
+        segmentState(sender: carbsG, state: true)
+        segmentState(sender: moistureG, state: true)
+        segmentState(sender: ironG, state: true)
+        segmentState(sender: magnesiumG, state: true)
+        segmentState(sender: vitaminDG, state: true)
+        segmentState(sender: folateG, state: true)
+        
         
     }
     
@@ -139,14 +156,14 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
         folateFilter.text = folateFilterGlo
         
         //Restore all previous switches
-        proteinsG.setOn(proteinsGGlo, animated: true)
-        fatsG.setOn(fatsGGlo, animated: true)
-        carbsG.setOn(carbsGGlo, animated: true)
-        moistureG.setOn(moistureGGlo, animated: true)
-        ironG.setOn(ironGGlo, animated: true)
-        magnesiumG.setOn(magnesiumGGlo, animated: true)
-        vitaminDG.setOn(vitaminDGGlo, animated: true)
-        folateG.setOn(folateGGlo, animated: true)
+        segmentState(sender: proteinsG, state: proteinsGGlo)
+        segmentState(sender: fatsG, state: fatsGGlo)
+        segmentState(sender: carbsG, state: carbsGGlo)
+        segmentState(sender: moistureG, state: moistureGGlo)
+        segmentState(sender: ironG, state: ironGGlo)
+        segmentState(sender: magnesiumG, state: magnesiumGGlo)
+        segmentState(sender: vitaminDG, state: vitaminDGGlo)
+        segmentState(sender: folateG, state: folateGGlo)
         
         
         
@@ -215,7 +232,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                     if let proteins = Double(proteinsFilter.text!){
                         
                         //If proteins switch is on, then it it is greater than
-                        if proteinsG.isOn{
+                        if proteinsG.selectedSegmentIndex == 1{
                             
                             //Proteins bool is set to this
                             proteinsIsG = Double(truncating: k.nutrientValue) * i.factor >= proteins
@@ -240,7 +257,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                     //Repeat for all the other nutrients, except its different nutrient id every time, and different varaibles
                 else if k.nutrientID == 204{
                     if let fats = Double(fatsFilter.text!){
-                        if fatsG.isOn{
+                        if fatsG.selectedSegmentIndex == 1{
                             
                             fatsIsG = Double(truncating: k.nutrientValue) * i.factor >= fats
                             fatsGGlo = true
@@ -257,7 +274,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 }
                 else if k.nutrientID == 205{
                     if let carbs = Double(carbsFilter.text!){
-                        if carbsG.isOn{
+                        if carbsG.selectedSegmentIndex == 1{
                             
                             carbsIsG = Double(truncating: k.nutrientValue) * i.factor >= carbs
                             carbsGGlo = true
@@ -274,7 +291,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 }
                 else if k.nutrientID == 255{
                     if let moisture = Double(moistureFilter.text!){
-                        if moistureG.isOn{
+                        if moistureG.selectedSegmentIndex == 1{
                             
                             moistureIsG = Double(truncating: k.nutrientValue) * i.factor >= moisture
                             moistureGGlo = true
@@ -291,7 +308,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 }
                 else if k.nutrientID == 303{
                     if let iron = Double(ironFilter.text!){
-                        if ironG.isOn{
+                        if ironG.selectedSegmentIndex == 1{
                             
                             ironIsG = Double(truncating: k.nutrientValue) * i.factor >= iron
                             ironGGlo = true
@@ -308,7 +325,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 }
                 else if k.nutrientID == 304{
                     if let magnesium = Double(magnesiumFilter.text!){
-                        if magnesiumG.isOn{
+                        if magnesiumG.selectedSegmentIndex == 1{
                             
                             magnesiumIsG = Double(truncating: k.nutrientValue) * i.factor >= magnesium
                             magnesiumGGlo = true
@@ -325,7 +342,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 }
                 else if k.nutrientID == 324{
                     if let vitaminD = Double(vitaminDFilter.text!){
-                        if vitaminDG.isOn{
+                        if vitaminDG.selectedSegmentIndex == 1{
                             
                             vitaminDIsG = Double(truncating: k.nutrientValue) * i.factor >= vitaminD
                             vitaminDGGlo = true
@@ -343,7 +360,7 @@ class FilterViewController: UIViewController, UITextFieldDelegate {
                 else if k.nutrientID == 806{
                     if let folate = Double(folateFilter.text!){
                         //print ("FOLATE: " + String(folate))
-                        if folateG.isOn{
+                        if folateG.selectedSegmentIndex == 1{
                             
                             folateIsG = Double(truncating: k.nutrientValue) * i.factor >= folate
                             folateGGlo = true

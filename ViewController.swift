@@ -43,7 +43,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     var micronutrient_amount: [Double] = []
     var micronutrient_score: [Double] = []
     
-    let macronutrients: [String] = ["Carbohydrates", "Fats", "Proteins"]
+    let macronutrients: [String] = ["carbs", "fats", "proteins"]
     var macronutrient_amount: [Double] = []
     var macronutrient_score: [Double] = []
     
@@ -464,6 +464,15 @@ class ViewController: UIViewController, ChartViewDelegate {
                 self.proteinProgress.setProgress(Float(self.macronutrient_amount[2]), animated: true)
                 self.fatProgress.setProgress(Float(self.macronutrient_amount[1]), animated: true)
                 
+                
+                    
+                self.macronutrient_amount[0] *= self.carbGoal
+                self.macronutrient_amount[1] *= self.fatGoal
+                self.macronutrient_amount[2] *= self.proteinGoal
+                    
+                
+                
+                
                 var userScoreContainer: Double = 0.0
                 
 
@@ -700,6 +709,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         chartDataset.colors = ChartColorTemplates.vordiplom()
         
         let chartData = PieChartData(dataSet: chartDataset)
+        chartData.setValueTextColor(.black)
         pieChart.data = chartData
         pieChart.animate(yAxisDuration: 2.5)
         pieChart.legend.enabled = false
