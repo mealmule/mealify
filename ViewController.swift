@@ -632,7 +632,6 @@ class ViewController: UIViewController, ChartViewDelegate {
         }
         
         if segue.identifier == "More" {
-            let dest = segue.destination as! SecondViewController
             loadFromMainIsTrue = true
             print("BOOL:: " + String(loadFromMainIsTrue))
         }

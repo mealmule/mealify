@@ -95,7 +95,6 @@ class ViewControllerRegister: UIViewController {
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "gotoqa" {
-            let dest = segue.destination as! SecondViewController
             loadFromMainIsTrue = false
         }
 
