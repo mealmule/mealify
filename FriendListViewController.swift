@@ -87,7 +87,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
                     var temp1 : String
                     var temp2 : String
                     print("THIS IS SORTING ALGORITH BEFOREEEE \(self.friendScore)")
-                    for i in 0..<self.friendScore.count{
+                    for i in 0..<self.friendRequestArr.count{
                         minimum = i
                         for j in 0..<i{
                             if self.friendScore[i] > self.friendScore[j]{
